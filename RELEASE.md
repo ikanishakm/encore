@@ -82,18 +82,17 @@ npm install @encore/core @encore/r3f @encore/studio
   `packages/studio/devEnv/cli.ts`) — studio is consumed as
   `import studio from '@encore/studio'`, so this rarely matters. Re-enabling it
   is a future improvement.
-- **Deep de-cloud not done (by design).** Studio still contains the cloud
-  auth / sync-server transport code. It no longer contacts third-party servers
-  (backend defaults to localhost; update checker removed), and the editor works
-  fully offline for local editing — but a boot-time request to `localhost:3000`
-  fails harmlessly and logs a console error. Fully removing the auth/sync
-  transport (delete `Auth.ts`, `SyncStore/*`, and rewrite
-  `StudioStore.ts` to always use a local saaz backend) is a clean follow-up.
-  Note: `@encore/sync-server` cannot simply be deleted — studio imports its
-  state schema (`stateEditors`, `schema`, `graphEditorColors`) for local
-  editing.
-- **Cloud packages** `@encore/app` and `@encore/sync-server` are kept in the
-  workspace (private, not published) because studio type-depends on them. They
-  are not shipped to consumers.
+- **Cloud code removed from studio.** The hosted auth (OAuth), the
+  sync-server websocket/tRPC transport, the login UI, and the update checker
+  have been deleted from `@encore/studio`. The editor runs fully local
+  (transactions, undo/redo, IndexedDB persistence, import/export) and makes no
+  requests to any third-party server. `@encore/sync-server` remains in the
+  workspace (private, **not published**) only because studio imports its local
+  state schema (`stateEditors`, `schema`, `graphEditorColors`).
+- **`@encore/app`** (the Next.js cloud backend) is now an unpublished, unused
+  dev package — studio no longer depends on it. It can be deleted entirely as a
+  further cleanup (it would require also removing `@encore/sync-server`'s
+  server code, which still imports it; the state-schema module that studio
+  needs does not).
 - **Node version.** Build/publish on Node 20 LTS for the smoothest experience;
   Node 24 works with the `tsx` bump already applied.

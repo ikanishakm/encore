@@ -55,9 +55,10 @@ Encore as well (substitute `@theatre/*` imports with `@encore/*`).
 
 - **React 19 / r3f v9** across the monorepo (the original is pinned to React 18).
 - **`@encore/*` scope** (the unscoped `theatric` package becomes `@encore/tweak`).
-- **No phone-home.** The hosted update checker was removed and the studio
-  backend defaults to `localhost`, so the editor never contacts a third-party
-  server. Cloud login / multiplayer sync are not wired to any hosted backend.
+- **No cloud, no phone-home.** The hosted update checker, the cloud login
+  (OAuth), and the multiplayer sync transport were **removed** from the editor.
+  `@encore/studio` runs fully local (state in IndexedDB + JSON export) and
+  never contacts a third-party server.
 
 ## License
 
