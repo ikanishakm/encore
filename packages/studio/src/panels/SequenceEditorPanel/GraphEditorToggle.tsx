@@ -10,9 +10,9 @@ import {includeLockFrameStampAttrs} from './FrameStampPositionProvider'
 
 const Container = styled.button`
   outline: none;
-  background-color: #1c1d21;
-  border: 1px solid #191919;
-  border-radius: 2px;
+  background-color: var(--tt-bg);
+  border: 1px solid var(--tt-border);
+  border-radius: var(--tt-radius-sm);
   display: flex;
   bottom: 14px;
   right: 8px;
@@ -21,12 +21,12 @@ const Container = styled.button`
 
   padding: 4px 8px;
   display: flex;
-  color: #656d77;
+  color: var(--tt-fg-muted);
   line-height: 20px;
   font-size: 10px;
 
   &:hover {
-    color: white;
+    color: var(--tt-fg);
   }
 
   & > svg {

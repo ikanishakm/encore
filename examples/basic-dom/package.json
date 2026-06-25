@@ -6,11 +6,11 @@
   "dependencies": {
     "@theatre/core": "workspace:*",
     "@theatre/studio": "workspace:*",
-    "@types/react": "^17.0.19",
-    "@types/react-dom": "^17.0.9",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
     "parcel-bundler": "^1.12.5",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
     "typescript": "5.1.6"
   }
 }

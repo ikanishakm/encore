@@ -10,26 +10,40 @@ import {pointerEventsAutoInNormalMode} from '@theatre/studio/css'
 
 const headerHeight = `44px`
 
+/**
+ * A solid, docked left sidebar (à la Figma/Framer) rather than a stack of
+ * floating translucent pills. Because the panel is opaque, the per-row
+ * hover/selected overlays layer over a solid surface and stay readable.
+ */
 const Container = styled.div<{pin: boolean}>`
   ${pointerEventsAutoInNormalMode};
-  background-color: transparent;
   position: absolute;
-  left: 8px;
+  left: 0;
+  top: 58px;
+  bottom: 8px;
+  width: 230px;
   z-index: ${panelZIndexes.outlinePanel};
 
-  top: calc(${headerHeight} + 8px);
-  height: fit-content;
-  max-height: calc(100% - ${headerHeight});
-  overflow-y: scroll;
+  background: var(--tt-panel);
+  border-right: 1px solid var(--tt-border);
+  border-top-right-radius: var(--tt-radius);
+  border-bottom-right-radius: var(--tt-radius);
+  box-shadow: 6px 0 24px -14px rgba(0, 0, 0, 0.45);
+
+  overflow-y: auto;
   overflow-x: hidden;
-  padding: 0;
+  padding: 6px 0;
   user-select: none;
 
   &::-webkit-scrollbar {
-    display: none;
+    width: 8px;
   }
-
-  scrollbar-width: none;
+  &::-webkit-scrollbar-thumb {
+    background: var(--tt-border-strong);
+    border-radius: 4px;
+  }
+  scrollbar-width: thin;
+  scrollbar-color: var(--tt-border-strong) transparent;
 
   display: ${({pin}) => (pin ? 'block' : 'none')};
 
@@ -41,7 +55,7 @@ const Container = styled.div<{pin: boolean}>`
   &::after {
     content: '';
     display: block;
-    height: 20px;
+    height: 12px;
   }
 `
 

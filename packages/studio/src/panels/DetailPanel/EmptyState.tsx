@@ -14,17 +14,17 @@ const Message = styled.div`
   display: flex;
   flex-direction: column;
   gap: 11px;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--tt-fg);
 `
 
 const Icon = styled.div`
-  color: rgba(145, 145, 145, 0.8);
+  color: var(--tt-fg-muted);
 `
 
 const LinkToDoc = styled.a`
-  color: #919191;
+  color: var(--tt-fg-muted);
   font-size: 10px;
-  text-decoration-color: #40434a;
+  text-decoration-color: var(--tt-border);
   text-underline-offset: 3px;
 `
 

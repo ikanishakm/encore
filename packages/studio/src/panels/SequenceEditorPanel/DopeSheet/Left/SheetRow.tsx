@@ -6,7 +6,7 @@ import AnyCompositeRow from './AnyCompositeRow'
 import {setCollapsedSheetItem} from '@theatre/studio/panels/SequenceEditorPanel/DopeSheet/setCollapsedSheetObjectOrCompoundProp'
 import uniqueKeyForAnyObject from '@theatre/utils/uniqueKeyForAnyObject'
 
-const SheetRow: React.VFC<{
+const SheetRow: React.FC<{
   leaf: SequenceEditorTree_Sheet
 }> = ({leaf}) => {
   return usePrism(() => {

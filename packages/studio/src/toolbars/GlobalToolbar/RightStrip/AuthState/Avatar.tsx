@@ -37,15 +37,15 @@ const Stroke = styled.div`
   position: absolute;
   inset: -2px;
   border-radius: 50px;
-  background: rgba(151, 208, 249, 0.6);
+  background: var(--tt-primary);
 
   ${Container}:hover & {
-    background: rgba(151, 208, 249, 0.9);
+    background: var(--tt-primary-hover);
     transform: scale(1.05);
   }
 
   ${Container}:active & {
-    background: rgba(151, 208, 249, 0.9);
+    background: var(--tt-primary-hover);
     transform: scale(1.05);
   }
 

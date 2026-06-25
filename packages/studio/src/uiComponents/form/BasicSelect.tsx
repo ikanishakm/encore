@@ -16,7 +16,7 @@ const IconContainer = styled.div`
   font-size: 14px;
   display: flex;
   align-items: center;
-  color: #6b7280;
+  color: var(--tt-fg-muted);
   pointer-events: none;
 `
 
@@ -25,13 +25,13 @@ const Select = styled.select`
   background-color: transparent;
   box-sizing: border-box;
   border: 1px solid transparent;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--tt-fg);
   padding: 1px 6px;
   font: inherit;
   outline: none;
   text-align: left;
   width: 100%;
-  border-radius: 2px;
+  border-radius: var(--tt-radius-sm);
   /*
   looks like putting percentages in the height of a select box doesn't work in Firefox. Not sure why.
   So we're hard-coding the height to 26px, unlike all other inputs that use a relative height.
@@ -43,10 +43,15 @@ const Select = styled.select`
     text-indent: -2px;
   }
 
-  &:hover,
+  &:hover {
+    background-color: var(--tt-input);
+    border-color: var(--tt-border);
+  }
+
   &:focus {
-    background-color: #10101042;
-    border-color: #00000059;
+    background-color: var(--tt-input);
+    border-color: var(--tt-primary);
+    box-shadow: 0 0 0 2px var(--tt-ring);
   }
 `
 

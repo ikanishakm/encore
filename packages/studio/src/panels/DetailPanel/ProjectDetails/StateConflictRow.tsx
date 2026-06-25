@@ -15,7 +15,7 @@ const a = 'hi'
 const Container = styled.div`
   padding: 8px 10px;
   position: relative;
-  background-color: #6d232352;
+  background-color: var(--tt-hover);
   &:before {
     position: absolute;
     content: ' ';
@@ -24,7 +24,7 @@ const Container = styled.div`
     top: 0;
     bottom: 0;
     width: 2px;
-    background-color: #ff000070;
+    background-color: var(--tt-danger);
   }
 `
 

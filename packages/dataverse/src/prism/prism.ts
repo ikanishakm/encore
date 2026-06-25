@@ -121,6 +121,9 @@ class HotHandle<V> {
 
     pushCollector(collector)
 
+    // Reset per-scope `source()` call counters so each recompute re-derives the
+    // same call-order-based effect keys (see HotScope.source).
+    this._scope.resetSourceIndices()
     hookScopeStack.push(this._scope)
     try {
       value = this._fn()
@@ -507,8 +510,20 @@ class HotScope implements PrismScope {
     this.effects.clear()
   }
 
+  // Disambiguates multiple `source()` calls within one scope by call order
+  // (like React hooks), instead of colliding on a single constant key. Reset to
+  // 0 at the start of every recompute via resetSourceIndices().
+  private _sourceIndex = 0
+
+  resetSourceIndices(): void {
+    this._sourceIndex = 0
+    for (const sub of Object.values(this.subs)) {
+      sub.resetSourceIndices()
+    }
+  }
+
   source<V>(subscribe: (fn: (val: V) => void) => VoidFn, getValue: () => V): V {
-    const sourceKey = '$$source/blah'
+    const sourceKey = '$$source/' + this._sourceIndex++
     this.effect(
       sourceKey,
       () => {

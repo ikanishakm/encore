@@ -1,6 +1,7 @@
-import type {ComponentProps, ComponentType, Ref, RefAttributes} from 'react'
+import type {ComponentProps, ComponentType, Ref} from 'react'
 import {useMemo, useState} from 'react'
 import React, {forwardRef, useEffect, useLayoutEffect, useRef} from 'react'
+import type {ThreeElements} from '@react-three/fiber'
 import {allRegisteredObjects, editorStore} from './store'
 import {mergeRefs} from 'react-merge-refs'
 import useInvalidate from './useInvalidate'
@@ -13,11 +14,11 @@ import type {ISheetObject} from '@theatre/core'
 import {notify} from '@theatre/core'
 import {useCurrentRafDriver} from './RafDriverProvider'
 
-const createEditable = <Keys extends keyof JSX.IntrinsicElements>(
+const createEditable = <Keys extends keyof ThreeElements>(
   config: EditableFactoryConfig,
 ) => {
   const editable = <
-    T extends ComponentType<any> | keyof JSX.IntrinsicElements | 'primitive',
+    T extends ComponentType<any> | keyof ThreeElements | 'primitive',
     U extends Keys,
   >(
     Component: T,
@@ -32,8 +33,11 @@ const createEditable = <Keys extends keyof JSX.IntrinsicElements>(
         ? {
             editableType: U
           }
-        : {}) &
-      RefAttributes<JSX.IntrinsicElements[U]>
+        : {})
+    // NB: the public `ref` prop is declared on the outer cast below
+    // (`React.ForwardRefExoticComponent<... & {ref?: Ref<unknown>}>`). Keeping
+    // `RefAttributes` here too breaks React 19's `forwardRef` render-fn
+    // constraint (`Omit<Props,'ref'>` is no longer assignable to `Props`).
 
     if (Component !== 'primitive' && !type) {
       throw new Error(
@@ -53,7 +57,11 @@ const createEditable = <Keys extends keyof JSX.IntrinsicElements>(
           additionalProps,
           objRef,
           ...props
-        }: Props,
+        }: // The manufactured `Props` (with its conditional 'primitive' branch)
+        // doesn't satisfy React 19's `ForwardRefRenderFunction<unknown,
+        // PropsWithoutRef<Props>>` constraint; the public prop types are
+        // declared on the outer cast below, so type the render param loosely.
+        $IntentionalAny,
         ref,
       ) => {
         //region Runtime type checks
@@ -72,7 +80,7 @@ const createEditable = <Keys extends keyof JSX.IntrinsicElements>(
 
         const actualType = type ?? editableType
 
-        const objectRef = useRef<JSX.IntrinsicElements[U]>()
+        const objectRef = useRef<ThreeElements[U]>(undefined as $IntentionalAny)
 
         const sheet = useCurrentSheet()!
         const rafDriver = useCurrentRafDriver()
@@ -253,7 +261,7 @@ Then you can use it in your JSX like any other editable component. Note the make
     primitive: editable('primitive', null),
   } as unknown as {
     [Property in Keys]: React.ForwardRefExoticComponent<
-      Omit<JSX.IntrinsicElements[Property], 'visible'> & {
+      Omit<ThreeElements[Property], 'visible'> & {
         theatreKey: string
         visible?: boolean | 'editor'
         additionalProps?: $FixMe
@@ -270,7 +278,7 @@ Then you can use it in your JSX like any other editable component. Note the make
         visible?: boolean | 'editor'
         additionalProps?: $FixMe
         objRef?: $FixMe
-        editableType: keyof JSX.IntrinsicElements
+        editableType: keyof ThreeElements
         // not exactly sure how to get the type of the threejs object itself
         ref?: Ref<unknown>
       } & {

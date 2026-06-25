@@ -32,7 +32,7 @@ export type ISingleKeyframeEditorProps = {
   selection: undefined | DopeSheetSelection
 }
 
-const SingleKeyframeEditor: React.VFC<ISingleKeyframeEditorProps> = React.memo(
+const SingleKeyframeEditor: React.FC<ISingleKeyframeEditorProps> = React.memo(
   (props) => {
     const {
       index,

@@ -174,7 +174,7 @@ export default function useDrag(
     onClick: OnClickCallback
   }>({onDrag: noop, onDragEnd: noop, onClick: noop})
 
-  const capturedPointerRef = useRef<undefined | CapturedPointer>()
+  const capturedPointerRef = useRef<undefined | CapturedPointer>(undefined)
   // needed to have a state on the react lifecycle which can be updated
   // via a ref (e.g. via the below layout effect).
   const [isDraggingRef, isDragging] = useRefAndState(false)

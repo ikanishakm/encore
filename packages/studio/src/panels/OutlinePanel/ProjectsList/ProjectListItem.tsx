@@ -11,13 +11,13 @@ import {useCollapseStateInOutlinePanel} from '@theatre/studio/panels/OutlinePane
 import useChordial from '@theatre/studio/uiComponents/chordial/useChodrial'
 
 const ConflictNotice = styled.div`
-  color: #ff6363;
+  color: var(--tt-fg);
   margin-left: 11px;
-  background: #4c282d;
+  background: var(--tt-danger);
   padding: 2px 8px;
-  border-radius: 2px;
+  border-radius: var(--tt-radius-sm);
   font-size: 10px;
-  box-shadow: 0 2px 8px -4px black;
+  box-shadow: var(--tt-shadow);
 `
 
 const ProjectListItem: React.FC<{

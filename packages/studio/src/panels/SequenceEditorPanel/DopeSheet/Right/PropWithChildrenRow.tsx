@@ -30,7 +30,7 @@ export const decideRowByPropType = (
     />
   )
 
-const RightPropWithChildrenRow: React.VFC<{
+const RightPropWithChildrenRow: React.FC<{
   viewModel: SequenceEditorTree_PropWithChildren
   layoutP: Pointer<SequenceEditorPanelLayout>
 }> = ({viewModel, layoutP}) => {

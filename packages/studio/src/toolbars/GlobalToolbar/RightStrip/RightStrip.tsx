@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import AuthState from './AuthState/AuthState'
+import ThemeToggle from './ThemeToggle'
 
 const Container = styled.div`
   margin-right: 12px;
@@ -14,6 +15,7 @@ const Container = styled.div`
 const RightStrip: React.FC<{}> = (props) => {
   return (
     <Container>
+      <ThemeToggle />
       <AuthState />
     </Container>
   )

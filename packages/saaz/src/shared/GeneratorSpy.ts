@@ -23,13 +23,11 @@ export function createGeneratorsSpy<Generators extends ValidGenerators>(
 
       const spyFn = (...args: SerializableValue[]) => {
         const key = stableValueHash([fnName, args])
-        if (!calls[key]) {
-          calls[key] = 0
-        } else {
-          calls[key]!++
-        }
-
-        const callIndex = calls[key]!
+        // Monotonic per-(fnName,args) call counter: 0 on first call, then 1, 2…
+        // (the previous `if (!calls[key])` test was stuck at 0 because 0 is
+        // falsy, so every same-args call collided on recording slot 0).
+        const callIndex = calls[key] ?? 0
+        calls[key] = callIndex + 1
 
         if (
           playbackOnly &&

@@ -2,7 +2,6 @@ import type {ISequencePositionFormatter} from '@theatre/core/sequences/Sequence'
 import type {SequenceEditorPanelLayout} from '@theatre/studio/panels/SequenceEditorPanel/layout/layout'
 import type {Pointer} from '@theatre/dataverse'
 import {prism, val} from '@theatre/dataverse'
-import {darken} from 'polished'
 import React, {useLayoutEffect, useRef, useState} from 'react'
 import styled from 'styled-components'
 import createGrid from './createGrid'
@@ -17,10 +16,10 @@ const Container = styled.div`
 `
 
 export const stampsGridTheme = {
-  fullUnitStampColor: `#6a6a6a`,
+  fullUnitStampColor: `var(--tt-fg-muted)`,
   stampFontSize: '10px',
   get subUnitStampColor(): string {
-    return darken(0.2, stampsGridTheme.fullUnitStampColor)
+    return `var(--tt-fg-muted)`
   },
 }
 

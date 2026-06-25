@@ -327,11 +327,20 @@ export const studioAuthRouter = t.createRouter({
         return {canEdit: false, reason: 'AccessTokenInvalid'}
       }
       const {userId} = payload
+      // The user may edit a workspace if they are an accepted member of its
+      // team, or hold an accepted READ_WRITE guest grant for it. (Workspace has
+      // no `userId` column — access is modeled via Team/TeamMember/GuestAccess.)
       const proj = await prisma.workspace.findFirst({
         where: {
-          // TODO check if user has access to project
-          // userId,
           id: opts.input.projectId,
+          OR: [
+            {team: {members: {some: {userId, accepted: true}}}},
+            {
+              guests: {
+                some: {userId, accepted: true, accessLevel: 'READ_WRITE'},
+              },
+            },
+          ],
         },
       })
       if (proj) {

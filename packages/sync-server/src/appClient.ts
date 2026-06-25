@@ -1,4 +1,5 @@
 import type {AppRouter} from '@theatre/app/src/server/api/root'
+import type {StudioTRPCRouter} from '@theatre/app/src/server/studio-api/root'
 import {createTRPCProxyClient, httpBatchLink} from '@trpc/client'
 import superjson from 'superjson'
 import {env} from './env'
@@ -14,6 +15,17 @@ const appClient = createTRPCProxyClient<AppRouter>({
   links: [
     httpBatchLink({
       url: appHost + '/api/trpc',
+    }),
+  ],
+  transformer: superjson,
+})
+
+// The studio-facing router (which exposes `studioAuth.canIEditProject`) is
+// served from a separate endpoint than the main app router.
+export const studioApiClient = createTRPCProxyClient<StudioTRPCRouter>({
+  links: [
+    httpBatchLink({
+      url: appHost + '/api/studio-trpc',
     }),
   ],
   transformer: superjson,

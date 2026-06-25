@@ -15,15 +15,15 @@ const Title = styled.div`
 `
 
 const IconContainer = styled.div`
-  background: #59595938;
-  border-radius: 4px;
-  border: 0.5px solid #ffffff1a;
-  color: white;
+  background: var(--tt-active);
+  border-radius: var(--tt-radius-sm);
+  border: 1px solid var(--tt-border);
+  color: var(--tt-fg);
   padding: 4px;
   font-size: 10px;
   /* margin: 0; */
   margin-left: 12px;
-  box-shadow: black 0px 2px 8px -4px;
+  box-shadow: var(--tt-shadow);
   flex-wrap: nowrap;
 `
 

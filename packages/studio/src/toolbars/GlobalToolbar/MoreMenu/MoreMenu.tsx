@@ -7,26 +7,25 @@ import {env} from '@theatre/studio/env'
 
 const Container = styled.div`
   width: 138px;
-  border-radius: 2px;
-  background-color: rgba(42, 45, 50, 0.9);
+  border-radius: var(--tt-radius);
+  background-color: var(--tt-elevated);
+  border: 1px solid var(--tt-border);
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  box-shadow:
-    0px 1px 1px rgba(0, 0, 0, 0.25),
-    0px 2px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--tt-shadow);
   backdrop-filter: blur(14px);
   pointer-events: auto;
   // makes the edges of the item highlights match the rounded corners
   overflow: hidden;
 
   @supports not (backdrop-filter: blur()) {
-    background-color: rgba(42, 45, 50, 0.98);
+    background-color: var(--tt-elevated);
   }
 
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--tt-fg);
 
   & a {
     // Fix colors of links to not be default
@@ -54,18 +53,18 @@ const Link = styled(Item)`
     display: block;
     content: ' ';
     inset: 3px;
-    border-radius: 3px;
-    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--tt-radius-sm);
+    background: var(--tt-hover);
     opacity: 0;
   }
 
   &.secondary {
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--tt-fg-muted);
   }
 
   &:hover {
     /* background-color: #398995; */
-    color: white !important;
+    color: var(--tt-fg) !important;
     &:before {
       opacity: 1;
     }
@@ -81,7 +80,7 @@ const VersionContainer = styled(Item)`
   justify-content: flex-start;
   align-items: stretch;
   gap: 8px;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--tt-fg-muted);
 `
 
 const VersionLabel = styled.div`
@@ -101,14 +100,14 @@ const VersionValue = styled.div`
 const Divider = styled.div`
   height: 1px;
   margin: 0 2px;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--tt-border);
 `
 
 const UpdateDot = styled.div`
   position: absolute;
   width: 8px;
   height: 8px;
-  background: #40aaa4;
+  background: var(--tt-primary);
   right: 14px;
   top: 12px;
   border-radius: 50%;

@@ -6,7 +6,7 @@ import {useVal} from '@theatre/react'
 import {outlineSelection} from '@theatre/studio/selectors'
 import useChordial from '@theatre/studio/uiComponents/chordial/useChodrial'
 
-export const ObjectItem: React.VFC<{
+export const ObjectItem: React.FC<{
   sheetObject: SheetObject
   depth: number
   overrideLabel?: string

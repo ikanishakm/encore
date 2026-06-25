@@ -6,8 +6,8 @@ export function getDetailRowHighlightBackground({
   isHighlighted: PropHighlighted
 }): string {
   return isHighlighted === 'self'
-    ? '#1857a4'
+    ? 'var(--tt-selected)'
     : isHighlighted === 'descendent'
-      ? '#0a2f5c'
+      ? 'var(--tt-hover)'
       : 'initial'
 }

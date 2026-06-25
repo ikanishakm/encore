@@ -128,10 +128,6 @@ export class InfiniteGridHelper extends Mesh {
               if (fragColor.a <= 0.0) discard;
           }
       `,
-
-      extensions: {
-        derivatives: true,
-      },
     })
 
     super(geometry, material)

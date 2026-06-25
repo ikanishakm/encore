@@ -58,9 +58,9 @@ type IDotThemeValues = {
   isSelected: AggregateKeyframePositionIsSelected | undefined
   flag: PresenceFlag | undefined
 }
-const SELECTED_COLOR = '#F2C95C'
-const DEFAULT_PRIMARY_COLOR = '#40AAA4'
-const DEFAULT_SECONDARY_COLOR = '#45747C'
+const SELECTED_COLOR = 'var(--tt-warning)'
+const DEFAULT_PRIMARY_COLOR = 'var(--tt-primary)'
+const DEFAULT_SECONDARY_COLOR = 'var(--tt-fg-muted)'
 const selectionColorAll = (theme: IDotThemeValues) =>
   theme.isSelected === AggregateKeyframePositionIsSelected.AllSelected
     ? SELECTED_COLOR
@@ -89,8 +89,11 @@ const AggregateDotAllHereSvg = (theme: IDotThemeValues) => (
       width="5"
       height="5"
       transform="rotate(-45 4.46443 10.0078)"
-      fill="#212327" // background knockout fill
-      stroke={selectionColorSome(theme)}
+      style={{
+        // background knockout fill
+        fill: 'var(--tt-panel)',
+        stroke: selectionColorSome(theme),
+      }}
     />
     <rect
       x="3.75732"
@@ -98,8 +101,11 @@ const AggregateDotAllHereSvg = (theme: IDotThemeValues) => (
       width="6"
       height="6"
       transform="rotate(-45 3.75732 6.01953)"
-      fill={selectionColorAll(theme)}
-      stroke={theme.flag === PresenceFlag.Primary ? 'white' : undefined}
+      style={{
+        fill: selectionColorAll(theme),
+        stroke:
+          theme.flag === PresenceFlag.Primary ? 'var(--tt-ring)' : undefined,
+      }}
       strokeWidth={theme.flag === PresenceFlag.Primary ? '2px' : undefined}
     />
   </svg>
@@ -119,10 +125,13 @@ const AggregateDotSomeHereSvg = (theme: IDotThemeValues) => (
       width="5"
       height="5"
       transform="rotate(-45 4.46443 8)"
-      fill="#23262B"
-      stroke={
-        theme.flag === PresenceFlag.Primary ? 'white' : selectionColorAll(theme)
-      }
+      style={{
+        fill: 'var(--tt-panel)',
+        stroke:
+          theme.flag === PresenceFlag.Primary
+            ? 'var(--tt-ring)'
+            : selectionColorAll(theme),
+      }}
       strokeWidth={theme.flag === PresenceFlag.Primary ? '2px' : undefined}
     />
   </svg>

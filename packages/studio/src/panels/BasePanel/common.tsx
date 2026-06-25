@@ -50,9 +50,9 @@ export const TitleBar = styled.div`
   align-items: center;
   padding: 0 10px;
   position: relative;
-  color: #adadadb3;
-  border-bottom: 1px solid rgb(0 0 0 / 13%);
-  background-color: #25272b;
+  color: var(--tt-fg-2);
+  border-bottom: 1px solid var(--tt-border);
+  background-color: var(--tt-panel);
   font-size: 10px;
   font-weight: 500;
   overflow: hidden;

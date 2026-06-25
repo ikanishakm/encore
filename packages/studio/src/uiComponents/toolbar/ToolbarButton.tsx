@@ -14,20 +14,24 @@ export const Container = styled.button<{disabled?: boolean; primary?: boolean}>`
   padding: 0 8px;
 
   color: ${({disabled, primary}) =>
-    disabled === true ? '#919191' : primary === true ? 'white' : '#a8a8a9'};
+    disabled === true
+      ? 'var(--tt-fg-muted)'
+      : primary === true
+        ? 'var(--tt-primary-fg)'
+        : 'var(--tt-fg-2)'};
 
   background: ${({disabled, primary}) =>
     disabled === true
-      ? 'rgba(64, 67, 71, 0.8)'
+      ? 'var(--tt-elevated)'
       : primary === true
-        ? 'rgb(41 110 120 / 60%)'
-        : 'rgba(40, 43, 47, 0.8)'};
+        ? 'var(--tt-primary)'
+        : 'var(--tt-elevated)'};
 
   backdrop-filter: blur(14px);
   border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 3px;
-  box-shadow: 0px 4px 4px -1px rgba(0, 0, 0, 0.48);
+  border-bottom: 1px solid var(--tt-border);
+  border-radius: var(--tt-radius-sm);
+  box-shadow: var(--tt-shadow);
 
   svg {
     display: block;
@@ -36,14 +40,14 @@ export const Container = styled.button<{disabled?: boolean; primary?: boolean}>`
   &:hover {
     background: ${({disabled, primary}) =>
       disabled === true
-        ? 'rgba(64, 67, 71, 0.8)'
+        ? 'var(--tt-elevated)'
         : primary === true
-          ? 'rgba(50, 155, 169, 0.80)'
-          : 'rgba(59, 63, 69, 0.8)'};
+          ? 'var(--tt-primary-hover)'
+          : 'var(--tt-panel-2)'};
   }
 
   &:active {
-    background: rgba(82, 88, 96, 0.8);
+    background: var(--tt-active);
   }
 `
 

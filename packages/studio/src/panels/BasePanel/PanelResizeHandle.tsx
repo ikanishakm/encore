@@ -22,7 +22,7 @@ const Base = styled.div`
   }
 
   opacity: 0;
-  background-color: #478698;
+  background-color: var(--tt-primary);
 
   &.isHighlighted {
     opacity: 0.7;

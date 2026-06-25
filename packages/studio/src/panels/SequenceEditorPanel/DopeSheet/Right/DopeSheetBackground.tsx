@@ -1,9 +1,7 @@
-import {theme} from '@theatre/studio/css'
 import type {SequenceEditorPanelLayout} from '@theatre/studio/panels/SequenceEditorPanel/layout/layout'
 import {zIndexes} from '@theatre/studio/panels/SequenceEditorPanel/SequenceEditorPanel'
 import {useVal} from '@theatre/react'
 import type {Pointer} from '@theatre/dataverse'
-import {darken, transparentize} from 'polished'
 import React from 'react'
 import styled from 'styled-components'
 import FrameGrid from '@theatre/studio/panels/SequenceEditorPanel/FrameGrid/FrameGrid'
@@ -15,7 +13,7 @@ const Container = styled.div`
   bottom: 0;
   z-index: ${() => zIndexes.rightBackground};
   overflow: hidden;
-  background: ${transparentize(0.01, darken(1 * 0.03, theme.panel.bg))};
+  background: var(--tt-bg);
   pointer-events: none;
 `
 

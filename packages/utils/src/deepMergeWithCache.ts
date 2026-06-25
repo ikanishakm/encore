@@ -70,7 +70,13 @@ export default function deepMergeWithCache<T extends {}>(
 
     // @ts-ignore @todo
     merged[key] =
-      typeof valueInOverride === 'object' && typeof valueInBase === 'object'
+      // Require both sides to be non-null objects before recursing: `typeof
+      // null === 'object'`, so without the truthiness guard a null opposite a
+      // plain object would recurse into null and throw.
+      valueInOverride &&
+      valueInBase &&
+      typeof valueInOverride === 'object' &&
+      typeof valueInBase === 'object'
         ? deepMergeWithCache(valueInBase as {}, valueInOverride as {}, cache)
         : valueInOverride === undefined
           ? valueInBase

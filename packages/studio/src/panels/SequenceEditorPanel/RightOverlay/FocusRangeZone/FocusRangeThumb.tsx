@@ -82,7 +82,7 @@ const TheDiv = styled.div<{enabled: boolean; type: ThumbType}>`
 
   #pointer-root.draggingPositionInSequenceEditor &:hover {
     --bg: ${focusRangeStripTheme.dragging.backgroundColor};
-    stroke: #40aaa4;
+    stroke: var(--tt-primary);
   }
 
   background-color: var(--bg);

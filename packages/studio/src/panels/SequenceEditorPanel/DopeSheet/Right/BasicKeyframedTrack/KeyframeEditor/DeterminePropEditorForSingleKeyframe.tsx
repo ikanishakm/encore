@@ -32,7 +32,7 @@ const SingleKeyframePropLabel = styled.div`
 
   width: 40%;
 
-  color: #919191;
+  color: var(--tt-fg-muted);
 
   overflow: hidden;
 `
@@ -118,7 +118,7 @@ function PrimitivePropEditor(
   } else {
     const PropEditor = simplePropEditorByPropType[
       p.propConfig.type
-    ] as React.VFC<ISimplePropEditorReactProps<PropTypeConfig_AllSimples>>
+    ] as React.FC<ISimplePropEditorReactProps<PropTypeConfig_AllSimples>>
     return (
       <SingleKeyframePropEditorContainer>
         <SingleKeyframePropLabel>

@@ -45,7 +45,7 @@ export const Pointer = ({
   color,
   left,
   top = 0.5,
-}: Props): JSX.Element => {
+}: Props): React.JSX.Element => {
   const style = {
     top: `${top * 100}%`,
     left: `${left * 100}%`,

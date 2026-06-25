@@ -61,7 +61,7 @@ const MarkerVisualDot = React.memo(() => (
       >
         <path
           d="M12 5H0V7H2.71973L5.96237 10.2426L9.20501 7H12V5Z"
-          fill="#40AAA4"
+          style={{fill: 'var(--tt-primary)'}}
         />
       </svg>
     }
@@ -103,7 +103,7 @@ type IMarkerDotProps = {
   markerId: SequenceMarkerId
 }
 
-const MarkerDot: React.VFC<IMarkerDotProps> = ({layoutP, markerId}) => {
+const MarkerDot: React.FC<IMarkerDotProps> = ({layoutP, markerId}) => {
   const sheetAddress = useVal(layoutP.sheet.address)
   const marker = useVal(
     getStudio().atomP.historic.projects.stateByProjectId[sheetAddress.projectId]
@@ -149,7 +149,7 @@ type IMarkerDotVisibleProps = {
   marker: StudioHistoricStateSequenceEditorMarker
 }
 
-const MarkerDotVisible: React.VFC<IMarkerDotVisibleProps> = ({
+const MarkerDotVisible: React.FC<IMarkerDotVisibleProps> = ({
   layoutP,
   marker,
 }) => {

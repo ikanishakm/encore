@@ -18,7 +18,7 @@ export type IDetailSimplePropEditorProps<
   pointerToProp: Pointer<TPropTypeConfig['valueType']>
   obj: SheetObject
   visualIndentation: number
-  SimpleEditorComponent: React.VFC<ISimplePropEditorReactProps<TPropTypeConfig>>
+  SimpleEditorComponent: React.FC<ISimplePropEditorReactProps<TPropTypeConfig>>
 }
 
 /**

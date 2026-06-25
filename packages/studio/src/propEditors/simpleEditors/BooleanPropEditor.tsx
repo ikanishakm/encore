@@ -8,7 +8,7 @@ const Input = styled(BasicCheckbox)`
   margin-left: 6px;
 
   :focus {
-    outline: 1px solid #555;
+    outline: 1px solid var(--tt-ring);
   }
 `
 

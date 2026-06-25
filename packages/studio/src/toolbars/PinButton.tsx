@@ -4,11 +4,10 @@ import React, {forwardRef, useState} from 'react'
 import ToolbarIconButton from '@theatre/studio/uiComponents/toolbar/ToolbarIconButton'
 
 const Container = styled(ToolbarIconButton)<{pinned?: boolean}>`
-  color: ${({pinned}) => (pinned ? 'rgba(255, 255, 255, 0.8)' : '#A8A8A9')};
+  color: ${({pinned}) => (pinned ? 'var(--tt-fg)' : 'var(--tt-fg-muted)')};
 
   border-bottom: 1px solid
-    ${({pinned}) =>
-      pinned ? 'rgba(255, 255, 255, 0.7)' : 'rgba(255, 255, 255, 0.08)'};
+    ${({pinned}) => (pinned ? 'var(--tt-border-strong)' : 'var(--tt-border)')};
 `
 
 interface PinButtonProps extends ComponentPropsWithRef<'button'> {

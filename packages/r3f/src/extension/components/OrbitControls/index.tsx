@@ -1,16 +1,23 @@
-import type {EventManager, ReactThreeFiber} from '@react-three/fiber'
+import type {
+  EventManager,
+  ReactThreeFiber,
+  ThreeElement,
+} from '@react-three/fiber'
 import {useFrame, useThree} from '@react-three/fiber'
 import * as React from 'react'
-import type {Camera, Event} from 'three'
+import type {Camera, Event, OrthographicCamera, PerspectiveCamera} from 'three'
 import {OrbitControlsImpl} from './OrbitControlsImpl'
 
+// R3F v9 removed `ReactThreeFiber.Overwrite`; inline the same semantics.
+type Overwrite<P, O> = Omit<P, keyof O> & O
+
 export type OrbitControlsChangeEvent = Event & {
-  target: EventTarget & {object: Camera}
+  target: OrbitControlsImpl
 }
 
 export type OrbitControlsProps = Omit<
-  ReactThreeFiber.Overwrite<
-    ReactThreeFiber.Object3DNode<OrbitControlsImpl, typeof OrbitControlsImpl>,
+  Overwrite<
+    ThreeElement<typeof OrbitControlsImpl>,
     {
       camera?: Camera
       domElement?: HTMLElement
@@ -24,7 +31,9 @@ export type OrbitControlsProps = Omit<
       keyEvents?: boolean | HTMLElement
     }
   >,
-  'ref'
+  // `args` (constructor args) is required by ThreeElement, but this wrapper
+  // constructs the impl itself; `ref` is forwarded explicitly.
+  'ref' | 'args'
 >
 
 export const OrbitControls = React.forwardRef<
@@ -57,8 +66,8 @@ export const OrbitControls = React.forwardRef<
     const get = useThree((state) => state.get)
     const performance = useThree((state) => state.performance)
     const explCamera = (camera || defaultCamera) as
-      | THREE.OrthographicCamera
-      | THREE.PerspectiveCamera
+      | OrthographicCamera
+      | PerspectiveCamera
     const explDomElement = (domElement ||
       events.connected ||
       gl.domElement) as HTMLElement

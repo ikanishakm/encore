@@ -1,4 +1,3 @@
-import {lighten} from 'polished'
 import {css} from 'styled-components'
 import styled, {createGlobalStyle, StyleSheetManager} from 'styled-components'
 import React, {useLayoutEffect, useState} from 'react'
@@ -25,21 +24,19 @@ export const pointerEventsAutoInNormalMode = css`
 
 export const theme = {
   panel: {
-    bg: `#282b2f`,
+    bg: `var(--tt-panel)`,
     head: {
       title: {
-        color: `#bbb`,
+        color: `var(--tt-fg-2)`,
       },
       punctuation: {
-        color: `#808080`,
+        color: `var(--tt-fg-muted)`,
       },
     },
     body: {
       compoudThing: {
         label: {
-          get color(): string {
-            return lighten(0.6, theme.panel.bg)
-          },
+          color: `var(--tt-fg-2)`,
         },
       },
     },
@@ -47,15 +44,87 @@ export const theme = {
 }
 
 export const panelUtils = {
-  panelBorder: `2px solid #1f1f1f`,
+  panelBorder: `1px solid var(--tt-border)`,
 }
+
+/**
+ * shadcn-inspired design tokens, exposed as CSS custom properties on the
+ * studio's shadow-DOM `:host`. The dark palette is the default; the light
+ * palette is applied when the host element carries `data-theme="light"`
+ * (see {@link applyTheme} / the theme toggle). Because these are pure CSS
+ * variables, switching themes is a zero-rerender, zero-cost attribute flip.
+ */
+export const themeTokens = css`
+  :host {
+    /* surfaces */
+    --tt-bg: #1c1e22;
+    --tt-panel: #25282d;
+    --tt-panel-2: #2c3036;
+    --tt-input: #191b1f;
+    --tt-elevated: #2a2e34;
+    /* text */
+    --tt-fg: #e7e8ea;
+    --tt-fg-2: #b7babf;
+    --tt-fg-muted: #82868d;
+    /* lines */
+    --tt-border: #34383f;
+    --tt-border-strong: #424751;
+    /* accent (Theatre teal) */
+    --tt-primary: #3eaaa4;
+    --tt-primary-hover: #49bdb6;
+    --tt-primary-fg: #06201f;
+    /* semantic */
+    --tt-warning: #f2c95c;
+    --tt-danger: #ef4444;
+    /* overlays */
+    --tt-hover: rgba(255, 255, 255, 0.06);
+    --tt-active: rgba(255, 255, 255, 0.1);
+    --tt-selected: rgba(62, 170, 164, 0.2);
+    --tt-ring: rgba(62, 170, 164, 0.55);
+    /* depth */
+    --tt-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.6),
+      0 2px 6px -2px rgba(0, 0, 0, 0.42);
+    /* radii */
+    --tt-radius: 8px;
+    --tt-radius-sm: 6px;
+    --tt-radius-lg: 12px;
+    /* invert amount for white-on-dark raster assets (e.g. the logo) */
+    --tt-logo-invert: 0;
+  }
+
+  :host([data-theme='light']) {
+    --tt-bg: #f4f4f5;
+    --tt-panel: #ffffff;
+    --tt-panel-2: #f4f4f5;
+    --tt-input: #ffffff;
+    --tt-elevated: #ffffff;
+    --tt-fg: #1b1b1f;
+    --tt-fg-2: #46474d;
+    --tt-fg-muted: #74757c;
+    --tt-border: #e4e4e7;
+    --tt-border-strong: #d2d3d8;
+    --tt-primary: #0d9488;
+    --tt-primary-hover: #0f766e;
+    --tt-primary-fg: #ffffff;
+    --tt-warning: #c2830a;
+    --tt-danger: #dc2626;
+    --tt-hover: rgba(0, 0, 0, 0.045);
+    --tt-active: rgba(0, 0, 0, 0.075);
+    --tt-selected: rgba(13, 148, 136, 0.14);
+    --tt-ring: rgba(13, 148, 136, 0.5);
+    --tt-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.18),
+      0 2px 6px -2px rgba(0, 0, 0, 0.1);
+    --tt-logo-invert: 1;
+  }
+`
 
 const GlobalStyle =
   typeof window !== 'undefined'
     ? createGlobalStyle`
+        ${themeTokens}
         :host {
           all: initial;
-          color: white;
+          color: var(--tt-fg);
           font:
             11px -apple-system,
             BlinkMacSystemFont,
@@ -204,7 +273,7 @@ export const ProvideStyles: React.FC<{
   children: React.ReactNode
 }> = (props) => {
   return (
-    <StyleSheetManager disableVendorPrefixes target={props.target}>
+    <StyleSheetManager target={props.target}>
       <>
         <GlobalStyle />
         {props.children}

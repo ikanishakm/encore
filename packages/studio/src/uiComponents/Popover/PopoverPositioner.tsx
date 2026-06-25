@@ -7,6 +7,7 @@ import useRefAndState from '@theatre/studio/utils/useRefAndState'
 import useOnClickOutside from '@theatre/studio/uiComponents/useOnClickOutside'
 import onPointerOutside from '@theatre/studio/uiComponents/onPointerOutside'
 import noop from '@theatre/utils/noop'
+import type {$IntentionalAny} from '@theatre/core/types/public'
 import {clamp} from 'lodash-es'
 
 const minimumDistanceOfArrowToEdgeOfPopover = 8
@@ -32,7 +33,10 @@ export type PopoverPositionerProps = {
 }
 
 const PopoverPositioner: React.FC<PopoverPositionerProps> = (props) => {
-  const originalElement = props.children()
+  const originalElement = props.children() as React.ReactElement<
+    $IntentionalAny,
+    $IntentionalAny
+  >
   const [ref, container] = useRefAndState<HTMLElement | SVGElement | null>(null)
   const style: Record<string, string> = originalElement.props.style
     ? {...originalElement.props.style}

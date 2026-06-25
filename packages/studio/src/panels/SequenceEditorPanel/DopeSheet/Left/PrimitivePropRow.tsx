@@ -18,7 +18,7 @@ import {graphEditorColors} from '@theatre/sync-server/state/schema'
 
 const theme = {
   label: {
-    color: `#9a9a9a`,
+    color: `var(--tt-fg-muted)`,
   },
 }
 
@@ -51,11 +51,12 @@ const PrimitivePropRowIconContainer = styled.button<{
   margin-left: 12px;
   color: ${(props) =>
     props.isSelected
-      ? graphEditorColors[props.graphEditorColor].iconColor
+      ? graphEditorColors[props.graphEditorColor as keyof GraphEditorColors]
+          .iconColor
       : nextPrevCursorsTheme.offColor};
 
   &:not([disabled]):hover {
-    color: white;
+    color: var(--tt-fg);
   }
 `
 
@@ -80,7 +81,7 @@ const PrimitivePropRowHead_Label = styled.span`
   ${propNameTextCSS};
 
   ${PrimitivePropRowHead}:hover & {
-    color: #ccc;
+    color: var(--tt-fg-2);
   }
 `
 

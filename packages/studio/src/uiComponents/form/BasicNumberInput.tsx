@@ -27,15 +27,15 @@ const Container = styled.div`
     border: 1px solid transparent;
     z-index: -2;
     box-sizing: border-box;
-    border-radius: 1px;
+    border-radius: var(--tt-radius-sm);
   }
 
   &:hover,
   &.dragging,
   &.editingViaKeyboard {
     &:after {
-      background-color: #10101042;
-      border-color: #00000059;
+      background-color: var(--tt-input);
+      border-color: var(--tt-border);
     }
   }
 `
@@ -43,7 +43,7 @@ const Container = styled.div`
 const Input = styled.input`
   background: transparent;
   border: 1px solid transparent;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--tt-fg);
   padding: 1px 6px;
   font: inherit;
   outline: none;
@@ -51,7 +51,7 @@ const Input = styled.input`
   text-align: left;
   width: 100%;
   height: calc(100% - 4px);
-  border-radius: 2px;
+  border-radius: var(--tt-radius-sm);
 
   &:focus {
     cursor: text;
@@ -63,13 +63,13 @@ const FillIndicator = styled.div`
   inset: 3px 2px 4px;
   transform: scale(var(--percentage), 1);
   transform-origin: top left;
-  background-color: #2d5561;
+  background-color: var(--tt-primary);
   z-index: -1;
-  border-radius: 2px;
+  border-radius: var(--tt-radius-sm);
   pointer-events: none;
 
   ${Container}.dragging &, ${Container}.noFocus:hover & {
-    background-color: #338198;
+    background-color: var(--tt-primary-hover);
   }
 `
 

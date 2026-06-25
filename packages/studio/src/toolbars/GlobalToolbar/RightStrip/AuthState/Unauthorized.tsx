@@ -10,9 +10,9 @@ const ThePopover = styled(SimplePopover)`
   padding: 24px 14px;
   font-weight: 500;
   backdrop-filter: blur(8px) contrast(65%) brightness(59%);
-  --popover-bg: rgb(58 59 67);
-  --popover-outer-stroke: rgb(99 100 112);
-  box-shadow: rgb(0 0 0 / 55%) 1px 8px 13px 6px;
+  --popover-bg: var(--tt-elevated);
+  --popover-outer-stroke: var(--tt-border);
+  box-shadow: var(--tt-shadow);
 `
 
 const P1 = styled.p`

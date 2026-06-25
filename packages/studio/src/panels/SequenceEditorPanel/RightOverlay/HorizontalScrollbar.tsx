@@ -13,8 +13,8 @@ import useDrag from '@theatre/studio/uiComponents/useDrag'
 
 const Container = styled.div`
   --threadHeight: 6px;
-  --bg-inactive: #32353b;
-  --bg-active: #5b5c5d;
+  --bg-inactive: var(--tt-border-strong);
+  --bg-active: var(--tt-fg-muted);
   position: absolute;
   height: 0;
   width: 100%;
@@ -99,9 +99,9 @@ const Tooltip = styled.div<{active: boolean}>`
   left: 4px;
   padding: 0 4px;
   transform: translateX(-50%);
-  background: #131d1f;
-  border-radius: 4px;
-  color: #fff;
+  background: var(--tt-elevated);
+  border-radius: var(--tt-radius-sm);
+  color: var(--tt-fg);
   font-size: 10px;
   line-height: 18px;
   text-align: center;

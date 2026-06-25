@@ -51,9 +51,11 @@ type ReactDeriver<Props extends {}> = (props: {
  * which allows you to pass in derivations for any of the properties that
  * previously took only values.
  */
-export function deriver<Props extends {}>(
-  Component: React.ComponentType<Props>,
-): ReactDeriver<Omit<Props, keyof JSX.IntrinsicAttributes>> {
+export function deriver<C extends React.ComponentType<any>>(
+  Component: C,
+): ReactDeriver<
+  Omit<React.ComponentProps<C>, keyof React.JSX.IntrinsicAttributes>
+> {
   const finalComp = React.memo(
     React.forwardRef(function deriverRender(
       props: Record<string, $IntentionalAny>,
@@ -89,7 +91,7 @@ export function deriver<Props extends {}>(
         React.createElement(Component, {
           ...normalProps,
           ...observedPropState,
-        } as Props)
+        } as React.ComponentProps<C>)
       )
     }),
   )

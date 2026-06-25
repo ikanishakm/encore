@@ -24,7 +24,7 @@ const DropdownChevron = React.forwardRef<HTMLDivElement, {}>(
 )
 
 const Container = styled.div`
-  color: #aaaaaa;
+  color: var(--tt-fg-muted);
   transition: all 0.12s;
 
   transform: translateY(calc(2px * var(--chevron-down, 0)));

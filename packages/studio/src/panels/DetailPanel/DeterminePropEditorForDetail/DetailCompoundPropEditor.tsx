@@ -39,7 +39,7 @@ const Container = styled.div`
   --right-width: 60%;
 `
 
-const Header = styled.div<{isHighlighted: PropHighlighted}>`
+const Header = styled.div<{isHighlighted?: PropHighlighted}>`
   height: 30px;
   display: flex;
   align-items: stretch;
@@ -68,7 +68,7 @@ const PropName = deriver(styled.div<{isHighlighted: PropHighlighted}>`
   gap: 4px;
   user-select: none;
   &:hover {
-    color: white;
+    color: var(--tt-fg);
   }
   overflow: hidden;
 
@@ -87,7 +87,7 @@ const CollapseIcon = styled.span<{isCollapsed: boolean; isVector: boolean}>`
     transform 0.05s ease-out,
     color 0.1s ease-out;
   transform: rotateZ(${(props) => (props.isCollapsed ? 0 : 90)}deg);
-  color: #66686a;
+  color: var(--tt-fg-muted);
 
   visibility: ${(props) =>
     // If it's a vector, show the collapse icon only when it's expanded
@@ -103,7 +103,7 @@ const CollapseIcon = styled.span<{isCollapsed: boolean; isVector: boolean}>`
 
   &:hover {
     transform: rotateZ(${(props) => (props.isCollapsed ? 15 : 75)}deg);
-    color: #c0c4c9;
+    color: var(--tt-fg-2);
   }
 `
 

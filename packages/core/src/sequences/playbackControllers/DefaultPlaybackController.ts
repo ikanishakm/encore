@@ -34,7 +34,7 @@ export interface IPlaybackController {
    *
    * @param rangeD - The prism that contains the range that will be used for the playback
    *
-   * @returns  a promise that gets rejected if the playback stopped for whatever reason
+   * @returns  a promise that resolves (with `false`) when the playback stops for whatever reason
    *
    */
   playDynamicRange(
@@ -244,7 +244,14 @@ export default class DefaultPlaybackController implements IPlaybackController {
       } else {
         let newPosition = lastPosition + elapsedSinceLastTickInSeconds
         if (newPosition > range[1]) {
-          newPosition = range[0] + (newPosition - range[1])
+          const iterationLength = range[1] - range[0]
+          // Use modulo rather than a single subtraction so a long frame (tab
+          // throttling, debugger pause) that advances past several iterations
+          // still wraps back inside the loop range.
+          newPosition =
+            iterationLength > 0
+              ? range[0] + ((newPosition - range[0]) % iterationLength)
+              : range[0]
         }
         this.gotoPosition(newPosition)
       }

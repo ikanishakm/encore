@@ -4,24 +4,24 @@ import React from 'react'
 import styled from 'styled-components'
 import PopoverArrow from './PopoverArrow'
 
-export const popoverBackgroundColor = `rgb(51 45 66 / 40%)`
+export const popoverBackgroundColor = `var(--tt-elevated)`
 
 const Container = styled.div`
   position: absolute;
   --popover-bg: ${popoverBackgroundColor};
-  --popover-inner-stroke: #505159;
-  --popover-outer-stroke: rgb(86 100 110 / 46%);
+  --popover-inner-stroke: var(--tt-border);
+  --popover-outer-stroke: var(--tt-border);
 
-  border-radius: 4px;
-  box-shadow: rgb(0 0 0 / 25%) 0px 2px 4px;
+  border-radius: var(--tt-radius);
+  box-shadow: var(--tt-shadow);
   backdrop-filter: blur(8px) saturate(300%) contrast(65%) brightness(55%);
   /* background-color: rgb(45 46 66 / 50%); */
-  border: 0.5px solid var(--popover-outer-stroke);
+  border: 1px solid var(--popover-outer-stroke);
 
   background: var(--popover-bg);
   /* border: 1px solid var(--popover-inner-stroke); */
 
-  color: white;
+  color: var(--tt-fg);
   padding: 1px 2px 1px 10px;
   margin: 0;
   cursor: default;

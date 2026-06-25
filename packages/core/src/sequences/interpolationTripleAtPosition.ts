@@ -181,6 +181,18 @@ const states = {
       }
     }
 
+    // Two keyframes at the same (or inverted) position would make the
+    // local-progression denominator zero below, producing NaN/Infinity that
+    // poisons the interpolation. Collapse a zero-length segment to a hold.
+    if (right.position - left.position <= 0) {
+      return {
+        started: true,
+        validFrom: left.position,
+        validTo: right.position,
+        der: prism(() => ({left: left.value, progression: 0})),
+      }
+    }
+
     const globalProgressionToLocalProgression = (
       globalProgression: number,
     ): number => {

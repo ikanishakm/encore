@@ -35,10 +35,10 @@ export const DOT_SIZE_PX = 6
 const DOT_HOVER_SIZE_PX = DOT_SIZE_PX + 2
 
 const dotTheme = {
-  normalColor: '#40AAA4',
-  selectedColor: '#F2C95C',
-  inlineEditorOpenColor: '#FCF3DC',
-  selectedAndInlineEditorOpenColor: '#CBEBEA',
+  normalColor: 'var(--tt-primary)',
+  selectedColor: 'var(--tt-warning)',
+  inlineEditorOpenColor: 'var(--tt-fg)',
+  selectedAndInlineEditorOpenColor: 'var(--tt-primary-hover)',
 }
 
 const selectBackgroundForDiamond = ({
@@ -71,7 +71,9 @@ const Diamond = styled.div<IDiamond>`
   transform: rotateZ(45deg);
 
   ${(props) =>
-    props.flag === PresenceFlag.Primary ? 'outline: 2px solid white;' : ''};
+    props.flag === PresenceFlag.Primary
+      ? 'outline: 2px solid var(--tt-ring);'
+      : ''};
 
   z-index: 1;
   pointer-events: none;
@@ -84,7 +86,9 @@ const Square = styled.div<IDiamond>`
   background: ${(props) => selectBackgroundForDiamond(props)};
 
   ${(props) =>
-    props.flag === PresenceFlag.Primary ? 'outline: 2px solid white;' : ''};
+    props.flag === PresenceFlag.Primary
+      ? 'outline: 2px solid var(--tt-ring);'
+      : ''};
 
   z-index: 1;
   pointer-events: none;
@@ -111,7 +115,7 @@ const HitZone = styled.div<{isInlineEditorPopoverOpen: boolean}>`
 type ISingleKeyframeDotProps = ISingleKeyframeEditorProps
 
 /** The ◆ you can grab onto in "keyframe editor" (aka "dope sheet" in other programs) */
-const SingleKeyframeDot: React.VFC<ISingleKeyframeDotProps> = (props) => {
+const SingleKeyframeDot: React.FC<ISingleKeyframeDotProps> = (props) => {
   const logger = useLogger('SingleKeyframeDot', props.keyframe.id)
   const presence = usePresence(props.itemKey)
   const [ref, node] = useRefAndState<HTMLDivElement | null>(null)

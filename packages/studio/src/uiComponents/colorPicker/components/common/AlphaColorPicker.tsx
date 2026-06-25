@@ -35,7 +35,7 @@ export const AlphaColorPicker = <T extends AnyColor>({
   permanentlySetValue,
   discardTemporaryValue,
   ...rest
-}: Props<T>): JSX.Element => {
+}: Props<T>): React.JSX.Element => {
   const [tempHsva, updateHsva] = useColorManipulation<T>(
     colorModel,
     color,

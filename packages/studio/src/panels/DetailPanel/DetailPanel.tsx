@@ -29,7 +29,7 @@ const headerHeight = `32px`
 
 const Container = styled.div<{pin: boolean}>`
   ${pointerEventsAutoInNormalMode};
-  background-color: rgba(40, 43, 47, 0.8);
+  background-color: var(--tt-elevated);
   position: fixed;
   right: 8px;
   top: 50px;
@@ -38,11 +38,10 @@ const Container = styled.div<{pin: boolean}>`
   height: fit-content;
   z-index: ${panelZIndexes.propsPanel};
 
-  box-shadow:
-    0 1px 1px rgba(0, 0, 0, 0.25),
-    0 2px 6px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--tt-border);
+  box-shadow: var(--tt-shadow);
   backdrop-filter: blur(14px);
-  border-radius: 2px;
+  border-radius: var(--tt-radius);
 
   display: ${({pin}) => (pin ? 'block' : 'none')};
 
@@ -51,13 +50,13 @@ const Container = styled.div<{pin: boolean}>`
   }
 
   @supports not (backdrop-filter: blur()) {
-    background: rgba(40, 43, 47, 0.95);
+    background: var(--tt-elevated);
   }
 `
 
 const Title = styled.div`
   margin: 0 10px;
-  color: #919191;
+  color: var(--tt-fg-muted);
   font-weight: 500;
   font-size: 10px;
   user-select: none;

@@ -9,7 +9,7 @@ import RightRow from './Row'
 import BasicKeyframedTrack from './BasicKeyframedTrack/BasicKeyframedTrack'
 import {useLogger} from '@theatre/studio/uiComponents/useLogger'
 
-const PrimitivePropRow: React.VFC<{
+const PrimitivePropRow: React.FC<{
   leaf: SequenceEditorTree_PrimitiveProp
   layoutP: Pointer<SequenceEditorPanelLayout>
 }> = ({leaf, layoutP}) => {

@@ -118,7 +118,9 @@ const defaultEditableFactoryConfig = {
   }),
   orthographicCamera: baseCameraConfig,
   points: baseObjectConfig,
-  line: baseObjectConfig,
+  // R3F v9 renamed the `<line>` intrinsic to `<threeLine>` (avoids clashing
+  // with the SVG `<line>` element), so the editable key must follow suit.
+  threeLine: baseObjectConfig,
   lineLoop: baseObjectConfig,
   lineSegments: baseObjectConfig,
   fog: {

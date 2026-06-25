@@ -181,8 +181,18 @@ const SnapshotEditor: React.FC<{paneId: string}> = (props) => {
     'minimized'
 
   return (
-    <root.div style={{overflow: 'hidden'}}>
-      <StyleSheetManager disableVendorPrefixes>
+    // react-shadow declares its defaults via `defaultProps`, which React 19
+    // ignores on function components. We therefore pass them explicitly —
+    // otherwise `mode` is undefined (attachShadow throws) and `styleSheets` is
+    // undefined (`styleSheets.length` throws in its layout effect).
+    <root.div
+      mode="open"
+      ssr={false}
+      delegatesFocus={false}
+      styleSheets={[]}
+      style={{overflow: 'hidden'}}
+    >
+      <StyleSheetManager>
         <>
           <GlobalStyle />
           <Wrapper>

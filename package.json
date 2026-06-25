@@ -67,5 +67,17 @@
   },
   "dependencies": {
     "@actions/core": "^1.10.0"
+  },
+  "//resolutions": "Force a single React 19 across the monorepo (R3F v9 + studio + playground require it). The cloud `app`/`sync-server` Next.js packages otherwise pin React 18 and split the tree.",
+  "resolutions": {
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3"
+  },
+  "dependenciesMeta": {
+    "deasync": {
+      "built": false
+    }
   }
 }

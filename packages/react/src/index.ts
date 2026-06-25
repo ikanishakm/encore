@@ -53,7 +53,7 @@ export function usePrism<T>(
     atom: Atom<typeof fn>
     prism: Prism<T>
     deps: unknown[]
-  }>()
+  }>(undefined as $IntentionalAny)
 
   if (!refs.current) {
     refs.current = {

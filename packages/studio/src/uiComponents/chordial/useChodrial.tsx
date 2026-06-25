@@ -10,7 +10,7 @@ import {mousedownActor} from './mousedownActor'
 export default function useChordial(
   optsFn: ChordialOptsFn,
 ): ChodrialElement['returnValue'] {
-  const refs = useRef<ChodrialElement | undefined>()
+  const refs = useRef<ChodrialElement | undefined>(undefined)
 
   if (!refs.current) {
     refs.current = createChordialElement(optsFn)

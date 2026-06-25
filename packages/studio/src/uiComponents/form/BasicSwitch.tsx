@@ -19,7 +19,7 @@ const Label = styled.label`
   align-items: center;
   justify-content: center;
   flex-grow: 1;
-  color: #a7a7a7;
+  color: var(--tt-fg-2);
   border: 1px solid transparent;
   box-sizing: border-box;
   border-right-width: 0px;
@@ -29,18 +29,18 @@ const Label = styled.label`
   }
 
   ${Container}:hover > & {
-    border-color: #1c2123;
+    border-color: var(--tt-border);
     /* background-color: #373748; */
     /* color: ${darken(0.1, 'white')}; */
   }
 
   &&:hover {
-    background-color: #464654;
+    background-color: var(--tt-panel-2);
   }
 
   &&[data-checked='true'] {
-    color: white;
-    background: #3f3f4c;
+    color: var(--tt-fg);
+    background: var(--tt-selected);
   }
 `
 

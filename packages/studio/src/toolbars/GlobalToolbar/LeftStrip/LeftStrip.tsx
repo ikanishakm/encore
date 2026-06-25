@@ -12,14 +12,15 @@ const Container = styled.div`
   flex-direction: row;
   margin-left: 13px;
 
-  border-radius: 3px;
-  background: rgba(47, 50, 53, 0.88);
-  box-shadow: 0px 4px 4px -1px rgba(0, 0, 0, 0.2);
+  border-radius: var(--tt-radius);
+  background: var(--tt-panel);
+  border: 1px solid var(--tt-border);
+  box-shadow: var(--tt-shadow);
   backdrop-filter: blur(10px);
 `
 
 const Separator = styled.div`
-  background: rgba(0, 0, 0, 0.24);
+  background: var(--tt-border);
   width: 1px;
   height: 100%;
 `

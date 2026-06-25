@@ -21,7 +21,7 @@ import DetailSimplePropEditor from './DeterminePropEditorForDetail/DetailSimpleP
  *
  * @param p - propConfig object for any type of prop.
  */
-const DeterminePropEditorForDetail: React.VFC<
+const DeterminePropEditorForDetail: React.FC<
   IDeterminePropEditorForDetailProps<PropTypeConfig['type']>
 > = ({propConfig, visualIndentation, pointerToProp, obj}) => {
   if (propConfig.type === 'compound') {
@@ -42,7 +42,7 @@ const DeterminePropEditorForDetail: React.VFC<
     return (
       <DetailSimplePropEditor
         SimpleEditorComponent={
-          PropEditor as React.VFC<
+          PropEditor as React.FC<
             ISimplePropEditorReactProps<PropTypeConfig_AllSimples>
           >
         }

@@ -78,7 +78,10 @@ export namespace studioAuth {
     const jwt = await new jose.SignJWT(payload)
       .setProtectedHeader({alg: jwtAlg})
       .setIssuedAt()
-      .setExpirationTime(expirationTime.getTime())
+      // jose treats a numeric expiration as seconds-since-epoch; getTime() is
+      // milliseconds, so it must be divided by 1000 (otherwise exp lands ~year
+      // 57000 and the token effectively never expires).
+      .setExpirationTime(Math.floor(expirationTime.getTime() / 1000))
       .sign(privateKey)
 
     return jwt
@@ -236,7 +239,10 @@ export namespace studioAuth {
       where: {refreshToken: originalIdToken},
       data: {
         succeededByRefreshToken: newRefreshToken,
-        successorLinkExpresAt: new Date(Date.now() + 60).toISOString(),
+        // One-minute grace window (per the schema comment) so a concurrent /
+        // retried refresh can still pick up the new token. Date.now() is in ms,
+        // so this must be 60 * 1000, not 60.
+        successorLinkExpresAt: new Date(Date.now() + 60 * 1000).toISOString(),
       },
     })
 

@@ -18,17 +18,17 @@ const PATTERN_DOT_COUNT = 8
 const PATTERN_GRID_SIZE = (1 - PATTERN_DOT_SIZE) / (PATTERN_DOT_COUNT - 1)
 
 // The curve supports a gradient but currently is solid cyan
-const CURVE_START_OVERSHOOT_COLOR = '#3EAAA4'
-const CURVE_START_COLOR = '#3EAAA4'
-const CURVE_MID_START_COLOR = '#3EAAA4'
-const CURVE_MID_COLOR = '#3EAAA4'
-const CURVE_MID_END_COLOR = '#3EAAA4'
-const CURVE_END_COLOR = '#3EAAA4'
-const CURVE_END_OVERSHOOT_COLOR = '#3EAAA4'
+const CURVE_START_OVERSHOOT_COLOR = 'var(--tt-primary)'
+const CURVE_START_COLOR = 'var(--tt-primary)'
+const CURVE_MID_START_COLOR = 'var(--tt-primary)'
+const CURVE_MID_COLOR = 'var(--tt-primary)'
+const CURVE_MID_END_COLOR = 'var(--tt-primary)'
+const CURVE_END_COLOR = 'var(--tt-primary)'
+const CURVE_END_OVERSHOOT_COLOR = 'var(--tt-primary)'
 
-const CONTROL_COLOR = '#B3B3B3'
-const HANDLE_COLOR = '#3eaaa4'
-const HANDLE_HOVER_COLOR = '#67dfd8'
+const CONTROL_COLOR = 'var(--tt-fg-muted)'
+const HANDLE_COLOR = 'var(--tt-primary)'
+const HANDLE_HOVER_COLOR = 'var(--tt-primary-hover)'
 
 const BACKGROUND_CURVE_COLORS = [
   'goldenrod',
@@ -67,7 +67,7 @@ type ICurveSegmentEditorProps = {
   backgroundConnections: Array<KeyframeConnectionWithAddress>
 }
 
-const CurveSegmentEditor: React.VFC<ICurveSegmentEditorProps> = (props) => {
+const CurveSegmentEditor: React.FC<ICurveSegmentEditorProps> = (props) => {
   const {
     curveConnection: {left, right},
     backgroundConnections,
@@ -126,16 +126,31 @@ const CurveSegmentEditor: React.VFC<ICurveSegmentEditorProps> = (props) => {
       <linearGradient id="myGradient" gradientTransform="rotate(90)">
         <stop
           offset={toExtremumSpace(-1)}
-          stopColor={CURVE_END_OVERSHOOT_COLOR}
+          style={{stopColor: CURVE_END_OVERSHOOT_COLOR}}
         />
-        <stop offset={toExtremumSpace(0)} stopColor={CURVE_END_COLOR} />
-        <stop offset={toExtremumSpace(0.3)} stopColor={CURVE_MID_END_COLOR} />
-        <stop offset={toExtremumSpace(0.5)} stopColor={CURVE_MID_COLOR} />
-        <stop offset={toExtremumSpace(0.7)} stopColor={CURVE_MID_START_COLOR} />
-        <stop offset={toExtremumSpace(1)} stopColor={CURVE_START_COLOR} />
+        <stop
+          offset={toExtremumSpace(0)}
+          style={{stopColor: CURVE_END_COLOR}}
+        />
+        <stop
+          offset={toExtremumSpace(0.3)}
+          style={{stopColor: CURVE_MID_END_COLOR}}
+        />
+        <stop
+          offset={toExtremumSpace(0.5)}
+          style={{stopColor: CURVE_MID_COLOR}}
+        />
+        <stop
+          offset={toExtremumSpace(0.7)}
+          style={{stopColor: CURVE_MID_START_COLOR}}
+        />
+        <stop
+          offset={toExtremumSpace(1)}
+          style={{stopColor: CURVE_START_COLOR}}
+        />
         <stop
           offset={toExtremumSpace(2)}
-          stopColor={CURVE_START_OVERSHOOT_COLOR}
+          style={{stopColor: CURVE_START_OVERSHOOT_COLOR}}
         />
       </linearGradient>
 
@@ -149,7 +164,7 @@ const CurveSegmentEditor: React.VFC<ICurveSegmentEditorProps> = (props) => {
         <rect
           width={PATTERN_DOT_SIZE}
           height={PATTERN_DOT_SIZE}
-          fill={CONTROL_COLOR}
+          style={{fill: CONTROL_COLOR}}
           opacity={0.3}
         ></rect>
       </pattern>
@@ -169,7 +184,7 @@ const CurveSegmentEditor: React.VFC<ICurveSegmentEditorProps> = (props) => {
         <rect
           width={PATTERN_DOT_SIZE}
           height={PATTERN_DOT_SIZE}
-          fill={CONTROL_COLOR}
+          style={{fill: CONTROL_COLOR}}
         ></rect>
       </pattern>
       <rect
@@ -188,7 +203,7 @@ const CurveSegmentEditor: React.VFC<ICurveSegmentEditorProps> = (props) => {
             y1={toExtremumSpace(1)}
             x2={left.handles[2]}
             y2={toExtremumSpace(1 - left.handles[3])}
-            stroke={CONTROL_COLOR}
+            style={{stroke: CONTROL_COLOR}}
             strokeWidth="0.01"
           />
           {/* Line from left end of curve to left handle */}
@@ -197,7 +212,7 @@ const CurveSegmentEditor: React.VFC<ICurveSegmentEditorProps> = (props) => {
             y1={toExtremumSpace(0)}
             x2={right.handles[0]}
             y2={toExtremumSpace(1 - right.handles[1])}
-            stroke={CONTROL_COLOR}
+            style={{stroke: CONTROL_COLOR}}
             strokeWidth="0.01"
           />
           {/* Curve "shadow": the low-opacity filled area between the curve and the diagonal */}
@@ -230,18 +245,16 @@ const CurveSegmentEditor: React.VFC<ICurveSegmentEditorProps> = (props) => {
             cx={0}
             cy={toExtremumSpace(1)}
             r="0.025"
-            stroke={CURVE_START_COLOR}
+            style={{stroke: CURVE_START_COLOR, fill: COLOR_BASE}}
             strokeWidth="0.02"
-            fill={COLOR_BASE}
           />
           {/* Left end of curve */}
           <circle
             cx={1}
             cy={toExtremumSpace(0)}
             r="0.025"
-            stroke={CURVE_END_COLOR}
+            style={{stroke: CURVE_END_COLOR, fill: COLOR_BASE}}
             strokeWidth="0.02"
-            fill={COLOR_BASE}
           />
 
           {/* Right handle and hit zone */}
@@ -249,7 +262,7 @@ const CurveSegmentEditor: React.VFC<ICurveSegmentEditorProps> = (props) => {
             ref={refLeft}
             cx={left.handles[2]}
             cy={toExtremumSpace(1 - left.handles[3])}
-            fill={CURVE_START_COLOR}
+            style={{fill: CURVE_START_COLOR}}
             opacity={0.2}
           />
           <Circle
@@ -261,7 +274,7 @@ const CurveSegmentEditor: React.VFC<ICurveSegmentEditorProps> = (props) => {
             ref={refRight}
             cx={right.handles[0]}
             cy={toExtremumSpace(1 - right.handles[1])}
-            fill={CURVE_END_COLOR}
+            style={{fill: CURVE_END_COLOR}}
             opacity={0.2}
           />
           <Circle
@@ -276,7 +289,7 @@ const CurveSegmentEditor: React.VFC<ICurveSegmentEditorProps> = (props) => {
             y1={toExtremumSpace(1)}
             x2={1}
             y2={toExtremumSpace(1)}
-            stroke={CONTROL_COLOR}
+            style={{stroke: CONTROL_COLOR}}
             strokeWidth="0.01"
           />
           <line
@@ -284,24 +297,22 @@ const CurveSegmentEditor: React.VFC<ICurveSegmentEditorProps> = (props) => {
             y1={toExtremumSpace(1)}
             x2={1}
             y2={0}
-            stroke={CONTROL_COLOR}
+            style={{stroke: CONTROL_COLOR}}
             strokeWidth="0.01"
           />
           <circle
             cx={0}
             cy={1}
             r="0.025"
-            stroke={CURVE_END_COLOR}
+            style={{stroke: CURVE_END_COLOR, fill: COLOR_BASE}}
             strokeWidth="0.02"
-            fill={COLOR_BASE}
           />
           <circle
             cx={1}
             cy={0}
             r="0.025"
-            stroke={CURVE_END_COLOR}
+            style={{stroke: CURVE_END_COLOR, fill: COLOR_BASE}}
             strokeWidth="0.02"
-            fill={COLOR_BASE}
           />
         </>
       )}

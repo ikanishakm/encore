@@ -28,11 +28,11 @@ const Container = styled.div`
 `
 
 const NumberOfConflictsIndicator = styled.div`
-  color: white;
+  color: #fff;
   width: 14px;
   height: 14px;
-  background: #d00;
-  border-radius: 4px;
+  background: var(--tt-danger);
+  border-radius: var(--tt-radius-sm);
   text-align: center;
   line-height: 14px;
   font-weight: 600;
@@ -51,7 +51,8 @@ const SubContainer = styled.div`
 
 const HasUpdatesBadge = styled.div<{type: 'info' | 'warning'}>`
   position: absolute;
-  background: ${({type}) => (type === 'info' ? '#40aaa4' : '#f59e0b')};
+  background: ${({type}) =>
+    type === 'info' ? 'var(--tt-primary)' : 'var(--tt-warning)'};
   width: 6px;
   height: 6px;
   border-radius: 50%;

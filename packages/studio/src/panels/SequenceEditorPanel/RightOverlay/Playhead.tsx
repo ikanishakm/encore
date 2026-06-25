@@ -33,7 +33,7 @@ import usePopover from '@theatre/studio/uiComponents/Popover/usePopover'
 import {generateSequenceMarkerId} from '@theatre/studio/utils/ids'
 
 const Container = styled.div<{isVisible: boolean}>`
-  --thumbColor: #00e0ff;
+  --thumbColor: var(--tt-primary);
   position: absolute;
   top: 0;
   left: 0;
@@ -50,7 +50,7 @@ const Rod = styled.div`
   top: 8px;
   width: 0;
   height: calc(100% - 8px);
-  border-left: 1px solid #27e0fd;
+  border-left: 1px solid var(--tt-primary);
   z-index: 10;
   pointer-events: none;
 
@@ -76,7 +76,7 @@ const Thumb = styled.div`
   left: -2px;
   z-index: 11;
   cursor: ew-resize;
-  --sunblock-color: #1f2b2b;
+  --sunblock-color: var(--tt-border-strong);
 
   ${pointerEventsAutoInNormalMode};
 
@@ -93,7 +93,7 @@ const Thumb = styled.div`
 
   ${Container}.playheadattachedtofocusrange > & {
     top: -8px;
-    --sunblock-color: #005662;
+    --sunblock-color: var(--tt-primary-hover);
     &:before,
     &:after {
       border-bottom-width: 8px;

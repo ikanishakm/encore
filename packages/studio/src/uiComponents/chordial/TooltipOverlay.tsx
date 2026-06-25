@@ -112,7 +112,12 @@ const theIcon = (
   </svg>
 )
 
-const Container = styled(animated.div)`
+// react-spring's AnimatedProps doesn't surface `children`/`ref`, which
+// styled-components v6's stricter typing then drops, so re-add them explicitly.
+const Container = styled(animated.div)<{
+  children?: React.ReactNode
+  ref?: React.Ref<HTMLDivElement>
+}>`
   display: flex;
   align-items: center;
   height: 30px;
@@ -123,14 +128,14 @@ const Container = styled(animated.div)`
   cursor: default;
   ${pointerEventsAutoInNormalMode};
 
-  color: white;
+  color: var(--tt-fg);
   box-sizing: border-box;
 
-  border-radius: 4px;
-  box-shadow: rgb(0 0 0 / 25%) 0px 2px 4px;
+  border-radius: var(--tt-radius);
+  box-shadow: var(--tt-shadow);
   backdrop-filter: blur(8px) saturate(300%) contrast(65%) brightness(55%);
-  background-color: rgb(45 46 66 / 50%);
-  border: 0.5px solid rgb(86 100 110 / 46%);
+  background-color: var(--tt-elevated);
+  border: 1px solid var(--tt-border);
   z-index: 10000;
   padding: 8px 8px;
   font-size: 10px;
@@ -151,14 +156,14 @@ const Title = styled.div`
 `
 
 const IconContainer = styled.div`
-  background: #59595938;
-  border-radius: 4px;
-  border: 0.5px solid #ffffff1a;
-  color: white;
+  background: var(--tt-active);
+  border-radius: var(--tt-radius-sm);
+  border: 1px solid var(--tt-border);
+  color: var(--tt-fg);
   padding: 4px;
   font-size: 10px;
   /* margin: 0; */
   margin-left: 12px;
-  box-shadow: black 0px 2px 8px -4px;
+  box-shadow: var(--tt-shadow);
   flex-wrap: nowrap;
 `

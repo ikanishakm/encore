@@ -22,7 +22,7 @@ const GroupDivider = styled.div`
   position: abolute;
   height: 32px;
   width: 1px;
-  background: #373b40;
+  background: var(--tt-border);
   opacity: 0.4;
 `
 

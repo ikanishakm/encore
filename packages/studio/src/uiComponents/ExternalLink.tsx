@@ -4,14 +4,14 @@ import styled from 'styled-components'
 
 const A = styled.a`
   text-decoration: none;
-  border-bottom: 1px solid #888;
+  border-bottom: 1px solid var(--tt-border);
   position: relative;
   display: inline-block;
   margin-left: 0.4em;
 
   &:hover,
   &:active {
-    border-color: #ccc;
+    border-color: var(--tt-border-strong);
   }
 `
 

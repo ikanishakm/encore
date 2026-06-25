@@ -17,9 +17,9 @@ const AddFile = styled.div`
   inset: -5px;
   // rotate 45deg
   transform: rotate(45deg);
-  --checker-color: #ededed36;
+  --checker-color: var(--tt-hover);
   &:hover {
-    --checker-color: #ededed77;
+    --checker-color: var(--tt-active);
   }
   // checkerboard background with 4px squares
   background-image: linear-gradient(
@@ -46,15 +46,15 @@ const InputLabel = styled.label<{empty: boolean}>`
   font-size: 16px;
 
   overflow: hidden;
-  color: #ccc;
+  color: var(--tt-fg-2);
   &:hover {
-    color: white;
+    color: var(--tt-fg);
   }
 
   border-radius: 99999px;
-  border: 1px solid hwb(220deg 40% 52%);
+  border: 1px solid var(--tt-border);
   &:hover {
-    border-color: hwb(220deg 45% 52%);
+    border-color: var(--tt-border-strong);
   }
 
   ${(props) => (props.empty ? css`` : css``)}
@@ -71,7 +71,7 @@ const DeleteButton = styled.button`
   justify-content: center;
   outline: none;
   background: transparent;
-  color: #a8a8a9;
+  color: var(--tt-fg-muted);
 
   border: none;
   height: 100%;
@@ -85,7 +85,7 @@ const DeleteButton = styled.button`
 
   &:hover {
     opacity: 1;
-    color: white;
+    color: var(--tt-fg);
   }
 `
 

@@ -1,6 +1,5 @@
 import type {VoidFn} from '@theatre/core/types/public'
 import {pointerEventsAutoInNormalMode} from '@theatre/studio/css'
-import {transparentize} from 'polished'
 import React from 'react'
 import styled, {css} from 'styled-components'
 import {PresenceFlag} from '@theatre/studio/uiComponents/usePresence'
@@ -41,7 +40,7 @@ const Container = styled.div`
     content: ' ';
     display: none;
     z-index: -1;
-    background: ${transparentize(0.2, 'black')};
+    background: var(--tt-active);
   }
 
   &:hover {
@@ -77,8 +76,8 @@ const Button = styled.div`
 `
 
 export const nextPrevCursorsTheme = {
-  offColor: '#555',
-  onColor: '#e0c917',
+  offColor: 'var(--tt-fg-muted)',
+  onColor: 'var(--tt-warning)',
 }
 
 const CurButton = styled(Button)<{
@@ -86,12 +85,12 @@ const CurButton = styled(Button)<{
   presence: PresenceFlag | undefined
 }>`
   &:hover {
-    color: #e0c917;
+    color: var(--tt-warning);
   }
 
   color: ${(props) =>
     props.presence === PresenceFlag.Primary
-      ? 'white'
+      ? 'var(--tt-fg)'
       : props.isOn
         ? nextPrevCursorsTheme.onColor
         : nextPrevCursorsTheme.offColor};
@@ -107,7 +106,7 @@ const PrevOrNextButton = styled(Button)<{
 }>`
   color: ${(props) =>
     props.flag === PresenceFlag.Primary
-      ? 'white'
+      ? 'var(--tt-fg)'
       : props.available
         ? nextPrevCursorsTheme.onColor
         : nextPrevCursorsTheme.offColor};
@@ -194,7 +193,7 @@ namespace Icons {
   )
 }
 
-const NextPrevKeyframeCursors: React.VFC<NearbyKeyframesControls> = (props) => {
+const NextPrevKeyframeCursors: React.FC<NearbyKeyframesControls> = (props) => {
   const prevPresence = usePresence(props.prev?.itemKey)
   const curPresence = usePresence(
     props.cur?.type === 'on' ? props.cur.itemKey : undefined,

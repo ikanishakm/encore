@@ -1,4 +1,4 @@
-import type {VFC} from 'react'
+import type {FC} from 'react'
 import {useMemo} from 'react'
 import React, {useEffect, useLayoutEffect, useRef} from 'react'
 import shallow from 'zustand/shallow'
@@ -18,7 +18,9 @@ const Container = styled.div<{minimized: boolean}>`
   cursor: pointer;
   overflow: hidden;
   border-radius: ${({minimized}) => (minimized ? '2px' : '4px')};
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 6px rgba(0, 0, 0, 0.15);
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.25),
+    0 2px 6px rgba(0, 0, 0, 0.15);
 `
 
 const Canvas = styled.canvas<{width: number; height: number}>`
@@ -77,7 +79,7 @@ interface ReferenceWindowProps {
   onToggleMinified: () => void
 }
 
-const ReferenceWindow: VFC<ReferenceWindowProps> = ({
+const ReferenceWindow: FC<ReferenceWindowProps> = ({
   maxHeight,
   maxWidth,
   minimized,

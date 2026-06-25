@@ -434,8 +434,8 @@ namespace utils {
 
 const SelectionRectangleDiv = styled.div`
   position: absolute;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px dashed rgba(255, 255, 255, 0.4);
+  background: var(--tt-selected);
+  border: 1px dashed var(--tt-primary);
   box-sizing: border-box;
 `
 
@@ -446,7 +446,7 @@ const sortBounds = (b: SelectionBounds): SelectionBounds => {
   }
 }
 
-const SelectionRectangle: React.VFC<{
+const SelectionRectangle: React.FC<{
   state: SelectionBounds
   layoutP: Pointer<SequenceEditorPanelLayout>
 }> = ({state, layoutP}) => {

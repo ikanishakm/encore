@@ -5,10 +5,10 @@ const VIEWBOX_PADDING = 0.75
 const SVG_CIRCLE_RADIUS = 0.1
 const VIEWBOX_SIZE = 1 + VIEWBOX_PADDING * 2
 
-const SELECTED_CURVE_COLOR = '#F5F5F5'
-const CURVE_COLOR = '#888888'
-const CONTROL_COLOR = '#4f4f4f'
-const CONTROL_HITZONE_COLOR = 'rgba(255, 255, 255, 0.1)'
+const SELECTED_CURVE_COLOR = 'var(--tt-fg)'
+const CURVE_COLOR = 'var(--tt-fg-muted)'
+const CONTROL_COLOR = 'var(--tt-border-strong)'
+const CONTROL_HITZONE_COLOR = 'var(--tt-active)'
 
 // SVG's y coordinates go from top to bottom, e.g. 1 is vertically lower than 0,
 // but easing points go from bottom to top.
@@ -46,7 +46,7 @@ const SVGCurveSegment: React.FC<IProps> = (props) => {
           y1="1"
           x2={leftControlPoint[0]}
           y2={leftControlPoint[1]}
-          stroke={CONTROL_COLOR}
+          style={{stroke: CONTROL_COLOR}}
           strokeWidth="0.1"
         />
         <line
@@ -54,7 +54,7 @@ const SVGCurveSegment: React.FC<IProps> = (props) => {
           y1="0"
           x2={rightControlPoint[0]}
           y2={rightControlPoint[1]}
-          stroke={CONTROL_COLOR}
+          style={{stroke: CONTROL_COLOR}}
           strokeWidth="0.1"
         />
 
@@ -63,13 +63,13 @@ const SVGCurveSegment: React.FC<IProps> = (props) => {
           cx={leftControlPoint[0]}
           cy={leftControlPoint[1]}
           r={0.1}
-          fill={CONTROL_HITZONE_COLOR}
+          style={{fill: CONTROL_HITZONE_COLOR}}
         />
         <circle
           cx={rightControlPoint[0]}
           cy={rightControlPoint[1]}
           r={0.1}
-          fill={CONTROL_HITZONE_COLOR}
+          style={{fill: CONTROL_HITZONE_COLOR}}
         />
 
         {/* Control point circles */}
@@ -77,24 +77,34 @@ const SVGCurveSegment: React.FC<IProps> = (props) => {
           cx={leftControlPoint[0]}
           cy={leftControlPoint[1]}
           r={SVG_CIRCLE_RADIUS}
-          fill={CONTROL_COLOR}
+          style={{fill: CONTROL_COLOR}}
         />
         <circle
           cx={rightControlPoint[0]}
           cy={rightControlPoint[1]}
           r={SVG_CIRCLE_RADIUS}
-          fill={CONTROL_COLOR}
+          style={{fill: CONTROL_COLOR}}
         />
 
         {/* Bezier curve */}
         <path
-          d={`M0 1 C${leftControlPoint[0]} ${leftControlPoint[1]} ${rightControlPoint[0]} 
+          d={`M0 1 C${leftControlPoint[0]} ${leftControlPoint[1]} ${rightControlPoint[0]}
         ${rightControlPoint[1]} 1 0`}
-          stroke={curveColor}
+          style={{stroke: curveColor}}
           strokeWidth="0.08"
         />
-        <circle cx={0} cy={1} r={SVG_CIRCLE_RADIUS} fill={curveColor} />
-        <circle cx={1} cy={0} r={SVG_CIRCLE_RADIUS} fill={curveColor} />
+        <circle
+          cx={0}
+          cy={1}
+          r={SVG_CIRCLE_RADIUS}
+          style={{fill: curveColor}}
+        />
+        <circle
+          cx={1}
+          cy={0}
+          r={SVG_CIRCLE_RADIUS}
+          style={{fill: curveColor}}
+        />
       </svg>
     )
   }
@@ -113,7 +123,7 @@ const SVGCurveSegment: React.FC<IProps> = (props) => {
         y1="1"
         x2={1}
         y2={1}
-        stroke={curveColor}
+        style={{stroke: curveColor}}
         strokeWidth="0.08"
       />
       <line
@@ -121,11 +131,11 @@ const SVGCurveSegment: React.FC<IProps> = (props) => {
         y1="0"
         x2={1}
         y2={1}
-        stroke={curveColor}
+        style={{stroke: curveColor}}
         strokeWidth="0.08"
       />
-      <circle cx={0} cy={1} r={SVG_CIRCLE_RADIUS} fill={curveColor} />
-      <circle cx={1} cy={0} r={SVG_CIRCLE_RADIUS} fill={curveColor} />
+      <circle cx={0} cy={1} r={SVG_CIRCLE_RADIUS} style={{fill: curveColor}} />
+      <circle cx={1} cy={0} r={SVG_CIRCLE_RADIUS} style={{fill: curveColor}} />
     </svg>
   )
 }

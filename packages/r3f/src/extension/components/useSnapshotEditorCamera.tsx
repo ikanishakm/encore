@@ -69,7 +69,13 @@ export default function useSnapshotEditorCamera(
 
   const node = (
     <>
-      <PerspectiveCamera makeDefault ref={camRef} position={[0, 102, 0]} />
+      <PerspectiveCamera
+        makeDefault
+        // useRefAndState gives us a MutableRefObject<…|undefined>, but @types/react
+        // 19's RefObject.current is `T | null` (invariant), so cast at the boundary.
+        ref={camRef as unknown as React.RefObject<PerspectiveCameraImpl | null>}
+        position={[0, 102, 0]}
+      />
       <OrbitControls
         makeDefault
         ref={orbitControlsRef}

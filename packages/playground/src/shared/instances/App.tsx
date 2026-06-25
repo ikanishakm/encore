@@ -3,6 +3,7 @@ import {Stars} from '@react-three/drei'
 import {getProject} from '@theatre/core'
 import React, {Suspense, useState} from 'react'
 import {Canvas} from '@react-three/fiber'
+import type {ThreeElements} from '@react-three/fiber'
 import {useGLTF, PerspectiveCamera} from '@react-three/drei'
 import sceneGLB from './scene.glb'
 
@@ -14,7 +15,7 @@ function Model({
   url,
   instance,
   ...props
-}: {url: string; instance?: string} & JSX.IntrinsicElements['group']) {
+}: {url: string; instance?: string} & Omit<ThreeElements['group'], 'ref'>) {
   const {nodes} = useGLTF(url) as any
 
   return (

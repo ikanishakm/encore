@@ -28,7 +28,7 @@ const {keyframeUtils} = __private
 const POPOVER_MARGIN_PX = 5
 const EasingPopoverWrapper = styled(BasicPopover)`
   --popover-outer-stroke: transparent;
-  --popover-inner-stroke: rgba(26, 28, 30, 0.97);
+  --popover-inner-stroke: var(--tt-border);
 `
 export const AggregateCurveEditorPopover: React.FC<
   IAggregateKeyframeEditorProps & {closePopover: (reason: string) => void}
@@ -50,7 +50,7 @@ export const AggregateCurveEditorPopover: React.FC<
   )
 })
 
-export const AggregateKeyframeConnector: React.VFC<
+export const AggregateKeyframeConnector: React.FC<
   IAggregateKeyframeConnectorProps
 > = (props) => {
   const [nodeRef, node] = useRefAndState<HTMLDivElement | null>(null)

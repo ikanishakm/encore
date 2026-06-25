@@ -21,7 +21,7 @@ export const simplePropEditorByPropType: ISimplePropEditorByPropType = {
 }
 
 type ISimplePropEditorByPropType = {
-  [K in PropTypeConfig_AllSimples['type']]: React.VFC<
+  [K in PropTypeConfig_AllSimples['type']]: React.FC<
     ISimplePropEditorReactProps<PropConfigForType<K>>
   >
 }

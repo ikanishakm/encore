@@ -63,10 +63,10 @@ const OptionsContainer = styled.div`
 `
 
 const SearchBox = styled.input.attrs({type: 'text'})`
-  background-color: ${COLOR_BASE};
+  background-color: var(--tt-input);
   border: none;
-  border-radius: 2px;
-  color: rgba(255, 255, 255, 0.8);
+  border-radius: var(--tt-radius-sm);
+  color: var(--tt-fg);
   padding: 6px;
   font-size: 12px;
   outline: none;
@@ -79,12 +79,12 @@ const SearchBox = styled.input.attrs({type: 'text'})`
   grid-area: search;
 
   &:hover {
-    background-color: #212121;
+    background-color: var(--tt-panel-2);
   }
 
   &:focus {
-    background-color: rgba(16, 16, 16, 0.26);
-    outline: 1px solid rgba(0, 0, 0, 0.35);
+    background-color: var(--tt-input);
+    outline: 1px solid var(--tt-ring);
   }
 `
 
@@ -96,7 +96,7 @@ const CurveEditorContainer = styled.div`
 const NoResultsFoundContainer = styled.div`
   grid-column: 1 / 4;
   padding: 6px;
-  color: #888888;
+  color: var(--tt-fg-muted);
 `
 /**
  * Tracking for what kinds of events are allowed to change the input's value.
@@ -340,7 +340,7 @@ const CurveEditorPopover: React.FC<ICurveEditorPopoverProps> = (props) => {
         ref={optionsRef.current[preset.label]}
         onMouseOver={() => onEasingOptionMouseOver(preset)}
         onMouseOut={onEasingOptionMouseOut}
-        onClick={select}
+        onClick={() => select()}
         tooltipPlacement={
           (optionsRef.current[preset.label].current?.offsetTop ?? 0) -
             (optionsScrollPosition ?? 0) <

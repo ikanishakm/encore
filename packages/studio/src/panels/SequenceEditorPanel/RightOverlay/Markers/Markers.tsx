@@ -5,7 +5,7 @@ import React from 'react'
 import type {SequenceEditorPanelLayout} from '@theatre/studio/panels/SequenceEditorPanel/layout/layout'
 import MarkerDot from './MarkerDot'
 
-const Markers: React.VFC<{layoutP: Pointer<SequenceEditorPanelLayout>}> = ({
+const Markers: React.FC<{layoutP: Pointer<SequenceEditorPanelLayout>}> = ({
   layoutP,
 }) => {
   const sheetAddress = useVal(layoutP.sheet.address)

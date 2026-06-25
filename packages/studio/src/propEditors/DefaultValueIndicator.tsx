@@ -1,22 +1,20 @@
-import {transparentize} from 'polished'
 import React from 'react'
 import styled from 'styled-components'
 import getStudio from '@theatre/studio/getStudio'
 import type {PathToProp} from '@theatre/utils/pathToProp'
 import type SheetObject from '@theatre/core/sheetObjects/SheetObject'
 import type {PropTypeConfig} from '@theatre/core/types/public'
-import {nextPrevCursorsTheme} from './NextPrevKeyframeCursors'
 import {__private} from '@theatre/core'
 const {isPropConfigComposite, iteratePropType} = __private.propTypeUtils
 
 const theme = {
   defaultState: {
-    color: transparentize(0.95, `#C4C4C4`),
-    hoverColor: transparentize(0.15, nextPrevCursorsTheme.onColor),
+    color: `var(--tt-fg-muted)`,
+    hoverColor: `var(--tt-warning)`,
   },
   withStaticOverride: {
-    color: transparentize(0.85, `#C4C4C4`),
-    hoverColor: transparentize(0.15, nextPrevCursorsTheme.onColor),
+    color: `var(--tt-fg-muted)`,
+    hoverColor: `var(--tt-warning)`,
   },
 }
 

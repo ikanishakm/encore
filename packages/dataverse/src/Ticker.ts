@@ -167,6 +167,11 @@ export default class Ticker {
           this._goDormant()
           return
         }
+      } else {
+        // Real work runs this tick, so reset the dormancy counter: dormancy is
+        // meant to trigger after EMPTY_TICKS_BEFORE_GOING_DORMANT *consecutive*
+        // idle ticks, not cumulative ones.
+        this._numberOfDormantTicks = 0
       }
     }
 

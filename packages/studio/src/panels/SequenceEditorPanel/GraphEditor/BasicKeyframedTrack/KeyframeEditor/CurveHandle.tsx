@@ -50,7 +50,7 @@ type Which = 'left' | 'right'
 
 type IProps = Parameters<typeof KeyframeEditor>[0] & {which: Which}
 
-const CurveHandle: React.VFC<IProps> = (props) => {
+const CurveHandle: React.FC<IProps> = (props) => {
   const [ref, node] = useRefAndState<SVGCircleElement | null>(null)
 
   const {index, trackData} = props

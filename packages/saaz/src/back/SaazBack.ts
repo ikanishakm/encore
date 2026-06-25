@@ -101,7 +101,7 @@ export default class SaazBack implements SaazBackInterface {
     clock: number | null
     peerId: string
   }): BackGetUpdateSinceClockResult {
-    if (!this.ready) {
+    if (!this.isReady) {
       throw new Error('Backend is not ready')
     }
 
@@ -155,7 +155,7 @@ export default class SaazBack implements SaazBackInterface {
     peerId: string
     presence: PeerPresenceState
   }): {ok: true} | {ok: false; error: unknown} {
-    if (!this.ready) {
+    if (!this.isReady) {
       throw new Error('Backend is not ready')
     }
 
@@ -172,7 +172,7 @@ export default class SaazBack implements SaazBackInterface {
   ):
     | ({ok: true} & BackGetUpdateSinceClockResult)
     | {ok: false; error: unknown} {
-    if (!this.ready) {
+    if (!this.isReady) {
       throw new Error('Backend is not ready')
     }
 

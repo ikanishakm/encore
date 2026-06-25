@@ -13,7 +13,7 @@ const ItemContainer = styled.li<{enabled: boolean}>`
   align-items: center;
   font-weight: 400;
   position: relative;
-  color: ${(props) => (props.enabled ? 'white' : '#8f8f8f')};
+  color: ${(props) => (props.enabled ? 'var(--tt-fg)' : 'var(--tt-fg-muted)')};
   cursor: ${(props) => (props.enabled ? 'default' : 'not-allowed')};
 
   &:after {
@@ -23,12 +23,12 @@ const ItemContainer = styled.li<{enabled: boolean}>`
     content: ' ';
     pointer-events: none;
     z-index: -1;
-    border-radius: 4px;
+    border-radius: var(--tt-radius-sm);
   }
 
   &:hover:after {
     background-color: ${(props) =>
-      props.enabled ? 'rgba(255, 255, 255, 0.075)' : 'initial'};
+      props.enabled ? 'var(--tt-hover)' : 'initial'};
   }
 `
 

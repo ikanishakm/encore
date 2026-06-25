@@ -41,10 +41,10 @@ const noop = () => {}
 const RgbaPopover = styled.div`
   position: absolute;
   background-color: ${popoverBackgroundColor};
-  color: white;
+  color: var(--tt-fg);
   margin: 0;
   cursor: default;
-  border-radius: 3px;
+  border-radius: var(--tt-radius-sm);
   z-index: 10000;
   backdrop-filter: blur(8px);
 

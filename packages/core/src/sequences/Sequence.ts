@@ -233,7 +233,7 @@ export default class Sequence implements PointerToPrismProvider {
    *
    * @param rangeD - The prism that contains the range that will be used for the playback
    *
-   * @returns  a promise that gets rejected if the playback stopped for whatever reason
+   * @returns  a promise that resolves (with `false`) when the playback stops for whatever reason
    *
    */
   playDynamicRange(

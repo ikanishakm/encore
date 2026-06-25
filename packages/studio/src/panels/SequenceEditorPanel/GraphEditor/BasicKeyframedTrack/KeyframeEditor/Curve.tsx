@@ -21,7 +21,7 @@ type IProps = Parameters<typeof KeyframeEditor>[0]
 // for keyframe.type === 'hold'
 const pathForHoldType = `M 0 0 L 1 0 L 1 1`
 
-const Curve: React.VFC<IProps> = (props) => {
+const Curve: React.FC<IProps> = (props) => {
   const {index, trackData} = props
   const cur = keyframeUtils.getSortedKeyframesCached(trackData.keyframes)[index]
   const next = keyframeUtils.getSortedKeyframesCached(trackData.keyframes)[

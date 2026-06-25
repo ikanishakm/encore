@@ -24,8 +24,9 @@ const RightRowNodeWrapper = styled.div<{isEven: boolean}>`
     bottom: 0;
     right: 0;
     box-sizing: border-box;
-    border-bottom: 1px solid #252b3869;
-    background: ${(props) => (props.isEven ? 'transparent' : '#6b8fb505')};
+    border-bottom: 1px solid var(--tt-border);
+    background: ${(props) =>
+      props.isEven ? 'transparent' : 'var(--tt-hover)'};
   }
 `
 

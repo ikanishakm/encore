@@ -20,7 +20,7 @@ export const LeftRowContainer = styled.li<{depth: number}>`
 `
 
 export const BaseHeader = styled.div<{isEven: boolean}>`
-  border-bottom: 1px solid #7695b705;
+  border-bottom: 1px solid var(--tt-border);
 `
 
 const LeftRowHeader = styled(BaseHeader)<{
@@ -48,7 +48,7 @@ const LeftRowHead_Label = styled.span`
   flex-wrap: nowrap;
 
   ${LeftRowHeader}:hover & {
-    color: #ccc;
+    color: var(--tt-fg-2);
   }
 `
 
@@ -63,11 +63,11 @@ const LeftRowHead_Icon = styled.span<{isCollapsed: boolean}>`
     transform 0.05s ease-out,
     color 0.1s ease-out;
   transform: rotateZ(${(props) => (props.isCollapsed ? 0 : 90)}deg);
-  color: #66686a;
+  color: var(--tt-fg-muted);
 
   &:hover {
     transform: rotateZ(${(props) => (props.isCollapsed ? 15 : 75)}deg);
-    color: #c0c4c9;
+    color: var(--tt-fg-2);
   }
 `
 

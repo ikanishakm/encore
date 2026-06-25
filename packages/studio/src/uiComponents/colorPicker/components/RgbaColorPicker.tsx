@@ -41,7 +41,7 @@ const colorModel: ColorModel<RgbaColor> = {
 
 export const RgbaColorPicker = (
   props: ColorPickerBaseProps<RgbaColor>,
-): JSX.Element => (
+): React.JSX.Element => (
   <EditingProvider>
     <AlphaColorPicker
       {...props}

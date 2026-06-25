@@ -6,20 +6,20 @@ import type {$IntentionalAny} from '@theatre/core/types/public'
 const Container = styled.div`
   position: absolute;
 
-  color: white;
+  color: var(--tt-fg);
   padding: 0;
   margin: 0;
   cursor: default;
   ${pointerEventsAutoInNormalMode};
 
-  color: white;
+  color: var(--tt-fg);
   box-sizing: border-box;
 
-  border-radius: 4px;
-  box-shadow: rgb(0 0 0 / 25%) 0px 2px 4px;
+  border-radius: var(--tt-radius);
+  box-shadow: var(--tt-shadow);
   backdrop-filter: blur(8px) saturate(300%) contrast(65%) brightness(55%);
-  background-color: rgb(45 46 66 / 50%);
-  border: 0.5px solid rgb(86 100 110 / 46%);
+  background-color: var(--tt-elevated);
+  border: 1px solid var(--tt-border);
   z-index: 10000;
   padding: 8px 8px;
   font-size: 10px;

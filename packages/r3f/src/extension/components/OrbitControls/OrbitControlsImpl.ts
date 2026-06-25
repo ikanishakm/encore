@@ -12,7 +12,9 @@ import {
 } from 'three'
 
 // Almost an exact copy of https://github.com/pmndrs/three-stdlib/blob/4c04593ee49bb0b022025718844f3ce2b21f67bf/src/controls/OrbitControls.ts
-// The only change is that we added `(if (altKey)` at line 866 to only rotate if alt key is pressed
+// Change vs upstream: in onMouseDown's MOUSE.ROTATE case, left-drag orbits
+// directly (no Alt key required) so the snapshot editor uses the standard
+// left-orbit / right-pan / wheel-zoom scheme.
 
 // This set of controls performs orbiting, dollying (zooming), and panning.
 // Unlike TrackballControls, it maintains the "up" direction object.up (+Y by default).
@@ -24,7 +26,11 @@ import {
 const moduloWrapAround = (offset: number, capacity: number) =>
   ((offset % capacity) + capacity) % capacity
 
-class OrbitControls extends EventDispatcher {
+class OrbitControls extends EventDispatcher<{
+  change: {}
+  start: {}
+  end: {}
+}> {
   object: PerspectiveCamera | OrthographicCamera
   domElement: HTMLElement | undefined
   // Set to false to disable this control
@@ -374,9 +380,9 @@ class OrbitControls extends EventDispatcher {
 
     const scope = this
 
-    const changeEvent = {type: 'change'}
-    const startEvent = {type: 'start'}
-    const endEvent = {type: 'end'}
+    const changeEvent = {type: 'change'} as const
+    const startEvent = {type: 'start'} as const
+    const endEvent = {type: 'end'} as const
 
     const STATE = {
       NONE: -1,
@@ -863,7 +869,13 @@ class OrbitControls extends EventDispatcher {
             if (scope.enablePan === false) return
             handleMouseDownPan(event)
             state = STATE.PAN
-          } else if (event.altKey) {
+          } else {
+            // Standard editor controls: left-drag orbits directly (no Alt
+            // required). Right-drag pans (mouseButtons.RIGHT === MOUSE.PAN),
+            // ctrl/meta/shift + left-drag also pans, wheel zooms. A quick
+            // left-click still selects objects (a drag past R3F's threshold
+            // is what starts the orbit), and the transform gizmo disables
+            // these controls while a handle is being dragged.
             if (scope.enableRotate === false) return
             handleMouseDownRotate(event)
             state = STATE.ROTATE

@@ -42,7 +42,7 @@ type IKeyframeEditorProps = {
   propConfig: PropTypeConfig_AllSimples
 }
 
-const KeyframeEditor: React.VFC<IKeyframeEditorProps> = (props) => {
+const KeyframeEditor: React.FC<IKeyframeEditorProps> = (props) => {
   const {index, trackData, isScalar} = props
   const sortedKeyframes = keyframeUtils.getSortedKeyframesCached(
     trackData.keyframes,

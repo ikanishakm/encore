@@ -125,7 +125,7 @@ export const useFrameStampPositionD = () => useContext(context).currentD
 /** Version of {@link useLockFrameStampPosition} which allows you to directly set status of a lock. */
 export const useLockFrameStampPositionRef = () => {
   const {getLock} = useContext(context)
-  const lockRef = useRef<undefined | ReturnType<typeof getLock>>()
+  const lockRef = useRef<undefined | ReturnType<typeof getLock>>(undefined)
 
   useLayoutEffect(() => {
     return () => {
@@ -160,7 +160,7 @@ export const useLockFrameStampPositionRef = () => {
 
 export const useLockFrameStampPosition = (shouldLock: boolean, val: number) => {
   const {getLock} = useContext(context)
-  const lockRef = useRef<undefined | ReturnType<typeof getLock>>()
+  const lockRef = useRef<undefined | ReturnType<typeof getLock>>(undefined)
 
   useLayoutEffect(() => {
     if (!shouldLock) return

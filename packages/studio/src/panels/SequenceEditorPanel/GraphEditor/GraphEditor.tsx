@@ -12,13 +12,12 @@ import {contentWidth} from '@theatre/studio/panels/SequenceEditorPanel/DopeSheet
 import HorizontallyScrollableArea from '@theatre/studio/panels/SequenceEditorPanel/DopeSheet/Right/HorizontallyScrollableArea'
 import PrimitivePropGraph from './PrimitivePropGraph'
 import FrameGrid from '@theatre/studio/panels/SequenceEditorPanel/FrameGrid/FrameGrid'
-import {transparentize} from 'polished'
 
 const Container = styled.div`
   position: absolute;
   right: 0;
   bottom: 0;
-  background: ${transparentize(0.03, '#1a1c1e')};
+  background: var(--tt-panel);
 `
 
 const SVGContainer = styled.svg`
@@ -87,7 +86,6 @@ const GraphEditor: React.FC<{
         style={{
           width: width + 'px',
           height: height + 'px',
-          // @ts-expect-error
           '--unitSpaceToScaledSpaceMultiplier':
             unitSpaceToScaledSpaceMultiplier,
           '--graphEditorVerticalSpace': `${val(

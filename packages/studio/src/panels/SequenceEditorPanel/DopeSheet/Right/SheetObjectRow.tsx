@@ -8,7 +8,7 @@ import RightRow from './Row'
 import {collectAggregateKeyframesInPrism} from './collectAggregateKeyframes'
 import AggregatedKeyframeTrack from './AggregatedKeyframeTrack/AggregatedKeyframeTrack'
 
-const RightSheetObjectRow: React.VFC<{
+const RightSheetObjectRow: React.FC<{
   leaf: SequenceEditorTree_SheetObject
   layoutP: Pointer<SequenceEditorPanelLayout>
 }> = ({leaf, layoutP}) => {

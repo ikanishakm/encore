@@ -15,15 +15,15 @@ const Container = styled.div`
   cursor: default;
   &:hover {
     --chevron-down: 1;
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--tt-hover);
   }
 `
 
 const Team = styled.span`
-  color: rgba(255, 255, 255, 0.38);
+  color: var(--tt-fg-muted);
 `
 const Separator = styled.span`
-  color: rgba(255, 255, 255, 0.38);
+  color: var(--tt-fg-muted);
 `
 const WorkspaceName = styled.span``
 

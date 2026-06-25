@@ -19,20 +19,20 @@ const ActionButton = styled.button`
   align-items: center;
   justify-content: center;
   outline: none;
-  border-radius: 2px;
+  border-radius: var(--tt-radius-sm);
 
-  color: #a8a8a9;
-  background: rgba(255, 255, 255, 0.1);
+  color: var(--tt-fg-2);
+  background: var(--tt-hover);
 
   border: none;
   height: 28px;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--tt-active);
   }
 
   &:active {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--tt-active);
   }
 `
 

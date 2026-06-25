@@ -17,31 +17,31 @@ const Wrapper = styled.div<{isSelected: boolean}>`
 
   transition: background-color 0.15s;
   background-color: ${COLOR_BASE};
-  border-radius: 2px;
+  border-radius: var(--tt-radius-sm);
   cursor: pointer;
   outline: none;
 
   ${({isSelected}) =>
     isSelected &&
     css`
-      background-color: #383d42;
+      background-color: var(--tt-elevated);
     `}
 
   &:hover {
-    background-color: #31353a;
+    background-color: var(--tt-panel-2);
   }
 
   &:focus {
-    background-color: #383d42;
+    background-color: var(--tt-elevated);
   }
 `
 
 const EasingTooltip = styled(BasicPopover)`
   padding: 0.5em;
-  color: white;
+  color: var(--tt-fg);
   max-width: 240px;
   pointer-events: none !important;
-  --popover-bg: black;
+  --popover-bg: var(--tt-elevated);
   --popover-outer-stroke: transparent;
   --popover-inner-stroke: transparent;
   box-shadow: none;

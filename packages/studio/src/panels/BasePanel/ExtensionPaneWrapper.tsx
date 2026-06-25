@@ -42,7 +42,7 @@ const Container = styled(PanelWrapper)`
   display: flex;
   flex-direction: column;
 
-  box-shadow: 0px 5px 12px -4px rgb(0 0 0 / 22%);
+  box-shadow: var(--tt-shadow);
   z-index: ${panelZIndexes.pluginPanes};
 `
 
@@ -64,16 +64,17 @@ const ClosePanelButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 2px;
+  border-radius: var(--tt-radius-sm);
   font-size: 11px;
   height: 10px;
   width: 18px;
-  color: #adadadb3;
+  color: var(--tt-fg-2);
   background: transparent;
   border: none;
   cursor: pointer;
   &:hover {
-    color: white;
+    color: var(--tt-fg);
+    background: var(--tt-hover);
   }
 `
 
@@ -106,13 +107,13 @@ const ErrorContainer = styled.div`
   padding: 12px;
 
   & > pre {
-    border: 1px solid #ff62624f;
-    background-color: rgb(255 0 0 / 5%);
+    border: 1px solid var(--tt-danger);
+    background-color: var(--tt-hover);
     margin: 8px 0;
     padding: 8px;
     font-family: monospace;
     overflow: scroll;
-    color: #ff9896;
+    color: var(--tt-danger);
   }
 `
 

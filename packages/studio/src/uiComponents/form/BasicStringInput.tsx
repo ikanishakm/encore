@@ -9,7 +9,7 @@ import useOnClickOutside from '@theatre/studio/uiComponents/useOnClickOutside'
 const Input = styled.input.attrs({type: 'text'})`
   background: transparent;
   border: 1px solid transparent;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--tt-fg);
   padding: 1px 6px;
   font: inherit;
   outline: none;
@@ -17,24 +17,28 @@ const Input = styled.input.attrs({type: 'text'})`
   text-align: left;
   width: 100%;
   height: calc(100% - 4px);
-  border-radius: 2px;
+  border-radius: var(--tt-radius-sm);
   border: 1px solid transparent;
   box-sizing: border-box;
 
   &:hover {
-    background-color: #10101042;
-    border-color: #00000059;
+    background-color: var(--tt-input);
+    border-color: var(--tt-border);
   }
 
-  &:hover,
+  &:hover {
+    cursor: text;
+  }
+
   &:focus {
     cursor: text;
-    background-color: #10101042;
-    border-color: #00000059;
+    background-color: var(--tt-input);
+    border-color: var(--tt-primary);
+    box-shadow: 0 0 0 2px var(--tt-ring);
   }
 
   &.invalid {
-    border-color: red;
+    border-color: var(--tt-danger);
   }
 `
 

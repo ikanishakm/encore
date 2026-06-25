@@ -39,7 +39,7 @@ const Line = styled.div<{posType: FrameStampPositionType}>`
   left: -0px;
   bottom: 0;
   width: 0.5px;
-  background: rgba(100, 100, 100, 0.2);
+  background: var(--tt-border);
   pointer-events: none;
 `
 

@@ -1,5 +1,6 @@
 import * as React from 'react'
 import type {PerspectiveCamera as PerspectiveCameraImpl, Object3D} from 'three'
+import type {ThreeElements} from '@react-three/fiber'
 import {useFrame, useThree} from '@react-three/fiber'
 import {mergeRefs} from 'react-merge-refs'
 import {editable} from '../index'
@@ -8,7 +9,7 @@ import {editorStore} from '../main/store'
 import type {MutableRefObject} from 'react'
 
 export type PerspectiveCameraProps = Omit<
-  JSX.IntrinsicElements['perspectiveCamera'],
+  ThreeElements['perspectiveCamera'],
   'lookAt'
 > & {
   lookAt?:
@@ -54,8 +55,8 @@ export const PerspectiveCamera = editable(
             Array.isArray(lookAt)
               ? new Vector3(...lookAt)
               : (lookAt as MutableRefObject<Object3D>).current
-              ? (lookAt as MutableRefObject<Object3D>).current.position
-              : (lookAt as Vector3),
+                ? (lookAt as MutableRefObject<Object3D>).current.position
+                : (lookAt as Vector3),
           )
 
           // how could we make it possible for users to do something like this too?

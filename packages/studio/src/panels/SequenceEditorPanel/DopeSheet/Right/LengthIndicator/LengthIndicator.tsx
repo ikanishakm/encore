@@ -23,8 +23,8 @@ import BasicPopover from '@theatre/studio/uiComponents/Popover/BasicPopover'
 const coverWidth = 1000
 
 const colors = {
-  stripNormal: `#0000006c`,
-  stripActive: `#000000`,
+  stripNormal: `var(--tt-border)`,
+  stripActive: `var(--tt-border-strong)`,
 }
 
 const Strip = styled.div`
@@ -71,16 +71,16 @@ const Tooltip = styled.div`
   font-size: 10px;
   white-space: nowrap;
   padding: 2px 8px;
-  border-radius: 2px;
+  border-radius: var(--tt-radius-sm);
   ${pointerEventsAutoInNormalMode};
   cursor: ew-resize;
-  color: #464646;
-  background-color: #0000004d;
+  color: var(--tt-fg-muted);
+  background-color: var(--tt-panel-2);
   display: none;
 
   ${Strip}:hover &, ${Strip}.dragging & {
     display: block;
-    color: white;
+    color: var(--tt-fg);
     background-color: ${colors.stripActive};
   }
 `
@@ -89,16 +89,16 @@ const Tumb = styled.div`
   font-size: 10px;
   white-space: nowrap;
   padding: 1px 2px;
-  border-radius: 2px;
+  border-radius: var(--tt-radius-sm);
   ${pointerEventsAutoInNormalMode};
   justify-content: center;
   align-items: center;
   cursor: ew-resize;
-  color: #5d5d5d;
-  background-color: #191919;
+  color: var(--tt-fg-muted);
+  background-color: var(--tt-panel-2);
 
   ${Strip}:hover &, ${Strip}.dragging & {
-    color: white;
+    color: var(--tt-fg);
     background-color: ${colors.stripActive};
 
     & > svg:first-child {

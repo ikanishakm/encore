@@ -18,29 +18,29 @@ export const Container = styled.button`
   height: 32px;
   outline: none;
 
-  color: #a8a8a9;
+  color: var(--tt-fg-2);
 
-  background: rgba(40, 43, 47, 0.8);
+  background: var(--tt-elevated);
   backdrop-filter: blur(14px);
   border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 3px;
+  border-bottom: 1px solid var(--tt-border);
+  border-radius: var(--tt-radius-sm);
 
   svg {
     display: block;
   }
 
   &:hover {
-    background: rgba(59, 63, 69, 0.8);
+    background: var(--tt-panel-2);
   }
 
   &:active {
-    background: rgba(82, 88, 96, 0.8);
+    background: var(--tt-active);
   }
 
   &.selected {
-    color: rgba(255, 255, 255, 0.8);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    color: var(--tt-fg);
+    border-bottom: 1px solid var(--tt-border-strong);
   }
 
   // Don't blur if in a button group, because it already blurs. We need to blur
@@ -51,18 +51,18 @@ export const Container = styled.button`
     border-radius: 0;
 
     &:first-child {
-      border-top-left-radius: 2px;
-      border-bottom-left-radius: 2px;
+      border-top-left-radius: var(--tt-radius-sm);
+      border-bottom-left-radius: var(--tt-radius-sm);
     }
 
     &:last-child {
-      border-bottom-right-radius: 2px;
-      border-top-right-radius: 2px;
+      border-bottom-right-radius: var(--tt-radius-sm);
+      border-top-right-radius: var(--tt-radius-sm);
     }
   }
 
   @supports not (backdrop-filter: blur()) {
-    background: rgba(40, 43, 47, 0.95);
+    background: var(--tt-elevated);
   }
 `
 

@@ -37,7 +37,7 @@ const EasingPopover = styled(BasicPopover)`
 
 type IBasicKeyframeConnectorProps = ISingleKeyframeEditorProps
 
-const BasicKeyframeConnector: React.VFC<IBasicKeyframeConnectorProps> = (
+const BasicKeyframeConnector: React.FC<IBasicKeyframeConnectorProps> = (
   props,
 ) => {
   const {index, track} = props

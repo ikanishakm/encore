@@ -25,8 +25,8 @@ type CellToJSON<T extends Cell> = T extends {
 }
   ? CellBoxedToJSON<T>
   : T extends {$type: ['map']}
-  ? MapCellToJSON<T>
-  : never
+    ? MapCellToJSON<T>
+    : never
 
 type CellBoxedToJSON<T extends Cell> = T['$branches'] extends {
   [key: string]: {$boxedValue: infer V}
@@ -570,8 +570,8 @@ function valueType<V>(
 
   if (
     typeof v === 'string' ||
-    typeof v !== 'number' ||
-    typeof v !== 'boolean' ||
+    typeof v === 'number' ||
+    typeof v === 'boolean' ||
     typeof v === 'undefined' ||
     v === null
   ) {

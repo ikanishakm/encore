@@ -53,7 +53,7 @@ function Button() {
       onPointerOut={() => setActive(false)}
       theatreKey="The Button"
     >
-      <sphereBufferGeometry args={[0.75, 64, 64]} />
+      <sphereGeometry args={[0.75, 64, 64]} />
       <meshPhysicalMaterial
         color={active ? 'purple' : '#e7b056'}
         clearcoat={1}
@@ -78,7 +78,7 @@ function Button() {
 function Plane({color, theatreKey, ...props}) {
   return (
     <e.mesh receiveShadow castShadow {...props} theatreKey={theatreKey}>
-      <boxBufferGeometry />
+      <boxGeometry />
       <meshStandardMaterial color={color} />
     </e.mesh>
   )

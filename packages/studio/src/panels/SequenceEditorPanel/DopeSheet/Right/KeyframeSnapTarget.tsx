@@ -39,7 +39,7 @@ export type ISnapTargetPRops = {
   position: number
 }
 
-const KeyframeSnapTarget: React.VFC<ISnapTargetPRops> = (props) => {
+const KeyframeSnapTarget: React.FC<ISnapTargetPRops> = (props) => {
   return (
     <Container
       style={{

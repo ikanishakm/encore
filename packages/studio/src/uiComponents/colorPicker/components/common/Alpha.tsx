@@ -54,7 +54,11 @@ interface Props {
   onChange: (newAlpha: {a: number}) => void
 }
 
-export const Alpha = ({className, hsva, onChange}: Props): JSX.Element => {
+export const Alpha = ({
+  className,
+  hsva,
+  onChange,
+}: Props): React.JSX.Element => {
   const handleMove = (interaction: Interaction) => {
     onChange({a: interaction.left})
   }

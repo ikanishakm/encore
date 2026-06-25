@@ -181,7 +181,9 @@ class IDBTransaction implements FrontStorageAdapterTransaction {
       const item = await store.get(sessionAndKeyAndId)
       if (item) {
         results.push(item.value as T)
-        await store.delete(item)
+        // IDB `delete` takes a key, not the record object (passing the object
+        // throws a DataError at runtime).
+        await store.delete(sessionAndKeyAndId)
       } else {
         results.push(undefined)
       }

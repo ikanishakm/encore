@@ -22,7 +22,7 @@ export const decideRowByPropType = (
   )
 }
 
-const PropWithChildrenRow: React.VFC<{
+const PropWithChildrenRow: React.FC<{
   leaf: SequenceEditorTree_PropWithChildren
 }> = ({leaf}) => {
   return (

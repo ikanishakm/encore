@@ -5,7 +5,6 @@ import prisma from 'src/prisma'
 import {getAppSession, studioAuth} from 'src/utils/authUtils'
 import {userCodeLength} from '~/server/studio-api/routes/studioAuthRouter'
 import {studioAccessScopes} from '~/types'
-import {type $IntentionalAny} from '@theatre/utils/types'
 
 export const dynamic = 'force-dynamic'
 
@@ -93,7 +92,11 @@ async function libAuth(req: NextRequest) {
   const nounce = row.nounce
   const scopes = row.scopes
 
-  if (!studioAccessScopes.scopes.parse(scopes)) {
+  // `.parse` returns the parsed value (truthy) or throws, so the old
+  // `if (!.parse(...))` branch was dead and an invalid `scopes` escaped as an
+  // uncaught ZodError. Use `.safeParse` so the cleanup-and-500 path runs.
+  const parsedScopes = studioAccessScopes.scopes.safeParse(scopes)
+  if (!parsedScopes.success) {
     console.error(`bad scopes`, scopes)
     await prisma.deviceAuthorizationFlow.delete({
       where: {deviceCode: row.deviceCode},
@@ -109,7 +112,7 @@ async function libAuth(req: NextRequest) {
   const {refreshToken, accessToken} = await studioAuth.createSession(
     nounce,
     user,
-    scopes as $IntentionalAny,
+    parsedScopes.data,
   )
 
   await prisma.deviceAuthorizationFlow.update({

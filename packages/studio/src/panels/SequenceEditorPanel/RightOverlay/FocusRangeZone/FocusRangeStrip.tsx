@@ -16,20 +16,20 @@ import {useLockFrameStampPosition} from '@theatre/studio/panels/SequenceEditorPa
 
 export const focusRangeStripTheme = {
   enabled: {
-    backgroundColor: '#2C2F34',
-    stroke: '#646568',
+    backgroundColor: 'var(--tt-panel-2)',
+    stroke: 'var(--tt-fg-muted)',
   },
   disabled: {
-    backgroundColor: '#282a2cc5',
-    stroke: '#595a5d',
+    backgroundColor: 'var(--tt-panel)',
+    stroke: 'var(--tt-fg-muted)',
   },
   hover: {
-    backgroundColor: '#34373D',
-    stroke: '#C8CAC0',
+    backgroundColor: 'var(--tt-elevated)',
+    stroke: 'var(--tt-fg-2)',
   },
   dragging: {
-    backgroundColor: '#3F444A',
-    stroke: '#C8CAC0',
+    backgroundColor: 'var(--tt-border-strong)',
+    stroke: 'var(--tt-fg-2)',
   },
   thumbWidth: 9,
   hitZoneWidth: 26,

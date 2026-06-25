@@ -33,11 +33,11 @@ const {isSheet, isSheetObject} = __private.instanceTypes
 
 const Container = styled(PanelWrapper)`
   z-index: ${panelZIndexes.sequenceEditorPanel};
-  box-shadow: 2px 2px 0 rgb(0 0 0 / 11%);
+  box-shadow: var(--tt-shadow);
 `
 
 const LeftBackground = styled.div`
-  background-color: rgba(40, 43, 47, 0.99);
+  background-color: var(--tt-panel);
   position: absolute;
   left: 0;
   top: 0;
@@ -87,7 +87,7 @@ const defaultPosition: PanelPosition = {
 
 const minDims = {width: 800, height: 200}
 
-const SequenceEditorPanel: React.VFC<{}> = (props) => {
+const SequenceEditorPanel: React.FC<{}> = (props) => {
   return (
     <BasePanel
       panelId={'sequenceEditor' as UIPanelId}
@@ -99,7 +99,7 @@ const SequenceEditorPanel: React.VFC<{}> = (props) => {
   )
 }
 
-const Content: React.VFC<{}> = () => {
+const Content: React.FC<{}> = () => {
   const {dims} = usePanel()
   const [containerNode, setContainerNode] = useState<null | HTMLDivElement>(
     null,

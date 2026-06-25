@@ -3,7 +3,6 @@ import React from 'react'
 import Item from './Item'
 import type {$FixMe} from '@theatre/core/types/public'
 import styled from 'styled-components'
-import {transparentize} from 'polished'
 import {pointerEventsAutoInNormalMode} from '@theatre/studio/css'
 
 const minWidth = 190
@@ -14,28 +13,25 @@ const MenuContainer = styled.ul`
   position: absolute;
   min-width: ${minWidth}px;
   z-index: 10000;
-  /* background: ${transparentize(0.4, '#000000')};
-  backdrop-filter: blur(8px) saturate(300%) contrast(65%) brightness(70%); */
-
-  background: rgb(45 55 66 / 75%);
+  background: var(--tt-elevated);
   backdrop-filter: blur(8px) brightness(70%);
-  color: white;
-  border: 0.5px solid #6262622c;
+  color: var(--tt-fg);
+  border: 1px solid var(--tt-border);
   box-sizing: border-box;
-  box-shadow: ${transparentize(0.75, '#000000')} 0px 4px 20px;
+  box-shadow: var(--tt-shadow);
   list-style-type: none;
   padding: 0;
   margin: 0;
   cursor: default;
   ${pointerEventsAutoInNormalMode};
-  border-radius: 4px;
+  border-radius: var(--tt-radius);
 `
 
 const MenuTitle = styled.div`
   padding: 8px 10px 6px;
   position: relative;
 
-  color: #d1d1d1;
+  color: var(--tt-fg-2);
   font-size: 10px;
   font-weight: 500;
 
@@ -97,7 +93,7 @@ const BaseMenu: React.FC<{
 const Separator = styled.div`
   height: 1px;
   margin: 2px 8px;
-  background: #6262622c;
+  background: var(--tt-border);
 `
 
 export default BaseMenu

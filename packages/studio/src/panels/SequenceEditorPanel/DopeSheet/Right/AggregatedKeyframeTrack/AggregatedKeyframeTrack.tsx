@@ -197,7 +197,7 @@ function AggregatedKeyframeTrack_memo(props: IAggregatedKeyframeTracksProps) {
     <AggregatedKeyframeTrackContainer
       ref={containerRef}
       style={{
-        background: isOpen ? '#444850 ' : 'unset',
+        background: isOpen ? 'var(--tt-active)' : 'unset',
       }}
     >
       {keyframeEditors}

@@ -5,7 +5,7 @@ import {decideRowByPropType} from './PropWithChildrenRow'
 import {setCollapsedSheetItem} from '@theatre/studio/panels/SequenceEditorPanel/DopeSheet/setCollapsedSheetObjectOrCompoundProp'
 import getStudio from '@theatre/studio/getStudio'
 
-const LeftSheetObjectRow: React.VFC<{
+const LeftSheetObjectRow: React.FC<{
   leaf: SequenceEditorTree_SheetObject
 }> = ({leaf}) => {
   return (

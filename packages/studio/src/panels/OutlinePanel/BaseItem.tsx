@@ -19,52 +19,46 @@ export const BaseHeader = styled.div``
 
 const Header = styled(BaseHeader)`
   position: relative;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-left: calc(4px + var(--depth) * 16px);
-  padding-left: 4px;
-  padding-right: 8px;
-  gap: 4px;
-  height: 21px;
-  line-height: 0;
+  width: 100%;
   box-sizing: border-box;
+  /* Full-width rows (Figma/Framer style); indent the contents by depth so the
+     hover/selected highlight always spans the whole row. */
+  padding-left: calc(10px + var(--depth) * 14px);
+  padding-right: 8px;
+  gap: 6px;
+  height: 26px;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   pointer-events: none;
   white-space: nowrap;
 
-  border-radius: 2px;
-  box-shadow: 0 3px 4px -1px rgba(0, 0, 0, 0.48);
-
-  color: rgba(255, 255, 255, 0.9);
-  background: rgba(40, 43, 47, 0.65);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--tt-fg-2);
+  background: transparent;
+  transition:
+    background 0.12s ease,
+    color 0.12s ease;
 
   &.descendant-is-selected {
-    background: rgba(29, 53, 59, 0.7);
+    color: var(--tt-fg);
+    background: var(--tt-hover);
   }
 
   ${pointerEventsAutoInNormalMode};
   &:not(.not-selectable):not(.selected):hover {
-    background: rgba(59, 63, 69, 0.9);
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+    background: var(--tt-hover);
+    color: var(--tt-fg);
   }
 
   &:not(.not-selectable):not(.selected):active {
-    background: rgba(82, 88, 96, 0.9);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+    background: var(--tt-active);
+    color: var(--tt-fg);
   }
 
   &.selected {
-    background: rgba(30, 88, 102, 0.7);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  }
-
-  @supports not (backdrop-filter: blur()) {
-    background: rgba(40, 43, 47, 0.95);
+    background: var(--tt-selected);
+    color: var(--tt-fg);
+    box-shadow: inset 2px 0 0 var(--tt-primary);
   }
 `
 

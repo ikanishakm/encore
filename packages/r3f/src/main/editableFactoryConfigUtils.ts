@@ -1,6 +1,7 @@
 import type {UnknownShorthandCompoundProps} from '@theatre/core'
 import {notify} from '@theatre/core'
 import {types} from '@theatre/core'
+import type {ThreeElements} from '@react-three/fiber'
 import type {Object3D} from 'three'
 import type {IconID} from '../extension/icons'
 import {Color} from 'three'
@@ -23,7 +24,7 @@ type Meta<T> = {
 }
 export type ObjectConfig<T> = {props: Props} & Meta<T>
 export type EditableFactoryConfig = Partial<
-  Record<keyof JSX.IntrinsicElements, ObjectConfig<any>>
+  Record<keyof ThreeElements, ObjectConfig<any>>
 >
 
 type Vector3 = {
@@ -61,36 +62,36 @@ export const createVectorPropConfig = (
     const vector = !propValue
       ? defaultValue
       : // if prop is an array
-      Array.isArray(propValue)
-      ? createVector(propValue as any)
-      : // if prop is a scalar
-      isNumber(propValue)
-      ? {
-          x: propValue,
-          y: propValue,
-          z: propValue,
-        }
-      : // if prop is a threejs Vector3
-      isVectorObject(propValue)
-      ? {
-          x: propValue.x,
-          y: propValue.y,
-          z: propValue.z,
-        }
-      : // show a warning and return defaultValue
-        (notify.warning(
-          `Invalid value for vector prop "${key}"`,
-          `Couldn't make sense of \`${key}={${JSON.stringify(
-            propValue,
-          )}}\`, falling back to \`${key}={${JSON.stringify([
-            defaultValue.x,
-            defaultValue.y,
-            defaultValue.z,
-          ])}}\`.
+        Array.isArray(propValue)
+        ? createVector(propValue as any)
+        : // if prop is a scalar
+          isNumber(propValue)
+          ? {
+              x: propValue,
+              y: propValue,
+              z: propValue,
+            }
+          : // if prop is a threejs Vector3
+            isVectorObject(propValue)
+            ? {
+                x: propValue.x,
+                y: propValue.y,
+                z: propValue.z,
+              }
+            : // show a warning and return defaultValue
+              (notify.warning(
+                `Invalid value for vector prop "${key}"`,
+                `Couldn't make sense of \`${key}={${JSON.stringify(
+                  propValue,
+                )}}\`, falling back to \`${key}={${JSON.stringify([
+                  defaultValue.x,
+                  defaultValue.y,
+                  defaultValue.z,
+                ])}}\`.
 
 To fix this, make sure the prop is set to either a number, an array of numbers, or a three.js Vector3 object.`,
-        ),
-        defaultValue)
+              ),
+              defaultValue)
     ;(['x', 'y', 'z'] as const).forEach((axis) => {
       // e.g. r3f also accepts prop keys like "scale-x"
       if (props[`${key}-${axis}` as any])

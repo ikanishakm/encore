@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react'
-import toast, {useToaster} from 'react-hot-toast/headless'
+import toast, {useToaster, type Toast} from 'react-hot-toast/headless'
 import styled from 'styled-components'
 import {pointerEventsAutoInNormalMode} from './css'
 import type {
@@ -85,25 +85,24 @@ const notificationTypeChecker = (() => {
 //region Styles
 const NotificationContainer = styled.div`
   width: 100%;
-  border-radius: 4px;
+  border-radius: var(--tt-radius);
   display: flex;
   gap: 12px;
   ${pointerEventsAutoInNormalMode};
-  background-color: rgba(40, 43, 47, 0.8);
-  box-shadow:
-    0 1px 1px rgba(0, 0, 0, 0.25),
-    0 2px 6px rgba(0, 0, 0, 0.15);
+  background-color: var(--tt-elevated);
+  border: 1px solid var(--tt-border);
+  box-shadow: var(--tt-shadow);
   backdrop-filter: blur(14px);
 
   @supports not (backdrop-filter: blur()) {
-    background: rgba(40, 43, 47, 0.95);
+    background: var(--tt-elevated);
   }
 `
 
 const NotificationTitle = styled.div`
   font-size: 14px;
   font-weight: bold;
-  color: #fff;
+  color: var(--tt-fg);
 `
 
 const NotificationMain = styled.div`
@@ -116,12 +115,12 @@ const NotificationMain = styled.div`
 `
 
 const NotificationMessage = styled.div`
-  color: #b4b4b4;
+  color: var(--tt-fg-2);
   font-size: 12px;
   line-height: 1.4;
 
   a {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--tt-fg);
   }
 
   em {
@@ -130,7 +129,7 @@ const NotificationMessage = styled.div`
 
   strong {
     font-weight: bold;
-    color: #d5d5d5;
+    color: var(--tt-fg);
   }
 
   p {
@@ -139,10 +138,10 @@ const NotificationMessage = styled.div`
 
   code {
     font-family: monospace;
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--tt-input);
     padding: 1px 1px 2px;
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--tt-radius-sm);
+    border: 1px solid var(--tt-border);
     white-space: pre-wrap;
   }
 
@@ -160,7 +159,7 @@ const NotificationMessage = styled.div`
 `
 
 const DismissButton = styled.button`
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--tt-fg);
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -169,18 +168,18 @@ const DismissButton = styled.button`
   border: none;
   padding-left: 12px;
   padding-right: 12px;
-  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 1px solid var(--tt-border);
 
   &:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--tt-hover);
   }
 `
 
 const COLORS = {
   info: '#3b82f6',
-  success: '#10b981',
-  warning: '#f59e0b',
-  error: '#ef4444',
+  success: 'var(--tt-primary)',
+  warning: 'var(--tt-warning)',
+  error: 'var(--tt-danger)',
 }
 
 const IndicatorDot = styled.div<{type: NotificationType}>`
@@ -194,7 +193,7 @@ const IndicatorDot = styled.div<{type: NotificationType}>`
     width: 8px;
     height: 8px;
     border-radius: 999999px;
-    background-color: ${({type}) => COLORS[type]};
+    background-color: ${({type}) => COLORS[type as keyof typeof COLORS]};
   }
 `
 //endregion
@@ -216,7 +215,7 @@ const createHandler =
       // so we use our own data structure for it.
       notificationTypeChecker.add(type)
       toast.custom(
-        (t) => (
+        (t: Toast) => (
           <NotificationContainer>
             <IndicatorDot type={type} />
             <NotificationMain>
@@ -277,19 +276,17 @@ const ButtonContainer = styled.div<{
 
 const Button = styled.button<{danger?: boolean}>`
   position: relative;
-  border-radius: 4px;
+  border-radius: var(--tt-radius);
   display: flex;
   align-items: center;
   gap: 12px;
   ${pointerEventsAutoInNormalMode};
-  background-color: rgba(40, 43, 47, 0.8);
-  box-shadow:
-    0 1px 1px rgba(0, 0, 0, 0.25),
-    0 2px 6px rgba(0, 0, 0, 0.15);
+  background-color: var(--tt-elevated);
+  border: 1px solid var(--tt-border);
+  box-shadow: var(--tt-shadow);
   backdrop-filter: blur(14px);
-  border: none;
   padding: 12px;
-  color: #fff;
+  color: var(--tt-fg);
   overflow: hidden;
 
   ::before {
@@ -300,11 +297,11 @@ const Button = styled.button<{danger?: boolean}>`
 
   :hover::before {
     background: ${({danger}) =>
-      danger ? 'rgba(255, 0, 0, 0.1)' : 'rgba(255, 255, 255, 0.1)'};
+      danger ? 'rgba(255, 0, 0, 0.1)' : 'var(--tt-active)'};
   }
 
   @supports not (backdrop-filter: blur()) {
-    background: rgba(40, 43, 47, 0.95);
+    background: var(--tt-elevated);
   }
 `
 
@@ -324,7 +321,7 @@ const NotifierContainer = styled.div`
 const NotificationScroller = styled.div`
   overflow: hidden;
   pointer-events: auto;
-  border-radius: 4px;
+  border-radius: var(--tt-radius);
 
   & > div {
     display: flex;
@@ -338,11 +335,11 @@ const NotificationScroller = styled.div`
 const EmptyState = styled.div`
   width: fit-content;
   padding: 8px;
-  border-radius: 4px;
+  border-radius: var(--tt-radius-sm);
   display: flex;
   flex-direction: column;
   gap: 12px;
-  color: #b4b4b4;
+  color: var(--tt-fg-2);
   font-size: 12px;
   line-height: 1.4;
 `

@@ -7,6 +7,7 @@ const lastStateByStore = new WeakMap<Atom<{}>, {}>()
 export type AtomPersistor = {
   refresh: () => void
   flush: () => void
+  dispose: () => void
 }
 
 export const persistAtom = (
@@ -34,13 +35,14 @@ export const persistAtom = (
 
   const schedulePersist = debounce(persist, 1000)
 
-  p.onStale(() => {
+  const unsubFromStale = p.onStale(() => {
     p.getValue()
     schedulePersist()
   })
 
-  if (window) {
-    window.addEventListener('beforeunload', () => schedulePersist.flush())
+  const onBeforeUnload = () => schedulePersist.flush()
+  if (typeof window !== 'undefined') {
+    window.addEventListener('beforeunload', onBeforeUnload)
   }
 
   return {
@@ -50,6 +52,14 @@ export const persistAtom = (
     },
     flush: () => {
       schedulePersist.flush()
+    },
+    dispose: () => {
+      schedulePersist.flush()
+      schedulePersist.cancel()
+      unsubFromStale()
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('beforeunload', onBeforeUnload)
+      }
     },
   }
 

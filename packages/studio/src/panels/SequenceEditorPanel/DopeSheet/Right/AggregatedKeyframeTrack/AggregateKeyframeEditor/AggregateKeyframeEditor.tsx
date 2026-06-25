@@ -62,7 +62,7 @@ export type IAggregateKeyframeEditorProps = {
  * is open. This would require having some kind of stable identity for each aggregate row.
  * Let's defer that work until other interactive keyframe editing PRs are merged in.
  */
-const AggregateKeyframeEditor: React.VFC<IAggregateKeyframeEditorProps> =
+const AggregateKeyframeEditor: React.FC<IAggregateKeyframeEditorProps> =
   React.memo((props) => {
     const utils = useAggregateKeyframeEditorUtils(props)
     return (
