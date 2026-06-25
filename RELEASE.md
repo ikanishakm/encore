@@ -40,7 +40,7 @@ All 8 publishable packages build on Windows + Node 24:
    - If `@encore` is already taken, do a global find/replace of `@encore/` to a
      free scope (e.g. `@encorejs/`) and re-run `yarn install`.
 2. **Create the GitHub repo** (the package metadata points at
-   `https://github.com/Kanishak/encore` — change it if you use a different
+   `https://github.com/ikanishakm/encore` — change it if you use a different
    URL), then push this `encore` branch.
 3. **npm auth.** Run `npm login` locally (the account must have publish rights
    to the `@encore` scope). For CI, set the `NPM_TOKEN` repo secret.

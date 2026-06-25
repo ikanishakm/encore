@@ -1,6 +1,6 @@
 # @encore/r3f
 
-A [Encore](https://github.com/Kanishak/encore) extension for [THREE.js](https://threejs.org/) with [React Three Fiber](https://github.com/pmndrs/react-three-fiber).
+A [Encore](https://github.com/ikanishakm/encore) extension for [THREE.js](https://threejs.org/) with [React Three Fiber](https://github.com/pmndrs/react-three-fiber).
 
 **Here be dragons! 🐉** `@encore/r3f` is pre-release software, the API, the internal logic, and even the package name can and will drastically change at any time, without warning.
 

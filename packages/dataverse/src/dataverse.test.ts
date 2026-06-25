@@ -1287,6 +1287,6 @@ describe(`The exhaustive guide to dataverse`, () => {
 
   // What's next?
   // At this point we have covered all of `@encore/dataverse`.
-  // If you're planning to use Dataverse with React, have a look at [`@encore/react`](https://github.com/Kanishak/encore/tree/main/packages/react)
+  // If you're planning to use Dataverse with React, have a look at [`@encore/react`](https://github.com/ikanishakm/encore/tree/main/packages/react)
   // which provides a React integration for Dataverse as well.
 })

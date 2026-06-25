@@ -239,10 +239,10 @@ ideas.
 ### Helping with outstanding issues
 
 Feel free to chime in on any
-[issue](https://github.com/Kanishak/encore/issues). We have labeled some with
-["Help wanted"](https://github.com/Kanishak/encore/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22help+wanted%22)
+[issue](https://github.com/ikanishakm/encore/issues). We have labeled some with
+["Help wanted"](https://github.com/ikanishakm/encore/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22help+wanted%22)
 or
-["Good first issue"](https://github.com/Kanishak/encore/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22good+first+issue%22)
+["Good first issue"](https://github.com/ikanishakm/encore/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22good+first+issue%22)
 if you're just getting started with the codebase.
 
 ## Sending pull requests

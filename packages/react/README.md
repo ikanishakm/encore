@@ -1,7 +1,7 @@
 # @encore/react
 
 Utilities for using [Encore](https://www.theatrejs.com) or
-[Dataverse](https://github.com/Kanishak/encore/tree/main/packages/dataverse)
+[Dataverse](https://github.com/ikanishakm/encore/tree/main/packages/dataverse)
 with React.
 
 ## Documentation

@@ -133,7 +133,7 @@ export type SequenceMarkerId = Nominal<'SequenceMarkerId'>
  * This type represents the object returned by `studio.createContnentOfSaveFile()`. It's
  * meant for advanced users who want to interact with the state of projects. In the vast
  * majority of cases, you __should not__ use this type. Either an API for your use-case
- * already exists, or you should open an issue on GitHub: https://github.com/Kanishak/encore/issues
+ * already exists, or you should open an issue on GitHub: https://github.com/ikanishakm/encore/issues
  *
  */
 export type __UNSTABLE_Project_OnDiskState = unknown

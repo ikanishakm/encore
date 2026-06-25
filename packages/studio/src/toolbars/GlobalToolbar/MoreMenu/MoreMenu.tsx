@@ -145,7 +145,7 @@ const MoreMenu = React.forwardRef((props: {}, ref) => {
       <Divider />
       <Link
         as="a"
-        href="https://github.com/Kanishak/encore"
+        href="https://github.com/ikanishakm/encore"
         className=""
         target="_blank"
       >

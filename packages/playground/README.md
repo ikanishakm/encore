@@ -67,7 +67,7 @@ $ yarn playwright codegen http://localhost:8080/tests/[playground-name] # run th
 
 Some `.e2e.ts` files also contain visual regression tetst. These tests run only
 the the [CI](../../.github/workflows/main.yml) using
-[Github actions](https://github.com/Kanishak/encore/actions). Look at the
+[Github actions](https://github.com/ikanishakm/encore/actions). Look at the
 example at
 [`src/tests/setting-static-props/test.e2e.ts`](src/tests/setting-static-props/test.e2e.ts)
 for an example of recording and diffing a screenshot.

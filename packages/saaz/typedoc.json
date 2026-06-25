@@ -19,5 +19,5 @@
   "excludeInternal": true,
   "excludeProtected": true,
   "excludePrivate": true,
-  "sourceLinkTemplate": "https://github.com/Kanishak/encore/blob/main/{path}#L{line}"
+  "sourceLinkTemplate": "https://github.com/ikanishakm/encore/blob/main/{path}#L{line}"
 }
