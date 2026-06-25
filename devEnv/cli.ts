@@ -180,14 +180,17 @@ prog
         locationsWhoseVersionsShouldBump,
       )
 
+      // Build sequentially, in dependency order. `packagesToBuild` is ordered so
+      // that a package's dependencies come before it (e.g. `core`/`studio` before
+      // `browser-bundles`, which *bundles* their built `dist/` output). Building
+      // in parallel races: `browser-bundles`' esbuild can start before `core`/
+      // `studio` have emitted `dist/index.js`, failing with "Could not resolve".
       console.log('Building all packages')
-      await Promise.all(
-        packagesToBuild.map((workspace) =>
-          skipTypescriptEmit
-            ? $`yarn workspace ${workspace} run build:js`
-            : $`yarn workspace ${workspace} run build`,
-        ),
-      )
+      for (const workspace of packagesToBuild) {
+        await (skipTypescriptEmit
+          ? $`yarn workspace ${workspace} run build:js`
+          : $`yarn workspace ${workspace} run build`)
+      }
 
       // temporarily rolling back the version assignments to make sure they don't show
       // up in `$ git status`. (would've been better to just ignore hese particular changes
