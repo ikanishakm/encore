@@ -73,12 +73,9 @@ prog
      * It assigns the same version number to all packages (like lerna's fixed mode).
      **/
 
+    // npm package *names* (e.g. `@encore/dataverse`). These are what
+    // `yarn workspace <name> ...` expects.
     const packagesToPublish = [...packagesToBuild]
-
-    /**
-     * All these packages will have the same version from monorepo/package.json
-     */
-    const packagesWhoseVersionsShouldBump = ['.', ...packagesToPublish]
 
     // our packages will check for this env variable to make sure their
     // prepublish script is only called from the `$ cd /path/to/monorepo; yarn run release`
@@ -88,6 +85,31 @@ prog
     async function release() {
       $.verbose = false
       const gitTags = (await $`git tag --list`).toString().split('\n')
+
+      // Resolve npm package *names* -> filesystem *locations* (e.g.
+      // `@encore/dataverse` -> `packages/dataverse`, `@encore/tweak` ->
+      // `packages/theatric`). The version-bumping helpers below operate on
+      // `package.json` files, so they need locations, not names.
+      const workspaceLocationByName: Record<string, string> =
+        Object.fromEntries(
+          (await $`yarn workspaces list --json`).stdout
+            .split('\n')
+            .filter(Boolean)
+            .map((line) => JSON.parse(line) as {name: string; location: string})
+            .map((ws) => [ws.name, ws.location]),
+        )
+      // All these packages (plus the monorepo root `.`) will be bumped to the
+      // same version from monorepo/package.json.
+      const locationsWhoseVersionsShouldBump = [
+        '.',
+        ...packagesToPublish.map((name) => {
+          const location = workspaceLocationByName[name]
+          if (!location) {
+            throw new Error(`Could not find a workspace location for "${name}"`)
+          }
+          return location
+        }),
+      ]
 
       if (typeof version !== 'string') {
         console.error(
@@ -153,7 +175,10 @@ prog
       const skipTypescriptEmit = opts['skip-ts'] === true
 
       console.log('Assigning versions')
-      await writeVersionsToPackageJSONs(version)
+      await writeVersionsToPackageJSONs(
+        version,
+        locationsWhoseVersionsShouldBump,
+      )
 
       console.log('Building all packages')
       await Promise.all(
@@ -167,7 +192,7 @@ prog
       // temporarily rolling back the version assignments to make sure they don't show
       // up in `$ git status`. (would've been better to just ignore hese particular changes
       // but i'm lazy)
-      await restoreVersions()
+      await restoreVersions(locationsWhoseVersionsShouldBump)
 
       console.log(
         'Checking if the build produced artifacts that must first be comitted to git',
@@ -182,7 +207,10 @@ prog
 
       $.verbose = true
 
-      await writeVersionsToPackageJSONs(version)
+      await writeVersionsToPackageJSONs(
+        version,
+        locationsWhoseVersionsShouldBump,
+      )
 
       console.log('Committing/tagging')
 
@@ -206,10 +234,16 @@ prog
       )
     }
 
-    void release()
+    await release().catch((err) => {
+      console.error(err)
+      process.exit(1)
+    })
 
-    async function writeVersionsToPackageJSONs(monorepoVersion: string) {
-      for (const packagePathRelativeFromRoot of packagesWhoseVersionsShouldBump) {
+    async function writeVersionsToPackageJSONs(
+      monorepoVersion: string,
+      locationsToBump: string[],
+    ) {
+      for (const packagePathRelativeFromRoot of locationsToBump) {
         const pathToPackage = path.resolve(
           __dirname,
           '../',
@@ -233,10 +267,10 @@ prog
       }
     }
 
-    async function restoreVersions() {
+    async function restoreVersions(locationsToBump: string[]) {
       const wasVerbose = $.verbose
       $.verbose = false
-      for (const packagePathRelativeFromRoot of packagesWhoseVersionsShouldBump) {
+      for (const packagePathRelativeFromRoot of locationsToBump) {
         const pathToPackageInGit = packagePathRelativeFromRoot + '/package.json'
 
         await $`git checkout ${pathToPackageInGit}`
