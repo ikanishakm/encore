@@ -1,10 +1,10 @@
 import React from 'react'
-import {usePrism} from '@theatre/react'
+import {usePrism} from '@encore/react'
 import type {ChodrialElement, InvokeTypePopover} from './chordialInternals'
-import {val} from '@theatre/dataverse'
+import {val} from '@encore/dataverse'
 import {popoverActor} from './popoverActor'
-import PopoverPositioner from '@theatre/studio/uiComponents/Popover/PopoverPositioner'
-import {usePointerCapturing} from '@theatre/studio/UIRoot/PointerCapturing'
+import PopoverPositioner from '@encore/studio/uiComponents/Popover/PopoverPositioner'
+import {usePointerCapturing} from '@encore/studio/UIRoot/PointerCapturing'
 
 export const PopoverOverlay: React.FC<{}> = () => {
   const s = usePrism(():

@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import theatre from '@theatre/core'
-import {getProject} from '@theatre/core'
+import theatre from '@encore/core'
+import {getProject} from '@encore/core'
 import {Scene} from './Scene'
 
 /**
- * This is a basic example of using Theatre.js for manipulating the DOM.
+ * This is a basic example of using Encore for manipulating the DOM.
  *
  * It also uses {@link IStudio.selection | studio.selection} to customize
  * the selection behavior.

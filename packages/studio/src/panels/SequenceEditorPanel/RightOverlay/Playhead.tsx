@@ -1,36 +1,36 @@
-import type {SequenceEditorPanelLayout} from '@theatre/studio/panels/SequenceEditorPanel/layout/layout'
-import RoomToClick from '@theatre/studio/uiComponents/RoomToClick'
-import useRefAndState from '@theatre/studio/utils/useRefAndState'
-import {usePrism, useVal} from '@theatre/react'
-import type {$IntentionalAny} from '@theatre/core/types/public'
-import type {Pointer} from '@theatre/dataverse'
-import {val} from '@theatre/dataverse'
+import type {SequenceEditorPanelLayout} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
+import RoomToClick from '@encore/studio/uiComponents/RoomToClick'
+import useRefAndState from '@encore/studio/utils/useRefAndState'
+import {usePrism, useVal} from '@encore/react'
+import type {$IntentionalAny} from '@encore/core/types/public'
+import type {Pointer} from '@encore/dataverse'
+import {val} from '@encore/dataverse'
 import clamp from 'lodash-es/clamp'
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import {zIndexes} from '@theatre/studio/panels/SequenceEditorPanel/SequenceEditorPanel'
+import {zIndexes} from '@encore/studio/panels/SequenceEditorPanel/SequenceEditorPanel'
 import {
   includeLockFrameStampAttrs,
   useLockFrameStampPosition,
-} from '@theatre/studio/panels/SequenceEditorPanel/FrameStampPositionProvider'
-import {pointerEventsAutoInNormalMode} from '@theatre/studio/css'
-import BasicPopover from '@theatre/studio/uiComponents/Popover/BasicPopover'
+} from '@encore/studio/panels/SequenceEditorPanel/FrameStampPositionProvider'
+import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
+import BasicPopover from '@encore/studio/uiComponents/Popover/BasicPopover'
 import PlayheadPositionPopover from './PlayheadPositionPopover'
-import {getIsPlayheadAttachedToFocusRange} from '@theatre/studio/UIRoot/useKeyboardShortcuts'
+import {getIsPlayheadAttachedToFocusRange} from '@encore/studio/UIRoot/useKeyboardShortcuts'
 import {
   lockedCursorCssVarName,
   useCssCursorLock,
-} from '@theatre/studio/uiComponents/PointerEventsHandler'
-import getStudio from '@theatre/studio/getStudio'
+} from '@encore/studio/uiComponents/PointerEventsHandler'
+import getStudio from '@encore/studio/getStudio'
 import DopeSnap from './DopeSnap'
 import {
   snapToAll,
   snapToNone,
-} from '@theatre/studio/panels/SequenceEditorPanel/DopeSheet/Right/KeyframeSnapTarget'
-import useChordial from '@theatre/studio/uiComponents/chordial/useChodrial'
+} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/KeyframeSnapTarget'
+import useChordial from '@encore/studio/uiComponents/chordial/useChodrial'
 import {mergeRefs} from 'react-merge-refs'
-import usePopover from '@theatre/studio/uiComponents/Popover/usePopover'
-import {generateSequenceMarkerId} from '@theatre/studio/utils/ids'
+import usePopover from '@encore/studio/uiComponents/Popover/usePopover'
+import {generateSequenceMarkerId} from '@encore/studio/utils/ids'
 
 const Container = styled.div<{isVisible: boolean}>`
   --thumbColor: var(--tt-primary);

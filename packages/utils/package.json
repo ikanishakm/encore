@@ -1,5 +1,5 @@
 {
-  "name": "@theatre/utils",
+  "name": "@encore/utils",
   "version": "0.7.0",
   "license": "Apache-2.0",
   "private": true,
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/theatre-js/theatre",
+    "url": "https://github.com/Kanishak/encore",
     "directory": "packages/utils"
   },
   "main": "dist/index.js",
@@ -31,8 +31,8 @@
     "precommit": "yarn run docs"
   },
   "devDependencies": {
+    "@encore/dataverse": "workspace:*",
     "@microsoft/api-extractor": "^7.36.4",
-    "@theatre/dataverse": "workspace:*",
     "@types/jest": "^26.0.23",
     "@types/lodash-es": "^4.17.4",
     "@types/node": "^15.6.2",

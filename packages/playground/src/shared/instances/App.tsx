@@ -1,6 +1,6 @@
-import {editable as e, RefreshSnapshot, SheetProvider} from '@theatre/r3f'
+import {editable as e, RefreshSnapshot, SheetProvider} from '@encore/r3f'
 import {Stars} from '@react-three/drei'
-import {getProject} from '@theatre/core'
+import {getProject} from '@encore/core'
 import React, {Suspense, useState} from 'react'
 import {Canvas} from '@react-three/fiber'
 import type {ThreeElements} from '@react-three/fiber'

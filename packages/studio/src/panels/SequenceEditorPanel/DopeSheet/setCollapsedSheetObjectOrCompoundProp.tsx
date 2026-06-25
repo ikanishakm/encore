@@ -1,9 +1,9 @@
-import getStudio from '@theatre/studio/getStudio'
+import getStudio from '@encore/studio/getStudio'
 import type {
   SheetAddress,
   WithoutSheetInstance,
-} from '@theatre/core/types/public'
-import type {StudioSheetItemKey} from '@theatre/core/types/private'
+} from '@encore/core/types/public'
+import type {StudioSheetItemKey} from '@encore/core/types/private'
 
 export function setCollapsedSheetItem(
   isCollapsed: boolean,

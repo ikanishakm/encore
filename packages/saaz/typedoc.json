@@ -19,5 +19,5 @@
   "excludeInternal": true,
   "excludeProtected": true,
   "excludePrivate": true,
-  "sourceLinkTemplate": "https://github.com/theatre-js/theatre/blob/main/{path}#L{line}"
+  "sourceLinkTemplate": "https://github.com/Kanishak/encore/blob/main/{path}#L{line}"
 }

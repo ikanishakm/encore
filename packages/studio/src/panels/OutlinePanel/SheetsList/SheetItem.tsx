@@ -1,7 +1,7 @@
-import type Project from '@theatre/core/projects/Project'
+import type Project from '@encore/core/projects/Project'
 
-import {usePrism} from '@theatre/react'
-import {val} from '@theatre/dataverse'
+import {usePrism} from '@encore/react'
+import {val} from '@encore/dataverse'
 import React from 'react'
 import styled from 'styled-components'
 import {SheetInstanceItem} from './SheetInstanceItem'

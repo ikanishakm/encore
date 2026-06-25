@@ -1,21 +1,21 @@
-import type {BasicKeyframe} from '@theatre/core/types/public'
+import type {BasicKeyframe} from '@encore/core/types/public'
 import type {
   DopeSheetSelection,
   SequenceEditorPanelLayout,
-} from '@theatre/studio/panels/SequenceEditorPanel/layout/layout'
+} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
 import type {
   SequenceEditorTree_PropWithChildren,
   SequenceEditorTree_Sheet,
   SequenceEditorTree_SheetObject,
-} from '@theatre/studio/panels/SequenceEditorPanel/layout/tree'
-import type {Pointer} from '@theatre/dataverse'
-import {val} from '@theatre/dataverse'
+} from '@encore/studio/panels/SequenceEditorPanel/layout/tree'
+import type {Pointer} from '@encore/dataverse'
+import {val} from '@encore/dataverse'
 import React from 'react'
 import styled from 'styled-components'
-import type {SequenceTrackId} from '@theatre/core/types/public'
-import type {AggregateKeyframePositionIsSelected} from '@theatre/studio/panels/SequenceEditorPanel/DopeSheet/Right/AggregatedKeyframeTrack/AggregatedKeyframeTrack'
-import type {KeyframeWithTrack} from '@theatre/studio/panels/SequenceEditorPanel/DopeSheet/Right/collectAggregateKeyframes'
-import type {SheetObjectAddress} from '@theatre/core/types/public'
+import type {SequenceTrackId} from '@encore/core/types/public'
+import type {AggregateKeyframePositionIsSelected} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/AggregatedKeyframeTrack/AggregatedKeyframeTrack'
+import type {KeyframeWithTrack} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/collectAggregateKeyframes'
+import type {SheetObjectAddress} from '@encore/core/types/public'
 import {AggregateKeyframeConnector} from './AggregateKeyframeConnector'
 import {useAggregateKeyframeEditorUtils} from './useAggregateKeyframeEditorUtils'
 import {AggregateKeyframeDot} from './AggregateKeyframeDot'

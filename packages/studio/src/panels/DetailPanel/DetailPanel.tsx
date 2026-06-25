@@ -1,5 +1,5 @@
-import {outlineSelection} from '@theatre/studio/selectors'
-import {usePrism, useVal} from '@theatre/react'
+import {outlineSelection} from '@encore/studio/selectors'
+import {usePrism, useVal} from '@encore/react'
 import React, {
   createContext,
   useContext,
@@ -12,17 +12,17 @@ import {
   panelZIndexes,
   TitleBar_Piece,
   TitleBar_Punctuation,
-} from '@theatre/studio/panels/BasePanel/common'
-import {pointerEventsAutoInNormalMode} from '@theatre/studio/css'
+} from '@encore/studio/panels/BasePanel/common'
+import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
 import ObjectDetails from './ObjectDetails'
 import ProjectDetails from './ProjectDetails'
-import getStudio from '@theatre/studio/getStudio'
-import useHotspot from '@theatre/studio/uiComponents/useHotspot'
-import {Atom, prism, val} from '@theatre/dataverse'
+import getStudio from '@encore/studio/getStudio'
+import useHotspot from '@encore/studio/uiComponents/useHotspot'
+import {Atom, prism, val} from '@encore/dataverse'
 import EmptyState from './EmptyState'
-import useLockSet from '@theatre/studio/uiComponents/useLockSet'
-import {usePresenceListenersOnRootElement} from '@theatre/studio/uiComponents/usePresence'
-import {__private} from '@theatre/core'
+import useLockSet from '@encore/studio/uiComponents/useLockSet'
+import {usePresenceListenersOnRootElement} from '@encore/studio/uiComponents/usePresence'
+import {__private} from '@encore/core'
 const {isProject, isSheetObject} = __private.instanceTypes
 
 const headerHeight = `32px`

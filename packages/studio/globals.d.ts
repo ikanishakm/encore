@@ -1,1 +1,1 @@
-// the global env of @theatre/studio. Note that tsconfig also uses ../core/globals.d.ts
+// the global env of @encore/studio. Note that tsconfig also uses ../core/globals.d.ts

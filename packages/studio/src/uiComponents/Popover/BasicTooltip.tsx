@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import {pointerEventsAutoInNormalMode} from '@theatre/studio/css'
+import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
 import React from 'react'
-import type {$IntentionalAny} from '@theatre/core/types/public'
+import type {$IntentionalAny} from '@encore/core/types/public'
 
 const Container = styled.div`
   position: absolute;

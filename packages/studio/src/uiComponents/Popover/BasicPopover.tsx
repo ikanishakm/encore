@@ -1,5 +1,5 @@
-import type {$IntentionalAny} from '@theatre/core/types/public'
-import {pointerEventsAutoInNormalMode} from '@theatre/studio/css'
+import type {$IntentionalAny} from '@encore/core/types/public'
+import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
 import React from 'react'
 import styled from 'styled-components'
 import PopoverArrow from './PopoverArrow'

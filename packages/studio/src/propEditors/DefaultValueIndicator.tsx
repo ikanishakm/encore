@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import getStudio from '@theatre/studio/getStudio'
-import type {PathToProp} from '@theatre/utils/pathToProp'
-import type SheetObject from '@theatre/core/sheetObjects/SheetObject'
-import type {PropTypeConfig} from '@theatre/core/types/public'
-import {__private} from '@theatre/core'
+import getStudio from '@encore/studio/getStudio'
+import type {PathToProp} from '@encore/utils/pathToProp'
+import type SheetObject from '@encore/core/sheetObjects/SheetObject'
+import type {PropTypeConfig} from '@encore/core/types/public'
+import {__private} from '@encore/core'
 const {isPropConfigComposite, iteratePropType} = __private.propTypeUtils
 
 const theme = {

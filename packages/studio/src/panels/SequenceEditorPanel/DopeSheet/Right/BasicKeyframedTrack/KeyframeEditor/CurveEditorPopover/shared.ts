@@ -48,7 +48,7 @@ export function handlesFromCssCubicBezierArgs(
 /**
  * A collection of cubic-bezier approximations of common easing functions
  * - ref: https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function
- * - ref: [GitHub issue 28 comment "michaeltheory's suggested default easing presets"](https://github.com/theatre-js/theatre/issues/28#issuecomment-938752916)
+ * - ref: [GitHub issue 28 comment "michaeltheory's suggested default easing presets"](https://github.com/Kanishak/encore/issues/28#issuecomment-938752916)
  **/
 export const EASING_PRESETS = [
   {label: 'Quad Out', value: '0.250, 0.460, 0.450, 0.940'},

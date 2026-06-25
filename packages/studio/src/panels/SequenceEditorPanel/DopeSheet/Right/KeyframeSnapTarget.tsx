@@ -1,20 +1,20 @@
-import type {SequenceEditorPanelLayout} from '@theatre/studio/panels/SequenceEditorPanel/layout/layout'
-import type {Pointer} from '@theatre/dataverse'
-import {Atom} from '@theatre/dataverse'
-import {val} from '@theatre/dataverse'
+import type {SequenceEditorPanelLayout} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
+import type {Pointer} from '@encore/dataverse'
+import {Atom} from '@encore/dataverse'
+import {val} from '@encore/dataverse'
 import React from 'react'
 import styled from 'styled-components'
-import {DopeSnapHitZoneUI} from '@theatre/studio/panels/SequenceEditorPanel/RightOverlay/DopeSnapHitZoneUI'
+import {DopeSnapHitZoneUI} from '@encore/studio/panels/SequenceEditorPanel/RightOverlay/DopeSnapHitZoneUI'
 import type {
   BasicKeyframe,
   ObjectAddressKey,
   SequenceTrackId,
-} from '@theatre/core/types/public'
+} from '@encore/core/types/public'
 import type {
   BasicKeyframedTrack,
   HistoricPositionalSequence,
-} from '@theatre/core/types/private/core'
-import {__private} from '@theatre/core'
+} from '@encore/core/types/private/core'
+import {__private} from '@encore/core'
 
 const {keyframeUtils} = __private
 

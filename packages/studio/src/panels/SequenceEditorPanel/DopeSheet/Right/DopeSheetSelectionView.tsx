@@ -1,31 +1,31 @@
-import getStudio from '@theatre/studio/getStudio'
-import type {CommitOrDiscardOrRecapture} from '@theatre/studio/StudioStore/StudioStore'
-import useDrag from '@theatre/studio/uiComponents/useDrag'
-import useKeyDown from '@theatre/studio/uiComponents/useKeyDown'
-import useValToAtom from '@theatre/studio/uiComponents/useValToAtom'
-import mutableSetDeep from '@theatre/utils/mutableSetDeep'
-import useRefAndState from '@theatre/studio/utils/useRefAndState'
-import {usePrism} from '@theatre/react'
-import type {$IntentionalAny} from '@theatre/core/types/public'
-import type {Pointer} from '@theatre/dataverse'
-import {val} from '@theatre/dataverse'
+import getStudio from '@encore/studio/getStudio'
+import type {CommitOrDiscardOrRecapture} from '@encore/studio/StudioStore/StudioStore'
+import useDrag from '@encore/studio/uiComponents/useDrag'
+import useKeyDown from '@encore/studio/uiComponents/useKeyDown'
+import useValToAtom from '@encore/studio/uiComponents/useValToAtom'
+import mutableSetDeep from '@encore/utils/mutableSetDeep'
+import useRefAndState from '@encore/studio/utils/useRefAndState'
+import {usePrism} from '@encore/react'
+import type {$IntentionalAny} from '@encore/core/types/public'
+import type {Pointer} from '@encore/dataverse'
+import {val} from '@encore/dataverse'
 import React, {useMemo, useRef} from 'react'
 import styled from 'styled-components'
 import type {
   DopeSheetSelection,
   SequenceEditorPanelLayout,
-} from '@theatre/studio/panels/SequenceEditorPanel/layout/layout'
+} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
 import type {
   SequenceEditorTree_AllRowTypes,
   SequenceEditorTree_PropWithChildren,
   SequenceEditorTree_Sheet,
   SequenceEditorTree_SheetObject,
-} from '@theatre/studio/panels/SequenceEditorPanel/layout/tree'
-import DopeSnap from '@theatre/studio/panels/SequenceEditorPanel/RightOverlay/DopeSnap'
+} from '@encore/studio/panels/SequenceEditorPanel/layout/tree'
+import DopeSnap from '@encore/studio/panels/SequenceEditorPanel/RightOverlay/DopeSnap'
 import {collectAggregateKeyframesInPrism} from './collectAggregateKeyframes'
-import type {ILogger, IUtilLogger} from '@theatre/utils/logger'
-import {useLogger} from '@theatre/studio/uiComponents/useLogger'
-import {__private} from '@theatre/core'
+import type {ILogger, IUtilLogger} from '@encore/utils/logger'
+import {useLogger} from '@encore/studio/uiComponents/useLogger'
+import {__private} from '@encore/core'
 
 const {keyframeUtils} = __private
 

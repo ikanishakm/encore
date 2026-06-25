@@ -3,19 +3,19 @@ import type {
   PropTypeConfig_AllSimples,
   PropTypeConfig_Compound,
   UnknownValidCompoundProps,
-} from '@theatre/core/types/public'
-import type SheetObject from '@theatre/core/sheetObjects/SheetObject'
-import type {IPropPathToTrackIdTree} from '@theatre/core/sheetObjects/SheetObjectTemplate'
-import type Sheet from '@theatre/core/sheets/Sheet'
-import type {PathToProp} from '@theatre/utils/pathToProp'
-import type {StudioSheetItemKey} from '@theatre/core/types/private'
-import {createStudioSheetItemKey} from '@theatre/studio/utils/createStudioSheetItemKey'
-import type {$FixMe, $IntentionalAny} from '@theatre/core/types/public'
-import {prism, val, pointerToPrism} from '@theatre/dataverse'
-import logger from '@theatre/utils/logger'
-import {titleBarHeight} from '@theatre/studio/panels/BasePanel/common'
-import type {Studio} from '@theatre/studio/Studio'
-import type {SequenceTrackId} from '@theatre/core/types/public'
+} from '@encore/core/types/public'
+import type SheetObject from '@encore/core/sheetObjects/SheetObject'
+import type {IPropPathToTrackIdTree} from '@encore/core/sheetObjects/SheetObjectTemplate'
+import type Sheet from '@encore/core/sheets/Sheet'
+import type {PathToProp} from '@encore/utils/pathToProp'
+import type {StudioSheetItemKey} from '@encore/core/types/private'
+import {createStudioSheetItemKey} from '@encore/studio/utils/createStudioSheetItemKey'
+import type {$FixMe, $IntentionalAny} from '@encore/core/types/public'
+import {prism, val, pointerToPrism} from '@encore/dataverse'
+import logger from '@encore/utils/logger'
+import {titleBarHeight} from '@encore/studio/panels/BasePanel/common'
+import type {Studio} from '@encore/studio/Studio'
+import type {SequenceTrackId} from '@encore/core/types/public'
 
 /**
  * Base "view model" for each row with common

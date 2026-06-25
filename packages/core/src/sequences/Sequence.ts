@@ -1,19 +1,19 @@
-import type Project from '@theatre/core/projects/Project'
-import type Sheet from '@theatre/core/sheets/Sheet'
-import {encodePathToProp} from '@theatre/utils/pathToProp'
-import type {BasicKeyframe, SequenceAddress} from '@theatre/core/types/public'
-import didYouMean from '@theatre/utils/didYouMean'
-import {InvalidArgumentError} from '@theatre/utils/errors'
+import type Project from '@encore/core/projects/Project'
+import type Sheet from '@encore/core/sheets/Sheet'
+import {encodePathToProp} from '@encore/utils/pathToProp'
+import type {BasicKeyframe, SequenceAddress} from '@encore/core/types/public'
+import didYouMean from '@encore/utils/didYouMean'
+import {InvalidArgumentError} from '@encore/utils/errors'
 import type {
   Prism,
   Pointer,
   Ticker,
   PointerToPrismProvider,
-} from '@theatre/dataverse'
-import {getPointerParts} from '@theatre/dataverse'
-import {Atom} from '@theatre/dataverse'
-import {pointer} from '@theatre/dataverse'
-import {prism, val} from '@theatre/dataverse'
+} from '@encore/dataverse'
+import {getPointerParts} from '@encore/dataverse'
+import {Atom} from '@encore/dataverse'
+import {pointer} from '@encore/dataverse'
+import {prism, val} from '@encore/dataverse'
 import {padStart} from 'lodash-es'
 import type {
   IPlaybackController,
@@ -26,11 +26,11 @@ import type {
   IPlaybackDirection,
   IPlaybackRange,
   ISequence,
-} from '@theatre/core/types/public'
-import {notify} from '@theatre/core/utils/notify'
-import type {$IntentionalAny} from '@theatre/dataverse/src/types'
-import {isSheetObject} from '@theatre/core/utils/instanceTypes'
-import {getSortedKeyframesCached} from '@theatre/core/utils/keyframeUtils'
+} from '@encore/core/types/public'
+import {notify} from '@encore/core/utils/notify'
+import type {$IntentionalAny} from '@encore/dataverse/src/types'
+import {isSheetObject} from '@encore/core/utils/instanceTypes'
+import {getSortedKeyframesCached} from '@encore/core/utils/keyframeUtils'
 
 const possibleDirections = [
   'normal',

@@ -1,11 +1,11 @@
-import {usePointerCapturing} from '@theatre/studio/UIRoot/PointerCapturing'
-import useRefAndState from '@theatre/studio/utils/useRefAndState'
+import {usePointerCapturing} from '@encore/studio/UIRoot/PointerCapturing'
+import useRefAndState from '@encore/studio/utils/useRefAndState'
 import React, {useCallback, useContext, useEffect, useRef} from 'react'
 import {createPortal} from 'react-dom'
 import {PortalContext} from 'reakit'
 import type {AbsolutePlacementBoxConstraints} from './PopoverPositioner'
 import PopoverPositioner from './PopoverPositioner'
-import {contextMenuShownContext} from '@theatre/studio/panels/DetailPanel/DetailPanel'
+import {contextMenuShownContext} from '@encore/studio/panels/DetailPanel/DetailPanel'
 
 export type OpenFn = (
   e:

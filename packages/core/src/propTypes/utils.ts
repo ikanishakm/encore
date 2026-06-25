@@ -6,8 +6,8 @@ import type {
   PropTypeConfig_Enum,
   PathToProp,
   $IntentionalAny,
-} from '@theatre/core/types/public'
-import memoizeFn from '@theatre/utils/memoizeFn'
+} from '@encore/core/types/public'
+import memoizeFn from '@encore/utils/memoizeFn'
 
 /**
  * Iterates recursively over all props of an object (which should be a {@link SerializableMap}) and runs `fn`

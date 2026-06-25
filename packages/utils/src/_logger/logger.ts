@@ -110,14 +110,14 @@ export type ITheatreLogIncludes = {
    */
   min?: TheatreLoggerLevel
   /**
-   * Include logs meant for developers using Theatre.js
+   * Include logs meant for developers using Encore
    * e.g. `Created new project 'Abc' with options {...}`
    *
    * defaults to `true` if `internal: true` or defaults to `false`.
    */
   dev?: boolean
   /**
-   * Include logs meant for internal development of Theatre.js
+   * Include logs meant for internal development of Encore
    * e.g. `Migrated project 'Abc' { duration_ms: 34, from_version: 1, to_version: 3, imported_settings: false }`
    *
    * defaults to `false`
@@ -139,11 +139,11 @@ enum _Category {
 
 /** @internal */
 enum _Audience {
-  /** Logs for developers of Theatre.js */
+  /** Logs for developers of Encore */
   INTERNAL = 1 << 3,
-  /** Logs for developers using Theatre.js */
+  /** Logs for developers using Encore */
   DEV = 1 << 4,
-  /** Logs for users of the app using Theatre.js */
+  /** Logs for users of the app using Encore */
   PUBLIC = 1 << 5,
 }
 
@@ -155,7 +155,7 @@ export enum TheatreLoggerLevel {
 }
 
 /**
- * @internal Theatre.js internal "dev" levels are odd numbers
+ * @internal Encore internal "dev" levels are odd numbers
  *
  * You can check if a level is odd quickly by doing `level & 1 === 1`
  */

@@ -1,8 +1,8 @@
 import * as jose from 'jose'
 import {TRPCError} from '@trpc/server'
 import {appHost} from 'src/appClient'
-import type {studioAuthTokens} from '@theatre/app/types'
-import type {$IntentionalAny} from '@theatre/utils/types'
+import type {studioAuthTokens} from '@encore/app/types'
+import type {$IntentionalAny} from '@encore/utils/types'
 
 const jwtPublicKey = fetch(appHost + `/api/jwt-public-key`)
   .then((response) => response.json())

@@ -1,4 +1,4 @@
-import {devStringify} from '@theatre/utils/devStringify'
+import {devStringify} from '@encore/utils/devStringify'
 
 type AllowedMessageTypes = string | number | object
 

@@ -1,5 +1,5 @@
 {
-  "name": "theatric",
+  "name": "@encore/tweak",
   "version": "0.7.0",
   "license": "Apache-2.0",
   "author": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/theatre-js/theatre",
+    "url": "https://github.com/Kanishak/encore",
     "directory": "packages/theatric"
   },
   "main": "dist/index.js",
@@ -28,8 +28,8 @@
     "clean": "rm -rf ./dist && rm -f tsconfig.tsbuildinfo"
   },
   "devDependencies": {
+    "@encore/dataverse": "workspace:*",
     "@microsoft/api-extractor": "^7.18.11",
-    "@theatre/dataverse": "workspace:*",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.6.2",
     "@types/react": "^19.2.17",
@@ -40,9 +40,9 @@
     "typescript": "5.1.6"
   },
   "dependencies": {
-    "@theatre/core": "workspace:*",
-    "@theatre/react": "workspace:*",
-    "@theatre/studio": "workspace:*",
+    "@encore/core": "workspace:*",
+    "@encore/react": "workspace:*",
+    "@encore/studio": "workspace:*",
     "oauth4webapi": "^2.4.0"
   },
   "peerDependencies": {

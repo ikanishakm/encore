@@ -1,13 +1,13 @@
-import type {SequenceEditorPanelLayout} from '@theatre/studio/panels/SequenceEditorPanel/layout/layout'
-import type {SequenceEditorTree_PrimitiveProp} from '@theatre/studio/panels/SequenceEditorPanel/layout/tree'
-import getStudio from '@theatre/studio/getStudio'
-import {usePrism} from '@theatre/react'
-import type {Pointer} from '@theatre/dataverse'
-import {val} from '@theatre/dataverse'
+import type {SequenceEditorPanelLayout} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
+import type {SequenceEditorTree_PrimitiveProp} from '@encore/studio/panels/SequenceEditorPanel/layout/tree'
+import getStudio from '@encore/studio/getStudio'
+import {usePrism} from '@encore/react'
+import type {Pointer} from '@encore/dataverse'
+import {val} from '@encore/dataverse'
 import React from 'react'
 import RightRow from './Row'
 import BasicKeyframedTrack from './BasicKeyframedTrack/BasicKeyframedTrack'
-import {useLogger} from '@theatre/studio/uiComponents/useLogger'
+import {useLogger} from '@encore/studio/uiComponents/useLogger'
 
 const PrimitivePropRow: React.FC<{
   leaf: SequenceEditorTree_PrimitiveProp

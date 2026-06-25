@@ -1,27 +1,27 @@
 import get from 'lodash-es/get'
 import React from 'react'
-import type {Prism, Pointer} from '@theatre/dataverse'
-import {getPointerParts, prism, val} from '@theatre/dataverse'
-import type SheetObject from '@theatre/core/sheetObjects/SheetObject'
-import getStudio from '@theatre/studio/getStudio'
-import type Scrub from '@theatre/studio/Scrub'
-import getDeep from '@theatre/utils/getDeep'
-import {usePrismInstance} from '@theatre/react'
+import type {Prism, Pointer} from '@encore/dataverse'
+import {getPointerParts, prism, val} from '@encore/dataverse'
+import type SheetObject from '@encore/core/sheetObjects/SheetObject'
+import getStudio from '@encore/studio/getStudio'
+import type Scrub from '@encore/studio/Scrub'
+import getDeep from '@encore/utils/getDeep'
+import {usePrismInstance} from '@encore/react'
 import type {
   SerializablePrimitive as SerializablePrimitive,
   Asset,
   File as AssetFile,
-} from '@theatre/core/types/public'
-import type {PropTypeConfig_AllSimples} from '@theatre/core/types/public'
-import type {SequenceTrackId} from '@theatre/core/types/public'
+} from '@encore/core/types/public'
+import type {PropTypeConfig_AllSimples} from '@encore/core/types/public'
+import type {SequenceTrackId} from '@encore/core/types/public'
 import DefaultOrStaticValueIndicator from './DefaultValueIndicator'
 import type {NearbyKeyframes} from './getNearbyKeyframesOfTrack'
 import {getNearbyKeyframesOfTrack} from './getNearbyKeyframesOfTrack'
 import type {NearbyKeyframesControls} from './NextPrevKeyframeCursors'
 import NextPrevKeyframeCursors from './NextPrevKeyframeCursors'
-import type {ContextMenuItem} from '@theatre/studio/uiComponents/chordial/chordialInternals'
-import {__private} from '@theatre/core'
-import type {$IntentionalAny} from '@theatre/core/types/public'
+import type {ContextMenuItem} from '@encore/studio/uiComponents/chordial/chordialInternals'
+import {__private} from '@encore/core'
+import type {$IntentionalAny} from '@encore/core/types/public'
 
 const {isPropConfSequencable} = __private.propTypeUtils
 

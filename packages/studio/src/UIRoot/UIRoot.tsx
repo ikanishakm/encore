@@ -1,25 +1,25 @@
-import getStudio from '@theatre/studio/getStudio'
-import {usePrism, useVal} from '@theatre/react'
-import {val} from '@theatre/dataverse'
+import getStudio from '@encore/studio/getStudio'
+import {usePrism, useVal} from '@encore/react'
+import {val} from '@encore/dataverse'
 import React, {useEffect} from 'react'
 import styled, {createGlobalStyle} from 'styled-components'
 import PanelsRoot from './PanelsRoot'
-import GlobalToolbar from '@theatre/studio/toolbars/GlobalToolbar/GlobalToolbar'
-import useRefAndState from '@theatre/studio/utils/useRefAndState'
+import GlobalToolbar from '@encore/studio/toolbars/GlobalToolbar/GlobalToolbar'
+import useRefAndState from '@encore/studio/utils/useRefAndState'
 import {PortalContext} from 'reakit'
-import type {$IntentionalAny} from '@theatre/core/types/public'
+import type {$IntentionalAny} from '@encore/core/types/public'
 import useKeyboardShortcuts from './useKeyboardShortcuts'
-import PointerEventsHandler from '@theatre/studio/uiComponents/PointerEventsHandler'
-import {MountAll} from '@theatre/studio/utils/renderInPortalInContext'
-import {PortalLayer, ProvideStyles} from '@theatre/studio/css'
+import PointerEventsHandler from '@encore/studio/uiComponents/PointerEventsHandler'
+import {MountAll} from '@encore/studio/utils/renderInPortalInContext'
+import {PortalLayer, ProvideStyles} from '@encore/studio/css'
 import {
   createTheatreInternalLogger,
   TheatreLoggerLevel,
-} from '@theatre/utils/logger'
-import {ProvideLogger} from '@theatre/studio/uiComponents/useLogger'
-import {Notifier} from '@theatre/studio/notify'
-import {useChordialCaptureEvents} from '@theatre/studio/uiComponents/chordial/useChodrial'
-import {ChordialOverlay} from '@theatre/studio/uiComponents/chordial/ChordialOverlay'
+} from '@encore/utils/logger'
+import {ProvideLogger} from '@encore/studio/uiComponents/useLogger'
+import {Notifier} from '@encore/studio/notify'
+import {useChordialCaptureEvents} from '@encore/studio/uiComponents/chordial/useChodrial'
+import {ChordialOverlay} from '@encore/studio/uiComponents/chordial/ChordialOverlay'
 
 const MakeRootHostContainStatic =
   typeof window !== 'undefined'
@@ -60,7 +60,7 @@ export default function UIRoot(props: {
     dev: INTERNAL_LOGGING,
     internal: INTERNAL_LOGGING,
   })
-  const logger = uiRootLogger.getLogger().named('Theatre.js UIRoot')
+  const logger = uiRootLogger.getLogger().named('Encore UIRoot')
 
   useKeyboardShortcuts()
 
@@ -68,7 +68,7 @@ export default function UIRoot(props: {
   useEffect(() => {
     if (visiblityState === 'everythingIsHidden') {
       console.warn(
-        `Theatre.js Studio is hidden. Use the keyboard shortcut 'alt + \\' to restore the studio, or call studio.ui.restore().`,
+        `Encore Studio is hidden. Use the keyboard shortcut 'alt + \\' to restore the studio, or call studio.ui.restore().`,
       )
     }
     return () => {}

@@ -1,10 +1,10 @@
-import UIRoot from '@theatre/studio/UIRoot/UIRoot'
-import type {$IntentionalAny} from '@theatre/core/types/public'
+import UIRoot from '@encore/studio/UIRoot/UIRoot'
+import type {$IntentionalAny} from '@encore/core/types/public'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {getMounter} from '@theatre/studio/utils/renderInPortalInContext'
-import {withStyledShadow} from '@theatre/studio/css'
-import ExtensionToolbar from '@theatre/studio/toolbars/ExtensionToolbar/ExtensionToolbar'
+import {getMounter} from '@encore/studio/utils/renderInPortalInContext'
+import {withStyledShadow} from '@encore/studio/css'
+import ExtensionToolbar from '@encore/studio/toolbars/ExtensionToolbar/ExtensionToolbar'
 
 export default class UINonSSRBits {
   readonly containerEl = document.createElement('div')
@@ -13,7 +13,7 @@ export default class UINonSSRBits {
   readonly containerShadow: ShadowRoot & HTMLElement
 
   constructor() {
-    // @todo we can't bootstrap Theatre.js (as in, to design Theatre.js using theatre), if we rely on IDed elements
+    // @todo we can't bootstrap Encore (as in, to design Encore using theatre), if we rely on IDed elements
     this.containerEl.id = 'theatrejs-studio-root'
 
     this.containerEl.style.cssText = `

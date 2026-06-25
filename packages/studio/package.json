@@ -1,11 +1,11 @@
 {
-  "name": "@theatre/studio",
+  "name": "@encore/studio",
   "version": "0.7.0",
   "license": "AGPL-3.0-only",
   "description": "Motion design editor for the web",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AriaMinaei/theatre",
+    "url": "https://github.com/Kanishak/encore",
     "directory": "theatre/studio"
   },
   "author": {
@@ -26,19 +26,19 @@
   },
   "sideEffects": true,
   "peerDependencies": {
-    "@theatre/core": "*"
+    "@encore/core": "*"
   },
   "dependencies": {
-    "@theatre/dataverse": "workspace:*"
+    "@encore/dataverse": "workspace:*"
   },
   "devDependencies": {
+    "@encore/app": "workspace:*",
+    "@encore/react": "workspace:*",
+    "@encore/saaz": "workspace:*",
+    "@encore/sync-server": "workspace:*",
+    "@encore/utils": "workspace:*",
     "@react-spring/web": "^9.7.3",
     "@styled/typescript-styled-plugin": "^1.0.1",
-    "@theatre/app": "workspace:*",
-    "@theatre/react": "workspace:*",
-    "@theatre/saaz": "workspace:*",
-    "@theatre/sync-server": "workspace:*",
-    "@theatre/utils": "workspace:*",
     "@trpc/client": "^10.43.0",
     "@types/jest": "^26.0.24",
     "@types/marked": "^4.0.7",

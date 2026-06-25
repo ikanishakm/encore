@@ -1,7 +1,7 @@
 # The docker-compose file is only used to *test* the repo on a local linux vm. You don't have
 # to use docker or know docker to develop the repo.
 version: '3.8'
-name: theatre-monorepo
+name: encore-monorepo
 services:
   node:
     image: mcr.microsoft.com/playwright:v1.40.0-jammy

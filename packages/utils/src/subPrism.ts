@@ -1,5 +1,5 @@
-import {prism} from '@theatre/dataverse'
-import type {$IntentionalAny} from '@theatre/utils/types'
+import {prism} from '@encore/dataverse'
+import type {$IntentionalAny} from '@encore/utils/types'
 
 /**
  * A prism hook that runs fn() into a prism() call and returns the result

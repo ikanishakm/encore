@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client'
-import studio from '@theatre/studio'
-import extension from '@theatre/r3f/dist/extension'
+import studio from '@encore/studio'
+import extension from '@encore/r3f/dist/extension'
 import App from './App/App'
 
 if (process.env.NODE_ENV === 'development' && typeof window !== 'undefined') {

@@ -1,9 +1,9 @@
-import type {$FixMe, VoidFn} from '@theatre/core/types/public'
+import type {$FixMe, VoidFn} from '@encore/core/types/public'
 import React from 'react'
 import styled, {css} from 'styled-components'
-import noop from '@theatre/utils/noop'
-import {pointerEventsAutoInNormalMode} from '@theatre/studio/css'
-import {ChevronDown, Package} from '@theatre/studio/uiComponents/icons'
+import noop from '@encore/utils/noop'
+import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
+import {ChevronDown, Package} from '@encore/studio/uiComponents/icons'
 
 export const Container = styled.li`
   margin: 0;

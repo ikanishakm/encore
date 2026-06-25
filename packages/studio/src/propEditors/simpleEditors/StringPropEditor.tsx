@@ -1,6 +1,6 @@
 import React from 'react'
-import type {PropTypeConfig_String} from '@theatre/core/types/public'
-import BasicStringInput from '@theatre/studio/uiComponents/form/BasicStringInput'
+import type {PropTypeConfig_String} from '@encore/core/types/public'
+import BasicStringInput from '@encore/studio/uiComponents/form/BasicStringInput'
 import type {ISimplePropEditorReactProps} from './ISimplePropEditorReactProps'
 
 function StringPropEditor({

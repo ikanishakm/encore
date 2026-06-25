@@ -1,5 +1,5 @@
 {
-  "name": "theatre-monorepo",
+  "name": "encore-monorepo",
   "license": "Apache-2.0",
   "version": "0.7.0",
   "workspaces": [
@@ -16,9 +16,9 @@
     "typecheck": "yarn run build:ts",
     "build:ts": "tsc --build ./devEnv/typecheck-all-projects/tsconfig.all.json",
     "test": "jest",
-    "test:compat:install": "yarn workspace @theatre/compat-tests run install-fixtures",
+    "test:compat:install": "yarn workspace @encore/compat-tests run install-fixtures",
     "test:compat:run": "jest --config jest.compat-tests.config.js",
-    "postinstall": "husky install && yarn workspace @theatre/app run prisma generate && yarn workspace @theatre/sync-server run prisma generate",
+    "postinstall": "husky install && yarn workspace @encore/app run prisma generate && yarn workspace @encore/sync-server run prisma generate",
     "lint:all": "eslint . --ext ts,tsx --ignore-path=.gitignore --rulesdir ./devEnv/eslint/rules"
   },
   "lint-staged": {
@@ -73,7 +73,8 @@
     "react": "19.2.7",
     "react-dom": "19.2.7",
     "@types/react": "19.2.17",
-    "@types/react-dom": "19.2.3"
+    "@types/react-dom": "19.2.3",
+    "tsx": "^4.20.0"
   },
   "dependenciesMeta": {
     "deasync": {

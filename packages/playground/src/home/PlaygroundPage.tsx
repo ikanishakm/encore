@@ -44,7 +44,7 @@ export const PlaygroundPage = ({
             },
             {
               label: 'Github',
-              href: 'https://github.com/theatre-js/theatre',
+              href: 'https://github.com/Kanishak/encore',
             },
           ]}
         />

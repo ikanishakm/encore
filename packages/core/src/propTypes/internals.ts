@@ -1,13 +1,13 @@
-import {InvalidArgumentError} from '@theatre/utils/errors'
-import type {$IntentionalAny} from '@theatre/core/types/public'
-import userReadableTypeOfValue from '@theatre/utils/userReadableTypeOfValue'
+import {InvalidArgumentError} from '@encore/utils/errors'
+import type {$IntentionalAny} from '@encore/core/types/public'
+import userReadableTypeOfValue from '@encore/utils/userReadableTypeOfValue'
 import {isPlainObject} from 'lodash-es'
 import {
   propTypeSymbol,
   type PropTypeConfig,
   type UnknownShorthandCompoundProps,
   type UnknownValidCompoundProps,
-} from '@theatre/core/types/public'
+} from '@encore/core/types/public'
 import * as t from './index'
 
 export function isLonghandPropType(t: unknown): t is PropTypeConfig {

@@ -1,4 +1,4 @@
-import type {$IntentionalAny} from '@theatre/utils/types'
+import type {$IntentionalAny} from '@encore/utils/types'
 
 /**
  * This is like `Object.assign(base, override)`, with the following differences:

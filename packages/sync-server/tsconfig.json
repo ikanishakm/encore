@@ -8,10 +8,10 @@
     "baseUrl": ".",
     "composite": true,
     "paths": {
-      "@theatre/utils/*": ["../utils/src/*"],
-      "@theatre/app/*": ["../app/src/*"],
-      "@theatre/core/*": ["../core/src/*"],
-      "@theatre/core": ["../core/src/index.ts"]
+      "@encore/utils/*": ["../utils/src/*"],
+      "@encore/app/*": ["../app/src/*"],
+      "@encore/core/*": ["../core/src/*"],
+      "@encore/core": ["../core/src/index.ts"]
     }
   },
   "references": [

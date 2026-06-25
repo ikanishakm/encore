@@ -1,4 +1,4 @@
-import type {$IntentionalAny} from '@theatre/utils/types'
+import type {$IntentionalAny} from '@encore/utils/types'
 
 /**
  * A wrapper around a WeakMap that adds a convenient `getOrSet` method.

@@ -1,6 +1,6 @@
-import {basicFSM} from '@theatre/utils/basicFSM'
+import {basicFSM} from '@encore/utils/basicFSM'
 import type {ChodrialElement, InvokeTypePopover} from './chordialInternals'
-import {prism, val} from '@theatre/dataverse'
+import {prism, val} from '@encore/dataverse'
 
 export const popoverActor = basicFSM<
   | {type: 'open'; el: ChodrialElement; triggerEvent: MouseEvent | undefined}

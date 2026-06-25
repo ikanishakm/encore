@@ -1,13 +1,13 @@
-import type Project from '@theatre/core/projects/Project'
-import type Sequence from '@theatre/core/sequences/Sequence'
-import type SheetObject from '@theatre/core/sheetObjects/SheetObject'
-import type Sheet from '@theatre/core/sheets/Sheet'
-import {prism, val} from '@theatre/dataverse'
-import type {$IntentionalAny} from '@theatre/dataverse/src/types'
-import type {SheetId} from '@theatre/core/types/public'
+import type Project from '@encore/core/projects/Project'
+import type Sequence from '@encore/core/sequences/Sequence'
+import type SheetObject from '@encore/core/sheetObjects/SheetObject'
+import type Sheet from '@encore/core/sheets/Sheet'
+import {prism, val} from '@encore/dataverse'
+import type {$IntentionalAny} from '@encore/dataverse/src/types'
+import type {SheetId} from '@encore/core/types/public'
 import {uniq} from 'lodash-es'
 import getStudio from './getStudio'
-import {__private} from '@theatre/core'
+import {__private} from '@encore/core'
 const {isSheet, isSheetObject} = __private.instanceTypes
 
 export type OutlineSelectable = Project | Sheet | SheetObject

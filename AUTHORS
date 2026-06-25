@@ -1,0 +1,41 @@
+# Authors & Contributors
+
+Encore is a fork of Theatre.js. The vast majority of this codebase was written
+by the Theatre.js authors and contributors listed below. We are grateful for
+their work.
+
+## Theatre.js — original authors
+
+- Aria Minaei — creator and lead author <aria@theatrejs.com>
+- Andrew Prifer — author of theatric (now @encore/tweak), co-author of r3f
+- TheaterJS Oy
+
+## Theatre.js — contributors
+
+(Compiled from the upstream git history, in rough order of contribution.)
+
+- Cole Lawrence
+- Elliot (vezwork)
+- Fülöp Kovács
+- Colin Duffy
+- Don McCurdy
+- Jørn Myrland
+- Adam Krebs
+- Or Fleisher
+- João Leite
+- Clément Roche
+- Dan
+- Kanishak
+- Ikko Eltociair Ashimine
+- 0xflotus
+- Marco Slooten
+- Nikhil Saraf
+- PaleHazy
+- Pumpudu
+- Timo Hausmann
+- cory-glooh
+- steam0r
+
+## Encore — fork maintainer
+
+- Kanishak <i.kanishakm@gmail.com>

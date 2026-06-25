@@ -1,3 +1,10 @@
-This is a bundle of @theatre/core and @theatre/studio packages.
+This is a bundle of the @encore/core and @encore/studio packages.
 
-See their licenses in their repo: https://github.com/theatre-js/theatre
+@encore/core is licensed under Apache-2.0; @encore/studio is licensed under
+AGPL-3.0-only. See the LICENSE file of each package, and the root NOTICE file,
+for details and attribution.
+
+Encore is a maintained fork of Theatre.js (https://www.theatrejs.com),
+originally created by Aria Minaei and contributors.
+
+Source: https://github.com/Kanishak/encore

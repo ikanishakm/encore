@@ -1,9 +1,9 @@
 import React from 'react'
-import {usePrism, useVal} from '@theatre/react'
+import {usePrism, useVal} from '@encore/react'
 import type {ChodrialElement, ChordialOpts} from './chordialInternals'
 import {contextActor, contextStatus} from './contextActor'
-import ContextMenu from '@theatre/studio/uiComponents/simpleContextMenu/ContextMenu/ContextMenu'
-import {val} from '@theatre/dataverse'
+import ContextMenu from '@encore/studio/uiComponents/simpleContextMenu/ContextMenu/ContextMenu'
+import {val} from '@encore/dataverse'
 
 export const ContextOverlay: React.FC<{}> = () => {
   const currentStatus = useVal(contextStatus)

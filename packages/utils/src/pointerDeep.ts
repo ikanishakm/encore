@@ -1,6 +1,6 @@
-import type {Pointer} from '@theatre/dataverse'
-import type {PathToProp} from '@theatre/utils/pathToProp'
-import type {$IntentionalAny} from '@theatre/utils/types'
+import type {Pointer} from '@encore/dataverse'
+import type {PathToProp} from '@encore/utils/pathToProp'
+import type {$IntentionalAny} from '@encore/utils/types'
 
 /**
  * Points deep into a pointer, using `toAppend` as the path. This is _NOT_ type-safe, so use with caution.

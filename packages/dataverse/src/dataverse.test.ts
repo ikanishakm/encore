@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import type {Pointer, Prism} from '@theatre/dataverse'
+import type {Pointer, Prism} from '@encore/dataverse'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import {
   isPointer,
@@ -11,7 +11,7 @@ import {
   prism,
   Ticker,
   val,
-} from '@theatre/dataverse'
+} from '@encore/dataverse'
 import {set as lodashSet} from 'lodash-es'
 import {isPointerToPrismProvider} from './pointerToPrism'
 
@@ -1286,7 +1286,7 @@ describe(`The exhaustive guide to dataverse`, () => {
   })
 
   // What's next?
-  // At this point we have covered all of `@theatre/dataverse`.
-  // If you're planning to use Dataverse with React, have a look at [`@theatre/react`](https://github.com/theatre-js/theatre/tree/main/packages/react)
+  // At this point we have covered all of `@encore/dataverse`.
+  // If you're planning to use Dataverse with React, have a look at [`@encore/react`](https://github.com/Kanishak/encore/tree/main/packages/react)
   // which provides a React integration for Dataverse as well.
 })

@@ -1,5 +1,5 @@
 {
-  "name": "@theatre/browser-bundles",
+  "name": "@encore/browser-bundles",
   "version": "0.7.0",
   "license": "SEE LICENSE IN LICENSE",
   "author": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AriaMinaei/theatre",
+    "url": "https://github.com/Kanishak/encore",
     "directory": "packages/browser-bundles"
   },
   "files": [
@@ -22,8 +22,8 @@
     "clean": "rm -rf ./dist && rm -f tsconfig.tsbuildinfo"
   },
   "devDependencies": {
-    "@theatre/core": "workspace:*",
-    "@theatre/studio": "workspace:*",
+    "@encore/core": "workspace:*",
+    "@encore/studio": "workspace:*",
     "esbuild": "^0.19.11",
     "npm-run-all": "^4.1.5",
     "tsx": "4.7.0",

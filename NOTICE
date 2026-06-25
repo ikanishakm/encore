@@ -1,0 +1,40 @@
+Encore
+======
+
+Encore is a maintained, community fork of Theatre.js
+(https://www.theatrejs.com) — the motion-design library and animation editor
+originally created by Aria Minaei and contributors.
+
+This product includes software developed by the Theatre.js project and its
+contributors.
+
+Original copyright
+------------------
+  Copyright (c) Aria Minaei
+  Copyright (c) TheaterJS Oy
+  Copyright (c) Andrew Prifer
+  and the Theatre.js contributors (see the AUTHORS file).
+
+Licensing
+---------
+Except where noted, the Encore packages are licensed under the Apache License,
+Version 2.0 (see the LICENSE file):
+
+  @encore/core, @encore/dataverse, @encore/react, @encore/r3f,
+  @encore/saaz, @encore/utils, @encore/tweak
+
+The @encore/studio package is licensed under the GNU Affero General Public
+License v3.0 only (AGPL-3.0-only); see packages/studio/LICENSE.
+
+@encore/browser-bundles ships @encore/core (Apache-2.0) and @encore/studio
+(AGPL-3.0-only) together; see packages/browser-bundles/LICENSE.
+
+Notable changes from upstream Theatre.js
+----------------------------------------
+  - Renamed the npm scope from @theatre/* to @encore/* (and the unscoped
+    `theatric` package to @encore/tweak).
+  - Support for React 19 and react-three-fiber v9.
+  - Removed the hosted-cloud update checker and defaulted the studio backend
+    to localhost, so the editor does not contact any third-party server.
+
+Maintained by Kanishak <i.kanishakm@gmail.com>.

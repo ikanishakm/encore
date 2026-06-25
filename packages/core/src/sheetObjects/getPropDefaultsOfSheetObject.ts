@@ -1,12 +1,12 @@
-import type {$FixMe} from '@theatre/core/types/public'
+import type {$FixMe} from '@encore/core/types/public'
 import type {
   PropTypeConfig,
   PropTypeConfig_Compound,
   PropTypeConfig_Enum,
   SerializableMap,
   SerializableValue,
-} from '@theatre/core/types/public'
-import type {SheetObjectPropTypeConfig} from '@theatre/core/types/public'
+} from '@encore/core/types/public'
+import type {SheetObjectPropTypeConfig} from '@encore/core/types/public'
 
 const cachedDefaults = new WeakMap<PropTypeConfig, SerializableValue>()
 

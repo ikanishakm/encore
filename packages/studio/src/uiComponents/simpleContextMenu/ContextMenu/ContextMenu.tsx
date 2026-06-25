@@ -1,4 +1,4 @@
-import useBoundingClientRect from '@theatre/studio/uiComponents/useBoundingClientRect'
+import useBoundingClientRect from '@encore/studio/uiComponents/useBoundingClientRect'
 import {useMemo} from 'react'
 import {useContext} from 'react'
 import React, {useLayoutEffect, useState} from 'react'
@@ -6,9 +6,9 @@ import {createPortal} from 'react-dom'
 import useWindowSize from 'react-use/esm/useWindowSize'
 import {height as itemHeight} from './Item'
 import {PortalContext} from 'reakit'
-import useOnKeyDown from '@theatre/studio/uiComponents/useOnKeyDown'
+import useOnKeyDown from '@encore/studio/uiComponents/useOnKeyDown'
 import BaseMenu from './BaseMenu'
-import type {ContextMenuItem} from '@theatre/studio/uiComponents/chordial/chordialInternals'
+import type {ContextMenuItem} from '@encore/studio/uiComponents/chordial/chordialInternals'
 
 /**
  * How far from the menu should the pointer travel to auto close the menu

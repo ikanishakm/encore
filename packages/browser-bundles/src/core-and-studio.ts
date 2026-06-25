@@ -1,5 +1,5 @@
-import * as core from '@theatre/core'
-import '@theatre/studio'
+import * as core from '@encore/core'
+import '@encore/studio'
 
 // @ts-ignore
-window.Theatre = core
+window.Encore = core

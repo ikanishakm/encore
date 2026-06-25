@@ -1,4 +1,4 @@
-import {defer} from '@theatre/utils/defer'
+import {defer} from '@encore/utils/defer'
 import {applyOptimisticUpdateToState} from '../shared/transactions'
 import type {
   BackApplyUpdateOps,
@@ -16,8 +16,8 @@ import {BackStorage} from './BackStorage'
 import type {DebouncedFunc} from 'lodash-es'
 import {cloneDeep, throttle} from 'lodash-es'
 import {ensureStateIsUptodate as ensureOpStateIsUptodate} from '../shared/utils'
-import {Atom} from '@theatre/dataverse'
-import deepEqual from '@theatre/utils/deepEqual'
+import {Atom} from '@encore/dataverse'
+import deepEqual from '@encore/utils/deepEqual'
 
 export default class SaazBack implements SaazBackInterface {
   private _dbName: string

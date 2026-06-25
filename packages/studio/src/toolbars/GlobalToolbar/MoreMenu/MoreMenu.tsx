@@ -1,9 +1,9 @@
-import {useVal} from '@theatre/react'
-import type {$IntentionalAny} from '@theatre/core/types/public'
-import getStudio from '@theatre/studio/getStudio'
+import {useVal} from '@encore/react'
+import type {$IntentionalAny} from '@encore/core/types/public'
+import getStudio from '@encore/studio/getStudio'
 import React from 'react'
 import styled from 'styled-components'
-import {env} from '@theatre/studio/env'
+import {env} from '@encore/studio/env'
 
 const Container = styled.div`
   width: 138px;
@@ -145,7 +145,7 @@ const MoreMenu = React.forwardRef((props: {}, ref) => {
       <Divider />
       <Link
         as="a"
-        href="https://github.com/theatre-js/theatre"
+        href="https://github.com/Kanishak/encore"
         className=""
         target="_blank"
       >

@@ -1,4 +1,4 @@
-import {theme} from '@theatre/studio/css'
+import {theme} from '@encore/studio/css'
 import styled from 'styled-components'
 
 export const panelZIndexes = {

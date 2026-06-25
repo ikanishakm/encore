@@ -1,16 +1,16 @@
-import type Sheet from '@theatre/core/sheets/Sheet'
-import getStudio from '@theatre/studio/getStudio'
-import type useDrag from '@theatre/studio/uiComponents/useDrag'
-import type {SheetAddress} from '@theatre/core/types/public'
-import subPrism from '@theatre/utils/subPrism'
+import type Sheet from '@encore/core/sheets/Sheet'
+import getStudio from '@encore/studio/getStudio'
+import type useDrag from '@encore/studio/uiComponents/useDrag'
+import type {SheetAddress} from '@encore/core/types/public'
+import subPrism from '@encore/utils/subPrism'
 import type {
   IRange,
   PositionInScreenSpace,
   StrictRecord,
-} from '@theatre/core/types/public'
-import {valToAtom} from '@theatre/utils/valToAtom'
-import type {Prism, Pointer} from '@theatre/dataverse'
-import {Atom, prism, val} from '@theatre/dataverse'
+} from '@encore/core/types/public'
+import {valToAtom} from '@encore/utils/valToAtom'
+import type {Prism, Pointer} from '@encore/dataverse'
+import {Atom, prism, val} from '@encore/dataverse'
 import type {SequenceEditorTree} from './tree'
 import {calculateSequenceEditorTree} from './tree'
 import {clamp} from 'lodash-es'
@@ -18,7 +18,7 @@ import type {
   KeyframeId,
   ObjectAddressKey,
   SequenceTrackId,
-} from '@theatre/core/types/public'
+} from '@encore/core/types/public'
 
 // A Side is either the left side of the panel or the right side
 type DimsOfPanelPart = {

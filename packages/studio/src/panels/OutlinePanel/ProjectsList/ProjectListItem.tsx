@@ -1,14 +1,14 @@
-import type Project from '@theatre/core/projects/Project'
+import type Project from '@encore/core/projects/Project'
 import React, {useCallback} from 'react'
-import BaseItem from '@theatre/studio/panels/OutlinePanel/BaseItem'
-import SheetsList from '@theatre/studio/panels/OutlinePanel/SheetsList/SheetsList'
-import getStudio from '@theatre/studio/getStudio'
-import {usePrism, useVal} from '@theatre/react'
-import {outlineSelection} from '@theatre/studio/selectors'
-import {val} from '@theatre/dataverse'
+import BaseItem from '@encore/studio/panels/OutlinePanel/BaseItem'
+import SheetsList from '@encore/studio/panels/OutlinePanel/SheetsList/SheetsList'
+import getStudio from '@encore/studio/getStudio'
+import {usePrism, useVal} from '@encore/react'
+import {outlineSelection} from '@encore/studio/selectors'
+import {val} from '@encore/dataverse'
 import styled from 'styled-components'
-import {useCollapseStateInOutlinePanel} from '@theatre/studio/panels/OutlinePanel/outlinePanelUtils'
-import useChordial from '@theatre/studio/uiComponents/chordial/useChodrial'
+import {useCollapseStateInOutlinePanel} from '@encore/studio/panels/OutlinePanel/outlinePanelUtils'
+import useChordial from '@encore/studio/uiComponents/chordial/useChodrial'
 
 const ConflictNotice = styled.div`
   color: var(--tt-fg);

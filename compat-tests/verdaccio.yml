@@ -12,10 +12,10 @@ uplinks:
     url: https://registry.npmjs.org/
     cache: false
 packages:
-  '@theatre/*':
+  '@encore/*':
     access: $all
     publish: $all
-  'theatric':
+  '@encore/tweak':
     access: $all
     publish: $all
   '@*/*':

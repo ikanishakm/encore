@@ -1,7 +1,7 @@
 import type {StudioAhistoricState} from './ahistoric'
 import type {StudioEphemeralState} from './ephemeral'
 import type {StudioHistoricState} from './historic'
-import type {Nominal} from '@theatre/utils/Nominal'
+import type {Nominal} from '@encore/utils/Nominal'
 export * from './ahistoric'
 export * from './ephemeral'
 export * from './historic'

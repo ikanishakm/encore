@@ -1,12 +1,12 @@
 import React, {useEffect, useLayoutEffect} from 'react'
 import styled from 'styled-components'
-import {panelZIndexes} from '@theatre/studio/panels/BasePanel/common'
+import {panelZIndexes} from '@encore/studio/panels/BasePanel/common'
 import ProjectsList from './ProjectsList/ProjectsList'
-import {useVal} from '@theatre/react'
-import getStudio from '@theatre/studio/getStudio'
-import useHotspot from '@theatre/studio/uiComponents/useHotspot'
-import {Atom, prism, val} from '@theatre/dataverse'
-import {pointerEventsAutoInNormalMode} from '@theatre/studio/css'
+import {useVal} from '@encore/react'
+import getStudio from '@encore/studio/getStudio'
+import useHotspot from '@encore/studio/uiComponents/useHotspot'
+import {Atom, prism, val} from '@encore/dataverse'
+import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
 
 const headerHeight = `44px`
 

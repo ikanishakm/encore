@@ -1,22 +1,22 @@
 /**
- * The library providing the editor components of Theatre.js.
+ * The library providing the editor components of Encore.
  *
  * @packageDocumentation
  */
 
-import {setStudio} from '@theatre/studio/getStudio'
-import {Studio} from '@theatre/studio/Studio'
+import {setStudio} from '@encore/studio/getStudio'
+import {Studio} from '@encore/studio/Studio'
 
-import type {GlobalVariableNames} from '@theatre/core/globals'
-import type {$FixMe} from '@theatre/core/types/public'
+import type {GlobalVariableNames} from '@encore/core/globals'
+import type {$FixMe} from '@encore/core/types/public'
 import StudioBundle from './StudioBundle'
-import type CoreBundle from '@theatre/core/CoreBundle'
-import type {IStudio} from '@theatre/core/types/public'
+import type CoreBundle from '@encore/core/CoreBundle'
+import type {IStudio} from '@encore/core/types/public'
 
 const globalVariableNames: GlobalVariableNames = {
-  StudioBundle: '__TheatreJS_StudioBundle',
-  coreBundle: '__TheatreJS_CoreBundle',
-  notifications: '__TheatreJS_Notifications',
+  StudioBundle: '__Encore_StudioBundle',
+  coreBundle: '__Encore_CoreBundle',
+  notifications: '__Encore_Notifications',
 }
 
 const studioPrivateAPI = new Studio()
@@ -51,14 +51,14 @@ function registerStudioBundle() {
       typeof existingStudioBundle.version === 'string'
     ) {
       throw new Error(
-        `It seems that the module '@theatre/studio' is loaded more than once. This could have two possible causes:\n` +
-          `1. You might have two separate versions of Theatre.js in node_modules.\n` +
+        `It seems that the module '@encore/studio' is loaded more than once. This could have two possible causes:\n` +
+          `1. You might have two separate versions of Encore in node_modules.\n` +
           `2. Or this might be a bundling misconfiguration, in case you're using a bundler like Webpack/ESBuild/Rollup.\n\n` +
-          `Note that it **is okay** to import '@theatre/studio' multiple times. But those imports should point to the same module.`,
+          `Note that it **is okay** to import '@encore/studio' multiple times. But those imports should point to the same module.`,
       )
     } else {
       throw new Error(
-        `The variable window.${globalVariableNames.StudioBundle} seems to be already set by a module other than @theatre/core.`,
+        `The variable window.${globalVariableNames.StudioBundle} seems to be already set by a module other than @encore/core.`,
       )
     }
   }
@@ -81,7 +81,7 @@ function registerStudioBundle() {
   }
 }
 
-import {notify} from '@theatre/studio/notify'
+import {notify} from '@encore/studio/notify'
 
 if (typeof window !== 'undefined') {
   // @ts-ignore

@@ -105,15 +105,15 @@ jobs:
           node-version: 18.x
 
       - uses: ./.github/actions/yarn-nm-install
-      - name: Build the Theatre.js packages
+      - name: Build the Encore packages
         run: yarn cli build
       - name: Update .yarnrc.yml with the auth config for the npmPublishRegistry
         run: cat .github/.yarnrc.publish.yml >> .yarnrc.yml
-      - name: Publish the Theatre.js packages
+      - name: Publish the Encore packages
         id: publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: yarn zx scripts/prerelease.mjs
+        run: yarn cli prerelease ci
 
       - name: Update the comment
         id: update-comment

@@ -1,6 +1,6 @@
-import {editable as e, RafDriverProvider, SheetProvider} from '@theatre/r3f'
-import type {IRafDriver} from '@theatre/core'
-import {getProject} from '@theatre/core'
+import {editable as e, RafDriverProvider, SheetProvider} from '@encore/r3f'
+import type {IRafDriver} from '@encore/core'
+import {getProject} from '@encore/core'
 import React from 'react'
 import {Canvas} from '@react-three/fiber'
 

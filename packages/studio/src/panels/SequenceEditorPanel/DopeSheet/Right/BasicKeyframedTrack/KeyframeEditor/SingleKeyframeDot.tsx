@@ -1,33 +1,33 @@
 import React, {useMemo, useRef} from 'react'
 import styled from 'styled-components'
 
-import getStudio from '@theatre/studio/getStudio'
-import type {CommitOrDiscardOrRecapture} from '@theatre/studio/StudioStore/StudioStore'
-import useContextMenu from '@theatre/studio/uiComponents/simpleContextMenu/useContextMenu'
-import type {DragOpts} from '@theatre/studio/uiComponents/useDrag'
-import useDrag from '@theatre/studio/uiComponents/useDrag'
-import useRefAndState from '@theatre/studio/utils/useRefAndState'
-import {val} from '@theatre/dataverse'
-import {useLockFrameStampPosition} from '@theatre/studio/panels/SequenceEditorPanel/FrameStampPositionProvider'
-import {useCssCursorLock} from '@theatre/studio/uiComponents/PointerEventsHandler'
-import DopeSnap from '@theatre/studio/panels/SequenceEditorPanel/RightOverlay/DopeSnap'
+import getStudio from '@encore/studio/getStudio'
+import type {CommitOrDiscardOrRecapture} from '@encore/studio/StudioStore/StudioStore'
+import useContextMenu from '@encore/studio/uiComponents/simpleContextMenu/useContextMenu'
+import type {DragOpts} from '@encore/studio/uiComponents/useDrag'
+import useDrag from '@encore/studio/uiComponents/useDrag'
+import useRefAndState from '@encore/studio/utils/useRefAndState'
+import {val} from '@encore/dataverse'
+import {useLockFrameStampPosition} from '@encore/studio/panels/SequenceEditorPanel/FrameStampPositionProvider'
+import {useCssCursorLock} from '@encore/studio/uiComponents/PointerEventsHandler'
+import DopeSnap from '@encore/studio/panels/SequenceEditorPanel/RightOverlay/DopeSnap'
 
 import type {ISingleKeyframeEditorProps} from './SingleKeyframeEditor'
-import {absoluteDims} from '@theatre/studio/utils/absoluteDims'
-import {useLogger} from '@theatre/studio/uiComponents/useLogger'
-import type {ILogger} from '@theatre/utils/logger'
-import {copyableKeyframesFromSelection} from '@theatre/studio/panels/SequenceEditorPanel/DopeSheet/selections'
-import {pointerEventsAutoInNormalMode} from '@theatre/studio/css'
+import {absoluteDims} from '@encore/studio/utils/absoluteDims'
+import {useLogger} from '@encore/studio/uiComponents/useLogger'
+import type {ILogger} from '@encore/utils/logger'
+import {copyableKeyframesFromSelection} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/selections'
+import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
 import {
   collectKeyframeSnapPositions,
   snapToNone,
   snapToSome,
-} from '@theatre/studio/panels/SequenceEditorPanel/DopeSheet/Right/KeyframeSnapTarget'
+} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/KeyframeSnapTarget'
 import {useKeyframeInlineEditorPopover} from './useSingleKeyframeInlineEditorPopover'
 import usePresence, {
   PresenceFlag,
-} from '@theatre/studio/uiComponents/usePresence'
-import {__private} from '@theatre/core'
+} from '@encore/studio/uiComponents/usePresence'
+import {__private} from '@encore/core'
 
 const {keyframeUtils} = __private
 

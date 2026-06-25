@@ -1,15 +1,15 @@
-import {privateAPI, setPrivateAPI} from '@theatre/core/privateAPIs'
-import {compound} from '@theatre/core/propTypes'
-import type Sheet from '@theatre/core/sheets/Sheet'
-import type {SheetAddress} from '@theatre/core/types/public'
-import {InvalidArgumentError} from '@theatre/utils/errors'
-import {validateAndSanitiseSlashedPathOrThrow} from '@theatre/utils/slashedPaths'
-import type {$FixMe, $IntentionalAny} from '@theatre/core/types/public'
-import userReadableTypeOfValue from '@theatre/utils/userReadableTypeOfValue'
+import {privateAPI, setPrivateAPI} from '@encore/core/privateAPIs'
+import {compound} from '@encore/core/propTypes'
+import type Sheet from '@encore/core/sheets/Sheet'
+import type {SheetAddress} from '@encore/core/types/public'
+import {InvalidArgumentError} from '@encore/utils/errors'
+import {validateAndSanitiseSlashedPathOrThrow} from '@encore/utils/slashedPaths'
+import type {$FixMe, $IntentionalAny} from '@encore/core/types/public'
+import userReadableTypeOfValue from '@encore/utils/userReadableTypeOfValue'
 import deepEqual from 'fast-deep-equal'
-import type SheetObject from '@theatre/core/sheetObjects/SheetObject'
-import type {ObjectAddressKey} from '@theatre/core/types/public'
-import {notify} from '@theatre/core/utils/notify'
+import type SheetObject from '@encore/core/sheetObjects/SheetObject'
+import type {ObjectAddressKey} from '@encore/core/types/public'
+import {notify} from '@encore/core/utils/notify'
 import type {
   IProject,
   ISheet,
@@ -17,7 +17,7 @@ import type {
   ISheetObject,
   ISequence,
   UnknownShorthandCompoundProps,
-} from '@theatre/core/types/public'
+} from '@encore/core/types/public'
 
 const weakMapOfUnsanitizedProps = new WeakMap<
   SheetObject,

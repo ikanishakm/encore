@@ -1,12 +1,12 @@
-import type Sheet from '@theatre/core/sheets/Sheet'
-import {usePrism} from '@theatre/react'
-import {val} from '@theatre/dataverse'
+import type Sheet from '@encore/core/sheets/Sheet'
+import {usePrism} from '@encore/react'
+import {val} from '@encore/dataverse'
 import React from 'react'
 import styled from 'styled-components'
 import {ObjectItem} from './ObjectItem'
-import type SheetObject from '@theatre/core/sheetObjects/SheetObject'
-import BaseItem from '@theatre/studio/panels/OutlinePanel/BaseItem'
-import {useCollapseStateInOutlinePanel} from '@theatre/studio/panels/OutlinePanel/outlinePanelUtils'
+import type SheetObject from '@encore/core/sheetObjects/SheetObject'
+import BaseItem from '@encore/studio/panels/OutlinePanel/BaseItem'
+import {useCollapseStateInOutlinePanel} from '@encore/studio/panels/OutlinePanel/outlinePanelUtils'
 
 export const Li = styled.li<{isSelected: boolean}>`
   color: ${(props) => (props.isSelected ? 'white' : 'hsl(1, 1%, 80%)')};

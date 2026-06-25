@@ -8,6 +8,11 @@ const externalPlugin = (patterns: RegExp[]): Plugin => {
 
     setup(build) {
       build.onResolve({filter: /.*/}, (args) => {
+        // Never externalize the entry point. On Windows its absolute path
+        // (e.g. C:\...) starts with a letter and would otherwise match the
+        // bare-specifier patterns below.
+        if (args.kind === 'entry-point') return
+
         const external = patterns.some((p) => {
           return p.test(args.path)
         })

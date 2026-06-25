@@ -2,32 +2,32 @@ import type {
   OnDiskState,
   ProjectEphemeralState,
   ProjectState,
-} from '@theatre/core/types/private/core'
-import type TheatreProject from '@theatre/core/projects/TheatreProject'
-import type Sheet from '@theatre/core/sheets/Sheet'
-import SheetTemplate from '@theatre/core/sheets/SheetTemplate'
-// import type {Studio} from '@theatre/studio/Studio'
-import type {ProjectAddress} from '@theatre/core/types/public'
-import type {Pointer} from '@theatre/dataverse'
-import {PointerProxy} from '@theatre/dataverse'
-import {Atom} from '@theatre/dataverse'
+} from '@encore/core/types/private/core'
+import type TheatreProject from '@encore/core/projects/TheatreProject'
+import type Sheet from '@encore/core/sheets/Sheet'
+import SheetTemplate from '@encore/core/sheets/SheetTemplate'
+// import type {Studio} from '@encore/studio/Studio'
+import type {ProjectAddress} from '@encore/core/types/public'
+import type {Pointer} from '@encore/dataverse'
+import {PointerProxy} from '@encore/dataverse'
+import {Atom} from '@encore/dataverse'
 import initialiseProjectState from './initialiseProjectState'
 import projectsSingleton from './projectsSingleton'
-import type {Deferred} from '@theatre/utils/defer'
-import {defer} from '@theatre/utils/defer'
-import {globals} from '@theatre/core/globals'
+import type {Deferred} from '@encore/utils/defer'
+import {defer} from '@encore/utils/defer'
+import {globals} from '@encore/core/globals'
 import type {
   ProjectId,
   SheetId,
   SheetInstanceId,
-} from '@theatre/core/types/public'
+} from '@encore/core/types/public'
 
 import type {
   $IntentionalAny,
   $____FixmeStudio,
-} from '@theatre/core/types/public'
-import {InvalidArgumentError} from '@theatre/utils/errors'
-import userReadableTypeOfValue from '@theatre/utils/userReadableTypeOfValue'
+} from '@encore/core/types/public'
+import {InvalidArgumentError} from '@encore/utils/errors'
+import userReadableTypeOfValue from '@encore/utils/userReadableTypeOfValue'
 
 type Studio = $____FixmeStudio
 
@@ -141,7 +141,7 @@ export default class Project {
 
     if (config.state) {
       setTimeout(() => {
-        // The user has provided config.state but in case @theatre/studio is loaded,
+        // The user has provided config.state but in case @encore/studio is loaded,
         // let's give it one tick to attach itself
         if (!this._studio) {
           this._studioReadyDeferred.resolve(undefined)
@@ -163,9 +163,9 @@ export default class Project {
           if (!this._studio) {
             throw new Error(
               `Argument config.state in Theatre.getProject("${id}", config) is empty. This is fine ` +
-                `while you are using @theatre/core along with @theatre/studio. But since @theatre/studio ` +
+                `while you are using @encore/core along with @encore/studio. But since @encore/studio ` +
                 `is not loaded, the state of project "${id}" will be empty.\n\n` +
-                `To fix this, you need to add @theatre/studio into the bundle and export ` +
+                `To fix this, you need to add @encore/studio into the bundle and export ` +
                 `the project's state. Learn how to do that at https://www.theatrejs.com/docs/latest/manual/projects#state\n`,
             )
           }
@@ -265,7 +265,7 @@ export const shallowValidateOnDiskState = (
     throw new InvalidArgumentError(
       `Error validating conf.state in Theatre.getProject(${JSON.stringify(
         projectId,
-      )}, conf). The state seems to be formatted in a way that is unreadable to Theatre.js. Read more at https://www.theatrejs.com/docs/latest/manual/projects#state`,
+      )}, conf). The state seems to be formatted in a way that is unreadable to Encore. Read more at https://www.theatrejs.com/docs/latest/manual/projects#state`,
     )
   }
 }

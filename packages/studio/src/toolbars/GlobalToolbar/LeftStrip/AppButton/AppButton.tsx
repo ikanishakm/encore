@@ -1,10 +1,10 @@
-import {pointerEventsAutoInNormalMode} from '@theatre/studio/css'
-import useChordial from '@theatre/studio/uiComponents/chordial/useChodrial'
+import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
+import useChordial from '@encore/studio/uiComponents/chordial/useChodrial'
 import React from 'react'
 import styled from 'styled-components'
-import logo from '@theatre/studio/assets/logo.png'
-import DropdownChevron from '@theatre/studio/uiComponents/icons/DropdownChevron'
-import BaseMenu from '@theatre/studio/uiComponents/simpleContextMenu/ContextMenu/BaseMenu'
+import logo from '@encore/studio/assets/logo.png'
+import DropdownChevron from '@encore/studio/uiComponents/icons/DropdownChevron'
+import BaseMenu from '@encore/studio/uiComponents/simpleContextMenu/ContextMenu/BaseMenu'
 
 const Container = styled.div`
   height: 100%;
@@ -26,7 +26,7 @@ const Logo = styled.img`
   filter: invert(var(--tt-logo-invert, 0));
 `
 
-const appButtonTitle = 'Theatre.js 0.8'
+const appButtonTitle = 'Encore 0.8'
 const AppButton: React.FC<{}> = (props) => {
   const s = useChordial(() => {
     return {

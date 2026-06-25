@@ -1,13 +1,13 @@
-import type {StrictRecord} from '@theatre/core/types/public'
+import type {StrictRecord} from '@encore/core/types/public'
 import React, {useMemo} from 'react'
 import {useEffect} from 'react'
 import {useLogger} from './useLogger'
-import {prism, pointerToPrism} from '@theatre/dataverse'
-import {Atom} from '@theatre/dataverse'
-import {usePrismInstance} from '@theatre/react'
-import {selectClosestHTMLAncestor} from '@theatre/studio/utils/selectClosestHTMLAncestor'
-import pointerDeep from '@theatre/utils/pointerDeep'
-import type {StudioSheetItemKey} from '@theatre/core/types/private'
+import {prism, pointerToPrism} from '@encore/dataverse'
+import {Atom} from '@encore/dataverse'
+import {usePrismInstance} from '@encore/react'
+import {selectClosestHTMLAncestor} from '@encore/studio/utils/selectClosestHTMLAncestor'
+import pointerDeep from '@encore/utils/pointerDeep'
+import type {StudioSheetItemKey} from '@encore/core/types/private'
 
 /** To mean the presence value */
 export enum PresenceFlag {

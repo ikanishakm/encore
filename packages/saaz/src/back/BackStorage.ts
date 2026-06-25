@@ -1,4 +1,4 @@
-import {defer} from '@theatre/utils/defer'
+import {defer} from '@encore/utils/defer'
 import type {BackStorageAdapter, Transaction} from '../types'
 
 export class BackStorage {

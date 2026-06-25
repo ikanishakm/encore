@@ -2,7 +2,7 @@ import type {Draft} from 'immer'
 import {createDraft, current, finishDraft} from 'immer'
 import type {$IntentionalAny, FrontStorageAdapterTransaction} from '../types'
 import type {FrontStorageAdapter} from '../types'
-import {defer} from '@theatre/utils/defer'
+import {defer} from '@encore/utils/defer'
 
 export class FrontMemoryAdapter implements FrontStorageAdapter {
   private _state: {

@@ -1,5 +1,5 @@
-import type {IBasePropType} from '@theatre/core/types/public'
-import type {IEditingTools} from '@theatre/studio/propEditors/utils/IEditingTools'
+import type {IBasePropType} from '@encore/core/types/public'
+import type {IEditingTools} from '@encore/studio/propEditors/utils/IEditingTools'
 
 /** Helper for defining consistent prop editor components */
 export type ISimplePropEditorReactProps<

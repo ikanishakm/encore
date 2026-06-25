@@ -1,10 +1,10 @@
-# Theatre.js - Core
+# Encore - Core
 
-Theatre.js is an animation library for high-fidelity motion graphics. It is designed to help you express detailed animation, enabling you to create intricate movement, and convey nuance.
+Encore is an animation library for high-fidelity motion graphics. It is designed to help you express detailed animation, enabling you to create intricate movement, and convey nuance.
 
-Theatre.js can be used both programmatically _and_ visually.
+Encore can be used both programmatically _and_ visually.
 
-You can use Theatre.js to:
+You can use Encore to:
 
 * Animate 3D objects made with THREE.js or other 3D libraries
   
@@ -36,13 +36,13 @@ You can find the documentation and video tutorials [here](https://theatrejs.com/
 
 Join us on [Discord](https://discord.gg/bm9f8F9Y9N), follow the updates on [twitter](https://twitter.com/AriaMinaei) or write us an [email](mailto:hello@theatrejs.com).
 
-## `@theatre/core`
+## `@encore/core`
 
-Theatre.js comes in two packages: `@theatre/core` (the library) and `@theatre/studio` (the editor). This package is the core library.
+Encore comes in two packages: `@encore/core` (the library) and `@encore/studio` (the editor). This package is the core library.
 
 ## Bundle size
 
-`@theatre/core` is currently around 20KiB compressed with all its dependencies.
+`@encore/core` is currently around 20KiB compressed with all its dependencies.
 
 ## License
 

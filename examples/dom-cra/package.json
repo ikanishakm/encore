@@ -6,17 +6,17 @@
     "hoistingLimits": "dependencies"
   },
   "dependencies": {
+    "@encore/core": "workspace:*",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "@theatre/core": "workspace:*",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
-    "@theatre/studio": "workspace:*"
+    "@encore/studio": "workspace:*"
   },
   "scripts": {
     "start": "react-scripts start",

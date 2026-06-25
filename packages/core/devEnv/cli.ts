@@ -44,7 +44,7 @@ async function bundle(watch: boolean) {
       __IS_VISUAL_REGRESSION_TESTING: 'false',
       'process.env.NODE_ENV': '"production"',
     },
-    external: ['@theatre/dataverse'],
+    external: ['@encore/dataverse'],
     minifyIdentifiers: false,
     minifySyntax: true,
     minifyWhitespace: false,

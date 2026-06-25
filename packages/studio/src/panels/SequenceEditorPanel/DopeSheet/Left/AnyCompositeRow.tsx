@@ -1,15 +1,15 @@
-import {theme} from '@theatre/studio/css'
+import {theme} from '@encore/studio/css'
 import type {
   SequenceEditorTree_PrimitiveProp,
   SequenceEditorTree_PropWithChildren,
   SequenceEditorTree_Sheet,
   SequenceEditorTree_SheetObject,
-} from '@theatre/studio/panels/SequenceEditorPanel/layout/tree'
-import type {VoidFn} from '@theatre/core/types/public'
+} from '@encore/studio/panels/SequenceEditorPanel/layout/tree'
+import type {VoidFn} from '@encore/core/types/public'
 import React, {useRef} from 'react'
 import {HiOutlineChevronRight} from 'react-icons/hi'
 import styled from 'styled-components'
-import {propNameTextCSS} from '@theatre/studio/propEditors/utils/propNameTextCSS'
+import {propNameTextCSS} from '@encore/studio/propEditors/utils/propNameTextCSS'
 import {usePropHighlightMouseEnter} from './usePropHighlightMouseEnter'
 
 export const LeftRowContainer = styled.li<{depth: number}>`

@@ -1,1 +1,1 @@
-`@theatre/utils`
+`@encore/utils`

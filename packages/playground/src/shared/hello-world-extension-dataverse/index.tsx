@@ -1,16 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import type {ToolsetConfig} from '@theatre/core'
-import theatre from '@theatre/core'
-import extension from '@theatre/r3f/dist/extension'
-import {Atom, prism, val} from '@theatre/dataverse'
-import {onChange} from '@theatre/core'
+import type {ToolsetConfig} from '@encore/core'
+import theatre from '@encore/core'
+import extension from '@encore/r3f/dist/extension'
+import {Atom, prism, val} from '@encore/dataverse'
+import {onChange} from '@encore/core'
 
 /**
- * Let's take a look at how we can use `prism`, `Ticker`, and `val` from Theatre.js's Dataverse library
+ * Let's take a look at how we can use `prism`, `Ticker`, and `val` from Encore's Dataverse library
  * to create a switch with state that is updated automatically,
- * and is even stored in a Theatre.js object.
+ * and is even stored in a Encore object.
  *
  * Without going into the details of `prism`, `Ticker`, and `val`, note that by wrapping our `ToolsetConfig` in a prism, our
  * ```ts
@@ -25,7 +25,7 @@ import {onChange} from '@theatre/core'
 void theatre.getStudio().then((studio) => {
   studio.extend(extension)
   studio.extend({
-    id: '@theatre/hello-world-extension',
+    id: '@encore/hello-world-extension',
     toolbars: {
       global(set, studio) {
         const exampleBox = new Atom('mobile')

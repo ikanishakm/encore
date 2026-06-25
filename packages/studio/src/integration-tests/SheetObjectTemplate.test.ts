@@ -1,12 +1,12 @@
-import {setupTestSheet} from '@theatre/studio/integration-tests/testUtils'
-import {encodePathToProp} from '@theatre/utils/pathToProp'
+import {setupTestSheet} from '@encore/studio/integration-tests/testUtils'
+import {encodePathToProp} from '@encore/utils/pathToProp'
 import type {
   ObjectAddressKey,
   SequenceTrackId,
-} from '@theatre/core/types/public'
-import type {$IntentionalAny} from '@theatre/core/types/public'
-import {iterateOver} from '@theatre/dataverse'
-import {__private} from '@theatre/core'
+} from '@encore/core/types/public'
+import type {$IntentionalAny} from '@encore/core/types/public'
+import {iterateOver} from '@encore/dataverse'
+import {__private} from '@encore/core'
 const {asSequenceTrackId} = __private.ids
 
 describe(`SheetObjectTemplate`, () => {

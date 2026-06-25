@@ -2,7 +2,7 @@ import type {$IntentionalAny, GeneratorRecordings} from '../types'
 import {cloneDeep} from 'lodash-es'
 import type {SerializableValue} from '../types'
 import type {ValidGenerators} from '../types'
-import {stableValueHash} from '@theatre/utils/stableJsonStringify'
+import {stableValueHash} from '@encore/utils/stableJsonStringify'
 
 export function createGeneratorsSpy<Generators extends ValidGenerators>(
   generators: ValidGenerators,

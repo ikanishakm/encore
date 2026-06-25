@@ -1,15 +1,15 @@
 /**
- * The library providing the runtime functionality of Theatre.js.
+ * The library providing the runtime functionality of Encore.
  *
  * @packageDocumentation
  */
 
 export * from './coreExports'
 export * from './types/public'
-import {defer} from '@theatre/utils/defer'
+import {defer} from '@encore/utils/defer'
 import CoreBundle from './CoreBundle'
 import {globalVariableNames} from './globals'
-import type {$____FixmeStudio} from '@theatre/core/types/public'
+import type {$____FixmeStudio} from '@encore/core/types/public'
 import type {IStudio, InitOpts} from './types/public'
 
 const studioDeferred = defer<$____FixmeStudio>()
@@ -50,7 +50,7 @@ registerCoreBundle()
  * @remarks
  * the studio and core need to communicate with each other somehow, and currently we do that
  * by registering each of them as a global variable. This function does the work of registering
- * the core bundle (everything exported from `@theatre/core`) to window.__TheatreJS_CoreBundle.
+ * the core bundle (everything exported from `@encore/core`) to window.__Encore_CoreBundle.
  */
 function registerCoreBundle() {
   // This only works in a browser environment
@@ -76,13 +76,13 @@ function registerCoreBundle() {
     ) {
       /*
       Another core bundle is registered. This usually means the bundler is not configured correctly and
-      is bundling `@theatre/core` multiple times, but, there are legitimate scenarios where a user may want
-      to include multiple instances of `@theatre/core` on the same page.
+      is bundling `@encore/core` multiple times, but, there are legitimate scenarios where a user may want
+      to include multiple instances of `@encore/core` on the same page.
 
       For example, an article might embed two separate interactive graphics that
       are made by different teams (and even different tech stacks -- one in JS, the other in clojurescript).
 
-      If both of those graphics use Theatre.js, our current setup makes them conflict with one another.
+      If both of those graphics use Encore, our current setup makes them conflict with one another.
 
       ----------------------
       --------------------
@@ -90,7 +90,7 @@ function registerCoreBundle() {
       -------.
 
       |   /\_/\   |
-      |  ( o.o )  |      --------> graphic1 made with JS+Theatre.js
+      |  ( o.o )  |      --------> graphic1 made with JS+Encore
       |   > ^ <   |
 
       ## ---
@@ -100,7 +100,7 @@ function registerCoreBundle() {
       -------.
 
       |    __      _   |
-      |  o'')}____//   | --------> graphic2 made with clojurescript+Theatre.js
+      |  o'')}____//   | --------> graphic2 made with clojurescript+Encore
       |  `_/      )    |
       |  (_(_/-(_/     |
       
@@ -112,14 +112,14 @@ function registerCoreBundle() {
       
       */
       throw new Error(
-        `It seems that the module '@theatre/core' is loaded more than once. This could have two possible causes:\n` +
-          `1. You might have two separate versions of Theatre.js in node_modules.\n` +
+        `It seems that the module '@encore/core' is loaded more than once. This could have two possible causes:\n` +
+          `1. You might have two separate versions of Encore in node_modules.\n` +
           `2. Or this might be a bundling misconfiguration, in case you're using a bundler like Webpack/ESBuild/Rollup.\n\n` +
-          `Note that it **is okay** to import '@theatre/core' multiple times. But those imports should point to the same module.`,
+          `Note that it **is okay** to import '@encore/core' multiple times. But those imports should point to the same module.`,
       )
     } else {
       throw new Error(
-        `The variable window.${globalVariableNames.coreBundle} seems to be already set by a module other than @theatre/core.`,
+        `The variable window.${globalVariableNames.coreBundle} seems to be already set by a module other than @encore/core.`,
       )
     }
   }

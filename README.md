@@ -1,109 +1,75 @@
-<h1 align="center">
-  <a href="https://github.com/theatre-js/theatre#gh-dark-mode-only"><img src="https://raw.githubusercontent.com/theatre-js/theatre-docs/main/docs/.vuepress/public/public/theatrejs-logo-white.svg" alt="Theatre.js" width="200"></a><a href="https://github.com/theatre-js/theatre#gh-light-mode-only"><img src="https://raw.githubusercontent.com/theatre-js/theatre-docs/main/docs/.vuepress/public/public/theatrejs-logo-black.svg" alt="Theatre.js" width="200"></a>
-</h1>
-<p align="center">Motion Design, for the web</p>
-<p align="center">
- <a href="#"><img alt="GitHub branch checks state" src="https://img.shields.io/github/checks-status/theatre-js/theatre/main?label=build"></a>
- <a href="https://discord.gg/Tku4CJKf4B"><img src="https://img.shields.io/discord/870988717190426644?label=Discord" alt="Join us on Discord"></a>
- <a href="https://twitter.com/theatre_js">
-   <img alt="Follow Theatre.js on Twitter" src="https://img.shields.io/twitter/url?label=%40theatre_js&url=https%3A%2F%2Ftwitter.com%2Ftheatre_js">
- </a>
- <a href="https://www.youtube.com/channel/UCsp9XOCs8v2twyq5kMLzS2Q">
-  <img src="https://img.shields.io/youtube/channel/views/UCsp9XOCs8v2twyq5kMLzS2Q?label=YouTube&style=social" alt="Watch on YouTube">
- </a>
- 
-</p>
+# Encore
 
-> ✨ Update: Theatre.js 1.0 is around the corner. We have _temporarily_ moved development to a private repo so we can iterate faster. We'll push our work back to this public repo soon. Terms and license will remain OSS, as before. (Also, [we're hiring – join the core team!](https://www.theatrejs.com/join)).
+**Encore** is a maintained, community fork of [Theatre.js](https://www.theatrejs.com) — a JavaScript animation library and visual editor for the web, including DOM, WebGL / [react-three-fiber](https://github.com/pmndrs/react-three-fiber), and any other JS-drivable target.
 
-Theatre.js is an animation library for high-fidelity motion graphics. It is
-designed to help you express detailed animation, enabling you to create
-intricate movement, and convey nuance.
+> Theatre.js is no longer actively maintained and does not support React 19.
+> Encore picks up where it left off: the same API and editor, updated for
+> **React 19 / react-three-fiber v9**, published under the `@encore/*` scope,
+> and free of any hosted-cloud dependency. Others are welcome to use it.
 
-Theatre.js can be used both programmatically _and_ visually.
+Encore is **not** affiliated with or endorsed by the original Theatre.js authors. It is an independent fork that preserves their copyright and attribution (see [`NOTICE`](./NOTICE) and [`AUTHORS`](./AUTHORS)).
 
----
+## Packages
 
-You can use Theatre.js to:
+| Package | What it is | License |
+| --- | --- | --- |
+| `@encore/core` | The runtime: projects, sheets, sequences, playback | Apache-2.0 |
+| `@encore/studio` | The visual editor (dev-time only) | **AGPL-3.0-only** |
+| `@encore/r3f` | react-three-fiber bindings + editable scenes | Apache-2.0 |
+| `@encore/react` | React helpers | Apache-2.0 |
+| `@encore/dataverse` | The reactive-state core | Apache-2.0 |
+| `@encore/tweak` | Quick tweakable controls (formerly `theatric`) | Apache-2.0 |
+| `@encore/browser-bundles` | Standalone browser/UMD bundles | Apache-2.0 + AGPL-3.0 |
 
-- Animate 3D objects made with THREE.js or other 3D libraries
+> In production you ship only the runtime (`@encore/core`, `@encore/r3f`, …),
+> which is Apache-2.0. `@encore/studio` is a development-time editor and is
+> tree-shaken out of production builds, so the AGPL license does not affect
+> the apps you ship.
 
-  ![s](https://raw.githubusercontent.com/AriaMinaei/theatre-docs/main/docs/.vuepress/public/preview-3d-short.gif)
+## Quick start
 
-  <sub>Art by
-  [drei.lu](https://sketchfab.com/models/91964c1ce1a34c3985b6257441efa500)</sub>
+```bash
+npm install @encore/core @encore/studio
+```
 
-- Animate HTML/SVG via React or other libraries
+```ts
+import { getProject } from '@encore/core'
+import studio from '@encore/studio'
 
-  ![s](https://raw.githubusercontent.com/AriaMinaei/theatre-docs/main/docs/.vuepress/public/preview-dom.gif)
+studio.initialize()
 
-- Design micro-interactions
+const project = getProject('My Project')
+const sheet = project.sheet('Scene')
+const obj = sheet.object('box', { x: 0, opacity: 1 })
 
-  ![s](https://raw.githubusercontent.com/AriaMinaei/theatre-docs/main/docs/.vuepress/public/preview-micro-interaction.gif)
+obj.onValuesChange((v) => {
+  // apply v.x, v.opacity to your DOM / WebGL object
+})
+```
 
-- Choreograph generative interactive art
+The runtime API is identical to Theatre.js, so the
+[Theatre.js documentation](https://www.theatrejs.com/docs/latest) applies to
+Encore as well (substitute `@theatre/*` imports with `@encore/*`).
 
-  ![s](https://raw.githubusercontent.com/AriaMinaei/theatre-docs/main/docs/.vuepress/public/preview-generative.gif)
+## Differences from Theatre.js
 
-- Or animate any other JS variable
-
-  ![s](https://raw.githubusercontent.com/AriaMinaei/theatre-docs/main/docs/.vuepress/public/preview-console.gif)
-
-## Documentation and Tutorials
-
-The docs are at [theatrejs.com/docs](https://www.theatrejs.com/docs):
-
-- [Video tutorials](https://www.youtube.com/channel/UCsp9XOCs8v2twyq5kMLzS2Q)
-  - [Crash course](https://www.youtube.com/watch?v=icR9EIS1q34)
-  - [Animating with music](https://www.youtube.com/watch?v=QoS4gMxwq_4)
-  - [Yuri Artiukh](https://twitter.com/akella)'s
-    [stream](https://youtu.be/qmRqgFbNprM?t=3462) with a section on using
-    Theatre.js with THREE.js
-  - \<Add your own tutorials here\>
-
-## Community and support
-
-Join our friendly community on [Discord](https://discord.gg/bm9f8F9Y9N), follow
-the updates on [twitter](https://twitter.com/theatre_js) or write us an
-[email](mailto:hello@theatrejs.com).
-
-## Development and contributing
-
-If you want to change the source of Theatre, have a look at the guide
-[here](./CONTRIBUTING.md).
-
-### Proposing fixes and changes
-
-You can always get help with bugfixes or discuss changes with our community on
-[Discord](https://discord.gg/bm9f8F9Y9N), or directly open an issue on Github.
-
-### Helping with outstanding issues
-
-Feel free to chime in on any
-[issue](https://github.com/AriaMinaei/theatre/issues). We have also labeled some
-issues with
-["Help wanted"](https://github.com/AriaMinaei/theatre/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22help+wanted%22)
-or
-["Good first issue"](https://github.com/AriaMinaei/theatre/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22good+first+issue%22)
-if you're just getting started with the codebase.
-
-### Helping with documentation
-
-The documentation website's repo is
-[here](https://github.com/theatre-js/theatre-docs/).
-
-### Writing/recording tutorials
-
-If you make tutorials or video content about Theatre, tell us to showcase it
-here :)
+- **React 19 / r3f v9** across the monorepo (the original is pinned to React 18).
+- **`@encore/*` scope** (the unscoped `theatric` package becomes `@encore/tweak`).
+- **No phone-home.** The hosted update checker was removed and the studio
+  backend defaults to `localhost`, so the editor never contacts a third-party
+  server. Cloud login / multiplayer sync are not wired to any hosted backend.
 
 ## License
 
-Your use of Theatre.js is governed under the Apache License Version 2.0:
+Encore is dual-licensed, mirroring upstream Theatre.js:
 
-- Theatre's core (`@theatre/core`) is released under the Apache License. Same
-  goes for most packages in this repository.
-- The studio (`@theatre/studio`) is released under the AGPL 3.0 License. This is
-  the package that you use to edit your animations, setup your scenes, etc. You
-  only use the studio during design/development. Your project's final bundle
-  only includes `@theatre/core`, so only the Apache License applies.
+- The runtime and helper packages are **Apache-2.0**.
+- `@encore/studio` (the editor) is **AGPL-3.0-only**.
+
+See [`LICENSE`](./LICENSE), each package's `LICENSE`, and [`NOTICE`](./NOTICE).
+
+## Credits
+
+Encore exists because of the years of work the Theatre.js authors and
+contributors put into the original project. Huge thanks to **Aria Minaei**,
+**Andrew Prifer**, and [everyone listed in `AUTHORS`](./AUTHORS).

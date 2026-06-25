@@ -6,9 +6,9 @@ module.exports = {
       'warn',
       {
         aliases: [
-          {name: '@theatre/core', path: path.resolve(__dirname, '../core/src')},
+          {name: '@encore/core', path: path.resolve(__dirname, '../core/src')},
           {
-            name: '@theatre/studio',
+            name: '@encore/studio',
             path: path.resolve(__dirname, './src'),
           },
         ],

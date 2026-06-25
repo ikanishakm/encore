@@ -11,10 +11,10 @@ services:
     plan: free
     region: frankfurt
     buildCommand:
-      YARN_NM_MODE=hardlinks-local yarn install && yarn workspace @theatre/app
+      YARN_NM_MODE=hardlinks-local yarn install && yarn workspace @encore/app
       run cli prod build
     # todo
-    startCommand: yarn workspace @theatre/app run start
+    startCommand: yarn workspace @encore/app run start
     healthCheckPath: /
     envVars:
       - key: DATABASE_URL
@@ -50,8 +50,8 @@ services:
     region: frankfurt
     buildCommand:
       YARN_NM_MODE=hardlinks-local yarn install && yarn workspace
-      @theatre/sync-server run cli prod build
-    startCommand: yarn workspace @theatre/sync-server run cli prod start
+      @encore/sync-server run cli prod build
+    startCommand: yarn workspace @encore/sync-server run cli prod start
     healthCheckPath: /
     envVars:
       - key: DATABASE_URL

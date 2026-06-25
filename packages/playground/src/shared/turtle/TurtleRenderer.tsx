@@ -7,9 +7,9 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import theatre, {getStudioSync} from '@theatre/core'
-import type {ISheet} from '@theatre/core'
-import {types} from '@theatre/core'
+import theatre, {getStudioSync} from '@encore/core'
+import type {ISheet} from '@encore/core'
+import {types} from '@encore/core'
 import type {ITurtle} from './turtle'
 import {drawTurtlePlan, makeTurtlePlan} from './turtle'
 

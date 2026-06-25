@@ -1,8 +1,8 @@
 import {createRoot} from 'react-dom/client'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
-import studio from '@theatre/studio'
-import {getProject} from '@theatre/core'
+import studio from '@encore/studio'
+import {getProject} from '@encore/core'
 import React from 'react'
 import App from './App'
 

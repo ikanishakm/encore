@@ -49,7 +49,7 @@ An effect hook, similar to React's `useEffect()`, but is not sensitive to call o
 
 #### Defined in
 
-[prism/prism.ts:885](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L885)
+[prism/prism.ts:900](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L900)
 
 ___
 
@@ -88,7 +88,7 @@ setTimeout(() => {
 
 #### Defined in
 
-[prism/prism.ts:887](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L887)
+[prism/prism.ts:902](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L902)
 
 ___
 
@@ -108,7 +108,7 @@ true if the current function is running inside a `prism()` call.
 
 #### Defined in
 
-[prism/prism.ts:891](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L891)
+[prism/prism.ts:906](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L906)
 
 ___
 
@@ -154,7 +154,7 @@ const pr = prism(() => {
 
 #### Defined in
 
-[prism/prism.ts:886](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L886)
+[prism/prism.ts:901](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L901)
 
 ___
 
@@ -204,7 +204,7 @@ const pr = prism(() => {
 
 #### Defined in
 
-[prism/prism.ts:884](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L884)
+[prism/prism.ts:899](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L899)
 
 ___
 
@@ -235,7 +235,7 @@ ___
 
 #### Defined in
 
-[prism/prism.ts:889](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L889)
+[prism/prism.ts:904](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L904)
 
 ___
 
@@ -291,7 +291,7 @@ function prismFromInputElement(input: HTMLInputElement): Prism<string> {
 
 #### Defined in
 
-[prism/prism.ts:892](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L892)
+[prism/prism.ts:907](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L907)
 
 ___
 
@@ -354,7 +354,7 @@ const mousePositionD = prism(() => {
 
 #### Defined in
 
-[prism/prism.ts:888](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L888)
+[prism/prism.ts:903](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L903)
 
 ___
 
@@ -392,4 +392,4 @@ The value of the inner prism
 
 #### Defined in
 
-[prism/prism.ts:890](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L890)
+[prism/prism.ts:905](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L905)

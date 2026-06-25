@@ -1,4 +1,4 @@
-import type {Asset, File} from '@theatre/core/types/public'
+import type {Asset, File} from '@encore/core/types/public'
 
 export interface IEditingTools<T> {
   temporarilySetValue(v: T): void

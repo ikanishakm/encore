@@ -1,9 +1,9 @@
-import type {IScrub} from '@theatre/core'
+import type {IScrub} from '@encore/core'
 import React, {useLayoutEffect, useMemo, useState} from 'react'
-import type {ISheet, ISheetObject, IProject} from '@theatre/core'
+import type {ISheet, ISheetObject, IProject} from '@encore/core'
 import type {UseDragOpts} from './useDrag'
 import useDrag from './useDrag'
-import theatre from '@theatre/core'
+import theatre from '@encore/core'
 
 void theatre.init({studio: true})
 

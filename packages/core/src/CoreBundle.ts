@@ -1,9 +1,9 @@
-// import type {Studio} from '@theatre/studio/Studio'
+// import type {Studio} from '@encore/studio/Studio'
 import projectsSingleton from './projects/projectsSingleton'
 import {privateAPI} from './privateAPIs'
 import * as coreExports from './coreExports'
 import {getCoreRafDriver} from './coreTicker'
-import type {$____FixmeStudio} from '@theatre/core/types/public'
+import type {$____FixmeStudio} from '@encore/core/types/public'
 import {env} from './env'
 
 type Studio = $____FixmeStudio
@@ -29,7 +29,7 @@ export default class CoreBundle {
 
   getBitsForStudio(studio: Studio, callback: (bits: CoreBits) => void) {
     if (this._studio) {
-      throw new Error(`@theatre/core is already attached to @theatre/studio`)
+      throw new Error(`@encore/core is already attached to @encore/studio`)
     }
     this._studio = studio
     const bits: CoreBits = {

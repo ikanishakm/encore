@@ -1,4 +1,4 @@
-import {Ticker} from '@theatre/dataverse'
+import {Ticker} from '@encore/dataverse'
 import {setPrivateAPI} from './privateAPIs'
 import type {IRafDriver} from './types/public'
 
@@ -17,14 +17,14 @@ let lastDriverId = 0
  * `rafDriver`s allow you to control when and how often computations in Theatre tick forward. (raf stands for [`requestAnimationFrame`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame)).
  * The default `rafDriver` in Theatre creates a `raf` loop and ticks forward on each frame. You can create your own `rafDriver`, which enables the following use-cases:
  *
- * 1. When using Theatre.js alongside other animation libs (`@react-three/fiber`/`gsap`/`lenis`/`etc`), you'd want all animation libs to use a single `raf` loop to keep the libraries in sync and also to get better performance.
+ * 1. When using Encore alongside other animation libs (`@react-three/fiber`/`gsap`/`lenis`/`etc`), you'd want all animation libs to use a single `raf` loop to keep the libraries in sync and also to get better performance.
  * 2. In XR sessions, you'd want Theatre to tick forward using [`xr.requestAnimationFrame()`](https://developer.mozilla.org/en-US/docs/Web/API/XRSession/requestAnimationFrame).
  * 3. In some advanced cases, you'd just want to manually tick forward (many ticks per frame, or skipping many frames, etc). This is useful for recording an animation, rendering to a file, testing an animation, running benchmarks, etc.
  *
  * Here is how you'd create a custom `rafDriver`:
  *
  * ```js
- * import { createRafDriver } from '@theatre/core'
+ * import { createRafDriver } from '@encore/core'
  *
  * const rafDriver = createRafDriver({ name: 'a custom 5fps raf driver' })
  *
@@ -36,7 +36,7 @@ let lastDriverId = 0
  * Now, any time you set up an `onChange()` listener, pass your custom `rafDriver`:
  *
  * ```js
- * import { onChange } from '@theatre/core'
+ * import { onChange } from '@encore/core'
  *
  * onChange(
  *   // let's say object is a Theatre object, the one returned from calling `sheet.object()`
@@ -67,7 +67,7 @@ let lastDriverId = 0
  * `rafDriver`s can optionally provide a `start/stop` callback. Theatre will call `start()` when it actually has computations scheduled, and will call `stop` if there is nothing to update after a few ticks:
  *
  * ```js
- * import { createRafDriver } from '@theatre/core'
+ * import { createRafDriver } from '@encore/core'
  * import type { IRafDriver } from '@theare/core'
  *
  * function createBasicRafDriver(): IRafDriver {

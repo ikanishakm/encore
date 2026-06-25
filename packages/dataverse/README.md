@@ -1,23 +1,23 @@
-# @theatre/dataverse
+# @encore/dataverse
 
 Dataverse is the reactive dataflow library
-[Theatre.js](https://www.theatrejs.com) is built on. It is inspired by ideas in
+[Encore](https://www.theatrejs.com) is built on. It is inspired by ideas in
 [functional reactive programming](https://en.wikipedia.org/wiki/Functional_reactive_programming)
 and it is optimised for interactivity and animation.
 
 ## Installation
 
 ```sh
-$ npm install @theatre/dataverse
+$ npm install @encore/dataverse
 # and the react bindings
-$ npm install @theatre/react
+$ npm install @encore/react
 ```
 
 ## Usage with React
 
 ```tsx
-import {Atom} from '@theatre/dataverse'
-import {useVal} from '@theatre/react'
+import {Atom} from '@encore/dataverse'
+import {useVal} from '@encore/react'
 import {useEffect} from 'react'
 
 // Atoms hold state
@@ -45,7 +45,7 @@ Alternatively, we could have defined our atom inside the component, making its
 state local to that component instance:
 
 ```tsx
-import {useAtom} form '@theatre/react'
+import {useAtom} form '@encore/react'
 
 function Component() {
   const atom = useAtom({count: 0, ready: false})
@@ -72,7 +72,7 @@ Atoms are state holders. They can be used to manage either component state or
 the global state of your application.
 
 ```ts
-import {Atom} from '@theatre/dataverse'
+import {Atom} from '@encore/dataverse'
 
 const atom = new Atom({intensity: 1, position: {x: 0, y: 0}})
 ```
@@ -105,7 +105,7 @@ atom.getByPointer(atom.pointer.intensity) // 4
 #### Reading the state of an atom _reactively, in React_
 
 ```ts
-import {useVal} from '@theatre/react'
+import {useVal} from '@encore/react'
 
 function Component() {
   const intensity = useVal(atom.pointer.intensity) // 4
@@ -121,7 +121,7 @@ we talk about [prisms](#prisms).
 Pointers are a type-safe way to refer to specific properties of atoms.
 
 ```ts
-import {Atom} from '@theatre/dataverse'
+import {Atom} from '@encore/dataverse'
 
 const atom = new Atom({intensity: 1, position: {x: 0, y: 0}})
 
@@ -145,8 +145,8 @@ Pointers are a great way to pass data down the component tree while keeping
 re-renders only to the components that actually need to re-render.
 
 ```tsx
-import {useVal, useAtom} from '@theatre/react'
-import type {Pointer} from '@theatre/dataverse'
+import {useVal, useAtom} from '@encore/react'
+import type {Pointer} from '@encore/dataverse'
 
 function ParentComponent() {
   const atom = useAtom({
@@ -185,7 +185,7 @@ function Light({intensityP}) {
 Prisms are functions that derive a value from an atom or from another prism.
 
 ```ts
-import {Atom, prism, val} from '@theatre/dataverse'
+import {Atom, prism, val} from '@encore/dataverse'
 
 const atom = new Atom({a: 1, b: 2, foo: 10})
 
@@ -241,7 +241,7 @@ Tickers are a way to schedule and synchronise computations. They're useful when
 reacting to changes in atoms or prisms _outside of React's renderloop_.
 
 ```ts
-import {Ticker, onChange} from '@theatre/dataverse'
+import {Ticker, onChange} from '@encore/dataverse'
 
 const ticker = new Ticker()
 
@@ -356,7 +356,7 @@ key to be passed into it, whlie `useMemo()` doesn't. This means that we can call
 key.
 
 ```ts
-import {Atom, prism, val} from '@theatre/dataverse'
+import {Atom, prism, val} from '@encore/dataverse'
 
 const atom = new Atom(0)
 
@@ -421,8 +421,8 @@ and how [`useState()`](https://reactjs.org/docs/hooks-state.html) work. But
 here's a quick example:
 
 ```tsx
-import {prism} from '@theatre/dataverse'
-import {useVal} from '@theatre/react'
+import {prism} from '@encore/dataverse'
+import {useVal} from '@encore/react'
 
 // This prism holds the current mouse position and updates when the mouse moves
 const mousePositionPr = prism(() => {
@@ -536,7 +536,7 @@ component. This way, we can optimize our React components in a fine-grained way
 by moving their computations outside of React's render loop.
 
 ```tsx
-import {usePrism} from '@theatre/react'
+import {usePrism} from '@encore/react'
 
 function Component() {
   const value = usePrism(() => {
@@ -703,7 +703,7 @@ val(double)
 - It's also fun to
   [open the monorepo](https://github1s.com/theatre-js/theatre/blob/main/packages/dataverse/src/index.ts)
   in VSCode and look up references to `Atom`, `prism()` and other dataverse
-  methods. Since dataverse is used internally in Theatre.js, there are a lot of
+  methods. Since dataverse is used internally in Encore, there are a lot of
   examples of how to use it.
-- Also see [`@theatre/react`](../react/README.md) to learn more about the React
+- Also see [`@encore/react`](../react/README.md) to learn more about the React
   bindings.

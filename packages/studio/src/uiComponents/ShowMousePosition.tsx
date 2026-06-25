@@ -1,6 +1,6 @@
-import mousePositionD from '@theatre/studio/utils/mousePositionD'
-import {usePrism} from '@theatre/react'
-import {val} from '@theatre/dataverse'
+import mousePositionD from '@encore/studio/utils/mousePositionD'
+import {usePrism} from '@encore/react'
+import {val} from '@encore/dataverse'
 import React from 'react'
 import {createPortal} from 'react-dom'
 

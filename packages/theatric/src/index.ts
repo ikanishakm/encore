@@ -4,11 +4,11 @@ import type {
   ISheetObject,
   UnknownShorthandCompoundProps,
   IStudio,
-} from '@theatre/core'
-import {getStudio, val, init, getStudioSync} from '@theatre/core'
-import {getProject} from '@theatre/core'
-import type {Pointer} from '@theatre/dataverse'
-import {isPointer} from '@theatre/dataverse'
+} from '@encore/core'
+import {getStudio, val, init, getStudioSync} from '@encore/core'
+import {getProject} from '@encore/core'
+import type {Pointer} from '@encore/dataverse'
+import {isPointer} from '@encore/dataverse'
 import isEqualWith from 'lodash-es/isEqualWith'
 import isEqual from 'lodash-es/isEqual'
 import {useEffect, useMemo, useState, useRef} from 'react'
@@ -317,7 +317,7 @@ export function useControls<Config extends ControlsAndButtons>(
   return {...values, ...$setAndGet}
 }
 
-export {types} from '@theatre/core'
+export {types} from '@encore/core'
 
 export const button = (onClick: Button['onClick']) => {
   return {

@@ -1,17 +1,17 @@
 import React from 'react'
-import usePopover from '@theatre/studio/uiComponents/Popover/usePopover'
-import BasicPopover from '@theatre/studio/uiComponents/Popover/BasicPopover'
+import usePopover from '@encore/studio/uiComponents/Popover/usePopover'
+import BasicPopover from '@encore/studio/uiComponents/Popover/BasicPopover'
 import {DeterminePropEditorForKeyframeTree} from './DeterminePropEditorForSingleKeyframe'
-import type {SequenceTrackId} from '@theatre/core/types/public'
-import type SheetObject from '@theatre/core/sheetObjects/SheetObject'
+import type {SequenceTrackId} from '@encore/core/types/public'
+import type SheetObject from '@encore/core/sheetObjects/SheetObject'
 import type {
   PropTypeConfig_AllSimples,
   PropTypeConfig_Compound,
   PropTypeConfig_Enum,
   UnknownValidCompoundProps,
   BasicKeyframe,
-} from '@theatre/core/types/public'
-import type {PathToProp} from '@theatre/utils/pathToProp'
+} from '@encore/core/types/public'
+import type {PathToProp} from '@encore/utils/pathToProp'
 
 /** The editor that pops up when directly clicking a Keyframe. */
 export function useKeyframeInlineEditorPopover(

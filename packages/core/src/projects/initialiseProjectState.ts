@@ -1,10 +1,10 @@
-// import type {Studio} from '@theatre/studio/Studio'
-import delay from '@theatre/utils/delay'
+// import type {Studio} from '@encore/studio/Studio'
+import delay from '@encore/utils/delay'
 import type Project from './Project'
-import type {OnDiskState} from '@theatre/core/types/private/core'
-import {globals} from '@theatre/core/globals'
-import {val} from '@theatre/dataverse'
-import type {$____FixmeStudio} from '@theatre/core/types/public'
+import type {OnDiskState} from '@encore/core/types/private/core'
+import {globals} from '@encore/core/globals'
+import {val} from '@encore/dataverse'
+import type {$____FixmeStudio} from '@encore/core/types/public'
 
 type Studio = $____FixmeStudio
 

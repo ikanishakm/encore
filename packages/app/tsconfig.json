@@ -26,7 +26,7 @@
     "paths": {
       "@prisma/client": ["./prisma/client-generated"],
       "~/*": ["./src/*"],
-      "@theatre/utils/*": ["../utils/src/*"]
+      "@encore/utils/*": ["../utils/src/*"]
     },
     "noEmit": false
   },

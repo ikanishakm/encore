@@ -1,7 +1,7 @@
 # Theatric
 
 An easy to use [Tweakpane](https://cocopon.github.io/tweakpane/)/[Leva](https://github.com/pmndrs/leva)-like library for React, built on top of
-[Theatre.js](github.com/theatre-js/theatre).
+[Encore](github.com/Kanishak/encore).
 
 https://user-images.githubusercontent.com/2991360/214639118-b64a9464-9df4-489d-b408-b70492990883.mp4
 
@@ -23,7 +23,7 @@ $ npm install theatric
 ReactDOM.render(<App />, document.getElementById('root'))
 
 // App.jsx
-import {useControls} from 'theatric'
+import {useControls} from '@encore/tweak'
 import React from 'react'
 
 export default function App() {
@@ -42,7 +42,7 @@ export default function App() {
 
 ## Supported prop types
 
-Theatric supports all the prop types that Theatre.js supports. You can find a list of supported prop types [here](https://www.theatrejs.com/docs/latest/manual/prop-types).
+Theatric supports all the prop types that Encore supports. You can find a list of supported prop types [here](https://www.theatrejs.com/docs/latest/manual/prop-types).
 
 ## API
 
@@ -59,7 +59,7 @@ anywhere in your component tree. It takes an object of controls and returns an
 object of values.
 
 ```tsx
-import {useControls} from 'theatric'
+import {useControls} from '@encore/tweak'
 
 function Introduction() {
   const {name, age} = useControls({name: 'Andrew', age: 28})
@@ -78,7 +78,7 @@ have multiple instances of the same component, in which case the controls would
 collide.
 
 ```tsx
-import {useControls} from 'theatric'
+import {useControls} from '@encore/tweak'
 
 function Introduction({id}) {
   const {name, age} = useControls({name: 'Andrew', age: 28}, {folder: id})
@@ -95,7 +95,7 @@ function Introduction({id}) {
 can use to get and set the values of your controls imperatively.
 
 ```tsx
-import {useControls} from 'theatric'
+import {useControls} from '@encore/tweak'
 
 function Introduction() {
   const {name, age, $get, $set} = useControls({name: 'Andrew', age: 28})
@@ -119,7 +119,7 @@ You can also place buttons on the control panel to trigger actions. You can
 combine this with the `$get` and `$set` methods to create a more convenient UI.
 
 ```tsx
-import {useControls, button} from 'theatric'
+import {useControls, button} from '@encore/tweak'
 
 function Introduction() {
   const {name, age, $get, $set} = useControls({
@@ -145,7 +145,7 @@ function Introduction() {
 Example of setting a nested prop:
 
 ```tsx
-import {useControls, button} from 'theatric'
+import {useControls, button} from '@encore/tweak'
 
 function Introduction() {
   const {person, $get, $set} = useControls({
@@ -180,7 +180,7 @@ config object as [`getProject()`](https://www.theatrejs.com/docs/latest/api/core
 
 
 ```tsx
-import {initialize, useControls, types, getAssetUrl} from 'theatric'
+import {initialize, useControls, types, getAssetUrl} from '@encore/tweak'
 import theatricState from './theatricState.json'
 
 initialize({
@@ -217,7 +217,7 @@ For example, to specify a range for a number, or adjust the scrubbing
 sensitivity, you can use the `number` type.
 
 ```tsx
-import {useControls, types} from 'theatric'
+import {useControls, types} from '@encore/tweak'
 
 function Introduction() {
   const {name, age} = useControls({
@@ -238,7 +238,7 @@ function Introduction() {
 }
 ```
 
-This is simply a re-export via `export {types} from '@theatre/core'`. To learn more about types, check out the
+This is simply a re-export via `export {types} from '@encore/core'`. To learn more about types, check out the
 [types documentation](https://www.theatrejs.com/docs/latest/manual/prop-types).
 
 ## Using assets
@@ -246,7 +246,7 @@ This is simply a re-export via `export {types} from '@theatre/core'`. To learn m
 Here is an example of using image assets in your controls. Learn more about assets [here](https://www.theatrejs.com/docs/latest/manual/assets).
 
 ```tsx
-import {initialize, useControls, types, getAssetUrl} from 'theatric'
+import {initialize, useControls, types, getAssetUrl} from '@encore/tweak'
 import theatricState from './theatricState.json'
 
 initialize({
@@ -283,12 +283,12 @@ function App() {
 }
 ```
 
-## How does Theatric compare to Theatre.js?
+## How does Theatric compare to Encore?
 
-* You can use both Theatric and Theatre.js in the same project. That's a common use-case.
-* You'd use Theatre.js if you're creating complex animation, or if you have large projects with many objects and props to control.
-* On the other hand, if you're just looking for a quick way to tweak a few values in your app, Theatric is a good choice. It requires no setup, no configuration, and no boilerplate. All of your values end up in a single Theatre.js [Object](https://www.theatrejs.com/docs/latest/manual/objects).
+* You can use both Theatric and Encore in the same project. That's a common use-case.
+* You'd use Encore if you're creating complex animation, or if you have large projects with many objects and props to control.
+* On the other hand, if you're just looking for a quick way to tweak a few values in your app, Theatric is a good choice. It requires no setup, no configuration, and no boilerplate. All of your values end up in a single Encore [Object](https://www.theatrejs.com/docs/latest/manual/objects).
 
 ## License
 
-Apache License Version 2.0. Theatric only embeds Theatre.js' studio in the development build, so studio won't be included in your production build.
+Apache License Version 2.0. Theatric only embeds Encore' studio in the development build, so studio won't be included in your production build.

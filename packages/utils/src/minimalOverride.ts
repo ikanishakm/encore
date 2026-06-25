@@ -1,5 +1,5 @@
 import isPlainObject from 'lodash-es/isPlainObject'
-import type {$IntentionalAny} from '@theatre/utils/types'
+import type {$IntentionalAny} from '@encore/utils/types'
 
 enum ValueType {
   Opaque = 0,

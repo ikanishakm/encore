@@ -1,38 +1,38 @@
-import type Project from '@theatre/core/projects/Project'
-import type Sheet from '@theatre/core/sheets/Sheet'
-import type SheetTemplate from '@theatre/core/sheets/SheetTemplate'
-import {emptyArray} from '@theatre/utils'
+import type Project from '@encore/core/projects/Project'
+import type Sheet from '@encore/core/sheets/Sheet'
+import type SheetTemplate from '@encore/core/sheets/SheetTemplate'
+import {emptyArray} from '@encore/utils'
 import type {
   SheetObjectAddress,
   WithoutSheetInstance,
   SerializableMap,
   SerializablePrimitive,
   SerializableValue,
-} from '@theatre/core/types/public'
-import type {PathToProp} from '@theatre/utils/pathToProp'
-import getDeep from '@theatre/utils/getDeep'
+} from '@encore/core/types/public'
+import type {PathToProp} from '@encore/utils/pathToProp'
+import getDeep from '@encore/utils/getDeep'
 import type {
   ObjectAddressKey,
   SequenceTrackId,
-} from '@theatre/core/types/public'
-import SimpleCache from '@theatre/utils/SimpleCache'
-import type {$FixMe, $IntentionalAny} from '@theatre/core/types/public'
-import type {Prism, Pointer} from '@theatre/dataverse'
-import {Atom, getPointerParts, prism, val} from '@theatre/dataverse'
+} from '@encore/core/types/public'
+import SimpleCache from '@encore/utils/SimpleCache'
+import type {$FixMe, $IntentionalAny} from '@encore/core/types/public'
+import type {Prism, Pointer} from '@encore/dataverse'
+import {Atom, getPointerParts, prism, val} from '@encore/dataverse'
 import set from 'lodash-es/set'
 import getPropDefaultsOfSheetObject from './getPropDefaultsOfSheetObject'
 import SheetObject from './SheetObject'
 import {
   getPropConfigByPath,
   isPropConfSequencable,
-} from '@theatre/core/propTypes/utils'
+} from '@encore/core/propTypes/utils'
 import getOrderingOfPropTypeConfig from './getOrderingOfPropTypeConfig'
-import type {SheetState_Historic} from '@theatre/core/types/private/core'
+import type {SheetState_Historic} from '@encore/core/types/private/core'
 import {cloneDeep, unset} from 'lodash-es'
 import type {
   SheetObjectActionsConfig,
   SheetObjectPropTypeConfig,
-} from '@theatre/core/types/public'
+} from '@encore/core/types/public'
 
 function isObjectEmpty(obj: unknown): boolean {
   return (

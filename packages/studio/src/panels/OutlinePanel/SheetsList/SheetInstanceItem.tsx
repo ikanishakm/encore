@@ -1,13 +1,13 @@
-import getStudio from '@theatre/studio/getStudio'
-import {outlineSelection} from '@theatre/studio/selectors'
-import {useVal} from '@theatre/react'
+import getStudio from '@encore/studio/getStudio'
+import {outlineSelection} from '@encore/studio/selectors'
+import {useVal} from '@encore/react'
 import React, {useCallback} from 'react'
 import styled from 'styled-components'
-import ObjectsList from '@theatre/studio/panels/OutlinePanel/ObjectsList/ObjectsList'
-import BaseItem from '@theatre/studio/panels/OutlinePanel/BaseItem'
-import type Sheet from '@theatre/core/sheets/Sheet'
-import {useCollapseStateInOutlinePanel} from '@theatre/studio/panels/OutlinePanel/outlinePanelUtils'
-import useChordial from '@theatre/studio/uiComponents/chordial/useChodrial'
+import ObjectsList from '@encore/studio/panels/OutlinePanel/ObjectsList/ObjectsList'
+import BaseItem from '@encore/studio/panels/OutlinePanel/BaseItem'
+import type Sheet from '@encore/core/sheets/Sheet'
+import {useCollapseStateInOutlinePanel} from '@encore/studio/panels/OutlinePanel/outlinePanelUtils'
+import useChordial from '@encore/studio/uiComponents/chordial/useChodrial'
 
 const Head = styled.div`
   display: flex;

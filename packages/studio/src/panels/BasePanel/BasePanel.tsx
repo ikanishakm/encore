@@ -1,12 +1,12 @@
-import {prism, val} from '@theatre/dataverse'
-import {usePrism} from '@theatre/react'
-import type {$IntentionalAny, VoidFn} from '@theatre/core/types/public'
-import getStudio from '@theatre/studio/getStudio'
-import type {PanelPosition} from '@theatre/core/types/private'
-import useLockSet from '@theatre/studio/uiComponents/useLockSet'
+import {prism, val} from '@encore/dataverse'
+import {usePrism} from '@encore/react'
+import type {$IntentionalAny, VoidFn} from '@encore/core/types/public'
+import getStudio from '@encore/studio/getStudio'
+import type {PanelPosition} from '@encore/core/types/private'
+import useLockSet from '@encore/studio/uiComponents/useLockSet'
 import React, {useContext} from 'react'
 import useWindowSize from 'react-use/esm/useWindowSize'
-import type {UIPanelId} from '@theatre/core/types/private'
+import type {UIPanelId} from '@encore/core/types/private'
 
 type PanelStuff = {
   panelId: UIPanelId

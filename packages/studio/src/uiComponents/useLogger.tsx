@@ -1,4 +1,4 @@
-import type {ILogger} from '@theatre/utils/logger'
+import type {ILogger} from '@encore/utils/logger'
 import React, {useContext, useMemo} from 'react'
 
 const loggerContext = React.createContext<ILogger>(null!)

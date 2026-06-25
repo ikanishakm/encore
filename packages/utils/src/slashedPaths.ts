@@ -1,5 +1,5 @@
-import {InvalidArgumentError} from '@theatre/utils/errors'
-// import {notify} from '@theatre/shared/notify'
+import {InvalidArgumentError} from '@encore/utils/errors'
+// import {notify} from '@encore/shared/notify'
 
 /**
  * Make the given string's "path" slashes normalized with preceding and trailing spaces.

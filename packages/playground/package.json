@@ -17,14 +17,15 @@
     "test:ci": "playwright test --reporter=dot --config=devEnv/playwright.config.ts --project=chromium"
   },
   "devDependencies": {
+    "@encore/core": "workspace:*",
+    "@encore/dataverse": "workspace:*",
+    "@encore/r3f": "workspace:*",
+    "@encore/react": "workspace:*",
+    "@encore/studio": "workspace:*",
+    "@encore/tweak": "workspace:*",
     "@playwright/test": "^1.36.2",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.1",
-    "@theatre/core": "workspace:*",
-    "@theatre/dataverse": "workspace:*",
-    "@theatre/r3f": "workspace:*",
-    "@theatre/react": "workspace:*",
-    "@theatre/studio": "workspace:*",
     "@types/jest": "^26.0.23",
     "@types/lodash-es": "^4.17.4",
     "@types/node": "^15.6.2",
@@ -40,7 +41,6 @@
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "styled-components": "^6.1.13",
-    "theatric": "workspace:*",
     "three": "0.184.0",
     "typescript": "5.1.6",
     "vite": "^4.3.9"

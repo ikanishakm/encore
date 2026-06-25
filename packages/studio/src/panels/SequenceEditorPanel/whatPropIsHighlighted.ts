@@ -1,14 +1,14 @@
-import type {Prism} from '@theatre/dataverse'
-import {val} from '@theatre/dataverse'
-import {Atom} from '@theatre/dataverse'
-import {prism} from '@theatre/dataverse'
+import type {Prism} from '@encore/dataverse'
+import {val} from '@encore/dataverse'
+import {Atom} from '@encore/dataverse'
+import {prism} from '@encore/dataverse'
 import type {
   PropAddress,
   WithoutSheetInstance,
-} from '@theatre/core/types/public'
+} from '@encore/core/types/public'
 
-import pointerDeep from '@theatre/utils/pointerDeep'
-import type {$IntentionalAny, VoidFn} from '@theatre/core/types/public'
+import pointerDeep from '@encore/utils/pointerDeep'
+import type {$IntentionalAny, VoidFn} from '@encore/core/types/public'
 import lodashSet from 'lodash-es/set'
 
 /** constant global manager */

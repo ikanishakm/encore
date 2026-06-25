@@ -1,10 +1,10 @@
-import {pointerEventsAutoInNormalMode} from '@theatre/studio/css'
-import {lockedCursorCssVarName} from '@theatre/studio/uiComponents/PointerEventsHandler'
+import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
+import {lockedCursorCssVarName} from '@encore/studio/uiComponents/PointerEventsHandler'
 import {css} from 'styled-components'
 import SnapCursor from './SnapCursor.svg'
-import {absoluteDims} from '@theatre/studio/utils/absoluteDims'
+import {absoluteDims} from '@encore/studio/utils/absoluteDims'
 import DopeSnap from './DopeSnap'
-import {includeLockFrameStampAttrs} from '@theatre/studio/panels/SequenceEditorPanel/FrameStampPositionProvider'
+import {includeLockFrameStampAttrs} from '@encore/studio/panels/SequenceEditorPanel/FrameStampPositionProvider'
 
 const HIT_ZONE_SIZE_PX = 12
 const SNAP_CURSOR_SIZE_PX = 34

@@ -1,19 +1,19 @@
-import getStudio from '@theatre/studio/getStudio'
-import {val} from '@theatre/dataverse'
+import getStudio from '@encore/studio/getStudio'
+import {val} from '@encore/dataverse'
 import type {
   SequenceEditorTree_PrimitiveProp,
   SequenceEditorTree_PropWithChildren,
   SequenceEditorTree_Sheet,
   SequenceEditorTree_SheetObject,
-} from '@theatre/studio/panels/SequenceEditorPanel/layout/tree'
-import type {BasicKeyframe, SequenceTrackId} from '@theatre/core/types/public'
-import type {TrackData} from '@theatre/core/types/private/core'
-import {encodePathToProp} from '@theatre/utils/pathToProp'
+} from '@encore/studio/panels/SequenceEditorPanel/layout/tree'
+import type {BasicKeyframe, SequenceTrackId} from '@encore/core/types/public'
+import type {TrackData} from '@encore/core/types/private/core'
+import {encodePathToProp} from '@encore/utils/pathToProp'
 import {uniq} from 'lodash-es'
-import type SheetObject from '@theatre/core/sheetObjects/SheetObject'
-import type {StudioSheetItemKey} from '@theatre/core/types/private'
-import {createStudioSheetItemKey} from '@theatre/studio/utils/createStudioSheetItemKey'
-import {__private} from '@theatre/core'
+import type SheetObject from '@encore/core/sheetObjects/SheetObject'
+import type {StudioSheetItemKey} from '@encore/core/types/private'
+import {createStudioSheetItemKey} from '@encore/studio/utils/createStudioSheetItemKey'
+import {__private} from '@encore/core'
 
 const {keyframeUtils} = __private
 

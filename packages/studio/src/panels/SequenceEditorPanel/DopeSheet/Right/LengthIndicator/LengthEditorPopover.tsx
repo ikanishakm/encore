@@ -1,13 +1,13 @@
-import type {Pointer} from '@theatre/dataverse'
+import type {Pointer} from '@encore/dataverse'
 import React, {useLayoutEffect, useMemo, useRef} from 'react'
 import styled from 'styled-components'
-import type {SequenceEditorPanelLayout} from '@theatre/studio/panels/SequenceEditorPanel/layout/layout'
-import {usePrism, useVal} from '@theatre/react'
-import getStudio from '@theatre/studio/getStudio'
-import type {BasicNumberInputNudgeFn} from '@theatre/studio/uiComponents/form/BasicNumberInput'
-import BasicNumberInput from '@theatre/studio/uiComponents/form/BasicNumberInput'
-import type {CommitOrDiscardOrRecapture} from '@theatre/studio/StudioStore/StudioStore'
-import {propNameTextCSS} from '@theatre/studio/propEditors/utils/propNameTextCSS'
+import type {SequenceEditorPanelLayout} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
+import {usePrism, useVal} from '@encore/react'
+import getStudio from '@encore/studio/getStudio'
+import type {BasicNumberInputNudgeFn} from '@encore/studio/uiComponents/form/BasicNumberInput'
+import BasicNumberInput from '@encore/studio/uiComponents/form/BasicNumberInput'
+import type {CommitOrDiscardOrRecapture} from '@encore/studio/StudioStore/StudioStore'
+import {propNameTextCSS} from '@encore/studio/propEditors/utils/propNameTextCSS'
 
 const greaterThanZero = (v: number) => isFinite(v) && v > 0
 

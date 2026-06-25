@@ -1,9 +1,9 @@
-import type {VoidFn} from '@theatre/core/types/public'
+import type {VoidFn} from '@encore/core/types/public'
 import React, {useContext, useEffect, useState} from 'react'
 import ContextMenu from './ContextMenu/ContextMenu'
 import type {ContextMenuProps} from './ContextMenu/ContextMenu'
-import {contextMenuShownContext} from '@theatre/studio/panels/DetailPanel/DetailPanel'
-import {closeAllTooltips} from '@theatre/studio/uiComponents/Popover/useTooltip'
+import {contextMenuShownContext} from '@encore/studio/panels/DetailPanel/DetailPanel'
+import {closeAllTooltips} from '@encore/studio/uiComponents/Popover/useTooltip'
 
 const emptyNode = <></>
 

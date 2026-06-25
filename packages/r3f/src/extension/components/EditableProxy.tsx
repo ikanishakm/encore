@@ -3,7 +3,7 @@ import React, {useEffect, useLayoutEffect, useMemo, useState} from 'react'
 import {Sphere, Html} from '@react-three/drei'
 import shallow from 'zustand/shallow'
 import {useSelected} from './useSelected'
-import {useVal} from '@theatre/react'
+import {useVal} from '@encore/react'
 import {getEditorSheetObject} from '../editorStuff'
 import type {IconID} from '../icons'
 import icons from '../icons'
@@ -11,7 +11,7 @@ import type {Helper} from '../../main/editableFactoryConfigUtils'
 import {invalidate, useFrame, useThree} from '@react-three/fiber'
 import {useDragDetector} from './DragDetector'
 import useExtensionStore from '../useExtensionStore'
-import {getStudioSync} from '@theatre/core'
+import {getStudioSync} from '@encore/core'
 
 export interface EditableProxyProps {
   storeKey: string
@@ -127,7 +127,7 @@ const EditableProxy: React.FC<EditableProxyProps> = ({storeKey, object}) => {
               useExtensionStore.getState().editables[storeKey].sheetObject
 
             if (!theatreObject) {
-              console.log('no Theatre.js object for', storeKey)
+              console.log('no Encore object for', storeKey)
             } else {
               const studio = getStudioSync(true)!
               studio.setSelection([theatreObject])
@@ -175,7 +175,7 @@ const EditableProxy: React.FC<EditableProxyProps> = ({storeKey, object}) => {
                     useExtensionStore.getState().editables[storeKey].sheetObject
 
                   if (!theatreObject) {
-                    console.log('no Theatre.js object for', storeKey)
+                    console.log('no Encore object for', storeKey)
                   } else {
                     const studio = getStudioSync(true)!
                     studio.setSelection([theatreObject])

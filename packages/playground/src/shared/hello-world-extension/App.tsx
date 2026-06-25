@@ -1,6 +1,6 @@
-import {editable as e, SheetProvider} from '@theatre/r3f'
+import {editable as e, SheetProvider} from '@encore/r3f'
 import {Stars, TorusKnot} from '@react-three/drei'
-import {getProject, onChange} from '@theatre/core'
+import {getProject, onChange} from '@encore/core'
 import React from 'react'
 import {Canvas} from '@react-three/fiber'
 

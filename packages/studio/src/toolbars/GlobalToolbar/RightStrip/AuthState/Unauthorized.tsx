@@ -1,8 +1,8 @@
-import type {AuthDerivedState} from '@theatre/studio/Auth'
-import getStudio from '@theatre/studio/getStudio'
-import ToolbarButton from '@theatre/studio/uiComponents/toolbar/ToolbarButton'
+import type {AuthDerivedState} from '@encore/studio/Auth'
+import getStudio from '@encore/studio/getStudio'
+import ToolbarButton from '@encore/studio/uiComponents/toolbar/ToolbarButton'
 import React from 'react'
-import SimplePopover from '@theatre/studio/uiComponents/Popover/SimplePopover'
+import SimplePopover from '@encore/studio/uiComponents/Popover/SimplePopover'
 import styled from 'styled-components'
 
 const ThePopover = styled(SimplePopover)`

@@ -1,4 +1,4 @@
-import {BackMemoryAdapter, SaazBack} from '@theatre/saaz'
+import {BackMemoryAdapter, SaazBack} from '@encore/saaz'
 import {schema} from 'src/state/schema'
 
 const backs: {[key in string]?: SaazBack} = {}

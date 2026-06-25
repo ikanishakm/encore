@@ -1,11 +1,11 @@
-import type {VoidFn} from '@theatre/core/types/public'
-import {pointerEventsAutoInNormalMode} from '@theatre/studio/css'
+import type {VoidFn} from '@encore/core/types/public'
+import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
 import React from 'react'
 import styled, {css} from 'styled-components'
-import {PresenceFlag} from '@theatre/studio/uiComponents/usePresence'
-import usePresence from '@theatre/studio/uiComponents/usePresence'
-import type {StudioSheetItemKey} from '@theatre/core/types/private'
-import type {BasicKeyframe} from '@theatre/core'
+import {PresenceFlag} from '@encore/studio/uiComponents/usePresence'
+import usePresence from '@encore/studio/uiComponents/usePresence'
+import type {StudioSheetItemKey} from '@encore/core/types/private'
+import type {BasicKeyframe} from '@encore/core'
 
 export type NearbyKeyframesControls = {
   prev?: Pick<BasicKeyframe, 'position'> & {

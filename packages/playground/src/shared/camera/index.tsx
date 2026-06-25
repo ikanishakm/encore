@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import theatre from '@theatre/core'
-import extension from '@theatre/r3f/dist/extension'
+import theatre from '@encore/core'
+import extension from '@encore/r3f/dist/extension'
 
 void theatre.getStudio().then((studio) => {
   studio.extend(extension)

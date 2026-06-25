@@ -1,4 +1,4 @@
-# Contributing to Theatre.js
+# Contributing to Encore
 
 ## Development workflow
 
@@ -58,7 +58,7 @@ $ yarn playground
 ```
 
 The playground is a bunch of ready-made projects that you can run to experiment
-with Theatre.js. It also contains the project's end-to-end tests.
+with Encore. It also contains the project's end-to-end tests.
 
 Read more at
 [`./packages/playground/README.md`](./packages/playground/README.md).
@@ -66,7 +66,7 @@ Read more at
 ### Hacking with `examples/`
 
 Other than `playground`, the [`examples/`](./examples) folder contains a few
-small projects that use Theatre.js with [parcel](https://parceljs.org),
+small projects that use Encore with [parcel](https://parceljs.org),
 [Create react app](create-react-app.dev), and other build tools. This means that
 unlike `playground`, you have to build all the packages before running the
 examples.
@@ -144,7 +144,7 @@ $ yarn lint:all --fix
 
 ### Publishing to npm
 
-Currently all packages (except for [`@theatre/r3f`](./packages/r3f/)) share the
+Currently all packages (except for [`@encore/r3f`](./packages/r3f/)) share the
 same version number. In order to publish to npm, you can run the `release`
 script from the root of the repo:
 
@@ -158,15 +158,15 @@ $ yarn cli release x.y.z-rc.w # npm publish version x.y.z-rc.w and tag it as "rc
 
 The [monorepo](https://en.wikipedia.org/wiki/Monorepo) consists of:
 
-- `@theatre/core` – The core animation library at
+- `@encore/core` – The core animation library at
   [`./packages/core`](./packages/core).
-- `@theatre/studio` – The visual editor at
+- `@encore/studio` – The visual editor at
   [`./packages/studio`](./packages/studio).
-- `@theatre/dataverse` – The reactive dataflow library at
+- `@encore/dataverse` – The reactive dataflow library at
   [`./packages/dataverse`](./packages/dataverse).
-- `@theatre/react` – Utilities for using Theatre.js with React at
+- `@encore/react` – Utilities for using Encore with React at
   [`./packages/react`](./packages/react).
-- `@theatre/r3f` – The react-three-fiber extension at
+- `@encore/r3f` – The react-three-fiber extension at
   [`./packages/r3f`](./packages/r3f).
 - `playground` – The playground explained [above](#hacking-with-playground),
   located at [`./packages/playground`](./packages/playground)
@@ -239,10 +239,10 @@ ideas.
 ### Helping with outstanding issues
 
 Feel free to chime in on any
-[issue](https://github.com/theatre-js/theatre/issues). We have labeled some with
-["Help wanted"](https://github.com/theatre-js/theatre/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22help+wanted%22)
+[issue](https://github.com/Kanishak/encore/issues). We have labeled some with
+["Help wanted"](https://github.com/Kanishak/encore/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22help+wanted%22)
 or
-["Good first issue"](https://github.com/theatre-js/theatre/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22good+first+issue%22)
+["Good first issue"](https://github.com/Kanishak/encore/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22good+first+issue%22)
 if you're just getting started with the codebase.
 
 ## Sending pull requests

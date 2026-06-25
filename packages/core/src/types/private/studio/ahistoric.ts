@@ -1,12 +1,12 @@
-import type {StrictRecord} from '@theatre/core/types/public'
-import type {PointableSet} from '@theatre/utils/PointableSet'
-import type {StudioSheetItemKey} from '@theatre/core/types/private/studio'
+import type {StrictRecord} from '@encore/core/types/public'
+import type {PointableSet} from '@encore/utils/PointableSet'
+import type {StudioSheetItemKey} from '@encore/core/types/private/studio'
 import type {
   BasicKeyframe,
   ProjectId,
   SheetId,
   IRange,
-} from '@theatre/core/types/public'
+} from '@encore/core/types/public'
 
 export type KeyframeWithPathToPropFromCommonRoot = {
   pathToProp: (string | number)[]

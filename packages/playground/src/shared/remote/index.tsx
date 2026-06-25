@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import theatre from '@theatre/core'
-import {getProject} from '@theatre/core'
+import theatre from '@encore/core'
+import {getProject} from '@encore/core'
 import {Scene} from './Scene'
 import RemoteController from './RemoteController'
 

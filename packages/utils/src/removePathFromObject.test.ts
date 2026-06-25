@@ -1,5 +1,5 @@
 import {deepStrictEqual} from 'assert'
-import type {PathToProp} from '@theatre/utils/pathToProp'
+import type {PathToProp} from '@encore/utils/pathToProp'
 import removePathFromObject from './removePathFromObject'
 
 const t = (objIn: {}, path: PathToProp, objOut: {}) => {

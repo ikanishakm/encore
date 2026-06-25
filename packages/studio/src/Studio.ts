@@ -1,8 +1,8 @@
-import Scrub from '@theatre/studio/Scrub'
-import type {StudioHistoricState} from '@theatre/core/types/private/studio'
-import UI from '@theatre/studio/UI/UI'
-import type {Pointer, Ticker} from '@theatre/dataverse'
-import {Atom, PointerProxy, pointerToPrism} from '@theatre/dataverse'
+import Scrub from '@encore/studio/Scrub'
+import type {StudioHistoricState} from '@encore/core/types/private/studio'
+import UI from '@encore/studio/UI/UI'
+import type {Pointer, Ticker} from '@encore/dataverse'
+import {Atom, PointerProxy, pointerToPrism} from '@encore/dataverse'
 import type {
   CommitOrDiscardOrRecapture,
   ITransactionPrivateApi,
@@ -13,32 +13,32 @@ import type {
   IStudio,
   PaneClassDefinition,
   InitOpts,
-} from '@theatre/core/types/public'
+} from '@encore/core/types/public'
 import TheatreStudio from './TheatreStudio'
 import {nanoid} from 'nanoid/non-secure'
-import type Project from '@theatre/core/projects/Project'
-import type {CoreBits} from '@theatre/core/CoreBundle'
-import SimpleCache from '@theatre/utils/SimpleCache'
-import type {IProject, ISheet, ProjectId} from '@theatre/core'
+import type Project from '@encore/core/projects/Project'
+import type {CoreBits} from '@encore/core/CoreBundle'
+import SimpleCache from '@encore/utils/SimpleCache'
+import type {IProject, ISheet, ProjectId} from '@encore/core'
 import PaneManager from './PaneManager'
-import type * as _coreExports from '@theatre/core/coreExports'
+import type * as _coreExports from '@encore/core/coreExports'
 import type {
   OnDiskState,
   ProjectEphemeralState,
-} from '@theatre/core/types/private/core'
-import type {Deferred} from '@theatre/utils/defer'
-import {defer} from '@theatre/utils/defer'
+} from '@encore/core/types/private/core'
+import type {Deferred} from '@encore/utils/defer'
+import {defer} from '@encore/utils/defer'
 import checkForUpdates from './checkForUpdates'
 import shallowEqual from 'shallowequal'
 import {createStore} from './IDBStorage'
-import {getAllPossibleAssetIDs} from '@theatre/studio/utils/assets'
+import {getAllPossibleAssetIDs} from '@encore/studio/utils/assets'
 import {notify} from './notify'
-import type {RafDriverPrivateAPI} from '@theatre/core/rafDrivers'
-import {persistAtom} from '@theatre/utils/persistAtom'
+import type {RafDriverPrivateAPI} from '@encore/core/rafDrivers'
+import {persistAtom} from '@encore/utils/persistAtom'
 import produce from 'immer'
 import Storno from './Storno/Storno'
 import Auth from './Auth'
-import type {$IntentionalAny} from '@theatre/core/types/public'
+import type {$IntentionalAny} from '@encore/core/types/public'
 import AppLink from './SyncStore/AppLink'
 import SyncServerLink from './SyncStore/SyncServerLink'
 import type {TrpcClientWrapped} from './SyncStore/utils'
@@ -49,28 +49,28 @@ const DEFAULT_PERSISTENCE_KEY = 'theatre-0.4'
 
 export type CoreExports = typeof _coreExports
 
-const STUDIO_NOT_INITIALIZED_MESSAGE = `You seem to have imported '@theatre/studio' but haven't initialized it. You can initialize the studio by:
+const STUDIO_NOT_INITIALIZED_MESSAGE = `You seem to have imported '@encore/studio' but haven't initialized it. You can initialize the studio by:
 \`\`\`
-import theatre from '@theatre/core'
+import theatre from '@encore/core'
 theatre.init({studio: true})
 \`\`\`
 
-* If you didn't mean to import '@theatre/studio', this means that your bundler is not tree-shaking it. This is most likely a bundler misconfiguration.
+* If you didn't mean to import '@encore/studio', this means that your bundler is not tree-shaking it. This is most likely a bundler misconfiguration.
 
-* If you meant to import '@theatre/studio' without showing its UI, you can do that by running:
+* If you meant to import '@encore/studio' without showing its UI, you can do that by running:
 
 \`\`\`
-import theatre from '@theatre/core'
+import theatre from '@encore/core'
 theatre.init({studio: true})
 studio.ui.hide()
 \`\`\`
 `
 
-const STUDIO_INITIALIZED_LATE_MSG = `You seem to have imported '@theatre/studio' but called \`studio.initialize()\` after some delay.
-Theatre.js projects remain in pending mode (won't play their sequences) until the studio is initialized, so you should place the \`studio.initialize()\` line right after the import line:
+const STUDIO_INITIALIZED_LATE_MSG = `You seem to have imported '@encore/studio' but called \`studio.initialize()\` after some delay.
+Encore projects remain in pending mode (won't play their sequences) until the studio is initialized, so you should place the \`studio.initialize()\` line right after the import line:
 
 \`\`\`
-import theatre from '@theatre/core'
+import theatre from '@encore/core'
 // ... and other imports
 
 studio.initialize()
@@ -110,7 +110,7 @@ export class Studio {
   readonly paneManager: PaneManager
 
   /**
-   * An atom holding the exports of '\@theatre/core'. Will be undefined if '\@theatre/core' is never imported
+   * An atom holding the exports of '\@encore/core'. Will be undefined if '\@encore/core' is never imported
    */
   private _coreAtom = new Atom<{core?: CoreExports}>({})
 
@@ -153,7 +153,7 @@ export class Studio {
   private _didWarnAboutNotInitializing = false
 
   /**
-   * This will be set as soon as `@theatre/core` registers itself on `@theatre/studio`
+   * This will be set as soon as `@encore/core` registers itself on `@encore/studio`
    */
   private _coreBits: CoreBits | undefined
 
@@ -311,7 +311,7 @@ export class Studio {
   async initialize(opts?: InitOpts) {
     if (!this._coreBits) {
       throw new Error(
-        `You seem to have imported \`@theatre/studio\` without importing \`@theatre/core\`. Make sure to include an import of \`@theatre/core\` before calling \`studio.initializer()\`.`,
+        `You seem to have imported \`@encore/studio\` without importing \`@encore/core\`. Make sure to include an import of \`@encore/core\` before calling \`studio.initializer()\`.`,
       )
     }
 
@@ -463,7 +463,7 @@ export class Studio {
               if (reconfigure && existing.extensionId === extension.id) {
                 // well this should never happen because we already deleted the pane class above
                 console.warn(
-                  `Pane class "${classDefinition.class}" already exists. This is a bug in Theatre.js. Please report it at https://github.com/theatre-js/theatre/issues/new`,
+                  `Pane class "${classDefinition.class}" already exists. This is a bug in Encore. Please report it at https://github.com/Kanishak/encore/issues/new`,
                 )
               } else {
                 throw new Error(
@@ -691,7 +691,9 @@ function sanitizeOpts(
   const storeOpts: StudioOpts = {
     persistenceKey: DEFAULT_PERSISTENCE_KEY,
     usePersistentStorage: true,
-    serverUrl: env.BACKEND_URL ?? 'https://app.theatrejs.com',
+    // Encore fork: no hosted cloud backend. Default to localhost so the editor
+    // never contacts a third-party server. Override via BACKEND_URL or serverUrl.
+    serverUrl: env.BACKEND_URL ?? 'http://localhost:3000',
     rafDriver: coreBits.getCoreRafDriver(),
   }
 
@@ -705,7 +707,7 @@ function sanitizeOpts(
       storeOpts.serverUrl = opts.serverUrl
     } else {
       throw new Error(
-        'parameter `serverUrl` in `theatre.init({studio: true, serverUrl})` must be either undefined or a fully formed url (e.g. `https://app.theatrejs.com`)',
+        'parameter `serverUrl` in `theatre.init({studio: true, serverUrl})` must be either undefined or a fully formed url (e.g. `http://localhost:3000`)',
       )
     }
   }
@@ -731,7 +733,7 @@ function sanitizeOpts(
     if (!rafDriverPrivateApi) {
       // TODO - need to educate the user about this edge case
       throw new Error(
-        'parameter `rafDriver` in `theatre.init({studio: true, __experimental_rafDriver})` seems to come from a different version of `@theatre/core` than the version that is attached to `@theatre/studio`',
+        'parameter `rafDriver` in `theatre.init({studio: true, __experimental_rafDriver})` seems to come from a different version of `@encore/core` than the version that is attached to `@encore/studio`',
       )
     }
     storeOpts.rafDriver = rafDriverPrivateApi

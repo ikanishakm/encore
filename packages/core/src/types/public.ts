@@ -1,4 +1,4 @@
-import type {Pointer} from '@theatre/dataverse'
+import type {Pointer} from '@encore/dataverse'
 
 /** For `any`s that aren't meant to stay `any`*/
 export type $FixMe = any
@@ -133,7 +133,7 @@ export type SequenceMarkerId = Nominal<'SequenceMarkerId'>
  * This type represents the object returned by `studio.createContnentOfSaveFile()`. It's
  * meant for advanced users who want to interact with the state of projects. In the vast
  * majority of cases, you __should not__ use this type. Either an API for your use-case
- * already exists, or you should open an issue on GitHub: https://github.com/theatre-js/theatre/issues
+ * already exists, or you should open an issue on GitHub: https://github.com/Kanishak/encore/issues
  *
  */
 export type __UNSTABLE_Project_OnDiskState = unknown
@@ -241,16 +241,16 @@ export type IProjectConfig = {
   }
 }
 /**
- * A Theatre.js project
+ * A Encore project
  */
 
 export interface IProject {
   readonly type: 'Theatre_Project_PublicAPI'
   /**
-   * If `@theatre/studio` is used, this promise would resolve when studio has loaded
+   * If `@encore/studio` is used, this promise would resolve when studio has loaded
    * the state of the project into memory.
    *
-   * If `@theatre/studio` is not used, this promise is already resolved.
+   * If `@encore/studio` is not used, this promise is already resolved.
    */
   readonly ready: Promise<void>
   /**
@@ -589,7 +589,7 @@ export interface ISequence {
    *
    * @example Usage
    * ```ts
-   * import {onChange, val} from '@theatre/core'
+   * import {onChange, val} from '@encore/core'
    *
    * // let's assume `sheet` is a sheet
    * const sequence = sheet.sequence
@@ -652,9 +652,9 @@ export interface ISequence {
    * await sheet.sequence.attachAudio({source: audioBuffer, audioContext, destinationNode})
    * ```
    *
-   * Note: It's better to provide the `audioContext` rather than allow Theatre.js to create it.
+   * Note: It's better to provide the `audioContext` rather than allow Encore to create it.
    * That's because some browsers [suspend the audioContext](https://developer.chrome.com/blog/autoplay/#webaudio)
-   * unless it's initiated by a user gesture, like a click. If that happens, Theatre.js will
+   * unless it's initiated by a user gesture, like a click. If that happens, Encore will
    * wait for a user gesture to resume the audioContext. But that's probably not an
    * optimal user experience. It is better to provide a button or some other UI element
    * to communicate to the user that they have to initiate the animation.
@@ -695,7 +695,7 @@ export interface ISequence {
     destinationNode: AudioNode
 
     /**
-     * This is an intermediate GainNode that Theatre.js feeds its audio to. It is by default
+     * This is an intermediate GainNode that Encore feeds its audio to. It is by default
      * connected to destinationNode, but you can disconnect the gainNode and feed it to your own graph.
      *
      * @example
@@ -1116,7 +1116,7 @@ export type ToolConfig =
 export type ToolsetConfig = Array<ToolConfig>
 
 /**
- * A Theatre.js Studio extension. You can define one either
+ * A Encore Studio extension. You can define one either
  * in a separate package, or within your project.
  */
 export interface IExtension {
@@ -1196,7 +1196,7 @@ export interface InitOpts {
  * @example
  * Basic usage:
  * ```ts
- * import theatre from '@theatre/core'
+ * import theatre from '@encore/core'
  *
  * theatre.init({studio: true})
  * ```
@@ -1204,7 +1204,7 @@ export interface InitOpts {
  * @example
  * Usage with **tree-shaking**:
  * ```ts
- * import theatre from '@theatre/core'
+ * import theatre from '@encore/core'
  *
  * if (process.env.NODE_ENV !== 'production') {
  *   theatre.init({studio: true})
@@ -1372,7 +1372,7 @@ export interface IStudio {
   destroyPane(paneId: string): void
 
   /**
-   * Returns the Theatre.js project that contains the studio's sheets and objects.
+   * Returns the Encore project that contains the studio's sheets and objects.
    *
    * It is useful if you'd like to have sheets/objects that are present only when
    * studio is present.
@@ -1437,7 +1437,7 @@ export interface IStudio {
 }
 
 /**
- * The scrub API is a simple construct for changing values in Theatre.js in a history-compatible way.
+ * The scrub API is a simple construct for changing values in Encore in a history-compatible way.
  * Primarily, it can be used to create a series of value changes using a temp transaction without
  * creating multiple transactions.
  *

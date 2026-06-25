@@ -5,7 +5,7 @@ import * as os from 'os'
 
 const root = path.join(__dirname, '..')
 
-const prog = sade('cli').describe('CLI for Theatre.js development')
+const prog = sade('cli').describe('CLI for Encore development')
 
 // better quote function from https://github.com/google/zx/pull/167
 $.quote = function quote(arg) {
@@ -28,14 +28,14 @@ $.quote = function quote(arg) {
 }
 
 const packagesToBuild = [
-  '@theatre/dataverse',
-  '@theatre/saaz',
-  '@theatre/core',
-  '@theatre/studio',
-  '@theatre/react',
-  '@theatre/r3f',
-  'theatric',
-  '@theatre/browser-bundles',
+  '@encore/dataverse',
+  '@encore/saaz',
+  '@encore/core',
+  '@encore/studio',
+  '@encore/react',
+  '@encore/r3f',
+  '@encore/tweak',
+  '@encore/browser-bundles',
 ]
 
 prog
@@ -252,14 +252,14 @@ prog
   )
   .action(async () => {
     const packagesToPublish = [
-      '@theatre/core',
-      '@theatre/studio',
-      '@theatre/dataverse',
-      '@theatre/saaz',
-      '@theatre/react',
-      '@theatre/browser-bundles',
-      '@theatre/r3f',
-      'theatric',
+      '@encore/core',
+      '@encore/studio',
+      '@encore/dataverse',
+      '@encore/saaz',
+      '@encore/react',
+      '@encore/browser-bundles',
+      '@encore/r3f',
+      '@encore/tweak',
     ]
 
     /**
@@ -296,7 +296,7 @@ prog
       // The `r3f` package has its own release schedule, so its version numbers
       // are almost always different from the rest of the packages.
       const pathToPackageJson =
-        packageName === '@theatre/r3f'
+        packageName === '@encore/r3f'
           ? path.resolve(__dirname, '../', 'packages', 'r3f', 'package.json')
           : path.resolve(__dirname, '../', './package.json')
 
@@ -334,13 +334,13 @@ prog
 
         let {version, dependencies, peerDependencies, devDependencies} =
           original
-        // The @theatre/r3f package curently doesn't track the same version number of the other packages like @theatre/core,
+        // The @encore/r3f package curently doesn't track the same version number of the other packages like @encore/core,
         // so we need to generate version numbers independently for each package
         version = getNewVersionName(workspaceData.name, latestCommitHash)
         assignedVersionByPackageName[workspaceData.name] = version
         // Normally we don't have to override the package versions in dependencies because yarn would already convert
-        // all the "workspace:*" versions to a fixed version before publishing. However, packages like @theatre/studio
-        // have a peerDependency on @theatre/core set to "*" (meaning they would work with any version of @theatre/core).
+        // all the "workspace:*" versions to a fixed version before publishing. However, packages like @encore/studio
+        // have a peerDependency on @encore/core set to "*" (meaning they would work with any version of @encore/core).
         // This is not the desired behavior in pre-release versions, so here, we'll fix those "*" versions to the set version.
         for (const deps of [dependencies, peerDependencies, devDependencies]) {
           if (!deps) continue
@@ -434,8 +434,8 @@ prog
 {
   const allDevCommands = [
     `yarn workspace playground run serve`,
-    `yarn workspace @theatre/app run cli dev all`,
-    `yarn workspace @theatre/sync-server run cli dev all`,
+    `yarn workspace @encore/app run cli dev all`,
+    `yarn workspace @encore/sync-server run cli dev all`,
   ]
 
   prog

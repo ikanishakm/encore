@@ -341,7 +341,7 @@ in it as dependencies, and reruns the function when these change.
 
 #### Defined in
 
-[prism/prism.ts:817](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L817)
+[prism/prism.ts:832](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L832)
 
 ___
 

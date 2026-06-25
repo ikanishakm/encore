@@ -16,10 +16,10 @@ export const globals = {
  * use to store their references.
  */
 export const globalVariableNames = {
-  StudioBundle: '__TheatreJS_StudioBundle',
-  coreBundle: '__TheatreJS_CoreBundle',
-  notifications: '__TheatreJS_Notifications',
+  StudioBundle: '__Encore_StudioBundle',
+  coreBundle: '__Encore_CoreBundle',
+  notifications: '__Encore_Notifications',
 } as const
 
-// This type is easier to import by the studio, since studio can only import types from `@theatre/core/*`
+// This type is easier to import by the studio, since studio can only import types from `@encore/core/*`
 export type GlobalVariableNames = typeof globalVariableNames

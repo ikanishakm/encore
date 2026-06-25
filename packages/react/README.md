@@ -1,7 +1,7 @@
-# @theatre/react
+# @encore/react
 
-Utilities for using [Theatre.js](https://www.theatrejs.com) or
-[Dataverse](https://github.com/theatre-js/theatre/tree/main/packages/dataverse)
+Utilities for using [Encore](https://www.theatrejs.com) or
+[Dataverse](https://github.com/Kanishak/encore/tree/main/packages/dataverse)
 with React.
 
 ## Documentation
@@ -13,8 +13,8 @@ A React hook that returns the value of the given prism or pointer.
 Usage with Dataverse pointers:
 
 ```tsx
-import {Atom} from '@theatre/dataverse'
-import {useVal} from '@theatre/react'
+import {Atom} from '@encore/dataverse'
+import {useVal} from '@encore/react'
 
 const atom = new Atom({foo: 'foo'})
 
@@ -27,8 +27,8 @@ function Component() {
 Usage with Dataverse prisms:
 
 ```tsx
-import {prism} from '@theatre/dataverse'
-import {useVal} from '@theatre/react'
+import {prism} from '@encore/dataverse'
+import {useVal} from '@encore/react'
 
 const pr = prism(() => 'some value')
 
@@ -38,11 +38,11 @@ function Component() {
 }
 ```
 
-Usage with Theatre.js pointers:
+Usage with Encore pointers:
 
 ```tsx
-import {useVal} from '@theatre/react'
-import {getProject} from '@theatre/core'
+import {useVal} from '@encore/react'
+import {getProject} from '@encore/core'
 
 const obj = getProject('my project')
   .sheet('my sheet')
@@ -65,8 +65,8 @@ Creates a prism out of `fn` and subscribes the element to the value of the
 created prism.
 
 ```tsx
-import {Atom, val, prism} from '@theatre/dataverse'
-import {usePrism} from '@theatre/react'
+import {Atom, val, prism} from '@encore/dataverse'
+import {usePrism} from '@encore/react'
 
 const state = new Atom({a: 1, b: 1})
 
@@ -94,8 +94,8 @@ function Component(props: {which: 'a' | 'b'}) {
 Subscribes the element to the value of the given prism instance.
 
 ```tsx
-import {Atom, val, prism} from '@theatre/dataverse'
-import {usePrismInstance} from '@theatre/react'
+import {Atom, val, prism} from '@encore/dataverse'
+import {usePrismInstance} from '@encore/react'
 
 const state = new Atom({a: 1, b: 1})
 
@@ -115,7 +115,7 @@ function Component() {
 re-render if the value of the atom changes.
 
 ```tsx
-import {useAtom, useVal} from '@theatre/react'
+import {useAtom, useVal} from '@encore/react'
 import {useEffect} from 'react'
 
 function MyComponent() {
