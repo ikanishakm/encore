@@ -1,11 +1,11 @@
-import type {ISequencePositionFormatter} from '@encore/core/sequences/Sequence'
-import type {SequenceEditorPanelLayout} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
-import type {Pointer} from '@encore/dataverse'
-import {prism, val} from '@encore/dataverse'
+import type {ISequencePositionFormatter} from '@encorejs/core/sequences/Sequence'
+import type {SequenceEditorPanelLayout} from '@encorejs/studio/panels/SequenceEditorPanel/layout/layout'
+import type {Pointer} from '@encorejs/dataverse'
+import {prism, val} from '@encorejs/dataverse'
 import React, {useLayoutEffect, useRef, useState} from 'react'
 import styled from 'styled-components'
 import createGrid from './createGrid'
-import getStudio from '@encore/studio/getStudio'
+import getStudio from '@encorejs/studio/getStudio'
 
 const Container = styled.div`
   position: absolute;

@@ -1,8 +1,8 @@
-import {getRegisteredSheetIds} from '@encore/studio/selectors'
-import {usePrism} from '@encore/react'
+import {getRegisteredSheetIds} from '@encorejs/studio/selectors'
+import {usePrism} from '@encorejs/react'
 import React from 'react'
 import {SheetItem} from './SheetItem'
-import type Project from '@encore/core/projects/Project'
+import type Project from '@encorejs/core/projects/Project'
 
 const SheetsList: React.FC<{
   project: Project

@@ -1,7 +1,7 @@
-import type {IScrub} from '@encore/core'
-import studio from '@encore/studio'
+import type {IScrub} from '@encorejs/core'
+import studio from '@encorejs/studio'
 import React, {useLayoutEffect, useMemo, useState} from 'react'
-import type {ISheet, ISheetObject, IProject} from '@encore/core'
+import type {ISheet, ISheetObject, IProject} from '@encorejs/core'
 import type {UseDragOpts} from './useDrag'
 import useDrag from './useDrag'
 

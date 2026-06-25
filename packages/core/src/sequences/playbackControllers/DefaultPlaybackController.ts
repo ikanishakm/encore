@@ -1,11 +1,11 @@
-import {defer} from '@encore/utils/defer'
-import noop from '@encore/utils/noop'
-import type {Prism, Pointer, Ticker} from '@encore/dataverse'
-import {Atom} from '@encore/dataverse'
+import {defer} from '@encorejs/utils/defer'
+import noop from '@encorejs/utils/noop'
+import type {Prism, Pointer, Ticker} from '@encorejs/dataverse'
+import {Atom} from '@encorejs/dataverse'
 import type {
   IPlaybackDirection,
   IPlaybackRange,
-} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
 
 export interface IPlaybackState {
   position: number

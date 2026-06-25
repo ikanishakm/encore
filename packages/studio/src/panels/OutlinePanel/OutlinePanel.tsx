@@ -1,12 +1,12 @@
 import React, {useEffect, useLayoutEffect} from 'react'
 import styled from 'styled-components'
-import {panelZIndexes} from '@encore/studio/panels/BasePanel/common'
+import {panelZIndexes} from '@encorejs/studio/panels/BasePanel/common'
 import ProjectsList from './ProjectsList/ProjectsList'
-import {useVal} from '@encore/react'
-import getStudio from '@encore/studio/getStudio'
-import useHotspot from '@encore/studio/uiComponents/useHotspot'
-import {Atom, prism, val} from '@encore/dataverse'
-import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
+import {useVal} from '@encorejs/react'
+import getStudio from '@encorejs/studio/getStudio'
+import useHotspot from '@encorejs/studio/uiComponents/useHotspot'
+import {Atom, prism, val} from '@encorejs/dataverse'
+import {pointerEventsAutoInNormalMode} from '@encorejs/studio/css'
 
 const headerHeight = `44px`
 

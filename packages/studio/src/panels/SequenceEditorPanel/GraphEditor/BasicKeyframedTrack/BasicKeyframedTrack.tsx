@@ -1,24 +1,24 @@
-import type {TrackData} from '@encore/core/types/private/core'
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
-import type {PathToProp} from '@encore/utils/pathToProp'
-import {createStudioSheetItemKey} from '@encore/studio/utils/createStudioSheetItemKey'
+import type {TrackData} from '@encorejs/core/types/private/core'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
+import type {PathToProp} from '@encorejs/utils/pathToProp'
+import {createStudioSheetItemKey} from '@encorejs/studio/utils/createStudioSheetItemKey'
 import type {
   $IntentionalAny,
   BasicKeyframe,
   VoidFn,
-} from '@encore/core/types/public'
-import type {Pointer} from '@encore/dataverse'
+} from '@encorejs/core/types/public'
+import type {Pointer} from '@encorejs/dataverse'
 import React, {useMemo, useRef, useState} from 'react'
-import type {SequenceEditorPanelLayout} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
+import type {SequenceEditorPanelLayout} from '@encorejs/studio/panels/SequenceEditorPanel/layout/layout'
 import KeyframeEditor from './KeyframeEditor/KeyframeEditor'
-import {__private} from '@encore/core'
+import {__private} from '@encorejs/core'
 import type {
   PropTypeConfig_AllSimples,
   SequenceTrackId,
-} from '@encore/core/types/public'
-import {useVal} from '@encore/react'
-import type {GraphEditorColors} from '@encore/core/types/private'
-import {graphEditorColors} from '@encore/sync-server/state/schema'
+} from '@encorejs/core/types/public'
+import {useVal} from '@encorejs/react'
+import type {GraphEditorColors} from '@encorejs/core/types/private'
+import {graphEditorColors} from '@encorejs/sync-server/state/schema'
 
 const {getPropConfigByPath, isPropConfigComposite, valueInProp} =
   __private.propTypeUtils

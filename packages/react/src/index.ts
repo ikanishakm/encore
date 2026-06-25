@@ -4,8 +4,8 @@
  * @packageDocumentation
  */
 
-import type {Prism} from '@encore/dataverse'
-import {prism, val, Atom} from '@encore/dataverse'
+import type {Prism} from '@encorejs/dataverse'
+import {prism, val, Atom} from '@encorejs/dataverse'
 import {findIndex} from 'lodash-es'
 import queueMicrotask from 'queue-microtask'
 import {useCallback, useLayoutEffect, useRef, useState} from 'react'
@@ -15,7 +15,7 @@ type $IntentionalAny = any
 type VoidFn = () => void
 
 /**
- * Enables a few traces and debug points to help identify performance glitches in `@encore/react`.
+ * Enables a few traces and debug points to help identify performance glitches in `@encorejs/react`.
  * Look up references to this value to see how to make use of those traces.
  */
 const TRACE: boolean = false && process.env.NODE_ENV !== 'production'
@@ -405,7 +405,7 @@ export function usePrismInstance<T>(der: Prism<T>, debugLabel?: string): T {
  *
  * Usage
  * ```tsx
- * import {useAtom, useVal} from '@encore/react'
+ * import {useAtom, useVal} from '@encorejs/react'
  * import {useEffect} from 'react'
  *
  * function MyComponent() {

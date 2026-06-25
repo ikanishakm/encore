@@ -28,14 +28,14 @@ $.quote = function quote(arg) {
 }
 
 const packagesToBuild = [
-  '@encore/dataverse',
-  '@encore/saaz',
-  '@encore/core',
-  '@encore/studio',
-  '@encore/react',
-  '@encore/r3f',
-  '@encore/tweak',
-  '@encore/browser-bundles',
+  '@encorejs/dataverse',
+  '@encorejs/saaz',
+  '@encorejs/core',
+  '@encorejs/studio',
+  '@encorejs/react',
+  '@encorejs/r3f',
+  '@encorejs/tweak',
+  '@encorejs/browser-bundles',
 ]
 
 prog
@@ -73,7 +73,7 @@ prog
      * It assigns the same version number to all packages (like lerna's fixed mode).
      **/
 
-    // npm package *names* (e.g. `@encore/dataverse`). These are what
+    // npm package *names* (e.g. `@encorejs/dataverse`). These are what
     // `yarn workspace <name> ...` expects.
     const packagesToPublish = [...packagesToBuild]
 
@@ -87,7 +87,7 @@ prog
       const gitTags = (await $`git tag --list`).toString().split('\n')
 
       // Resolve npm package *names* -> filesystem *locations* (e.g.
-      // `@encore/dataverse` -> `packages/dataverse`, `@encore/tweak` ->
+      // `@encorejs/dataverse` -> `packages/dataverse`, `@encorejs/tweak` ->
       // `packages/theatric`). The version-bumping helpers below operate on
       // `package.json` files, so they need locations, not names.
       const workspaceLocationByName: Record<string, string> =
@@ -286,14 +286,14 @@ prog
   )
   .action(async () => {
     const packagesToPublish = [
-      '@encore/core',
-      '@encore/studio',
-      '@encore/dataverse',
-      '@encore/saaz',
-      '@encore/react',
-      '@encore/browser-bundles',
-      '@encore/r3f',
-      '@encore/tweak',
+      '@encorejs/core',
+      '@encorejs/studio',
+      '@encorejs/dataverse',
+      '@encorejs/saaz',
+      '@encorejs/react',
+      '@encorejs/browser-bundles',
+      '@encorejs/r3f',
+      '@encorejs/tweak',
     ]
 
     /**
@@ -330,7 +330,7 @@ prog
       // The `r3f` package has its own release schedule, so its version numbers
       // are almost always different from the rest of the packages.
       const pathToPackageJson =
-        packageName === '@encore/r3f'
+        packageName === '@encorejs/r3f'
           ? path.resolve(__dirname, '../', 'packages', 'r3f', 'package.json')
           : path.resolve(__dirname, '../', './package.json')
 
@@ -368,13 +368,13 @@ prog
 
         let {version, dependencies, peerDependencies, devDependencies} =
           original
-        // The @encore/r3f package curently doesn't track the same version number of the other packages like @encore/core,
+        // The @encorejs/r3f package curently doesn't track the same version number of the other packages like @encorejs/core,
         // so we need to generate version numbers independently for each package
         version = getNewVersionName(workspaceData.name, latestCommitHash)
         assignedVersionByPackageName[workspaceData.name] = version
         // Normally we don't have to override the package versions in dependencies because yarn would already convert
-        // all the "workspace:*" versions to a fixed version before publishing. However, packages like @encore/studio
-        // have a peerDependency on @encore/core set to "*" (meaning they would work with any version of @encore/core).
+        // all the "workspace:*" versions to a fixed version before publishing. However, packages like @encorejs/studio
+        // have a peerDependency on @encorejs/core set to "*" (meaning they would work with any version of @encorejs/core).
         // This is not the desired behavior in pre-release versions, so here, we'll fix those "*" versions to the set version.
         for (const deps of [dependencies, peerDependencies, devDependencies]) {
           if (!deps) continue
@@ -468,8 +468,8 @@ prog
 {
   const allDevCommands = [
     `yarn workspace playground run serve`,
-    `yarn workspace @encore/app run cli dev all`,
-    `yarn workspace @encore/sync-server run cli dev all`,
+    `yarn workspace @encorejs/app run cli dev all`,
+    `yarn workspace @encorejs/sync-server run cli dev all`,
   ]
 
   prog

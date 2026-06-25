@@ -1,9 +1,9 @@
-import {prism} from '@encore/dataverse'
-import {createStudioSheetItemKey} from '@encore/studio/utils/createStudioSheetItemKey'
-import {AggregateKeyframePositionIsSelected} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/AggregatedKeyframeTrack/AggregatedKeyframeTrack'
-import {isConnectionEditingInCurvePopover} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/BasicKeyframedTrack/KeyframeEditor/CurveEditorPopover/CurveEditorPopover'
-import {usePrism} from '@encore/react'
-import {selectedKeyframeConnections} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/selections'
+import {prism} from '@encorejs/dataverse'
+import {createStudioSheetItemKey} from '@encorejs/studio/utils/createStudioSheetItemKey'
+import {AggregateKeyframePositionIsSelected} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/Right/AggregatedKeyframeTrack/AggregatedKeyframeTrack'
+import {isConnectionEditingInCurvePopover} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/Right/BasicKeyframedTrack/KeyframeEditor/CurveEditorPopover/CurveEditorPopover'
+import {usePrism} from '@encorejs/react'
+import {selectedKeyframeConnections} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/selections'
 import type {
   IAggregateKeyframeEditorProps,
   AggregatedKeyframeConnection,

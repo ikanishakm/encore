@@ -1,4 +1,4 @@
-import {button, initialize, types, useControls} from '@encore/tweak'
+import {button, initialize, types, useControls} from '@encorejs/tweak'
 import ReactDom from 'react-dom/client'
 import React, {useState} from 'react'
 import state from './state.json'

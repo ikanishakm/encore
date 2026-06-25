@@ -1,7 +1,7 @@
-import type {PropTypeConfig_Boolean} from '@encore/core/types/public'
+import type {PropTypeConfig_Boolean} from '@encorejs/core/types/public'
 import React, {useCallback} from 'react'
 import styled from 'styled-components'
-import BasicCheckbox from '@encore/studio/uiComponents/form/BasicCheckbox'
+import BasicCheckbox from '@encorejs/studio/uiComponents/form/BasicCheckbox'
 import type {ISimplePropEditorReactProps} from './ISimplePropEditorReactProps'
 
 const Input = styled(BasicCheckbox)`

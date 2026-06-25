@@ -1,26 +1,26 @@
-import getStudio from '@encore/studio/getStudio'
-import type {CommitOrDiscardOrRecapture} from '@encore/studio/StudioStore/StudioStore'
-import useContextMenu from '@encore/studio/uiComponents/simpleContextMenu/useContextMenu'
-import useDrag from '@encore/studio/uiComponents/useDrag'
-import useRefAndState from '@encore/studio/utils/useRefAndState'
-import {val} from '@encore/dataverse'
+import getStudio from '@encorejs/studio/getStudio'
+import type {CommitOrDiscardOrRecapture} from '@encorejs/studio/StudioStore/StudioStore'
+import useContextMenu from '@encorejs/studio/uiComponents/simpleContextMenu/useContextMenu'
+import useDrag from '@encorejs/studio/uiComponents/useDrag'
+import useRefAndState from '@encorejs/studio/utils/useRefAndState'
+import {val} from '@encorejs/dataverse'
 import React, {useMemo, useRef, useState} from 'react'
 import styled from 'styled-components'
 import type KeyframeEditor from './KeyframeEditor'
-import type {BasicKeyframe} from '@encore/core/types/public'
-import {useLockFrameStampPosition} from '@encore/studio/panels/SequenceEditorPanel/FrameStampPositionProvider'
-import {includeLockFrameStampAttrs} from '@encore/studio/panels/SequenceEditorPanel/FrameStampPositionProvider'
-import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
+import type {BasicKeyframe} from '@encorejs/core/types/public'
+import {useLockFrameStampPosition} from '@encorejs/studio/panels/SequenceEditorPanel/FrameStampPositionProvider'
+import {includeLockFrameStampAttrs} from '@encorejs/studio/panels/SequenceEditorPanel/FrameStampPositionProvider'
+import {pointerEventsAutoInNormalMode} from '@encorejs/studio/css'
 import {
   lockedCursorCssVarName,
   useCssCursorLock,
-} from '@encore/studio/uiComponents/PointerEventsHandler'
-import DopeSnap from '@encore/studio/panels/SequenceEditorPanel/RightOverlay/DopeSnap'
-import {useKeyframeInlineEditorPopover} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/BasicKeyframedTrack/KeyframeEditor/useSingleKeyframeInlineEditorPopover'
+} from '@encorejs/studio/uiComponents/PointerEventsHandler'
+import DopeSnap from '@encorejs/studio/panels/SequenceEditorPanel/RightOverlay/DopeSnap'
+import {useKeyframeInlineEditorPopover} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/Right/BasicKeyframedTrack/KeyframeEditor/useSingleKeyframeInlineEditorPopover'
 import usePresence, {
   PresenceFlag,
-} from '@encore/studio/uiComponents/usePresence'
-import {__private} from '@encore/core'
+} from '@encorejs/studio/uiComponents/usePresence'
+import {__private} from '@encorejs/core'
 
 const {keyframeUtils} = __private
 

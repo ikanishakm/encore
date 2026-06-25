@@ -1,8 +1,8 @@
-import type {$IntentionalAny} from '@encore/core/types/public'
-import type {BasicKeyframedTrack} from '@encore/core/types/private/core'
-import memoizeFn from '@encore/utils/memoizeFn'
+import type {$IntentionalAny} from '@encorejs/core/types/public'
+import type {BasicKeyframedTrack} from '@encorejs/core/types/private/core'
+import memoizeFn from '@encorejs/utils/memoizeFn'
 import {cloneDeep} from 'lodash-es'
-import type {BasicKeyframe} from '@encore/core/types/public'
+import type {BasicKeyframe} from '@encorejs/core/types/public'
 
 export const getSortedKeyframes = (
   keyframes: BasicKeyframedTrack['keyframes'],

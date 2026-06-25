@@ -1,8 +1,8 @@
-import type Project from '@encore/core/projects/Project'
+import type Project from '@encorejs/core/projects/Project'
 import {useCallback} from 'react'
-import getStudio from '@encore/studio/getStudio'
-import {useVal} from '@encore/react'
-import type Sheet from '@encore/core/sheets/Sheet'
+import getStudio from '@encorejs/studio/getStudio'
+import {useVal} from '@encorejs/react'
+import type Sheet from '@encorejs/core/sheets/Sheet'
 
 export function useCollapseStateInOutlinePanel(
   item: Project | Sheet | {type: 'namespace'; sheet: Sheet; path: string[]},

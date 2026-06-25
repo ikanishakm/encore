@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from 'react'
 import type {CSSProperties} from 'react'
-import {types} from '@encore/core'
-import type {IProject} from '@encore/core'
+import {types} from '@encorejs/core'
+import type {IProject} from '@encorejs/core'
 import {Box3D, BoxSize} from './Box3D'
 
 // Scene

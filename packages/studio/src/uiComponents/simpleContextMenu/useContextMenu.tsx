@@ -1,4 +1,4 @@
-import type {$FixMe, VoidFn} from '@encore/core/types/public'
+import type {$FixMe, VoidFn} from '@encorejs/core/types/public'
 import type React from 'react'
 import {useEffect} from 'react'
 import useMenu from './useMenu'

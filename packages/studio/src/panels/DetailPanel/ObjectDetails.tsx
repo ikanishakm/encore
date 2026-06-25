@@ -1,10 +1,10 @@
 import React from 'react'
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
-import type {Pointer} from '@encore/dataverse'
-import type {$FixMe} from '@encore/core/types/public'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
+import type {Pointer} from '@encorejs/dataverse'
+import type {$FixMe} from '@encorejs/core/types/public'
 import DeterminePropEditorForDetail from './DeterminePropEditorForDetail'
-import {useVal} from '@encore/react'
-import uniqueKeyForAnyObject from '@encore/utils/uniqueKeyForAnyObject'
+import {useVal} from '@encorejs/react'
+import uniqueKeyForAnyObject from '@encorejs/utils/uniqueKeyForAnyObject'
 import styled from 'styled-components'
 
 const ActionButtonContainer = styled.div`

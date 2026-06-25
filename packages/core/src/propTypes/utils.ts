@@ -6,8 +6,8 @@ import type {
   PropTypeConfig_Enum,
   PathToProp,
   $IntentionalAny,
-} from '@encore/core/types/public'
-import memoizeFn from '@encore/utils/memoizeFn'
+} from '@encorejs/core/types/public'
+import memoizeFn from '@encorejs/utils/memoizeFn'
 
 /**
  * Iterates recursively over all props of an object (which should be a {@link SerializableMap}) and runs `fn`

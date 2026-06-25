@@ -1,12 +1,12 @@
-import {useVal} from '@encore/react'
-import getStudio from '@encore/studio/getStudio'
+import {useVal} from '@encorejs/react'
+import getStudio from '@encorejs/studio/getStudio'
 import React from 'react'
 import styled from 'styled-components'
-import ExtensionToolbar from '@encore/studio/toolbars/ExtensionToolbar/ExtensionToolbar'
+import ExtensionToolbar from '@encorejs/studio/toolbars/ExtensionToolbar/ExtensionToolbar'
 import {
   useNotifications,
   useEmptyNotificationsTooltip,
-} from '@encore/studio/notify'
+} from '@encorejs/studio/notify'
 import {
   uesConflicts,
   useOutlineTriggerTooltip,

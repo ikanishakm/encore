@@ -1,4 +1,4 @@
-import {globalVariableNames} from '@encore/core/globals'
+import {globalVariableNames} from '@encorejs/core/globals'
 
 export type Notification = {title: string; message: string}
 export type NotificationType = 'info' | 'success' | 'warning' | 'error'

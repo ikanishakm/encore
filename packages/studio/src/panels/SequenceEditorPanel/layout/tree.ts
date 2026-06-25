@@ -3,19 +3,19 @@ import type {
   PropTypeConfig_AllSimples,
   PropTypeConfig_Compound,
   UnknownValidCompoundProps,
-} from '@encore/core/types/public'
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
-import type {IPropPathToTrackIdTree} from '@encore/core/sheetObjects/SheetObjectTemplate'
-import type Sheet from '@encore/core/sheets/Sheet'
-import type {PathToProp} from '@encore/utils/pathToProp'
-import type {StudioSheetItemKey} from '@encore/core/types/private'
-import {createStudioSheetItemKey} from '@encore/studio/utils/createStudioSheetItemKey'
-import type {$FixMe, $IntentionalAny} from '@encore/core/types/public'
-import {prism, val, pointerToPrism} from '@encore/dataverse'
-import logger from '@encore/utils/logger'
-import {titleBarHeight} from '@encore/studio/panels/BasePanel/common'
-import type {Studio} from '@encore/studio/Studio'
-import type {SequenceTrackId} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
+import type {IPropPathToTrackIdTree} from '@encorejs/core/sheetObjects/SheetObjectTemplate'
+import type Sheet from '@encorejs/core/sheets/Sheet'
+import type {PathToProp} from '@encorejs/utils/pathToProp'
+import type {StudioSheetItemKey} from '@encorejs/core/types/private'
+import {createStudioSheetItemKey} from '@encorejs/studio/utils/createStudioSheetItemKey'
+import type {$FixMe, $IntentionalAny} from '@encorejs/core/types/public'
+import {prism, val, pointerToPrism} from '@encorejs/dataverse'
+import logger from '@encorejs/utils/logger'
+import {titleBarHeight} from '@encorejs/studio/panels/BasePanel/common'
+import type {Studio} from '@encorejs/studio/Studio'
+import type {SequenceTrackId} from '@encorejs/core/types/public'
 
 /**
  * Base "view model" for each row with common

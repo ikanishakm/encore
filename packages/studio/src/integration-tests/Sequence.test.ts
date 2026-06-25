@@ -1,10 +1,10 @@
-import {setupTestSheet} from '@encore/studio/integration-tests/testUtils'
-import {encodePathToProp} from '@encore/utils/pathToProp'
+import {setupTestSheet} from '@encorejs/studio/integration-tests/testUtils'
+import {encodePathToProp} from '@encorejs/utils/pathToProp'
 import type {
   ObjectAddressKey,
   SequenceTrackId,
-} from '@encore/core/types/public'
-import {__private} from '@encore/core'
+} from '@encorejs/core/types/public'
+import {__private} from '@encorejs/core'
 
 const {keyframeUtils} = __private
 

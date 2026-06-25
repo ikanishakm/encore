@@ -4,7 +4,7 @@ import * as path from 'path'
 import * as dotenv from 'dotenv'
 import * as yaml from 'yaml'
 
-describe(`@encore/app env`, () => {
+describe(`@encorejs/app env`, () => {
   describe(`.env files`, () => {
     test(`.env.example should be valid`, () => {
       const pathToEnvExample = path.join(__dirname, '../.env.example')

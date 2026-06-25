@@ -1,12 +1,12 @@
-import {prism, val} from '@encore/dataverse'
-import {usePrism} from '@encore/react'
-import type {$IntentionalAny, VoidFn} from '@encore/core/types/public'
-import getStudio from '@encore/studio/getStudio'
-import type {PanelPosition} from '@encore/core/types/private'
-import useLockSet from '@encore/studio/uiComponents/useLockSet'
+import {prism, val} from '@encorejs/dataverse'
+import {usePrism} from '@encorejs/react'
+import type {$IntentionalAny, VoidFn} from '@encorejs/core/types/public'
+import getStudio from '@encorejs/studio/getStudio'
+import type {PanelPosition} from '@encorejs/core/types/private'
+import useLockSet from '@encorejs/studio/uiComponents/useLockSet'
 import React, {useContext} from 'react'
 import useWindowSize from 'react-use/esm/useWindowSize'
-import type {UIPanelId} from '@encore/core/types/private'
+import type {UIPanelId} from '@encorejs/core/types/private'
 
 type PanelStuff = {
   panelId: UIPanelId

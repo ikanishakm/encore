@@ -1,4 +1,4 @@
-import type {IRange} from '@encore/core/types/public'
+import type {IRange} from '@encorejs/core/types/public'
 import {memoize} from 'lodash-es'
 
 const getFactorsOfNumber = memoize((divisionsPerUnit: number): number[] => {

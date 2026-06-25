@@ -1,13 +1,13 @@
 import React from 'react'
-import useDrag from '@encore/studio/uiComponents/useDrag'
-import useRefAndState from '@encore/studio/utils/useRefAndState'
+import useDrag from '@encorejs/studio/uiComponents/useDrag'
+import useRefAndState from '@encorejs/studio/utils/useRefAndState'
 import clamp from 'lodash-es/clamp'
 import styled from 'styled-components'
-import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
+import {pointerEventsAutoInNormalMode} from '@encorejs/studio/css'
 import type {CubicBezierHandles} from './shared'
 import {useFreezableMemo} from './useFreezableMemo'
 import {COLOR_BASE} from './colors'
-import type {KeyframeConnectionWithAddress} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/selections'
+import type {KeyframeConnectionWithAddress} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/selections'
 
 // Defines the dimensions of the SVG viewbox space
 const VIEWBOX_PADDING = 0.12

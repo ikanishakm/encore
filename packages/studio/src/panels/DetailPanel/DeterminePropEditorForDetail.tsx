@@ -1,13 +1,13 @@
 import React from 'react'
-import type {Pointer} from '@encore/dataverse'
+import type {Pointer} from '@encorejs/dataverse'
 import type {
   PropTypeConfig,
   PropTypeConfig_AllSimples,
-} from '@encore/core/types/public'
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
-import {simplePropEditorByPropType} from '@encore/studio/propEditors/simpleEditors/simplePropEditorByPropType'
-import type {PropConfigForType} from '@encore/studio/propEditors/utils/PropConfigForType'
-import type {ISimplePropEditorReactProps} from '@encore/studio/propEditors/simpleEditors/ISimplePropEditorReactProps'
+} from '@encorejs/core/types/public'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
+import {simplePropEditorByPropType} from '@encorejs/studio/propEditors/simpleEditors/simplePropEditorByPropType'
+import type {PropConfigForType} from '@encorejs/studio/propEditors/utils/PropConfigForType'
+import type {ISimplePropEditorReactProps} from '@encorejs/studio/propEditors/simpleEditors/ISimplePropEditorReactProps'
 import DetailCompoundPropEditor from './DeterminePropEditorForDetail/DetailCompoundPropEditor'
 import DetailSimplePropEditor from './DeterminePropEditorForDetail/DetailSimplePropEditor'
 

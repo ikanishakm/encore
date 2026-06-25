@@ -1,5 +1,5 @@
-import type {AppRouter} from '@encore/app/src/server/api/root'
-import type {StudioTRPCRouter} from '@encore/app/src/server/studio-api/root'
+import type {AppRouter} from '@encorejs/app/src/server/api/root'
+import type {StudioTRPCRouter} from '@encorejs/app/src/server/studio-api/root'
 import {createTRPCProxyClient, httpBatchLink} from '@trpc/client'
 import superjson from 'superjson'
 import {env} from './env'

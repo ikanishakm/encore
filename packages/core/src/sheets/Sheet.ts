@@ -1,20 +1,20 @@
-import type Project from '@encore/core/projects/Project'
-import Sequence from '@encore/core/sequences/Sequence'
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
-import TheatreSheet from '@encore/core/sheets/TheatreSheet'
-import type {SheetAddress} from '@encore/core/types/public'
-import {Atom, prism, val} from '@encore/dataverse'
+import type Project from '@encorejs/core/projects/Project'
+import Sequence from '@encorejs/core/sequences/Sequence'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
+import TheatreSheet from '@encorejs/core/sheets/TheatreSheet'
+import type {SheetAddress} from '@encorejs/core/types/public'
+import {Atom, prism, val} from '@encorejs/dataverse'
 import type SheetTemplate from './SheetTemplate'
 import type {
   ObjectAddressKey,
   SheetInstanceId,
-} from '@encore/core/types/public'
-import type {StrictRecord} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
+import type {StrictRecord} from '@encorejs/core/types/public'
 import {isInteger} from 'lodash-es'
 import type {
   SheetObjectActionsConfig,
   SheetObjectPropTypeConfig,
-} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
 
 type SheetObjectMap = StrictRecord<ObjectAddressKey, SheetObject>
 

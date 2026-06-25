@@ -1,5 +1,5 @@
-import {getProject, types} from '@encore/core'
-import theatre from '@encore/core'
+import {getProject, types} from '@encorejs/core'
+import theatre from '@encorejs/core'
 import React, {useEffect, useState} from 'react'
 import ReactDom from 'react-dom/client'
 import styled from 'styled-components'

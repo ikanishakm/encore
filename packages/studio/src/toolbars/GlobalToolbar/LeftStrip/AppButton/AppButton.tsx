@@ -1,10 +1,10 @@
-import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
-import useChordial from '@encore/studio/uiComponents/chordial/useChodrial'
+import {pointerEventsAutoInNormalMode} from '@encorejs/studio/css'
+import useChordial from '@encorejs/studio/uiComponents/chordial/useChodrial'
 import React from 'react'
 import styled from 'styled-components'
-import logo from '@encore/studio/assets/logo.png'
-import DropdownChevron from '@encore/studio/uiComponents/icons/DropdownChevron'
-import BaseMenu from '@encore/studio/uiComponents/simpleContextMenu/ContextMenu/BaseMenu'
+import logo from '@encorejs/studio/assets/logo.png'
+import DropdownChevron from '@encorejs/studio/uiComponents/icons/DropdownChevron'
+import BaseMenu from '@encorejs/studio/uiComponents/simpleContextMenu/ContextMenu/BaseMenu'
 
 const Container = styled.div`
   height: 100%;

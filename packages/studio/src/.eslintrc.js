@@ -5,7 +5,7 @@ module.exports = {
       {
         selector: `ImportDeclaration[importKind!='type'][source.value=/@theatre\\u002Fcore\\u002F/]`,
         message:
-          '@encore/studio may not import @encore/core/* modules except via type imports.',
+          '@encorejs/studio may not import @encorejs/core/* modules except via type imports.',
       },
     ],
   },

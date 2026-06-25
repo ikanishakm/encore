@@ -1,5 +1,5 @@
-import memoizeFn from '@encore/utils/memoizeFn'
-import type {Nominal} from '@encore/utils/Nominal'
+import memoizeFn from '@encorejs/utils/memoizeFn'
+import type {Nominal} from '@encorejs/utils/Nominal'
 
 /**
  * This is a simple array representing the path to a prop, without specifying the object.

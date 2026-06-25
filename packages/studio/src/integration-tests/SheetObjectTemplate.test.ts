@@ -1,12 +1,12 @@
-import {setupTestSheet} from '@encore/studio/integration-tests/testUtils'
-import {encodePathToProp} from '@encore/utils/pathToProp'
+import {setupTestSheet} from '@encorejs/studio/integration-tests/testUtils'
+import {encodePathToProp} from '@encorejs/utils/pathToProp'
 import type {
   ObjectAddressKey,
   SequenceTrackId,
-} from '@encore/core/types/public'
-import type {$IntentionalAny} from '@encore/core/types/public'
-import {iterateOver} from '@encore/dataverse'
-import {__private} from '@encore/core'
+} from '@encorejs/core/types/public'
+import type {$IntentionalAny} from '@encorejs/core/types/public'
+import {iterateOver} from '@encorejs/dataverse'
+import {__private} from '@encorejs/core'
 const {asSequenceTrackId} = __private.ids
 
 describe(`SheetObjectTemplate`, () => {

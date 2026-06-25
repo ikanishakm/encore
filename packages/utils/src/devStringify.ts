@@ -1,4 +1,4 @@
-import {tightJsonStringify} from '@encore/utils/tightJsonStringify'
+import {tightJsonStringify} from '@encorejs/utils/tightJsonStringify'
 
 /**
  * Stringifies any value given. If an object is given and `indentJSON` is true,

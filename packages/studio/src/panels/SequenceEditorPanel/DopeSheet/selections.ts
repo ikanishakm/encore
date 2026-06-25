@@ -1,5 +1,5 @@
-import type {Prism} from '@encore/dataverse'
-import {prism, val} from '@encore/dataverse'
+import type {Prism} from '@encorejs/dataverse'
+import {prism, val} from '@encorejs/dataverse'
 import type {
   KeyframeId,
   ObjectAddressKey,
@@ -7,16 +7,16 @@ import type {
   SequenceTrackId,
   SheetId,
   BasicKeyframe,
-} from '@encore/core/types/public'
-import getStudio from '@encore/studio/getStudio'
-import type {DopeSheetSelection} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
+} from '@encorejs/core/types/public'
+import getStudio from '@encorejs/studio/getStudio'
+import type {DopeSheetSelection} from '@encorejs/studio/panels/SequenceEditorPanel/layout/layout'
 import {
   commonRootOfPathsToProps,
   decodePathToProp,
-} from '@encore/utils/pathToProp'
-import type {StrictRecord} from '@encore/core/types/public'
-import type {KeyframeWithPathToPropFromCommonRoot} from '@encore/core/types/private'
-import {__private} from '@encore/core'
+} from '@encorejs/utils/pathToProp'
+import type {StrictRecord} from '@encorejs/core/types/public'
+import type {KeyframeWithPathToPropFromCommonRoot} from '@encorejs/core/types/private'
+import {__private} from '@encorejs/core'
 
 const {keyframeUtils} = __private
 

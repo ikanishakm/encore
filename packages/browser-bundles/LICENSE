@@ -1,6 +1,6 @@
-This is a bundle of the @encore/core and @encore/studio packages.
+This is a bundle of the @encorejs/core and @encorejs/studio packages.
 
-@encore/core is licensed under Apache-2.0; @encore/studio is licensed under
+@encorejs/core is licensed under Apache-2.0; @encorejs/studio is licensed under
 AGPL-3.0-only. See the LICENSE file of each package, and the root NOTICE file,
 for details and attribution.
 

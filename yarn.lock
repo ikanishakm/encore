@@ -5202,13 +5202,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@encore/app@workspace:*, @encore/app@workspace:packages/app":
+"@encorejs/app@workspace:*, @encorejs/app@workspace:packages/app":
   version: 0.0.0-use.local
-  resolution: "@encore/app@workspace:packages/app"
+  resolution: "@encorejs/app@workspace:packages/app"
   dependencies:
     "@auth/prisma-adapter": ^1.0.3
     "@cspotcode/zx": ^6.1.2
-    "@encore/utils": "workspace:*"
+    "@encorejs/utils": "workspace:*"
     "@hookform/resolvers": ^3.3.2
     "@prisma/client": ^4.12.0
     "@radix-ui/react-alert-dialog": ^1.0.5
@@ -5269,12 +5269,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@encore/browser-bundles@workspace:packages/browser-bundles":
+"@encorejs/browser-bundles@workspace:packages/browser-bundles":
   version: 0.0.0-use.local
-  resolution: "@encore/browser-bundles@workspace:packages/browser-bundles"
+  resolution: "@encorejs/browser-bundles@workspace:packages/browser-bundles"
   dependencies:
-    "@encore/core": "workspace:*"
-    "@encore/studio": "workspace:*"
+    "@encorejs/core": "workspace:*"
+    "@encorejs/studio": "workspace:*"
     esbuild: ^0.19.11
     npm-run-all: ^4.1.5
     tsx: 4.7.0
@@ -5282,9 +5282,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@encore/compat-tests@workspace:compat-tests":
+"@encorejs/compat-tests@workspace:compat-tests":
   version: 0.0.0-use.local
-  resolution: "@encore/compat-tests@workspace:compat-tests"
+  resolution: "@encorejs/compat-tests@workspace:compat-tests"
   dependencies:
     "@cspotcode/zx": ^6.1.2
     "@verdaccio/types": ^10.8.0
@@ -5299,7 +5299,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@encore/core-0.5.0@npm:@theatre/core@0.5.0":
+"@encorejs/core-0.5.0@npm:@theatre/core@0.5.0":
   version: 0.5.0
   resolution: "@theatre/core@npm:0.5.0"
   dependencies:
@@ -5308,12 +5308,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@encore/core@workspace:*, @encore/core@workspace:packages/core":
+"@encorejs/core@workspace:*, @encorejs/core@workspace:packages/core":
   version: 0.0.0-use.local
-  resolution: "@encore/core@workspace:packages/core"
+  resolution: "@encorejs/core@workspace:packages/core"
   dependencies:
-    "@encore/dataverse": "workspace:*"
-    "@encore/utils": "workspace:*"
+    "@encorejs/dataverse": "workspace:*"
+    "@encorejs/utils": "workspace:*"
     "@rollup/plugin-alias": ^5.1.0
     "@rollup/plugin-multi-entry": ^6.0.1
     "@rollup/plugin-replace": ^5.0.5
@@ -5334,7 +5334,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@encore/dataverse-0.5.0@npm:@theatre/dataverse@0.5.0, @theatre/dataverse@npm:0.5.0":
+"@encorejs/dataverse-0.5.0@npm:@theatre/dataverse@0.5.0, @theatre/dataverse@npm:0.5.0":
   version: 0.5.0
   resolution: "@theatre/dataverse@npm:0.5.0"
   dependencies:
@@ -5343,9 +5343,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@encore/dataverse-experiments@workspace:packages/dataverse-experiments":
+"@encorejs/dataverse-experiments@workspace:packages/dataverse-experiments":
   version: 0.0.0-use.local
-  resolution: "@encore/dataverse-experiments@workspace:packages/dataverse-experiments"
+  resolution: "@encorejs/dataverse-experiments@workspace:packages/dataverse-experiments"
   dependencies:
     "@types/jest": ^26.0.23
     "@types/lodash-es": ^4.17.4
@@ -5355,9 +5355,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@encore/dataverse@workspace:*, @encore/dataverse@workspace:packages/dataverse":
+"@encorejs/dataverse@workspace:*, @encorejs/dataverse@workspace:packages/dataverse":
   version: 0.0.0-use.local
-  resolution: "@encore/dataverse@workspace:packages/dataverse"
+  resolution: "@encorejs/dataverse@workspace:packages/dataverse"
   dependencies:
     "@microsoft/api-extractor": ^7.36.4
     "@types/jest": ^26.0.23
@@ -5373,12 +5373,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@encore/r3f@workspace:*, @encore/r3f@workspace:packages/r3f":
+"@encorejs/r3f@workspace:*, @encorejs/r3f@workspace:packages/r3f":
   version: 0.0.0-use.local
-  resolution: "@encore/r3f@workspace:packages/r3f"
+  resolution: "@encorejs/r3f@workspace:packages/r3f"
   dependencies:
-    "@encore/dataverse": "workspace:*"
-    "@encore/react": "workspace:*"
+    "@encorejs/dataverse": "workspace:*"
+    "@encorejs/react": "workspace:*"
     "@react-three/drei": ^10.7.7
     "@react-three/fiber": ^9.6.1
     "@types/jest": ^26.0.23
@@ -5405,8 +5405,8 @@ __metadata:
     typescript: 5.1.6
     zustand: ^3.5.1
   peerDependencies:
-    "@encore/core": "*"
-    "@encore/studio": "*"
+    "@encorejs/core": "*"
+    "@encorejs/studio": "*"
     "@react-three/fiber": ^9.0.0
     react: ">=19"
     react-dom: ">=19"
@@ -5414,11 +5414,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@encore/react@workspace:*, @encore/react@workspace:packages/react":
+"@encorejs/react@workspace:*, @encorejs/react@workspace:packages/react":
   version: 0.0.0-use.local
-  resolution: "@encore/react@workspace:packages/react"
+  resolution: "@encorejs/react@workspace:packages/react"
   dependencies:
-    "@encore/dataverse": "workspace:*"
+    "@encorejs/dataverse": "workspace:*"
     "@microsoft/api-extractor": ^7.18.11
     "@types/jest": ^26.0.23
     "@types/lodash-es": ^4.17.4
@@ -5437,12 +5437,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@encore/saaz@workspace:*, @encore/saaz@workspace:packages/saaz":
+"@encorejs/saaz@workspace:*, @encorejs/saaz@workspace:packages/saaz":
   version: 0.0.0-use.local
-  resolution: "@encore/saaz@workspace:packages/saaz"
+  resolution: "@encorejs/saaz@workspace:packages/saaz"
   dependencies:
-    "@encore/dataverse": "workspace:*"
-    "@encore/utils": "workspace:*"
+    "@encorejs/dataverse": "workspace:*"
+    "@encorejs/utils": "workspace:*"
     "@microsoft/api-extractor": ^7.36.4
     "@types/jest": ^26.0.23
     "@types/lodash-es": ^4.17.4
@@ -5462,7 +5462,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@encore/studio-0.5.0@npm:@theatre/studio@0.5.0":
+"@encorejs/studio-0.5.0@npm:@theatre/studio@0.5.0":
   version: 0.5.0
   resolution: "@theatre/studio@npm:0.5.0"
   dependencies:
@@ -5473,15 +5473,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@encore/studio@workspace:*, @encore/studio@workspace:packages/studio":
+"@encorejs/studio@workspace:*, @encorejs/studio@workspace:packages/studio":
   version: 0.0.0-use.local
-  resolution: "@encore/studio@workspace:packages/studio"
+  resolution: "@encorejs/studio@workspace:packages/studio"
   dependencies:
-    "@encore/dataverse": "workspace:*"
-    "@encore/react": "workspace:*"
-    "@encore/saaz": "workspace:*"
-    "@encore/sync-server": "workspace:*"
-    "@encore/utils": "workspace:*"
+    "@encorejs/dataverse": "workspace:*"
+    "@encorejs/react": "workspace:*"
+    "@encorejs/saaz": "workspace:*"
+    "@encorejs/sync-server": "workspace:*"
+    "@encorejs/utils": "workspace:*"
     "@react-spring/web": ^9.7.3
     "@styled/typescript-styled-plugin": ^1.0.1
     "@trpc/client": ^10.43.0
@@ -5525,19 +5525,19 @@ __metadata:
     typescript: 5.1.6
     typescript-styled-plugin: ^0.18.3
   peerDependencies:
-    "@encore/core": "*"
+    "@encorejs/core": "*"
   languageName: unknown
   linkType: soft
 
-"@encore/sync-server@workspace:*, @encore/sync-server@workspace:packages/sync-server":
+"@encorejs/sync-server@workspace:*, @encorejs/sync-server@workspace:packages/sync-server":
   version: 0.0.0-use.local
-  resolution: "@encore/sync-server@workspace:packages/sync-server"
+  resolution: "@encorejs/sync-server@workspace:packages/sync-server"
   dependencies:
     "@cspotcode/zx": ^6.1.2
-    "@encore/app": "workspace:*"
-    "@encore/core": "workspace:*"
-    "@encore/saaz": "workspace:*"
-    "@encore/utils": "workspace:*"
+    "@encorejs/app": "workspace:*"
+    "@encorejs/core": "workspace:*"
+    "@encorejs/saaz": "workspace:*"
+    "@encorejs/utils": "workspace:*"
     "@prisma/client": ^4.12.0
     "@trpc/client": ^10.43.0
     "@trpc/server": ^10.43.0
@@ -5563,14 +5563,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@encore/tweak@workspace:*, @encore/tweak@workspace:packages/theatric":
+"@encorejs/tweak@workspace:*, @encorejs/tweak@workspace:packages/theatric":
   version: 0.0.0-use.local
-  resolution: "@encore/tweak@workspace:packages/theatric"
+  resolution: "@encorejs/tweak@workspace:packages/theatric"
   dependencies:
-    "@encore/core": "workspace:*"
-    "@encore/dataverse": "workspace:*"
-    "@encore/react": "workspace:*"
-    "@encore/studio": "workspace:*"
+    "@encorejs/core": "workspace:*"
+    "@encorejs/dataverse": "workspace:*"
+    "@encorejs/react": "workspace:*"
+    "@encorejs/studio": "workspace:*"
     "@microsoft/api-extractor": ^7.18.11
     "@types/jest": ^26.0.23
     "@types/node": ^15.6.2
@@ -5586,11 +5586,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@encore/utils@workspace:*, @encore/utils@workspace:packages/utils":
+"@encorejs/utils@workspace:*, @encorejs/utils@workspace:packages/utils":
   version: 0.0.0-use.local
-  resolution: "@encore/utils@workspace:packages/utils"
+  resolution: "@encorejs/utils@workspace:packages/utils"
   dependencies:
-    "@encore/dataverse": "workspace:*"
+    "@encorejs/dataverse": "workspace:*"
     "@microsoft/api-extractor": ^7.36.4
     "@types/jest": ^26.0.23
     "@types/lodash-es": ^4.17.4
@@ -6852,8 +6852,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@examples/basic-dom@workspace:examples/basic-dom"
   dependencies:
-    "@encore/core": "workspace:*"
-    "@encore/studio": "workspace:*"
+    "@encorejs/core": "workspace:*"
+    "@encorejs/studio": "workspace:*"
     "@types/react": ^19.2.17
     "@types/react-dom": ^19.2.3
     parcel-bundler: ^1.12.5
@@ -6867,8 +6867,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@examples/dom-cra@workspace:examples/dom-cra"
   dependencies:
-    "@encore/core": "workspace:*"
-    "@encore/studio": "workspace:*"
+    "@encorejs/core": "workspace:*"
+    "@encorejs/studio": "workspace:*"
     "@testing-library/jest-dom": ^5.11.4
     "@testing-library/react": ^11.1.0
     "@testing-library/user-event": ^12.1.10
@@ -6883,9 +6883,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@examples/r3f-cra@workspace:examples/r3f-cra"
   dependencies:
-    "@encore/core": "workspace:*"
-    "@encore/r3f": "workspace:*"
-    "@encore/studio": "workspace:*"
+    "@encorejs/core": "workspace:*"
+    "@encorejs/r3f": "workspace:*"
+    "@encorejs/studio": "workspace:*"
     "@react-three/drei": ^10.7.7
     "@react-three/fiber": ^9.6.1
     "@testing-library/jest-dom": ^5.11.4
@@ -14112,12 +14112,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "benchmarks@workspace:packages/benchmarks"
   dependencies:
-    "@encore/core": "workspace:*"
-    "@encore/core-0.5.0": "npm:@theatre/core@0.5.0"
-    "@encore/dataverse-0.5.0": "npm:@theatre/dataverse@0.5.0"
-    "@encore/r3f": "workspace:*"
-    "@encore/studio": "workspace:*"
-    "@encore/studio-0.5.0": "npm:@theatre/studio@0.5.0"
+    "@encorejs/core": "workspace:*"
+    "@encorejs/core-0.5.0": "npm:@theatre/core@0.5.0"
+    "@encorejs/dataverse-0.5.0": "npm:@theatre/dataverse@0.5.0"
+    "@encorejs/r3f": "workspace:*"
+    "@encorejs/studio": "workspace:*"
+    "@encorejs/studio-0.5.0": "npm:@theatre/studio@0.5.0"
     "@types/jest": ^29.2.3
     "@types/lodash-es": ^4.17.6
     "@types/node": ^18.11.9
@@ -29537,12 +29537,12 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "playground@workspace:packages/playground"
   dependencies:
-    "@encore/core": "workspace:*"
-    "@encore/dataverse": "workspace:*"
-    "@encore/r3f": "workspace:*"
-    "@encore/react": "workspace:*"
-    "@encore/studio": "workspace:*"
-    "@encore/tweak": "workspace:*"
+    "@encorejs/core": "workspace:*"
+    "@encorejs/dataverse": "workspace:*"
+    "@encorejs/r3f": "workspace:*"
+    "@encorejs/react": "workspace:*"
+    "@encorejs/studio": "workspace:*"
+    "@encorejs/tweak": "workspace:*"
     "@playwright/test": ^1.36.2
     "@react-three/drei": ^10.7.7
     "@react-three/fiber": ^9.6.1

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {DOT_SIZE_PX} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/BasicKeyframedTrack/KeyframeEditor/SingleKeyframeDot'
+import {DOT_SIZE_PX} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/Right/BasicKeyframedTrack/KeyframeEditor/SingleKeyframeDot'
 
 const CONNECTOR_HEIGHT = DOT_SIZE_PX / 2 + 1
 const CONNECTOR_WIDTH_UNSCALED = 1000

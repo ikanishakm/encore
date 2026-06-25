@@ -2,5 +2,5 @@ The sync-server.
 
 Implementation status:
 
-- [x] Expose `@encore/saaz` through tRPC.
+- [x] Expose `@encorejs/saaz` through tRPC.
 - [ ] Store `SaazBack`'s state in the DB

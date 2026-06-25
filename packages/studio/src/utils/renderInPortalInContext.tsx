@@ -1,6 +1,6 @@
-import {Atom} from '@encore/dataverse'
-import {useVal} from '@encore/react'
-import type {$FixMe, $IntentionalAny} from '@encore/core/types/public'
+import {Atom} from '@encorejs/dataverse'
+import {useVal} from '@encorejs/react'
+import type {$FixMe, $IntentionalAny} from '@encorejs/core/types/public'
 import React from 'react'
 import {createPortal} from 'react-dom'
 

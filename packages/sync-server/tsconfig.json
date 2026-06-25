@@ -8,10 +8,10 @@
     "baseUrl": ".",
     "composite": true,
     "paths": {
-      "@encore/utils/*": ["../utils/src/*"],
-      "@encore/app/*": ["../app/src/*"],
-      "@encore/core/*": ["../core/src/*"],
-      "@encore/core": ["../core/src/index.ts"]
+      "@encorejs/utils/*": ["../utils/src/*"],
+      "@encorejs/app/*": ["../app/src/*"],
+      "@encorejs/core/*": ["../core/src/*"],
+      "@encorejs/core": ["../core/src/index.ts"]
     }
   },
   "references": [

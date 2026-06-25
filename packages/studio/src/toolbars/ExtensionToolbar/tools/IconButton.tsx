@@ -1,8 +1,8 @@
 import React from 'react'
-import ToolbarIconButton from '@encore/studio/uiComponents/toolbar/ToolbarIconButton'
+import ToolbarIconButton from '@encorejs/studio/uiComponents/toolbar/ToolbarIconButton'
 import styled from 'styled-components'
-import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
-import type {ToolConfigIcon} from '@encore/core/types/public'
+import {pointerEventsAutoInNormalMode} from '@encorejs/studio/css'
+import type {ToolConfigIcon} from '@encorejs/core/types/public'
 
 const Container = styled(ToolbarIconButton)`
   ${pointerEventsAutoInNormalMode};

@@ -12,10 +12,10 @@ uplinks:
     url: https://registry.npmjs.org/
     cache: false
 packages:
-  '@encore/*':
+  '@encorejs/*':
     access: $all
     publish: $all
-  '@encore/tweak':
+  '@encorejs/tweak':
     access: $all
     publish: $all
   '@*/*':

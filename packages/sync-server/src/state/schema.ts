@@ -5,7 +5,7 @@ import type {
   StudioSheetItemKey,
   UIPanelId,
   GraphEditorColors,
-} from '@encore/core/types/private'
+} from '@encorejs/core/types/private'
 
 import type {
   ProjectAddress,
@@ -23,15 +23,15 @@ import type {
   SerializablePrimitive,
   SerializableValue,
   IRange,
-} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
 
 import {
   encodePathToProp,
   commonRootOfPathsToProps,
-} from '@encore/utils/pathToProp'
-import removePathFromObject from '@encore/utils/removePathFromObject'
-import {transformNumber} from '@encore/utils/transformNumber'
-import type {$IntentionalAny} from '@encore/utils/types'
+} from '@encorejs/utils/pathToProp'
+import removePathFromObject from '@encorejs/utils/removePathFromObject'
+import {transformNumber} from '@encorejs/utils/transformNumber'
+import type {$IntentionalAny} from '@encorejs/utils/types'
 import findLastIndex from 'lodash-es/findLastIndex'
 import keyBy from 'lodash-es/keyBy'
 import pullFromArray from 'lodash-es/pull'
@@ -44,18 +44,18 @@ import type {
   StudioAhistoricState,
   StudioHistoricStateSequenceEditorMarker,
   StudioState,
-} from '@encore/core/types/private/studio'
+} from '@encorejs/core/types/private/studio'
 import {clamp, cloneDeep} from 'lodash-es'
-import {pointableSetUtil} from '@encore/utils/PointableSet'
-import type {ProjectState_Historic} from '@encore/core/types/private/core'
-import {current} from '@encore/saaz'
+import {pointableSetUtil} from '@encorejs/utils/PointableSet'
+import type {ProjectState_Historic} from '@encorejs/core/types/private/core'
+import {current} from '@encorejs/saaz'
 import type {Draft as _Draft} from 'immer'
 import type {
   EditorDefinitionToEditorInvocable,
   Schema,
-} from '@encore/saaz/src/types'
+} from '@encorejs/saaz/src/types'
 import {nanoid as generateNonSecure} from 'nanoid/non-secure'
-import {__private} from '@encore/core'
+import {__private} from '@encorejs/core'
 
 const {keyframeUtils} = __private
 

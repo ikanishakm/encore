@@ -1,7 +1,7 @@
-import {isPrism, prism, val} from '@encore/dataverse'
-import type {Prism, Pointer} from '@encore/dataverse'
-import {usePrismInstance} from '@encore/react'
-import type {$FixMe, $IntentionalAny} from '@encore/core/types/public'
+import {isPrism, prism, val} from '@encorejs/dataverse'
+import type {Prism, Pointer} from '@encorejs/dataverse'
+import {usePrismInstance} from '@encorejs/react'
+import type {$FixMe, $IntentionalAny} from '@encorejs/core/types/public'
 import React, {useMemo, useRef} from 'react'
 import {invariant} from './invariant'
 

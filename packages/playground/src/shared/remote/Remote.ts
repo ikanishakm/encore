@@ -1,5 +1,5 @@
-import type {IProject, ISheet, ISheetObject} from '@encore/core'
-import type {VoidFn} from '@encore/dataverse/src/types'
+import type {IProject, ISheet, ISheetObject} from '@encorejs/core'
+import type {VoidFn} from '@encorejs/dataverse/src/types'
 
 export type TheatreUpdateCallback = (data: any) => void
 

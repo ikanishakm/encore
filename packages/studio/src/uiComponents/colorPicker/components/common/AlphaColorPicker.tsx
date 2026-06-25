@@ -8,8 +8,8 @@ import type {
   ColorModel,
   ColorPickerBaseProps,
   AnyColor,
-} from '@encore/studio/uiComponents/colorPicker/types'
-import {useColorManipulation} from '@encore/studio/uiComponents/colorPicker/hooks/useColorManipulation'
+} from '@encorejs/studio/uiComponents/colorPicker/types'
+import {useColorManipulation} from '@encorejs/studio/uiComponents/colorPicker/hooks/useColorManipulation'
 import styled from 'styled-components'
 
 const Container = styled.div`

@@ -1,5 +1,5 @@
 {
-  "name": "@encore/studio",
+  "name": "@encorejs/studio",
   "version": "0.7.0",
   "license": "AGPL-3.0-only",
   "description": "Motion design editor for the web",
@@ -26,16 +26,16 @@
   },
   "sideEffects": true,
   "peerDependencies": {
-    "@encore/core": "*"
+    "@encorejs/core": "*"
   },
   "dependencies": {
-    "@encore/dataverse": "workspace:*"
+    "@encorejs/dataverse": "workspace:*"
   },
   "devDependencies": {
-    "@encore/react": "workspace:*",
-    "@encore/saaz": "workspace:*",
-    "@encore/sync-server": "workspace:*",
-    "@encore/utils": "workspace:*",
+    "@encorejs/react": "workspace:*",
+    "@encorejs/saaz": "workspace:*",
+    "@encorejs/sync-server": "workspace:*",
+    "@encorejs/utils": "workspace:*",
     "@react-spring/web": "^9.7.3",
     "@styled/typescript-styled-plugin": "^1.0.1",
     "@trpc/client": "^10.43.0",

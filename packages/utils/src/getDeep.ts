@@ -1,5 +1,5 @@
 import lodashGet from 'lodash-es/get'
-import type {PathToProp} from '@encore/utils/pathToProp'
+import type {PathToProp} from '@encorejs/utils/pathToProp'
 
 /**
  * Returns the value at `path` of `v`.

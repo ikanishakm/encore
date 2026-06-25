@@ -1,13 +1,13 @@
-import getStudio from '@encore/studio/getStudio'
-import type {SerializableValue} from '@encore/core/types/public'
+import getStudio from '@encorejs/studio/getStudio'
+import type {SerializableValue} from '@encorejs/core/types/public'
 import type {
   CommitOrDiscardOrRecapture,
   ITransactionPrivateApi,
-} from '@encore/studio/StudioStore/StudioStore'
-import type {IEditingTools} from '@encore/studio/propEditors/utils/IEditingTools'
+} from '@encorejs/studio/StudioStore/StudioStore'
+import type {IEditingTools} from '@encorejs/studio/propEditors/utils/IEditingTools'
 import {useMemo} from 'react'
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
-import type {Asset} from '@encore/core/types/public'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
+import type {Asset} from '@encorejs/core/types/public'
 
 /**
  * This function takes a function `writeTx` that sets a value in the private Studio API and

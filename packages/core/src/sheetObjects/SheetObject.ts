@@ -1,25 +1,25 @@
-import type {InterpolationTriple} from '@encore/core/sequences/interpolationTripleAtPosition'
-import interpolationTripleAtPosition from '@encore/core/sequences/interpolationTripleAtPosition'
-import type Sheet from '@encore/core/sheets/Sheet'
-import type {SheetObjectAddress} from '@encore/core/types/public'
-import deepMergeWithCache from '@encore/utils/deepMergeWithCache'
-import type {SequenceTrackId} from '@encore/core/types/public'
-import pointerDeep from '@encore/utils/pointerDeep'
-import SimpleCache from '@encore/utils/SimpleCache'
-import type {$FixMe, $IntentionalAny} from '@encore/core/types/public'
-import {valToAtom} from '@encore/utils/valToAtom'
-import type {PointerToPrismProvider, Prism, Pointer} from '@encore/dataverse'
-import {Atom, getPointerParts, pointer, prism, val} from '@encore/dataverse'
+import type {InterpolationTriple} from '@encorejs/core/sequences/interpolationTripleAtPosition'
+import interpolationTripleAtPosition from '@encorejs/core/sequences/interpolationTripleAtPosition'
+import type Sheet from '@encorejs/core/sheets/Sheet'
+import type {SheetObjectAddress} from '@encorejs/core/types/public'
+import deepMergeWithCache from '@encorejs/utils/deepMergeWithCache'
+import type {SequenceTrackId} from '@encorejs/core/types/public'
+import pointerDeep from '@encorejs/utils/pointerDeep'
+import SimpleCache from '@encorejs/utils/SimpleCache'
+import type {$FixMe, $IntentionalAny} from '@encorejs/core/types/public'
+import {valToAtom} from '@encorejs/utils/valToAtom'
+import type {PointerToPrismProvider, Prism, Pointer} from '@encorejs/dataverse'
+import {Atom, getPointerParts, pointer, prism, val} from '@encorejs/dataverse'
 import type SheetObjectTemplate from './SheetObjectTemplate'
 import TheatreSheetObject from './TheatreSheetObject'
-import {getPropConfigByPath} from '@encore/core/propTypes/utils'
+import {getPropConfigByPath} from '@encorejs/core/propTypes/utils'
 import type {
   Interpolator,
   PropTypeConfig,
   DeepPartialOfSerializableValue,
   SerializableMap,
   SerializableValue,
-} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
 
 /**
  * Internally, the sheet's actual configured value is not a specific type, since we
@@ -89,7 +89,7 @@ export default class SheetObject implements PointerToPrismProvider {
          * recalculations are cheap.
          *
          * Question: What about object.initialValue which _could_ change on every frame, but isn't layerd on last?
-         * Answer: initialValue is seldom used (it's only used in `@encore/r3f` as far as we know). So this won't
+         * Answer: initialValue is seldom used (it's only used in `@encorejs/r3f` as far as we know). So this won't
          * affect the majority of use cases. And in case it _is_ used, it's better for us to implement an alternative
          * to `object.getValues()` that does not layer initialValue (and also skips defaultValue too). This is discussed
          * in issue [P-208](https://linear.app/theatre/issue/P-208/use-overrides-rather-than-final-values-in-r3f).

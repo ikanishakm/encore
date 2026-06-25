@@ -1,9 +1,9 @@
-import {useVal} from '@encore/react'
-import type {$IntentionalAny} from '@encore/core/types/public'
-import getStudio from '@encore/studio/getStudio'
+import {useVal} from '@encorejs/react'
+import type {$IntentionalAny} from '@encorejs/core/types/public'
+import getStudio from '@encorejs/studio/getStudio'
 import React from 'react'
 import styled from 'styled-components'
-import {env} from '@encore/studio/env'
+import {env} from '@encorejs/studio/env'
 
 const Container = styled.div`
   width: 138px;

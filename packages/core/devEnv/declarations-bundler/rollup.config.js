@@ -13,7 +13,7 @@ const config = {
     format: 'es',
   },
   external: (s) => {
-    if (s === '@encore/dataverse') {
+    if (s === '@encorejs/dataverse') {
       return true
     }
 
@@ -33,18 +33,18 @@ const config = {
       respectExternal: true,
       compilerOptions: {
         paths: {
-          '@encore/core': [fromPackage(`.temp/declarations/src`)],
+          '@encorejs/core': [fromPackage(`.temp/declarations/src`)],
         },
       },
     }),
     alias({
       entries: [
         {
-          find: `@encore/core`,
+          find: `@encorejs/core`,
           replacement: fromPackage(`.temp/declarations/src`),
         },
         {
-          find: `@encore/utils`,
+          find: `@encorejs/utils`,
           replacement: fromPackages(`utils/src`),
         },
       ],

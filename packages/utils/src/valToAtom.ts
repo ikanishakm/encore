@@ -1,4 +1,4 @@
-import {Atom, prism} from '@encore/dataverse'
+import {Atom, prism} from '@encorejs/dataverse'
 
 /**
  * A prism hook that converts `val` into an atom, and returns that atom.

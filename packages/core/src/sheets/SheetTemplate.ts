@@ -1,11 +1,11 @@
-import type Project from '@encore/core/projects/Project'
-import SheetObjectTemplate from '@encore/core/sheetObjects/SheetObjectTemplate'
+import type Project from '@encorejs/core/projects/Project'
+import SheetObjectTemplate from '@encorejs/core/sheetObjects/SheetObjectTemplate'
 import type {
   SheetAddress,
   WithoutSheetInstance,
-} from '@encore/core/types/public'
-import {Atom} from '@encore/dataverse'
-import type {Pointer} from '@encore/dataverse'
+} from '@encorejs/core/types/public'
+import {Atom} from '@encorejs/dataverse'
+import type {Pointer} from '@encorejs/dataverse'
 import Sheet from './Sheet'
 import type {ObjectNativeObject} from './Sheet'
 
@@ -13,12 +13,12 @@ import type {
   ObjectAddressKey,
   SheetId,
   SheetInstanceId,
-} from '@encore/core/types/public'
-import type {StrictRecord} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
+import type {StrictRecord} from '@encorejs/core/types/public'
 import type {
   SheetObjectActionsConfig,
   SheetObjectPropTypeConfig,
-} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
 
 type SheetTemplateObjectTemplateMap = StrictRecord<
   ObjectAddressKey,

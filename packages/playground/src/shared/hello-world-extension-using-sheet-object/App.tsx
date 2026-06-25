@@ -1,6 +1,6 @@
-import {editable as e, SheetProvider} from '@encore/r3f'
+import {editable as e, SheetProvider} from '@encorejs/r3f'
 import {Stars, TorusKnot} from '@react-three/drei'
-import {getProject} from '@encore/core'
+import {getProject} from '@encorejs/core'
 import React from 'react'
 import {Canvas} from '@react-three/fiber'
 

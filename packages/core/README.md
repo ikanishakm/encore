@@ -36,13 +36,13 @@ You can find the documentation and video tutorials [here](https://theatrejs.com/
 
 Join us on [Discord](https://discord.gg/bm9f8F9Y9N), follow the updates on [twitter](https://twitter.com/AriaMinaei) or write us an [email](mailto:hello@theatrejs.com).
 
-## `@encore/core`
+## `@encorejs/core`
 
-Encore comes in two packages: `@encore/core` (the library) and `@encore/studio` (the editor). This package is the core library.
+Encore comes in two packages: `@encorejs/core` (the library) and `@encorejs/studio` (the editor). This package is the core library.
 
 ## Bundle size
 
-`@encore/core` is currently around 20KiB compressed with all its dependencies.
+`@encorejs/core` is currently around 20KiB compressed with all its dependencies.
 
 ## License
 

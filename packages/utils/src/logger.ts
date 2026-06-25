@@ -7,16 +7,16 @@ export type {
   ITheatreLoggerConfig,
   ITheatreLoggingConfig,
   ITheatreInternalLogger,
-} from '@encore/utils/_logger/logger'
+} from '@encorejs/utils/_logger/logger'
 import {
   createTheatreInternalLogger,
   TheatreLoggerLevel,
-} from '@encore/utils/_logger/logger'
-import type {IUtilLogger} from '@encore/utils/_logger/logger'
+} from '@encorejs/utils/_logger/logger'
+import type {IUtilLogger} from '@encorejs/utils/_logger/logger'
 export {
   TheatreLoggerLevel,
   createTheatreInternalLogger,
-} from '@encore/utils/_logger/logger'
+} from '@encorejs/utils/_logger/logger'
 
 /**
  * Common object interface for the context to pass in to utility functions.

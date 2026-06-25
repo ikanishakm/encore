@@ -1,4 +1,4 @@
-import { getStudioSync} from '@encore/core'
+import { getStudioSync} from '@encorejs/core'
 import type {UseDragOpts} from './useDrag'
 import useDrag from './useDrag'
 import React, {useLayoutEffect, useMemo, useRef, useState} from 'react'
@@ -6,9 +6,9 @@ import type {
   IProject,
   ISheet,
   ShorthandCompoundPropsToInitialValue,
-} from '@encore/core'
-import {onChange, types} from '@encore/core'
-import type {IScrub, IStudio} from '@encore/core'
+} from '@encorejs/core'
+import {onChange, types} from '@encorejs/core'
+import type {IScrub, IStudio} from '@encorejs/core'
 
 const textInterpolate = (left: string, right: string, progression: number) => {
   if (!left || right.startsWith(left)) {

@@ -1,6 +1,6 @@
 import type {ReactNode} from 'react'
 import React, {createContext, useContext, useEffect} from 'react'
-import type {IRafDriver} from '@encore/core'
+import type {IRafDriver} from '@encorejs/core'
 
 const ctx = createContext<{rafDriver: IRafDriver}>(undefined!)
 

@@ -1,8 +1,8 @@
-import Scrub from '@encore/studio/Scrub'
-import type {StudioHistoricState} from '@encore/core/types/private/studio'
-import UI from '@encore/studio/UI/UI'
-import type {Pointer, Ticker} from '@encore/dataverse'
-import {Atom, PointerProxy, pointerToPrism} from '@encore/dataverse'
+import Scrub from '@encorejs/studio/Scrub'
+import type {StudioHistoricState} from '@encorejs/core/types/private/studio'
+import UI from '@encorejs/studio/UI/UI'
+import type {Pointer, Ticker} from '@encorejs/dataverse'
+import {Atom, PointerProxy, pointerToPrism} from '@encorejs/dataverse'
 import type {
   CommitOrDiscardOrRecapture,
   ITransactionPrivateApi,
@@ -13,27 +13,27 @@ import type {
   IStudio,
   PaneClassDefinition,
   InitOpts,
-} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
 import TheatreStudio from './TheatreStudio'
 import {nanoid} from 'nanoid/non-secure'
-import type Project from '@encore/core/projects/Project'
-import type {CoreBits} from '@encore/core/CoreBundle'
-import SimpleCache from '@encore/utils/SimpleCache'
-import type {IProject, ISheet, ProjectId} from '@encore/core'
+import type Project from '@encorejs/core/projects/Project'
+import type {CoreBits} from '@encorejs/core/CoreBundle'
+import SimpleCache from '@encorejs/utils/SimpleCache'
+import type {IProject, ISheet, ProjectId} from '@encorejs/core'
 import PaneManager from './PaneManager'
-import type * as _coreExports from '@encore/core/coreExports'
+import type * as _coreExports from '@encorejs/core/coreExports'
 import type {
   OnDiskState,
   ProjectEphemeralState,
-} from '@encore/core/types/private/core'
-import type {Deferred} from '@encore/utils/defer'
-import {defer} from '@encore/utils/defer'
+} from '@encorejs/core/types/private/core'
+import type {Deferred} from '@encorejs/utils/defer'
+import {defer} from '@encorejs/utils/defer'
 import shallowEqual from 'shallowequal'
 import {createStore} from './IDBStorage'
-import {getAllPossibleAssetIDs} from '@encore/studio/utils/assets'
+import {getAllPossibleAssetIDs} from '@encorejs/studio/utils/assets'
 import {notify} from './notify'
-import type {RafDriverPrivateAPI} from '@encore/core/rafDrivers'
-import {persistAtom} from '@encore/utils/persistAtom'
+import type {RafDriverPrivateAPI} from '@encorejs/core/rafDrivers'
+import {persistAtom} from '@encorejs/utils/persistAtom'
 import produce from 'immer'
 import {env} from './env'
 
@@ -41,28 +41,28 @@ const DEFAULT_PERSISTENCE_KEY = 'theatre-0.4'
 
 export type CoreExports = typeof _coreExports
 
-const STUDIO_NOT_INITIALIZED_MESSAGE = `You seem to have imported '@encore/studio' but haven't initialized it. You can initialize the studio by:
+const STUDIO_NOT_INITIALIZED_MESSAGE = `You seem to have imported '@encorejs/studio' but haven't initialized it. You can initialize the studio by:
 \`\`\`
-import theatre from '@encore/core'
+import theatre from '@encorejs/core'
 theatre.init({studio: true})
 \`\`\`
 
-* If you didn't mean to import '@encore/studio', this means that your bundler is not tree-shaking it. This is most likely a bundler misconfiguration.
+* If you didn't mean to import '@encorejs/studio', this means that your bundler is not tree-shaking it. This is most likely a bundler misconfiguration.
 
-* If you meant to import '@encore/studio' without showing its UI, you can do that by running:
+* If you meant to import '@encorejs/studio' without showing its UI, you can do that by running:
 
 \`\`\`
-import theatre from '@encore/core'
+import theatre from '@encorejs/core'
 theatre.init({studio: true})
 studio.ui.hide()
 \`\`\`
 `
 
-const STUDIO_INITIALIZED_LATE_MSG = `You seem to have imported '@encore/studio' but called \`studio.initialize()\` after some delay.
+const STUDIO_INITIALIZED_LATE_MSG = `You seem to have imported '@encorejs/studio' but called \`studio.initialize()\` after some delay.
 Encore projects remain in pending mode (won't play their sequences) until the studio is initialized, so you should place the \`studio.initialize()\` line right after the import line:
 
 \`\`\`
-import theatre from '@encore/core'
+import theatre from '@encorejs/core'
 // ... and other imports
 
 studio.initialize()
@@ -100,7 +100,7 @@ export class Studio {
   readonly paneManager: PaneManager
 
   /**
-   * An atom holding the exports of '\@encore/core'. Will be undefined if '\@encore/core' is never imported
+   * An atom holding the exports of '\@encorejs/core'. Will be undefined if '\@encorejs/core' is never imported
    */
   private _coreAtom = new Atom<{core?: CoreExports}>({})
 
@@ -143,7 +143,7 @@ export class Studio {
   private _didWarnAboutNotInitializing = false
 
   /**
-   * This will be set as soon as `@encore/core` registers itself on `@encore/studio`
+   * This will be set as soon as `@encorejs/core` registers itself on `@encorejs/studio`
    */
   private _coreBits: CoreBits | undefined
 
@@ -237,7 +237,7 @@ export class Studio {
   async initialize(opts?: InitOpts) {
     if (!this._coreBits) {
       throw new Error(
-        `You seem to have imported \`@encore/studio\` without importing \`@encore/core\`. Make sure to include an import of \`@encore/core\` before calling \`studio.initializer()\`.`,
+        `You seem to have imported \`@encorejs/studio\` without importing \`@encorejs/core\`. Make sure to include an import of \`@encorejs/core\` before calling \`studio.initializer()\`.`,
       )
     }
 
@@ -659,7 +659,7 @@ function sanitizeOpts(
     if (!rafDriverPrivateApi) {
       // TODO - need to educate the user about this edge case
       throw new Error(
-        'parameter `rafDriver` in `theatre.init({studio: true, __experimental_rafDriver})` seems to come from a different version of `@encore/core` than the version that is attached to `@encore/studio`',
+        'parameter `rafDriver` in `theatre.init({studio: true, __experimental_rafDriver})` seems to come from a different version of `@encorejs/core` than the version that is attached to `@encorejs/studio`',
       )
     }
     storeOpts.rafDriver = rafDriverPrivateApi

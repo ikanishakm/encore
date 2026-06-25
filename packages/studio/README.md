@@ -36,13 +36,13 @@ You can find the documentation and video tutorials [here](https://www.theatrejs.
 
 Join us on [Discord](https://discord.gg/bm9f8F9Y9N), follow the updates on [twitter](https://twitter.com/AriaMinaei) or write us an [email](mailto:hello@theatrejs.com).
 
-## `@encore/studio`
+## `@encorejs/studio`
 
-Encore comes in two packages: `@encore/core` (the library) and `@encore/studio` (the editor). This package is the editor, which is only used during design/development.
+Encore comes in two packages: `@encorejs/core` (the library) and `@encorejs/studio` (the editor). This package is the editor, which is only used during design/development.
 
 ## License
 
 Your use of Encore is governed under the Apache License Version 2.0:
 
-* Theatre's core (`@encore/core`) is released under the Apache License.
-* The studio (`@encore/studio`) is released under the AGPL 3.0 License. This is the package that you use to edit your animations, setup your scenes, etc. You only use the studio during design/development. Your project's final bundle only includes `@encore/core`, so only the Apache License applies.
+* Theatre's core (`@encorejs/core`) is released under the Apache License.
+* The studio (`@encorejs/studio`) is released under the AGPL 3.0 License. This is the package that you use to edit your animations, setup your scenes, etc. You only use the studio during design/development. Your project's final bundle only includes `@encorejs/core`, so only the Apache License applies.

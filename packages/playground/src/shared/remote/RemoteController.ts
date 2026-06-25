@@ -1,5 +1,5 @@
-import type {IProject, ISheet} from '@encore/core'
-import {getStudioSync} from '@encore/core'
+import type {IProject, ISheet} from '@encorejs/core'
+import {getStudioSync} from '@encorejs/core'
 import {remote} from './Remote'
 import type {BroadcastData, BroadcastDataEvent} from './Remote'
 

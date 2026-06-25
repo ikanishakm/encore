@@ -6,8 +6,8 @@
     "hoistingLimits": "workspaces"
   },
   "dependencies": {
-    "@encore/core": "workspace:*",
-    "@encore/r3f": "workspace:*",
+    "@encorejs/core": "workspace:*",
+    "@encorejs/r3f": "workspace:*",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.1",
     "@testing-library/jest-dom": "^5.11.4",
@@ -20,7 +20,7 @@
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
-    "@encore/studio": "workspace:*"
+    "@encorejs/studio": "workspace:*"
   },
   "scripts": {
     "start": "react-scripts start",

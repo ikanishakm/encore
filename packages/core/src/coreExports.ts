@@ -1,16 +1,16 @@
 import projectsSingleton from './projects/projectsSingleton'
 import TheatreProject from './projects/TheatreProject'
 import * as types from './propTypes'
-import {validateName} from '@encore/utils/sanitizers'
+import {validateName} from '@encorejs/utils/sanitizers'
 import deepEqual from 'fast-deep-equal'
-import type {PointerType, Prism} from '@encore/dataverse'
-import {isPointer} from '@encore/dataverse'
-import {isPrism, pointerToPrism} from '@encore/dataverse'
-import type {$IntentionalAny, VoidFn} from '@encore/core/types/public'
-import type {ProjectId} from '@encore/core/types/public'
+import type {PointerType, Prism} from '@encorejs/dataverse'
+import {isPointer} from '@encorejs/dataverse'
+import {isPrism, pointerToPrism} from '@encorejs/dataverse'
+import type {$IntentionalAny, VoidFn} from '@encorejs/core/types/public'
+import type {ProjectId} from '@encorejs/core/types/public'
 import {getCoreTicker} from './coreTicker'
 import {privateAPI} from './privateAPIs'
-export {notify} from '@encore/core/utils/notify'
+export {notify} from '@encorejs/core/utils/notify'
 export {types}
 export {createRafDriver} from './rafDrivers'
 import * as propTypeUtils from './propTypes/utils'
@@ -38,14 +38,14 @@ export const __private = {
  * Returns a project of the given id, or creates one if it doesn't already exist.
  *
  * @remarks
- * If \@encore/studio is also loaded, then the state of the project will be managed by the studio.
+ * If \@encorejs/studio is also loaded, then the state of the project will be managed by the studio.
  *
  * [Learn more about exporting](https://www.theatrejs.com/docs/latest/manual/projects#state)
  *
  * @example
  * Usage:
  * ```ts
- * import {getProject} from '@encore/core'
+ * import {getProject} from '@encorejs/core'
  * const config = {} // the config can be empty when starting a new project
  * const project = getProject("a-unique-id", config)
  * ```
@@ -53,7 +53,7 @@ export const __private = {
  * @example
  * Usage with an explicit state:
  * ```ts
- * import {getProject} from '@encore/core'
+ * import {getProject} from '@encorejs/core'
  * import state from './saved-state.json'
  * const config = {state} // here the config contains our saved state
  * const project = getProject("a-unique-id", config)
@@ -103,7 +103,7 @@ export function getProject(id: string, config: IProjectConfig = {}): IProject {
  * @example
  * Usage:
  * ```ts
- * import {getProject, onChange} from '@encore/core'
+ * import {getProject, onChange} from '@encorejs/core'
  *
  * const obj = getProject("A project").sheet("Scene").object("Box", {position: {x: 0}})
  *
@@ -151,7 +151,7 @@ export function onChange<
  *
  * Usage
  * ```ts
- * import {val, getProject} from '@encore/core'
+ * import {val, getProject} from '@encorejs/core'
  *
  * const obj = getProject("A project").sheet("Scene").object("Box", {position: {x: 0}})
  *

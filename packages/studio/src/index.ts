@@ -4,14 +4,14 @@
  * @packageDocumentation
  */
 
-import {setStudio} from '@encore/studio/getStudio'
-import {Studio} from '@encore/studio/Studio'
+import {setStudio} from '@encorejs/studio/getStudio'
+import {Studio} from '@encorejs/studio/Studio'
 
-import type {GlobalVariableNames} from '@encore/core/globals'
-import type {$FixMe} from '@encore/core/types/public'
+import type {GlobalVariableNames} from '@encorejs/core/globals'
+import type {$FixMe} from '@encorejs/core/types/public'
 import StudioBundle from './StudioBundle'
-import type CoreBundle from '@encore/core/CoreBundle'
-import type {IStudio} from '@encore/core/types/public'
+import type CoreBundle from '@encorejs/core/CoreBundle'
+import type {IStudio} from '@encorejs/core/types/public'
 
 const globalVariableNames: GlobalVariableNames = {
   StudioBundle: '__Encore_StudioBundle',
@@ -51,14 +51,14 @@ function registerStudioBundle() {
       typeof existingStudioBundle.version === 'string'
     ) {
       throw new Error(
-        `It seems that the module '@encore/studio' is loaded more than once. This could have two possible causes:\n` +
+        `It seems that the module '@encorejs/studio' is loaded more than once. This could have two possible causes:\n` +
           `1. You might have two separate versions of Encore in node_modules.\n` +
           `2. Or this might be a bundling misconfiguration, in case you're using a bundler like Webpack/ESBuild/Rollup.\n\n` +
-          `Note that it **is okay** to import '@encore/studio' multiple times. But those imports should point to the same module.`,
+          `Note that it **is okay** to import '@encorejs/studio' multiple times. But those imports should point to the same module.`,
       )
     } else {
       throw new Error(
-        `The variable window.${globalVariableNames.StudioBundle} seems to be already set by a module other than @encore/core.`,
+        `The variable window.${globalVariableNames.StudioBundle} seems to be already set by a module other than @encorejs/core.`,
       )
     }
   }
@@ -81,7 +81,7 @@ function registerStudioBundle() {
   }
 }
 
-import {notify} from '@encore/studio/notify'
+import {notify} from '@encorejs/studio/notify'
 
 if (typeof window !== 'undefined') {
   // @ts-ignore

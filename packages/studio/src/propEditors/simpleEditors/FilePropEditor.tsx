@@ -1,9 +1,9 @@
-import type {PropTypeConfig_File} from '@encore/core/types/public'
-import {Package, Trash} from '@encore/studio/uiComponents/icons'
+import type {PropTypeConfig_File} from '@encorejs/core/types/public'
+import {Package, Trash} from '@encorejs/studio/uiComponents/icons'
 import React, {useCallback, useEffect} from 'react'
 import styled, {css} from 'styled-components'
 import type {ISimplePropEditorReactProps} from './ISimplePropEditorReactProps'
-import type {$FixMe} from '@encore/core/types/public'
+import type {$FixMe} from '@encorejs/core/types/public'
 
 const Container = styled.div<{empty: boolean}>`
   display: flex;

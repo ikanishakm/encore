@@ -1,38 +1,38 @@
-import type Project from '@encore/core/projects/Project'
-import type Sheet from '@encore/core/sheets/Sheet'
-import type SheetTemplate from '@encore/core/sheets/SheetTemplate'
-import {emptyArray} from '@encore/utils'
+import type Project from '@encorejs/core/projects/Project'
+import type Sheet from '@encorejs/core/sheets/Sheet'
+import type SheetTemplate from '@encorejs/core/sheets/SheetTemplate'
+import {emptyArray} from '@encorejs/utils'
 import type {
   SheetObjectAddress,
   WithoutSheetInstance,
   SerializableMap,
   SerializablePrimitive,
   SerializableValue,
-} from '@encore/core/types/public'
-import type {PathToProp} from '@encore/utils/pathToProp'
-import getDeep from '@encore/utils/getDeep'
+} from '@encorejs/core/types/public'
+import type {PathToProp} from '@encorejs/utils/pathToProp'
+import getDeep from '@encorejs/utils/getDeep'
 import type {
   ObjectAddressKey,
   SequenceTrackId,
-} from '@encore/core/types/public'
-import SimpleCache from '@encore/utils/SimpleCache'
-import type {$FixMe, $IntentionalAny} from '@encore/core/types/public'
-import type {Prism, Pointer} from '@encore/dataverse'
-import {Atom, getPointerParts, prism, val} from '@encore/dataverse'
+} from '@encorejs/core/types/public'
+import SimpleCache from '@encorejs/utils/SimpleCache'
+import type {$FixMe, $IntentionalAny} from '@encorejs/core/types/public'
+import type {Prism, Pointer} from '@encorejs/dataverse'
+import {Atom, getPointerParts, prism, val} from '@encorejs/dataverse'
 import set from 'lodash-es/set'
 import getPropDefaultsOfSheetObject from './getPropDefaultsOfSheetObject'
 import SheetObject from './SheetObject'
 import {
   getPropConfigByPath,
   isPropConfSequencable,
-} from '@encore/core/propTypes/utils'
+} from '@encorejs/core/propTypes/utils'
 import getOrderingOfPropTypeConfig from './getOrderingOfPropTypeConfig'
-import type {SheetState_Historic} from '@encore/core/types/private/core'
+import type {SheetState_Historic} from '@encorejs/core/types/private/core'
 import {cloneDeep, unset} from 'lodash-es'
 import type {
   SheetObjectActionsConfig,
   SheetObjectPropTypeConfig,
-} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
 
 function isObjectEmpty(obj: unknown): boolean {
   return (

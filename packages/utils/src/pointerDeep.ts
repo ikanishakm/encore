@@ -1,6 +1,6 @@
-import type {Pointer} from '@encore/dataverse'
-import type {PathToProp} from '@encore/utils/pathToProp'
-import type {$IntentionalAny} from '@encore/utils/types'
+import type {Pointer} from '@encorejs/dataverse'
+import type {PathToProp} from '@encorejs/utils/pathToProp'
+import type {$IntentionalAny} from '@encorejs/utils/types'
 
 /**
  * Points deep into a pointer, using `toAppend` as the path. This is _NOT_ type-safe, so use with caution.

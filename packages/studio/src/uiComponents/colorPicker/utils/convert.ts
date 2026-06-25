@@ -6,7 +6,7 @@ import type {
   HslColor,
   HsvaColor,
   HsvColor,
-} from '@encore/studio/uiComponents/colorPicker/types'
+} from '@encorejs/studio/uiComponents/colorPicker/types'
 
 /**
  * Valid CSS <angle> units.

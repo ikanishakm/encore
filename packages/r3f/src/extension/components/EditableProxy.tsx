@@ -3,7 +3,7 @@ import React, {useEffect, useLayoutEffect, useMemo, useState} from 'react'
 import {Sphere, Html} from '@react-three/drei'
 import shallow from 'zustand/shallow'
 import {useSelected} from './useSelected'
-import {useVal} from '@encore/react'
+import {useVal} from '@encorejs/react'
 import {getEditorSheetObject} from '../editorStuff'
 import type {IconID} from '../icons'
 import icons from '../icons'
@@ -11,7 +11,7 @@ import type {Helper} from '../../main/editableFactoryConfigUtils'
 import {invalidate, useFrame, useThree} from '@react-three/fiber'
 import {useDragDetector} from './DragDetector'
 import useExtensionStore from '../useExtensionStore'
-import {getStudioSync} from '@encore/core'
+import {getStudioSync} from '@encorejs/core'
 
 export interface EditableProxyProps {
   storeKey: string

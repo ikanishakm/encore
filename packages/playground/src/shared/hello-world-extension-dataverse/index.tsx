@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import type {ToolsetConfig} from '@encore/core'
-import theatre from '@encore/core'
-import extension from '@encore/r3f/dist/extension'
-import {Atom, prism, val} from '@encore/dataverse'
-import {onChange} from '@encore/core'
+import type {ToolsetConfig} from '@encorejs/core'
+import theatre from '@encorejs/core'
+import extension from '@encorejs/r3f/dist/extension'
+import {Atom, prism, val} from '@encorejs/dataverse'
+import {onChange} from '@encorejs/core'
 
 /**
  * Let's take a look at how we can use `prism`, `Ticker`, and `val` from Encore's Dataverse library
@@ -25,7 +25,7 @@ import {onChange} from '@encore/core'
 void theatre.getStudio().then((studio) => {
   studio.extend(extension)
   studio.extend({
-    id: '@encore/hello-world-extension',
+    id: '@encorejs/hello-world-extension',
     toolbars: {
       global(set, studio) {
         const exampleBox = new Atom('mobile')

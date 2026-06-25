@@ -1,14 +1,14 @@
-import type Project from '@encore/core/projects/Project'
+import type Project from '@encorejs/core/projects/Project'
 import React, {useCallback} from 'react'
-import BaseItem from '@encore/studio/panels/OutlinePanel/BaseItem'
-import SheetsList from '@encore/studio/panels/OutlinePanel/SheetsList/SheetsList'
-import getStudio from '@encore/studio/getStudio'
-import {usePrism, useVal} from '@encore/react'
-import {outlineSelection} from '@encore/studio/selectors'
-import {val} from '@encore/dataverse'
+import BaseItem from '@encorejs/studio/panels/OutlinePanel/BaseItem'
+import SheetsList from '@encorejs/studio/panels/OutlinePanel/SheetsList/SheetsList'
+import getStudio from '@encorejs/studio/getStudio'
+import {usePrism, useVal} from '@encorejs/react'
+import {outlineSelection} from '@encorejs/studio/selectors'
+import {val} from '@encorejs/dataverse'
 import styled from 'styled-components'
-import {useCollapseStateInOutlinePanel} from '@encore/studio/panels/OutlinePanel/outlinePanelUtils'
-import useChordial from '@encore/studio/uiComponents/chordial/useChodrial'
+import {useCollapseStateInOutlinePanel} from '@encorejs/studio/panels/OutlinePanel/outlinePanelUtils'
+import useChordial from '@encorejs/studio/uiComponents/chordial/useChodrial'
 
 const ConflictNotice = styled.div`
   color: var(--tt-fg);

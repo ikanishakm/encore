@@ -1,5 +1,5 @@
-import type {Studio} from '@encore/studio/Studio'
-import {val} from '@encore/dataverse'
+import type {Studio} from '@encorejs/studio/Studio'
+import {val} from '@encorejs/dataverse'
 
 const NonSSRBitsClass =
   typeof window !== 'undefined'

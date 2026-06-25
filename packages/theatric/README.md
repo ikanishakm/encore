@@ -23,7 +23,7 @@ $ npm install theatric
 ReactDOM.render(<App />, document.getElementById('root'))
 
 // App.jsx
-import {useControls} from '@encore/tweak'
+import {useControls} from '@encorejs/tweak'
 import React from 'react'
 
 export default function App() {
@@ -59,7 +59,7 @@ anywhere in your component tree. It takes an object of controls and returns an
 object of values.
 
 ```tsx
-import {useControls} from '@encore/tweak'
+import {useControls} from '@encorejs/tweak'
 
 function Introduction() {
   const {name, age} = useControls({name: 'Andrew', age: 28})
@@ -78,7 +78,7 @@ have multiple instances of the same component, in which case the controls would
 collide.
 
 ```tsx
-import {useControls} from '@encore/tweak'
+import {useControls} from '@encorejs/tweak'
 
 function Introduction({id}) {
   const {name, age} = useControls({name: 'Andrew', age: 28}, {folder: id})
@@ -95,7 +95,7 @@ function Introduction({id}) {
 can use to get and set the values of your controls imperatively.
 
 ```tsx
-import {useControls} from '@encore/tweak'
+import {useControls} from '@encorejs/tweak'
 
 function Introduction() {
   const {name, age, $get, $set} = useControls({name: 'Andrew', age: 28})
@@ -119,7 +119,7 @@ You can also place buttons on the control panel to trigger actions. You can
 combine this with the `$get` and `$set` methods to create a more convenient UI.
 
 ```tsx
-import {useControls, button} from '@encore/tweak'
+import {useControls, button} from '@encorejs/tweak'
 
 function Introduction() {
   const {name, age, $get, $set} = useControls({
@@ -145,7 +145,7 @@ function Introduction() {
 Example of setting a nested prop:
 
 ```tsx
-import {useControls, button} from '@encore/tweak'
+import {useControls, button} from '@encorejs/tweak'
 
 function Introduction() {
   const {person, $get, $set} = useControls({
@@ -180,7 +180,7 @@ config object as [`getProject()`](https://www.theatrejs.com/docs/latest/api/core
 
 
 ```tsx
-import {initialize, useControls, types, getAssetUrl} from '@encore/tweak'
+import {initialize, useControls, types, getAssetUrl} from '@encorejs/tweak'
 import theatricState from './theatricState.json'
 
 initialize({
@@ -217,7 +217,7 @@ For example, to specify a range for a number, or adjust the scrubbing
 sensitivity, you can use the `number` type.
 
 ```tsx
-import {useControls, types} from '@encore/tweak'
+import {useControls, types} from '@encorejs/tweak'
 
 function Introduction() {
   const {name, age} = useControls({
@@ -238,7 +238,7 @@ function Introduction() {
 }
 ```
 
-This is simply a re-export via `export {types} from '@encore/core'`. To learn more about types, check out the
+This is simply a re-export via `export {types} from '@encorejs/core'`. To learn more about types, check out the
 [types documentation](https://www.theatrejs.com/docs/latest/manual/prop-types).
 
 ## Using assets
@@ -246,7 +246,7 @@ This is simply a re-export via `export {types} from '@encore/core'`. To learn mo
 Here is an example of using image assets in your controls. Learn more about assets [here](https://www.theatrejs.com/docs/latest/manual/assets).
 
 ```tsx
-import {initialize, useControls, types, getAssetUrl} from '@encore/tweak'
+import {initialize, useControls, types, getAssetUrl} from '@encorejs/tweak'
 import theatricState from './theatricState.json'
 
 initialize({

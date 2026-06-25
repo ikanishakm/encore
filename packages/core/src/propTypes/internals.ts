@@ -1,13 +1,13 @@
-import {InvalidArgumentError} from '@encore/utils/errors'
-import type {$IntentionalAny} from '@encore/core/types/public'
-import userReadableTypeOfValue from '@encore/utils/userReadableTypeOfValue'
+import {InvalidArgumentError} from '@encorejs/utils/errors'
+import type {$IntentionalAny} from '@encorejs/core/types/public'
+import userReadableTypeOfValue from '@encorejs/utils/userReadableTypeOfValue'
 import {isPlainObject} from 'lodash-es'
 import {
   propTypeSymbol,
   type PropTypeConfig,
   type UnknownShorthandCompoundProps,
   type UnknownValidCompoundProps,
-} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
 import * as t from './index'
 
 export function isLonghandPropType(t: unknown): t is PropTypeConfig {

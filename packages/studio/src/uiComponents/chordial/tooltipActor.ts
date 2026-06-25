@@ -1,6 +1,6 @@
-import {basicFSM} from '@encore/utils/basicFSM'
+import {basicFSM} from '@encorejs/utils/basicFSM'
 import type {MaybeChodrialEl, ChodrialElement} from './chordialInternals'
-import {prism, val} from '@encore/dataverse'
+import {prism, val} from '@encorejs/dataverse'
 import {contextActor} from './contextActor'
 import {hoverActor} from './hoverActor'
 import {mousedownActor} from './mousedownActor'

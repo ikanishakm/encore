@@ -3,23 +3,23 @@ import type {
   StudioEphemeralState,
   StudioHistoricState,
   StudioState,
-} from '@encore/core/types/private'
-import type {$FixMe, $IntentionalAny, VoidFn} from '@encore/core/types/public'
-import {Atom} from '@encore/dataverse'
-import type {Pointer} from '@encore/dataverse'
+} from '@encorejs/core/types/private'
+import type {$FixMe, $IntentionalAny, VoidFn} from '@encorejs/core/types/public'
+import {Atom} from '@encorejs/dataverse'
+import type {Pointer} from '@encorejs/dataverse'
 import type {Draft} from 'immer'
-import type {OnDiskState} from '@encore/core/types/private'
-import * as Saaz from '@encore/saaz'
-import type {ProjectId} from '@encore/core/types/public'
-import {schema} from '@encore/sync-server/state/schema'
+import type {OnDiskState} from '@encorejs/core/types/private'
+import * as Saaz from '@encorejs/saaz'
+import type {ProjectId} from '@encorejs/core/types/public'
+import {schema} from '@encorejs/sync-server/state/schema'
 import type {
   IInvokableDraftEditors,
   IStateEditors,
   StateEditorsAPI,
-} from '@encore/sync-server/state/schema'
+} from '@encorejs/sync-server/state/schema'
 import createTransactionPrivateApi from './createTransactionPrivateApi'
-import {SaazBack} from '@encore/saaz'
-import type {Studio} from '@encore/studio/Studio'
+import {SaazBack} from '@encorejs/saaz'
+import type {Studio} from '@encorejs/studio/Studio'
 
 export type Drafts = {
   historic: Draft<StudioHistoricState>

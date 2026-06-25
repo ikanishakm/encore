@@ -45,7 +45,7 @@ async function bundle(watch: boolean) {
       __IS_VISUAL_REGRESSION_TESTING: 'false',
       'process.env.NODE_ENV': '"production"',
     },
-    external: ['@encore/dataverse', '@encore/core'],
+    external: ['@encorejs/dataverse', '@encorejs/core'],
     minify: true,
   }
 

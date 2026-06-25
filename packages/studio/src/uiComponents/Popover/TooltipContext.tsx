@@ -1,5 +1,5 @@
-import {Atom} from '@encore/dataverse'
-import useRefAndState from '@encore/studio/utils/useRefAndState'
+import {Atom} from '@encorejs/dataverse'
+import useRefAndState from '@encorejs/studio/utils/useRefAndState'
 import {useCallback, useEffect, useMemo} from 'react'
 
 let lastTooltipId = 0

@@ -1,14 +1,14 @@
 import React, {useRef} from 'react'
 import styled from 'styled-components'
-import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
+import {pointerEventsAutoInNormalMode} from '@encorejs/studio/css'
 import type {
   ToolConfigFlyoutMenu,
   ToolconfigFlyoutMenuItem,
-} from '@encore/core/types/public'
-import ToolbarIconButton from '@encore/studio/uiComponents/toolbar/ToolbarIconButton'
-import BaseMenu from '@encore/studio/uiComponents/simpleContextMenu/ContextMenu/BaseMenu'
-import usePopover from '@encore/studio/uiComponents/Popover/usePopover'
-import type {$IntentionalAny} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
+import ToolbarIconButton from '@encorejs/studio/uiComponents/toolbar/ToolbarIconButton'
+import BaseMenu from '@encorejs/studio/uiComponents/simpleContextMenu/ContextMenu/BaseMenu'
+import usePopover from '@encorejs/studio/uiComponents/Popover/usePopover'
+import type {$IntentionalAny} from '@encorejs/core/types/public'
 
 const Container = styled.div`
   ${pointerEventsAutoInNormalMode};

@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import theatre from '@encore/core'
-import {getProject, notify} from '@encore/core'
+import theatre from '@encorejs/core'
+import {getProject, notify} from '@encorejs/core'
 import {Scene} from './Scene'
 
 void theatre.init({studio: true})

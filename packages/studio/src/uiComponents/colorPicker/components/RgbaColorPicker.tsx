@@ -6,12 +6,12 @@ import type {
   ColorPickerBaseProps,
   HsvaColor,
   RgbaColor,
-} from '@encore/studio/uiComponents/colorPicker/types'
-import {equalColorObjects} from '@encore/studio/uiComponents/colorPicker/utils/compare'
+} from '@encorejs/studio/uiComponents/colorPicker/types'
+import {equalColorObjects} from '@encorejs/studio/uiComponents/colorPicker/utils/compare'
 import {
   rgbaToHsva,
   hsvaToRgba,
-} from '@encore/studio/uiComponents/colorPicker/utils/convert'
+} from '@encorejs/studio/uiComponents/colorPicker/utils/convert'
 import {EditingProvider} from './EditingProvider'
 
 const normalizeRgba = (rgba: RgbaColor) => {

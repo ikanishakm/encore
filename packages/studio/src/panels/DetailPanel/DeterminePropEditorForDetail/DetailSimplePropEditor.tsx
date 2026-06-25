@@ -1,15 +1,15 @@
 import type {
   IBasePropType,
   PropTypeConfig_AllSimples,
-} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
 import React, {useMemo} from 'react'
-import {useEditingToolsForSimplePropInDetailsPanel} from '@encore/studio/propEditors/useEditingToolsForSimpleProp'
-import {SingleRowPropEditor} from '@encore/studio/panels/DetailPanel/DeterminePropEditorForDetail/SingleRowPropEditor'
-import type {Pointer} from '@encore/dataverse'
-import {getPointerParts} from '@encore/dataverse'
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
-import type {ISimplePropEditorReactProps} from '@encore/studio/propEditors/simpleEditors/ISimplePropEditorReactProps'
-import {whatPropIsHighlighted} from '@encore/studio/panels/SequenceEditorPanel/whatPropIsHighlighted'
+import {useEditingToolsForSimplePropInDetailsPanel} from '@encorejs/studio/propEditors/useEditingToolsForSimpleProp'
+import {SingleRowPropEditor} from '@encorejs/studio/panels/DetailPanel/DeterminePropEditorForDetail/SingleRowPropEditor'
+import type {Pointer} from '@encorejs/dataverse'
+import {getPointerParts} from '@encorejs/dataverse'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
+import type {ISimplePropEditorReactProps} from '@encorejs/studio/propEditors/simpleEditors/ISimplePropEditorReactProps'
+import {whatPropIsHighlighted} from '@encorejs/studio/panels/SequenceEditorPanel/whatPropIsHighlighted'
 
 export type IDetailSimplePropEditorProps<
   TPropTypeConfig extends IBasePropType<string, any>,

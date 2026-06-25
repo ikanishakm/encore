@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import type {ISheetObject} from '@encore/core'
-import {onChange, types, val} from '@encore/core'
-import theatre from '@encore/core'
-import extension from '@encore/r3f/dist/extension'
+import type {ISheetObject} from '@encorejs/core'
+import {onChange, types, val} from '@encorejs/core'
+import theatre from '@encorejs/core'
+import extension from '@encorejs/r3f/dist/extension'
 
 const dataConfig = {
   exampleProp: types.stringLiteral('yes', {
@@ -16,7 +16,7 @@ const dataConfig = {
 void theatre.getStudio().then((studio) => {
   studio.extend(extension)
   studio.extend({
-    id: '@encore/hello-world-extension',
+    id: '@encorejs/hello-world-extension',
     toolbars: {
       global(set, studio) {
         // A sheet object used by this extension

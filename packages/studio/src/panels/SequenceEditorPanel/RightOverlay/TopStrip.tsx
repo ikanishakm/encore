@@ -1,11 +1,11 @@
-import {useVal} from '@encore/react'
-import type {Pointer} from '@encore/dataverse'
+import {useVal} from '@encorejs/react'
+import type {Pointer} from '@encorejs/dataverse'
 import React from 'react'
 import styled from 'styled-components'
-import type {SequenceEditorPanelLayout} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
-import StampsGrid from '@encore/studio/panels/SequenceEditorPanel/FrameGrid/StampsGrid'
-import {includeLockFrameStampAttrs} from '@encore/studio/panels/SequenceEditorPanel/FrameStampPositionProvider'
-import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
+import type {SequenceEditorPanelLayout} from '@encorejs/studio/panels/SequenceEditorPanel/layout/layout'
+import StampsGrid from '@encorejs/studio/panels/SequenceEditorPanel/FrameGrid/StampsGrid'
+import {includeLockFrameStampAttrs} from '@encorejs/studio/panels/SequenceEditorPanel/FrameStampPositionProvider'
+import {pointerEventsAutoInNormalMode} from '@encorejs/studio/css'
 import FocusRangeZone from './FocusRangeZone/FocusRangeZone'
 
 export const topStripHeight = 18

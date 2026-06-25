@@ -1,18 +1,18 @@
 import type {
   DopeSheetSelection,
   SequenceEditorPanelLayout,
-} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
-import type {SequenceEditorTree_PrimitiveProp} from '@encore/studio/panels/SequenceEditorPanel/layout/tree'
-import type {Pointer} from '@encore/dataverse'
-import {val} from '@encore/dataverse'
+} from '@encorejs/studio/panels/SequenceEditorPanel/layout/layout'
+import type {SequenceEditorTree_PrimitiveProp} from '@encorejs/studio/panels/SequenceEditorPanel/layout/tree'
+import type {Pointer} from '@encorejs/dataverse'
+import {val} from '@encorejs/dataverse'
 import React from 'react'
 import styled from 'styled-components'
 import SingleKeyframeConnector from './BasicKeyframeConnector'
 import SingleKeyframeDot from './SingleKeyframeDot'
-import type {TrackWithId} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/collectAggregateKeyframes'
-import type {StudioSheetItemKey} from '@encore/core/types/private'
-import type {BasicKeyframe} from '@encore/core'
-import {__private} from '@encore/core'
+import type {TrackWithId} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/Right/collectAggregateKeyframes'
+import type {StudioSheetItemKey} from '@encorejs/core/types/private'
+import type {BasicKeyframe} from '@encorejs/core'
+import {__private} from '@encorejs/core'
 
 const {keyframeUtils} = __private
 

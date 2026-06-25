@@ -1,6 +1,6 @@
 import React, {useLayoutEffect, useRef} from 'react'
-import type {IProject} from '@encore/core'
-import {onChange, types} from '@encore/core'
+import type {IProject} from '@encorejs/core'
+import {onChange, types} from '@encorejs/core'
 
 const globalConfig = {
   background: {

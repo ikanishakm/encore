@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import getStudio from '@encore/studio/getStudio'
-import type {PathToProp} from '@encore/utils/pathToProp'
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
-import type {PropTypeConfig} from '@encore/core/types/public'
-import {__private} from '@encore/core'
+import getStudio from '@encorejs/studio/getStudio'
+import type {PathToProp} from '@encorejs/utils/pathToProp'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
+import type {PropTypeConfig} from '@encorejs/core/types/public'
+import {__private} from '@encorejs/core'
 const {isPropConfigComposite, iteratePropType} = __private.propTypeUtils
 
 const theme = {

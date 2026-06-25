@@ -1,6 +1,6 @@
 import {createRequire} from 'module'
-import type {Env} from '@encore/core/envSchema'
-import type {$IntentionalAny} from '@encore/utils/types'
+import type {Env} from '@encorejs/core/envSchema'
+import type {$IntentionalAny} from '@encorejs/utils/types'
 // This file gets imported by other packages who may ot have set up path aliases, so we should use relative imports here
 // eslint-disable-next-line no-relative-imports
 import {fullSchema} from '../src/envSchema'
@@ -22,7 +22,7 @@ fullSchema.parse(env)
 
 export const definedGlobals: Record<string, string> = {
   // json-touch-patch (an unmaintained package) reads this value. We patch it to just 'Set', becauce
-  // this is only used in `@encore/studio`, which only supports evergreen browsers
+  // this is only used in `@encorejs/studio`, which only supports evergreen browsers
   'global.Set': 'Set',
 }
 

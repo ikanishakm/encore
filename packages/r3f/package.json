@@ -1,5 +1,5 @@
 {
-  "name": "@encore/r3f",
+  "name": "@encorejs/r3f",
   "version": "0.7.0",
   "license": "Apache-2.0",
   "authors": [
@@ -47,8 +47,8 @@
     "clean": "rm -rf ./dist && rm -f tsconfig.tsbuildinfo"
   },
   "devDependencies": {
-    "@encore/dataverse": "workspace:*",
-    "@encore/react": "workspace:*",
+    "@encorejs/dataverse": "workspace:*",
+    "@encorejs/react": "workspace:*",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.1",
     "@types/jest": "^26.0.23",
@@ -76,8 +76,8 @@
     "zustand": "^3.5.1"
   },
   "peerDependencies": {
-    "@encore/core": "*",
-    "@encore/studio": "*",
+    "@encorejs/core": "*",
+    "@encorejs/studio": "*",
     "@react-three/fiber": "^9.0.0",
     "react": ">=19",
     "react-dom": ">=19",

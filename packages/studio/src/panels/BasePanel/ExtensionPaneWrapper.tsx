@@ -1,6 +1,6 @@
-import type {$FixMe} from '@encore/core/types/public'
-import type {PanelPosition, UIPanelId} from '@encore/core/types/private'
-import type {PaneInstance} from '@encore/core/types/public'
+import type {$FixMe} from '@encorejs/core/types/public'
+import type {PanelPosition, UIPanelId} from '@encorejs/core/types/private'
+import type {PaneInstance} from '@encorejs/core/types/public'
 import React, {useCallback, useLayoutEffect, useState} from 'react'
 import styled from 'styled-components'
 import {F2 as F2Impl, TitleBar} from './common'
@@ -9,9 +9,9 @@ import PanelDragZone from './PanelDragZone'
 import PanelWrapper from './PanelWrapper'
 import {ErrorBoundary} from 'react-error-boundary'
 import {IoClose} from 'react-icons/io5'
-import getStudio from '@encore/studio/getStudio'
-import {panelZIndexes} from '@encore/studio/panels/BasePanel/common'
-import type {PaneInstanceId} from '@encore/core/types/public'
+import getStudio from '@encorejs/studio/getStudio'
+import {panelZIndexes} from '@encorejs/studio/panels/BasePanel/common'
+import type {PaneInstanceId} from '@encorejs/core/types/public'
 
 const defaultPosition: PanelPosition = {
   edges: {

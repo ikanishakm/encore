@@ -3,8 +3,8 @@ import {useLayoutEffect, useRef, useState} from 'react'
 import {
   __private_allRegisteredObjects as allRegisteredObjects,
   __private_makeStoreKey as makeStoreKey,
-} from '@encore/r3f'
-import {getStudioSync, type ISheetObject, type IStudio} from '@encore/core'
+} from '@encorejs/r3f'
+import {getStudioSync, type ISheetObject, type IStudio} from '@encorejs/core'
 import type {$IntentionalAny} from '../../types'
 
 export function useSelected(): undefined | string {

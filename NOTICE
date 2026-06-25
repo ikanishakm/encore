@@ -20,19 +20,19 @@ Licensing
 Except where noted, the Encore packages are licensed under the Apache License,
 Version 2.0 (see the LICENSE file):
 
-  @encore/core, @encore/dataverse, @encore/react, @encore/r3f,
-  @encore/saaz, @encore/utils, @encore/tweak
+  @encorejs/core, @encorejs/dataverse, @encorejs/react, @encorejs/r3f,
+  @encorejs/saaz, @encorejs/utils, @encorejs/tweak
 
-The @encore/studio package is licensed under the GNU Affero General Public
+The @encorejs/studio package is licensed under the GNU Affero General Public
 License v3.0 only (AGPL-3.0-only); see packages/studio/LICENSE.
 
-@encore/browser-bundles ships @encore/core (Apache-2.0) and @encore/studio
+@encorejs/browser-bundles ships @encorejs/core (Apache-2.0) and @encorejs/studio
 (AGPL-3.0-only) together; see packages/browser-bundles/LICENSE.
 
 Notable changes from upstream Theatre.js
 ----------------------------------------
-  - Renamed the npm scope from @theatre/* to @encore/* (and the unscoped
-    `theatric` package to @encore/tweak).
+  - Renamed the npm scope from @theatre/* to @encorejs/* (and the unscoped
+    `theatric` package to @encorejs/tweak).
   - Support for React 19 and react-three-fiber v9.
   - Removed the hosted-cloud update checker and defaulted the studio backend
     to localhost, so the editor does not contact any third-party server.

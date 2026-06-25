@@ -1,5 +1,5 @@
-import type {Pointer, Prism} from '@encore/dataverse'
-import {isPointer, prism, val} from '@encore/dataverse'
+import type {Pointer, Prism} from '@encorejs/dataverse'
+import {isPointer, prism, val} from '@encorejs/dataverse'
 import type {$IntentionalAny} from './types'
 
 /**

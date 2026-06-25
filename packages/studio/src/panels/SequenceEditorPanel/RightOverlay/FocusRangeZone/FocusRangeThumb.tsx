@@ -1,28 +1,28 @@
-import type {Pointer} from '@encore/dataverse'
-import {prism, val} from '@encore/dataverse'
-import {usePrism, useVal} from '@encore/react'
-import type {$IntentionalAny, IRange} from '@encore/core/types/public'
-import getStudio from '@encore/studio/getStudio'
-import type {SequenceEditorPanelLayout} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
+import type {Pointer} from '@encorejs/dataverse'
+import {prism, val} from '@encorejs/dataverse'
+import {usePrism, useVal} from '@encorejs/react'
+import type {$IntentionalAny, IRange} from '@encorejs/core/types/public'
+import getStudio from '@encorejs/studio/getStudio'
+import type {SequenceEditorPanelLayout} from '@encorejs/studio/panels/SequenceEditorPanel/layout/layout'
 import {
   topStripHeight,
   topStripTheme,
-} from '@encore/studio/panels/SequenceEditorPanel/RightOverlay/TopStrip'
-import type {CommitOrDiscardOrRecapture} from '@encore/studio/StudioStore/StudioStore'
+} from '@encorejs/studio/panels/SequenceEditorPanel/RightOverlay/TopStrip'
+import type {CommitOrDiscardOrRecapture} from '@encorejs/studio/StudioStore/StudioStore'
 import {
   lockedCursorCssVarName,
   useCssCursorLock,
-} from '@encore/studio/uiComponents/PointerEventsHandler'
-import useDrag from '@encore/studio/uiComponents/useDrag'
-import useRefAndState from '@encore/studio/utils/useRefAndState'
+} from '@encorejs/studio/uiComponents/PointerEventsHandler'
+import useDrag from '@encorejs/studio/uiComponents/useDrag'
+import useRefAndState from '@encorejs/studio/utils/useRefAndState'
 import React, {useMemo} from 'react'
 import styled from 'styled-components'
 import {
   includeLockFrameStampAttrs,
   useLockFrameStampPosition,
-} from '@encore/studio/panels/SequenceEditorPanel/FrameStampPositionProvider'
+} from '@encorejs/studio/panels/SequenceEditorPanel/FrameStampPositionProvider'
 import {focusRangeStripTheme, RangeStrip} from './FocusRangeStrip'
-import DopeSnap from '@encore/studio/panels/SequenceEditorPanel/RightOverlay/DopeSnap'
+import DopeSnap from '@encorejs/studio/panels/SequenceEditorPanel/RightOverlay/DopeSnap'
 
 const TheDiv = styled.div<{enabled: boolean; type: ThumbType}>`
   position: absolute;

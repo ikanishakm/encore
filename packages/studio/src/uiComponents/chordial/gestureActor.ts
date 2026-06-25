@@ -1,13 +1,13 @@
-import {basicFSM} from '@encore/utils/basicFSM'
-import type {DragHandlers, DragOpts} from '@encore/studio/uiComponents/useDrag'
+import {basicFSM} from '@encorejs/utils/basicFSM'
+import type {DragHandlers, DragOpts} from '@encorejs/studio/uiComponents/useDrag'
 import {
   DRAG_DETECTION_DISTANCE_THRESHOLD,
   MouseButton,
   didPointerLockCauseMovement,
-} from '@encore/studio/uiComponents/useDrag'
-import {isSafari} from '@encore/studio/uiComponents/isSafari'
-import type {CapturedPointer} from '@encore/studio/UIRoot/PointerCapturing'
-import {createPointerCapturing} from '@encore/studio/UIRoot/PointerCapturing'
+} from '@encorejs/studio/uiComponents/useDrag'
+import {isSafari} from '@encorejs/studio/uiComponents/isSafari'
+import type {CapturedPointer} from '@encorejs/studio/UIRoot/PointerCapturing'
+import {createPointerCapturing} from '@encorejs/studio/UIRoot/PointerCapturing'
 import type {
   ChodrialElement,
   ChordialOpts,

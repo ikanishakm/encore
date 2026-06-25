@@ -1,4 +1,4 @@
-import {devStringify} from '@encore/utils/devStringify'
+import {devStringify} from '@encorejs/utils/devStringify'
 
 type AllowedMessageTypes = string | number | object
 

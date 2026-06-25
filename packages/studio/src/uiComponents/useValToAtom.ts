@@ -1,4 +1,4 @@
-import {Atom} from '@encore/dataverse'
+import {Atom} from '@encorejs/dataverse'
 import {useLayoutEffect, useMemo} from 'react'
 
 export default function useValToAtom<S>(val: S): Atom<S> {

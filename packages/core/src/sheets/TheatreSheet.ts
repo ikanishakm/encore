@@ -1,15 +1,15 @@
-import {privateAPI, setPrivateAPI} from '@encore/core/privateAPIs'
-import {compound} from '@encore/core/propTypes'
-import type Sheet from '@encore/core/sheets/Sheet'
-import type {SheetAddress} from '@encore/core/types/public'
-import {InvalidArgumentError} from '@encore/utils/errors'
-import {validateAndSanitiseSlashedPathOrThrow} from '@encore/utils/slashedPaths'
-import type {$FixMe, $IntentionalAny} from '@encore/core/types/public'
-import userReadableTypeOfValue from '@encore/utils/userReadableTypeOfValue'
+import {privateAPI, setPrivateAPI} from '@encorejs/core/privateAPIs'
+import {compound} from '@encorejs/core/propTypes'
+import type Sheet from '@encorejs/core/sheets/Sheet'
+import type {SheetAddress} from '@encorejs/core/types/public'
+import {InvalidArgumentError} from '@encorejs/utils/errors'
+import {validateAndSanitiseSlashedPathOrThrow} from '@encorejs/utils/slashedPaths'
+import type {$FixMe, $IntentionalAny} from '@encorejs/core/types/public'
+import userReadableTypeOfValue from '@encorejs/utils/userReadableTypeOfValue'
 import deepEqual from 'fast-deep-equal'
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
-import type {ObjectAddressKey} from '@encore/core/types/public'
-import {notify} from '@encore/core/utils/notify'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
+import type {ObjectAddressKey} from '@encorejs/core/types/public'
+import {notify} from '@encorejs/core/utils/notify'
 import type {
   IProject,
   ISheet,
@@ -17,7 +17,7 @@ import type {
   ISheetObject,
   ISequence,
   UnknownShorthandCompoundProps,
-} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
 
 const weakMapOfUnsanitizedProps = new WeakMap<
   SheetObject,

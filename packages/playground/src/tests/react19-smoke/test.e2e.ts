@@ -11,7 +11,7 @@ test.describe('react19-smoke', () => {
     // The R3F <Canvas> renders a real <canvas> element once the scene mounts.
     await expect(page.locator('canvas')).toBeVisible()
 
-    // The @encore/r3f extension registers a global toolbar in the studio UI.
+    // The @encorejs/r3f extension registers a global toolbar in the studio UI.
     const toolbar = page.locator(
       '[data-testid="theatre-extensionToolbar-global"]',
     )

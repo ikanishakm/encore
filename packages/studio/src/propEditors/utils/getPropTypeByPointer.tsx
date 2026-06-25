@@ -1,6 +1,6 @@
-import type {PropTypeConfig} from '@encore/core/types/public'
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
-import {getPointerParts} from '@encore/dataverse'
+import type {PropTypeConfig} from '@encorejs/core/types/public'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
+import {getPointerParts} from '@encorejs/dataverse'
 
 /**
  * @deprecated because it uses obj.template.staticConfig

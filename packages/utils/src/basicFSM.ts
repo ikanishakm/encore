@@ -1,6 +1,6 @@
-import type {$IntentionalAny} from '@encore/utils/types'
-import type {Pointer} from '@encore/dataverse'
-import {Atom} from '@encore/dataverse'
+import type {$IntentionalAny} from '@encorejs/utils/types'
+import type {Pointer} from '@encorejs/dataverse'
+import {Atom} from '@encorejs/dataverse'
 
 type TakeFn<EventType> = (e: EventType) => void
 type TransitionFn<EventType, ContextType> = (

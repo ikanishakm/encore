@@ -1,4 +1,4 @@
-import {prism} from '@encore/dataverse'
+import {prism} from '@encorejs/dataverse'
 
 /**
  * A prism that holds the current mouse position.

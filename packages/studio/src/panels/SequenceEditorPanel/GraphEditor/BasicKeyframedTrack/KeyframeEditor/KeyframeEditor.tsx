@@ -1,23 +1,23 @@
-import type {TrackData} from '@encore/core/types/private/core'
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
-import type {SequenceEditorPanelLayout} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
-import type {BasicKeyframe, SequenceTrackId} from '@encore/core/types/public'
-import type {Pointer} from '@encore/dataverse'
+import type {TrackData} from '@encorejs/core/types/private/core'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
+import type {SequenceEditorPanelLayout} from '@encorejs/studio/panels/SequenceEditorPanel/layout/layout'
+import type {BasicKeyframe, SequenceTrackId} from '@encorejs/core/types/public'
+import type {Pointer} from '@encorejs/dataverse'
 import React from 'react'
 import styled from 'styled-components'
-import type {ExtremumSpace} from '@encore/studio/panels/SequenceEditorPanel/GraphEditor/BasicKeyframedTrack/BasicKeyframedTrack'
+import type {ExtremumSpace} from '@encorejs/studio/panels/SequenceEditorPanel/GraphEditor/BasicKeyframedTrack/BasicKeyframedTrack'
 import Curve from './Curve'
 import CurveHandle from './CurveHandle'
 import GraphEditorDotScalar from './GraphEditorDotScalar'
 import GraphEditorDotNonScalar from './GraphEditorDotNonScalar'
 import GraphEditorNonScalarDash from './GraphEditorNonScalarDash'
-import type {PropTypeConfig_AllSimples} from '@encore/core/types/public'
-import type {PathToProp} from '@encore/utils/pathToProp'
+import type {PropTypeConfig_AllSimples} from '@encorejs/core/types/public'
+import type {PathToProp} from '@encorejs/utils/pathToProp'
 import type {
   GraphEditorColors,
   StudioSheetItemKey,
-} from '@encore/core/types/private'
-import {__private} from '@encore/core'
+} from '@encorejs/core/types/private'
+import {__private} from '@encorejs/core'
 
 const {keyframeUtils} = __private
 

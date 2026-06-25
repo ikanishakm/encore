@@ -1,13 +1,13 @@
-// import theatre from '@encore/core'
-import {createRafDriver, getProject} from '@encore/core'
+// import theatre from '@encorejs/core'
+import {createRafDriver, getProject} from '@encorejs/core'
 import type {
   UnknownShorthandCompoundProps,
   ISheet,
   ISheetObject,
-} from '@encore/core'
+} from '@encorejs/core'
 // @ts-ignore
 import benchProject1State from './Bench project 1.theatre-project-state.json'
-import {setCoreRafDriver} from '@encore/core/coreTicker'
+import {setCoreRafDriver} from '@encorejs/core/coreTicker'
 
 const driver = createRafDriver({name: 'BenchmarkRafDriver'})
 

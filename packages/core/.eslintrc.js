@@ -6,7 +6,7 @@ module.exports = {
       'warn',
       {
         aliases: [
-          {name: '@encore/core', path: path.resolve(__dirname, './src')},
+          {name: '@encorejs/core', path: path.resolve(__dirname, './src')},
         ],
       },
     ],

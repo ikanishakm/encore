@@ -1,5 +1,5 @@
-import type {Pointer} from '@encore/dataverse'
-import {getPointerParts, pointer} from '@encore/dataverse'
+import type {Pointer} from '@encorejs/dataverse'
+import {getPointerParts, pointer} from '@encorejs/dataverse'
 import lodashSet from 'lodash-es/set'
 
 /**

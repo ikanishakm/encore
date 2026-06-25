@@ -15,7 +15,7 @@ import GithubProvider from 'next-auth/providers/github'
 import {PrismaAdapter} from '@auth/prisma-adapter'
 import type {Adapter} from 'next-auth/adapters'
 import type {studioAuthTokens} from 'src/types'
-import type {$FixMe, $IntentionalAny} from '@encore/utils/types'
+import type {$FixMe, $IntentionalAny} from '@encorejs/utils/types'
 
 // Extend NextAuth Session type to include all fields from the User model
 declare module 'next-auth' {

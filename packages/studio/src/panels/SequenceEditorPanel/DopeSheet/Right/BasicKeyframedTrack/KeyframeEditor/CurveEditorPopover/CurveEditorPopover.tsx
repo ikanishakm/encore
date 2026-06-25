@@ -1,4 +1,4 @@
-import {Atom, prism} from '@encore/dataverse'
+import {Atom, prism} from '@encorejs/dataverse'
 import type {KeyboardEvent} from 'react'
 import React, {
   useEffect,
@@ -9,8 +9,8 @@ import React, {
 } from 'react'
 import styled from 'styled-components'
 import fuzzy from 'fuzzy'
-import getStudio from '@encore/studio/getStudio'
-import type {CommitOrDiscardOrRecapture} from '@encore/studio/StudioStore/StudioStore'
+import getStudio from '@encorejs/studio/getStudio'
+import type {CommitOrDiscardOrRecapture} from '@encorejs/studio/StudioStore/StudioStore'
 import CurveSegmentEditor from './CurveSegmentEditor'
 import EasingOption from './EasingOption'
 import type {CSSCubicBezierArgsString, CubicBezierHandles} from './shared'
@@ -21,10 +21,10 @@ import {
   areEasingsSimilar,
 } from './shared'
 import {COLOR_BASE, COLOR_POPOVER_BACK} from './colors'
-import useRefAndState from '@encore/studio/utils/useRefAndState'
+import useRefAndState from '@encorejs/studio/utils/useRefAndState'
 import {useUIOptionGrid, Outcome} from './useUIOptionGrid'
-import type {KeyframeConnectionWithAddress} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/selections'
-import type {BasicKeyframe} from '@encore/core/types/public'
+import type {KeyframeConnectionWithAddress} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/selections'
+import type {BasicKeyframe} from '@encorejs/core/types/public'
 
 const PRESET_COLUMNS = 3
 const PRESET_SIZE = 53

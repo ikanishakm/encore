@@ -1,20 +1,20 @@
 # Releasing Encore
 
-This repo is a maintained fork of Theatre.js, renamed to the `@encore/*` npm
+This repo is a maintained fork of Theatre.js, renamed to the `@encorejs/*` npm
 scope and updated for React 19. This document covers what was changed and the
 exact steps to publish to npm.
 
 ## What changed in the fork
 
-- **Scope rename** `@theatre/* → @encore/*` across ~486 files (2,220 import +
+- **Scope rename** `@theatre/* → @encorejs/*` across ~486 files (2,220 import +
   package-name references). The unscoped `theatric` package became
-  `@encore/tweak`.
+  `@encorejs/tweak`.
 - **Attribution** preserved and added: every package keeps its original
   `author` fields; root [`NOTICE`](./NOTICE) and [`AUTHORS`](./AUTHORS) credit
   Aria Minaei, Andrew Prifer, TheaterJS Oy and all upstream contributors, as
   required by Apache-2.0 / AGPL-3.0.
 - **Licenses unchanged** (and legally must stay so): runtime packages are
-  Apache-2.0; `@encore/studio` is AGPL-3.0-only.
+  Apache-2.0; `@encorejs/studio` is AGPL-3.0-only.
 - **No phone-home.** The hosted update checker (`updates.theatrejs.com`) is now
   a no-op, and the studio backend defaults to `localhost` instead of
   `app.theatrejs.com`. See [`packages/studio/src/checkForUpdates.ts`](./packages/studio/src/checkForUpdates.ts)
@@ -31,13 +31,13 @@ exact steps to publish to npm.
 ## Verified
 
 All 8 publishable packages build on Windows + Node 24:
-`@encore/dataverse`, `@encore/core`, `@encore/react`, `@encore/r3f`,
-`@encore/saaz`, `@encore/tweak`, `@encore/studio`, `@encore/browser-bundles`.
+`@encorejs/dataverse`, `@encorejs/core`, `@encorejs/react`, `@encorejs/r3f`,
+`@encorejs/saaz`, `@encorejs/tweak`, `@encorejs/studio`, `@encorejs/browser-bundles`.
 
 ## Prerequisites (one-time, you must do these — they need your accounts)
 
 1. **Claim the npm scope.** Create the `@encore` org/scope on npmjs.com.
-   - If `@encore` is already taken, do a global find/replace of `@encore/` to a
+   - If `@encore` is already taken, do a global find/replace of `@encorejs/` to a
      free scope (e.g. `@encorejs/`) and re-run `yarn install`.
 2. **Create the GitHub repo** (the package metadata points at
    `https://github.com/ikanishakm/encore` — change it if you use a different
@@ -70,9 +70,9 @@ yarn cli release 1.0.0
 After publishing, sanity-check:
 
 ```bash
-npm view @encore/core
+npm view @encorejs/core
 # in a fresh app:
-npm install @encore/core @encore/r3f @encore/studio
+npm install @encorejs/core @encorejs/r3f @encorejs/studio
 ```
 
 ## Known limitations / optional follow-ups
@@ -80,18 +80,18 @@ npm install @encore/core @encore/r3f @encore/studio
 - **Studio ships without generated `.d.ts`.** Type generation for studio is
   disabled *upstream too* (`bundleTypes()` is commented out in
   `packages/studio/devEnv/cli.ts`) — studio is consumed as
-  `import studio from '@encore/studio'`, so this rarely matters. Re-enabling it
+  `import studio from '@encorejs/studio'`, so this rarely matters. Re-enabling it
   is a future improvement.
 - **Cloud code removed from studio.** The hosted auth (OAuth), the
   sync-server websocket/tRPC transport, the login UI, and the update checker
-  have been deleted from `@encore/studio`. The editor runs fully local
+  have been deleted from `@encorejs/studio`. The editor runs fully local
   (transactions, undo/redo, IndexedDB persistence, import/export) and makes no
-  requests to any third-party server. `@encore/sync-server` remains in the
+  requests to any third-party server. `@encorejs/sync-server` remains in the
   workspace (private, **not published**) only because studio imports its local
   state schema (`stateEditors`, `schema`, `graphEditorColors`).
-- **`@encore/app`** (the Next.js cloud backend) is now an unpublished, unused
+- **`@encorejs/app`** (the Next.js cloud backend) is now an unpublished, unused
   dev package — studio no longer depends on it. It can be deleted entirely as a
-  further cleanup (it would require also removing `@encore/sync-server`'s
+  further cleanup (it would require also removing `@encorejs/sync-server`'s
   server code, which still imports it; the state-schema module that studio
   needs does not).
 - **Node version.** Build/publish on Node 20 LTS for the smoothest experience;

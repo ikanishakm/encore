@@ -1,5 +1,5 @@
-import {editable as e, SheetProvider} from '@encore/r3f'
-import {getProject} from '@encore/core'
+import {editable as e, SheetProvider} from '@encorejs/r3f'
+import {getProject} from '@encorejs/core'
 import React from 'react'
 import {Canvas} from '@react-three/fiber'
 

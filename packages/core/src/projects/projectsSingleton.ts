@@ -1,5 +1,5 @@
-import {Atom} from '@encore/dataverse'
-import type {ProjectId} from '@encore/core/types/public'
+import {Atom} from '@encorejs/dataverse'
+import type {ProjectId} from '@encorejs/core/types/public'
 import type Project from './Project'
 
 interface State {

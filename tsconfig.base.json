@@ -16,23 +16,23 @@
     "stripInternal": true,
     "declaration": true,
     "paths": {
-      "@encore/core": ["./packages/core/src/index.ts"],
-      "@encore/core/*": ["./packages/core/src/*"],
-      "@encore/studio": ["./packages/studio/src/index.ts"],
-      "@encore/studio/*": ["./packages/studio/src/*"],
-      "@encore/utils": ["./packages/utils/src/index.ts"],
-      "@encore/utils/*": ["./packages/utils/src/*"],
-      "@encore/saaz": ["./packages/saaz/src/index.ts"],
-      "@encore/app/*": ["./packages/app/src/*"],
-      "@encore/sync-server/*": ["./packages/sync-server/src/*"],
-      "@encore/dataverse": ["./packages/dataverse/src/index.ts"],
-      "@encore/react": ["./packages/react/src/index.ts"],
-      "@encore/r3f": ["./packages/r3f/src/index.ts"],
-      "@encore/r3f/dist/extension": ["./packages/r3f/src/extension/index.ts"],
-      "@encore/dataverse-experiments": [
+      "@encorejs/core": ["./packages/core/src/index.ts"],
+      "@encorejs/core/*": ["./packages/core/src/*"],
+      "@encorejs/studio": ["./packages/studio/src/index.ts"],
+      "@encorejs/studio/*": ["./packages/studio/src/*"],
+      "@encorejs/utils": ["./packages/utils/src/index.ts"],
+      "@encorejs/utils/*": ["./packages/utils/src/*"],
+      "@encorejs/saaz": ["./packages/saaz/src/index.ts"],
+      "@encorejs/app/*": ["./packages/app/src/*"],
+      "@encorejs/sync-server/*": ["./packages/sync-server/src/*"],
+      "@encorejs/dataverse": ["./packages/dataverse/src/index.ts"],
+      "@encorejs/react": ["./packages/react/src/index.ts"],
+      "@encorejs/r3f": ["./packages/r3f/src/index.ts"],
+      "@encorejs/r3f/dist/extension": ["./packages/r3f/src/extension/index.ts"],
+      "@encorejs/dataverse-experiments": [
         "./packages/dataverse-experiments/src/index.ts"
       ],
-      "@encore/tweak": ["./packages/theatric/src/index.ts"]
+      "@encorejs/tweak": ["./packages/theatric/src/index.ts"]
     },
     "forceConsistentCasingInFileNames": true
   },

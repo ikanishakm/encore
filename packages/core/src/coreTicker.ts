@@ -1,4 +1,4 @@
-import type {Ticker} from '@encore/dataverse'
+import type {Ticker} from '@encorejs/dataverse'
 import {privateAPI} from './privateAPIs'
 import type {RafDriverPrivateAPI} from './rafDrivers'
 import {createRafDriver} from './rafDrivers'

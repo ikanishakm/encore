@@ -1,11 +1,11 @@
-import type {TrackData} from '@encore/core/types/private/core'
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
-import {createStudioSheetItemKey} from '@encore/studio/utils/createStudioSheetItemKey'
+import type {TrackData} from '@encorejs/core/types/private/core'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
+import {createStudioSheetItemKey} from '@encorejs/studio/utils/createStudioSheetItemKey'
 import type {
   KeyframeWithTrack,
   TrackWithId,
-} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/collectAggregateKeyframes'
-import {__private} from '@encore/core'
+} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/Right/collectAggregateKeyframes'
+import {__private} from '@encorejs/core'
 
 const {keyframeUtils} = __private
 

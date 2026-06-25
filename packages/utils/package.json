@@ -1,5 +1,5 @@
 {
-  "name": "@encore/utils",
+  "name": "@encorejs/utils",
   "version": "0.7.0",
   "license": "Apache-2.0",
   "private": true,
@@ -31,7 +31,7 @@
     "precommit": "yarn run docs"
   },
   "devDependencies": {
-    "@encore/dataverse": "workspace:*",
+    "@encorejs/dataverse": "workspace:*",
     "@microsoft/api-extractor": "^7.36.4",
     "@types/jest": "^26.0.23",
     "@types/lodash-es": "^4.17.4",

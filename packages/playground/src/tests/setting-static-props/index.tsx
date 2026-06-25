@@ -1,5 +1,5 @@
-import theatre from '@encore/core'
-import {getProject} from '@encore/core'
+import theatre from '@encorejs/core'
+import {getProject} from '@encorejs/core'
 
 void theatre.init({studio: true, usePersistentStorage: false})
 

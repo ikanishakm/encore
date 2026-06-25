@@ -1,10 +1,10 @@
-import UIRoot from '@encore/studio/UIRoot/UIRoot'
-import type {$IntentionalAny} from '@encore/core/types/public'
+import UIRoot from '@encorejs/studio/UIRoot/UIRoot'
+import type {$IntentionalAny} from '@encorejs/core/types/public'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {getMounter} from '@encore/studio/utils/renderInPortalInContext'
-import {withStyledShadow} from '@encore/studio/css'
-import ExtensionToolbar from '@encore/studio/toolbars/ExtensionToolbar/ExtensionToolbar'
+import {getMounter} from '@encorejs/studio/utils/renderInPortalInContext'
+import {withStyledShadow} from '@encorejs/studio/css'
+import ExtensionToolbar from '@encorejs/studio/toolbars/ExtensionToolbar/ExtensionToolbar'
 
 export default class UINonSSRBits {
   readonly containerEl = document.createElement('div')

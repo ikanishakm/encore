@@ -1,9 +1,9 @@
-import {Atom} from '@encore/dataverse'
-import {useVal} from '@encore/react'
+import {Atom} from '@encorejs/dataverse'
+import {useVal} from '@encorejs/react'
 /* eslint-disable import/no-extraneous-dependencies */
-import type {IExtension} from '@encore/core/types/public'
-import getStudio from '@encore/studio/getStudio'
-import type {ToolsetConfig} from '@encore/core/types/public'
+import type {IExtension} from '@encorejs/core/types/public'
+import getStudio from '@encorejs/studio/getStudio'
+import type {ToolsetConfig} from '@encorejs/core/types/public'
 import React, {useLayoutEffect, useMemo} from 'react'
 
 import styled from 'styled-components'

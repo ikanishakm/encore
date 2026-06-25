@@ -17,12 +17,12 @@
     "test:ci": "playwright test --reporter=dot --config=devEnv/playwright.config.ts --project=chromium"
   },
   "devDependencies": {
-    "@encore/core": "workspace:*",
-    "@encore/dataverse": "workspace:*",
-    "@encore/r3f": "workspace:*",
-    "@encore/react": "workspace:*",
-    "@encore/studio": "workspace:*",
-    "@encore/tweak": "workspace:*",
+    "@encorejs/core": "workspace:*",
+    "@encorejs/dataverse": "workspace:*",
+    "@encorejs/r3f": "workspace:*",
+    "@encorejs/react": "workspace:*",
+    "@encorejs/studio": "workspace:*",
+    "@encorejs/tweak": "workspace:*",
     "@playwright/test": "^1.36.2",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.1",

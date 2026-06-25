@@ -1,9 +1,9 @@
 import React from 'react'
-import {AggregateKeyframePositionIsSelected} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/AggregatedKeyframeTrack/AggregatedKeyframeTrack'
-import {PresenceFlag} from '@encore/studio/uiComponents/usePresence'
+import {AggregateKeyframePositionIsSelected} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/Right/AggregatedKeyframeTrack/AggregatedKeyframeTrack'
+import {PresenceFlag} from '@encorejs/studio/uiComponents/usePresence'
 import styled from 'styled-components'
-import {absoluteDims} from '@encore/studio/utils/absoluteDims'
-import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
+import {absoluteDims} from '@encorejs/studio/utils/absoluteDims'
+import {pointerEventsAutoInNormalMode} from '@encorejs/studio/css'
 
 const DOT_SIZE_PX = 16
 const DOT_HOVER_SIZE_PX = DOT_SIZE_PX + 2

@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import studio from '@encore/studio'
-import {getProject} from '@encore/core'
+import studio from '@encorejs/studio'
+import {getProject} from '@encorejs/core'
 import {Scene} from './App/Scene'
 
 studio.initialize()

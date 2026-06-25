@@ -12,8 +12,8 @@ This setup helps us test whether Encore is compatible with popular tools in the 
 
 ## How to run the tests
 
-1. First, we run `yarn run install-fixtures`, which tries to install Encore on a fixture as if `@encore/core|studio|r3f` were installed through npm. This script runs a [local npm registry](https://github.com/verdaccio/verdaccio) and publishes a production build of all the Encore packages to it. Then, it iterates through `./fixtures/*/package` and runs `$ npm install` on them, using that local npm registry. 
-  **If this step fails**, that usually means one of `@encore/*` packages has a `dependency/peerDependency` that cannot be satisfied by `npm/yarn`. So this is always the first thing to fix.
+1. First, we run `yarn run install-fixtures`, which tries to install Encore on a fixture as if `@encorejs/core|studio|r3f` were installed through npm. This script runs a [local npm registry](https://github.com/verdaccio/verdaccio) and publishes a production build of all the Encore packages to it. Then, it iterates through `./fixtures/*/package` and runs `$ npm install` on them, using that local npm registry. 
+  **If this step fails**, that usually means one of `@encorejs/*` packages has a `dependency/peerDependency` that cannot be satisfied by `npm/yarn`. So this is always the first thing to fix.
 1. Then, we run `$ yarn test:compat:run`, which will run jest on all of `*.compat-test.ts` files, each of which tests an aspect of a test setup.
 2. Most of our fixtures don't actually have `.compat-test.ts` files, so we'll have to run them manually and see if Theatre still works in them, jut like a manual QA pass.
 

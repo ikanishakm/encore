@@ -3,8 +3,8 @@ import type {
   ProjectId,
   SerializableMap,
   SheetId,
-} from '@encore/core/types/public'
-import type {StrictRecord} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
+import type {StrictRecord} from '@encorejs/core/types/public'
 
 /**
  * Technically, all parts of the ephemeral state can be implemented

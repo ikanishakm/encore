@@ -1,7 +1,7 @@
-import type {Prism, Pointer} from '@encore/dataverse'
-import {Atom, prism, val} from '@encore/dataverse'
-import mousePositionD from '@encore/studio/utils/mousePositionD'
-import type {$IntentionalAny} from '@encore/core/types/public'
+import type {Prism, Pointer} from '@encorejs/dataverse'
+import {Atom, prism, val} from '@encorejs/dataverse'
+import mousePositionD from '@encorejs/studio/utils/mousePositionD'
+import type {$IntentionalAny} from '@encorejs/core/types/public'
 import {inRange, last} from 'lodash-es'
 import React, {
   createContext,

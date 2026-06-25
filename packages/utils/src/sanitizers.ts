@@ -1,5 +1,5 @@
-import userReadableTypeOfValue from '@encore/utils/userReadableTypeOfValue'
-import {InvalidArgumentError} from '@encore/utils/errors'
+import userReadableTypeOfValue from '@encorejs/utils/userReadableTypeOfValue'
+import {InvalidArgumentError} from '@encorejs/utils/errors'
 
 const _validateSym = (
   val: string,

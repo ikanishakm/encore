@@ -1,9 +1,9 @@
 import React, {useRef, useMemo, useEffect} from 'react'
 
-import {useEventCallback} from '@encore/studio/uiComponents/colorPicker/hooks/useEventCallback'
-import {clamp} from '@encore/studio/uiComponents/colorPicker/utils/clamp'
+import {useEventCallback} from '@encorejs/studio/uiComponents/colorPicker/hooks/useEventCallback'
+import {clamp} from '@encorejs/studio/uiComponents/colorPicker/utils/clamp'
 import styled from 'styled-components'
-import {useEditing} from '@encore/studio/uiComponents/colorPicker/components/EditingProvider'
+import {useEditing} from '@encorejs/studio/uiComponents/colorPicker/components/EditingProvider'
 
 export interface Interaction {
   left: number

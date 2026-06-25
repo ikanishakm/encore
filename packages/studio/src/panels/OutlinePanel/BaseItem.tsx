@@ -1,9 +1,9 @@
-import type {$FixMe, VoidFn} from '@encore/core/types/public'
+import type {$FixMe, VoidFn} from '@encorejs/core/types/public'
 import React from 'react'
 import styled, {css} from 'styled-components'
-import noop from '@encore/utils/noop'
-import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
-import {ChevronDown, Package} from '@encore/studio/uiComponents/icons'
+import noop from '@encorejs/utils/noop'
+import {pointerEventsAutoInNormalMode} from '@encorejs/studio/css'
+import {ChevronDown, Package} from '@encorejs/studio/uiComponents/icons'
 
 export const Container = styled.li`
   margin: 0;

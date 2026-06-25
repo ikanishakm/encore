@@ -4,8 +4,8 @@
     "start": "parcel serve ./index.html"
   },
   "dependencies": {
-    "@encore/core": "workspace:*",
-    "@encore/studio": "workspace:*",
+    "@encorejs/core": "workspace:*",
+    "@encorejs/studio": "workspace:*",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "parcel-bundler": "^1.12.5",

@@ -1,5 +1,5 @@
-import {editable as e, SheetProvider, PerspectiveCamera} from '@encore/r3f'
-import {getProject} from '@encore/core'
+import {editable as e, SheetProvider, PerspectiveCamera} from '@encorejs/r3f'
+import {getProject} from '@encorejs/core'
 import React, {useMemo} from 'react'
 import {Canvas} from '@react-three/fiber'
 import {Grid, Line} from '@react-three/drei'

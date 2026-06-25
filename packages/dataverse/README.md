@@ -1,4 +1,4 @@
-# @encore/dataverse
+# @encorejs/dataverse
 
 Dataverse is the reactive dataflow library
 [Encore](https://www.theatrejs.com) is built on. It is inspired by ideas in
@@ -8,16 +8,16 @@ and it is optimised for interactivity and animation.
 ## Installation
 
 ```sh
-$ npm install @encore/dataverse
+$ npm install @encorejs/dataverse
 # and the react bindings
-$ npm install @encore/react
+$ npm install @encorejs/react
 ```
 
 ## Usage with React
 
 ```tsx
-import {Atom} from '@encore/dataverse'
-import {useVal} from '@encore/react'
+import {Atom} from '@encorejs/dataverse'
+import {useVal} from '@encorejs/react'
 import {useEffect} from 'react'
 
 // Atoms hold state
@@ -45,7 +45,7 @@ Alternatively, we could have defined our atom inside the component, making its
 state local to that component instance:
 
 ```tsx
-import {useAtom} form '@encore/react'
+import {useAtom} form '@encorejs/react'
 
 function Component() {
   const atom = useAtom({count: 0, ready: false})
@@ -72,7 +72,7 @@ Atoms are state holders. They can be used to manage either component state or
 the global state of your application.
 
 ```ts
-import {Atom} from '@encore/dataverse'
+import {Atom} from '@encorejs/dataverse'
 
 const atom = new Atom({intensity: 1, position: {x: 0, y: 0}})
 ```
@@ -105,7 +105,7 @@ atom.getByPointer(atom.pointer.intensity) // 4
 #### Reading the state of an atom _reactively, in React_
 
 ```ts
-import {useVal} from '@encore/react'
+import {useVal} from '@encorejs/react'
 
 function Component() {
   const intensity = useVal(atom.pointer.intensity) // 4
@@ -121,7 +121,7 @@ we talk about [prisms](#prisms).
 Pointers are a type-safe way to refer to specific properties of atoms.
 
 ```ts
-import {Atom} from '@encore/dataverse'
+import {Atom} from '@encorejs/dataverse'
 
 const atom = new Atom({intensity: 1, position: {x: 0, y: 0}})
 
@@ -145,8 +145,8 @@ Pointers are a great way to pass data down the component tree while keeping
 re-renders only to the components that actually need to re-render.
 
 ```tsx
-import {useVal, useAtom} from '@encore/react'
-import type {Pointer} from '@encore/dataverse'
+import {useVal, useAtom} from '@encorejs/react'
+import type {Pointer} from '@encorejs/dataverse'
 
 function ParentComponent() {
   const atom = useAtom({
@@ -185,7 +185,7 @@ function Light({intensityP}) {
 Prisms are functions that derive a value from an atom or from another prism.
 
 ```ts
-import {Atom, prism, val} from '@encore/dataverse'
+import {Atom, prism, val} from '@encorejs/dataverse'
 
 const atom = new Atom({a: 1, b: 2, foo: 10})
 
@@ -241,7 +241,7 @@ Tickers are a way to schedule and synchronise computations. They're useful when
 reacting to changes in atoms or prisms _outside of React's renderloop_.
 
 ```ts
-import {Ticker, onChange} from '@encore/dataverse'
+import {Ticker, onChange} from '@encorejs/dataverse'
 
 const ticker = new Ticker()
 
@@ -356,7 +356,7 @@ key to be passed into it, whlie `useMemo()` doesn't. This means that we can call
 key.
 
 ```ts
-import {Atom, prism, val} from '@encore/dataverse'
+import {Atom, prism, val} from '@encorejs/dataverse'
 
 const atom = new Atom(0)
 
@@ -421,8 +421,8 @@ and how [`useState()`](https://reactjs.org/docs/hooks-state.html) work. But
 here's a quick example:
 
 ```tsx
-import {prism} from '@encore/dataverse'
-import {useVal} from '@encore/react'
+import {prism} from '@encorejs/dataverse'
+import {useVal} from '@encorejs/react'
 
 // This prism holds the current mouse position and updates when the mouse moves
 const mousePositionPr = prism(() => {
@@ -536,7 +536,7 @@ component. This way, we can optimize our React components in a fine-grained way
 by moving their computations outside of React's render loop.
 
 ```tsx
-import {usePrism} from '@encore/react'
+import {usePrism} from '@encorejs/react'
 
 function Component() {
   const value = usePrism(() => {
@@ -705,5 +705,5 @@ val(double)
   in VSCode and look up references to `Atom`, `prism()` and other dataverse
   methods. Since dataverse is used internally in Encore, there are a lot of
   examples of how to use it.
-- Also see [`@encore/react`](../react/README.md) to learn more about the React
+- Also see [`@encorejs/react`](../react/README.md) to learn more about the React
   bindings.

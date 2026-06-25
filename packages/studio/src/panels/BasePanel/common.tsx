@@ -1,4 +1,4 @@
-import {theme} from '@encore/studio/css'
+import {theme} from '@encorejs/studio/css'
 import styled from 'styled-components'
 
 export const panelZIndexes = {

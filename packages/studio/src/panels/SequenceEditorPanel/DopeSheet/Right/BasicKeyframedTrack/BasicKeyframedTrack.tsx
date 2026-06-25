@@ -1,26 +1,26 @@
-import type {TrackData} from '@encore/core/types/private/core'
-import type {SequenceEditorPanelLayout} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
-import type {SequenceEditorTree_PrimitiveProp} from '@encore/studio/panels/SequenceEditorPanel/layout/tree'
-import {usePrism, useVal} from '@encore/react'
-import type {Pointer} from '@encore/dataverse'
-import {val} from '@encore/dataverse'
+import type {TrackData} from '@encorejs/core/types/private/core'
+import type {SequenceEditorPanelLayout} from '@encorejs/studio/panels/SequenceEditorPanel/layout/layout'
+import type {SequenceEditorTree_PrimitiveProp} from '@encorejs/studio/panels/SequenceEditorPanel/layout/tree'
+import {usePrism, useVal} from '@encorejs/react'
+import type {Pointer} from '@encorejs/dataverse'
+import {val} from '@encorejs/dataverse'
 import React, {useMemo} from 'react'
 import styled from 'styled-components'
 import SingleKeyframeEditor from './KeyframeEditor/SingleKeyframeEditor'
-import useContextMenu from '@encore/studio/uiComponents/simpleContextMenu/useContextMenu'
-import useRefAndState from '@encore/studio/utils/useRefAndState'
-import getStudio from '@encore/studio/getStudio'
-import {arePathsEqual} from '@encore/utils/pathToProp'
-import type {KeyframeWithPathToPropFromCommonRoot} from '@encore/core/types/private'
+import useContextMenu from '@encorejs/studio/uiComponents/simpleContextMenu/useContextMenu'
+import useRefAndState from '@encorejs/studio/utils/useRefAndState'
+import getStudio from '@encorejs/studio/getStudio'
+import {arePathsEqual} from '@encorejs/utils/pathToProp'
+import type {KeyframeWithPathToPropFromCommonRoot} from '@encorejs/core/types/private'
 import KeyframeSnapTarget, {
   snapPositionsStateD,
-} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/KeyframeSnapTarget'
-import {createStudioSheetItemKey} from '@encore/studio/utils/createStudioSheetItemKey'
-import type {BasicKeyframe} from '@encore/core'
-import {__private} from '@encore/core'
+} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/Right/KeyframeSnapTarget'
+import {createStudioSheetItemKey} from '@encorejs/studio/utils/createStudioSheetItemKey'
+import type {BasicKeyframe} from '@encorejs/core'
+import {__private} from '@encorejs/core'
 
 const {keyframeUtils} = __private
-import type {ContextMenuItem} from '@encore/studio/uiComponents/chordial/chordialInternals'
+import type {ContextMenuItem} from '@encorejs/studio/uiComponents/chordial/chordialInternals'
 
 const Container = styled.div`
   position: relative;

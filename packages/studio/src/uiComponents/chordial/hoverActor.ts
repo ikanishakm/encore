@@ -1,4 +1,4 @@
-import {basicFSM} from '@encore/utils/basicFSM'
+import {basicFSM} from '@encorejs/utils/basicFSM'
 import type {ChodrialElement} from './chordialInternals'
 import {findChodrialByDomNode} from './chordialInternals'
 

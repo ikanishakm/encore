@@ -1,17 +1,17 @@
-import {defer} from '@encore/utils/defer'
-import {InvalidArgumentError} from '@encore/utils/errors'
-import noop from '@encore/utils/noop'
-import type {Prism, Pointer, Ticker} from '@encore/dataverse'
-import {Atom} from '@encore/dataverse'
+import {defer} from '@encorejs/utils/defer'
+import {InvalidArgumentError} from '@encorejs/utils/errors'
+import noop from '@encorejs/utils/noop'
+import type {Prism, Pointer, Ticker} from '@encorejs/dataverse'
+import {Atom} from '@encorejs/dataverse'
 import type {
   IPlaybackController,
   IPlaybackState,
 } from './DefaultPlaybackController'
-import {notify} from '@encore/core/utils/notify'
+import {notify} from '@encorejs/core/utils/notify'
 import type {
   IPlaybackDirection,
   IPlaybackRange,
-} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
 
 export default class AudioPlaybackController implements IPlaybackController {
   _mainGain: GainNode

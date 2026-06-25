@@ -1,14 +1,14 @@
-import type Project from '@encore/core/projects/Project'
-import getStudio from '@encore/studio/getStudio'
-import BasicPopover from '@encore/studio/uiComponents/Popover/BasicPopover'
-import usePopover from '@encore/studio/uiComponents/Popover/usePopover'
+import type Project from '@encorejs/core/projects/Project'
+import getStudio from '@encorejs/studio/getStudio'
+import BasicPopover from '@encorejs/studio/uiComponents/Popover/BasicPopover'
+import usePopover from '@encorejs/studio/uiComponents/Popover/usePopover'
 import React, {useCallback, useState} from 'react'
 import styled from 'styled-components'
-import DetailPanelButton from '@encore/studio/uiComponents/DetailPanelButton'
+import DetailPanelButton from '@encorejs/studio/uiComponents/DetailPanelButton'
 import StateConflictRow from './ProjectDetails/StateConflictRow'
 import JSZip from 'jszip'
-import {notify} from '@encore/studio/notify'
-import {getAllPossibleAssetIDs} from '@encore/studio/utils/assets'
+import {notify} from '@encorejs/studio/notify'
+import {getAllPossibleAssetIDs} from '@encorejs/studio/utils/assets'
 
 const Container = styled.div``
 

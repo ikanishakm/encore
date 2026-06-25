@@ -1,14 +1,14 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import type {IProject, ISheet, ISheetObject} from '@encore/core/types/public'
-import type Project from '@encore/core/projects/Project'
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
-import type SheetObjectTemplate from '@encore/core/sheetObjects/SheetObjectTemplate'
-import type Sheet from '@encore/core/sheets/Sheet'
-import type SheetTemplate from '@encore/core/sheets/SheetTemplate'
-import type {$IntentionalAny} from '@encore/core/types/public'
+import type {IProject, ISheet, ISheetObject} from '@encorejs/core/types/public'
+import type Project from '@encorejs/core/projects/Project'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
+import type SheetObjectTemplate from '@encorejs/core/sheetObjects/SheetObjectTemplate'
+import type Sheet from '@encorejs/core/sheets/Sheet'
+import type SheetTemplate from '@encorejs/core/sheets/SheetTemplate'
+import type {$IntentionalAny} from '@encorejs/core/types/public'
 
 /**
- * Since \@encore/core and \@encore/studio are separate bundles,
+ * Since \@encorejs/core and \@encorejs/studio are separate bundles,
  * they cannot use `x instanceof Y` to detect object types.
  *
  * The functions in this module are supposed to be a replacement for that.

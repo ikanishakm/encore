@@ -1,15 +1,15 @@
-import {privateAPI, setPrivateAPI} from '@encore/core/privateAPIs'
-import Project from '@encore/core/projects/Project'
-import type {Asset, ProjectAddress} from '@encore/core/types/public'
+import {privateAPI, setPrivateAPI} from '@encorejs/core/privateAPIs'
+import Project from '@encorejs/core/projects/Project'
+import type {Asset, ProjectAddress} from '@encorejs/core/types/public'
 import type {
   ProjectId,
   SheetId,
   SheetInstanceId,
-} from '@encore/core/types/public'
-import {validateInstanceId} from '@encore/utils/sanitizers'
-import {validateAndSanitiseSlashedPathOrThrow} from '@encore/utils/slashedPaths'
-import type {IProject, IProjectConfig, ISheet} from '@encore/core/types/public'
-import {notify} from '@encore/core/coreExports'
+} from '@encorejs/core/types/public'
+import {validateInstanceId} from '@encorejs/utils/sanitizers'
+import {validateAndSanitiseSlashedPathOrThrow} from '@encorejs/utils/slashedPaths'
+import type {IProject, IProjectConfig, ISheet} from '@encorejs/core/types/public'
+import {notify} from '@encorejs/core/coreExports'
 
 // export type IProjectConfigExperiments = {
 //   /**

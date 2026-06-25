@@ -1,4 +1,4 @@
-import type {ProjectState_Historic} from '@encore/core/types/private/core'
+import type {ProjectState_Historic} from '@encorejs/core/types/private/core'
 import type {
   ProjectAddress,
   SheetAddress,
@@ -6,20 +6,20 @@ import type {
   WithoutSheetInstance,
   PaneInstanceId,
   SequenceMarkerId,
-} from '@encore/core/types/public'
-import type {PathToProp_Encoded} from '@encore/utils/pathToProp'
-import type {StrictRecord} from '@encore/core/types/public'
-import type {PointableSet} from '@encore/utils/PointableSet'
+} from '@encorejs/core/types/public'
+import type {PathToProp_Encoded} from '@encorejs/utils/pathToProp'
+import type {StrictRecord} from '@encorejs/core/types/public'
+import type {PointableSet} from '@encorejs/utils/PointableSet'
 import type {
   ObjectAddressKey,
   ProjectId,
   SheetId,
   SheetInstanceId,
-} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
 import type {
   UIPanelId,
   GraphEditorColors,
-} from '@encore/core/types/private/studio'
+} from '@encorejs/core/types/private/studio'
 
 export type PanelPosition = {
   edges: {

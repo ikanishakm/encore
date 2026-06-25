@@ -1,5 +1,5 @@
-import {prism} from '@encore/dataverse'
-import type {$IntentionalAny} from '@encore/utils/types'
+import {prism} from '@encorejs/dataverse'
+import type {$IntentionalAny} from '@encorejs/utils/types'
 
 /**
  * A prism hook that runs fn() into a prism() call and returns the result

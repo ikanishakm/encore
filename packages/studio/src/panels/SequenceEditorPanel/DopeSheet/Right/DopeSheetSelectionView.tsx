@@ -1,31 +1,31 @@
-import getStudio from '@encore/studio/getStudio'
-import type {CommitOrDiscardOrRecapture} from '@encore/studio/StudioStore/StudioStore'
-import useDrag from '@encore/studio/uiComponents/useDrag'
-import useKeyDown from '@encore/studio/uiComponents/useKeyDown'
-import useValToAtom from '@encore/studio/uiComponents/useValToAtom'
-import mutableSetDeep from '@encore/utils/mutableSetDeep'
-import useRefAndState from '@encore/studio/utils/useRefAndState'
-import {usePrism} from '@encore/react'
-import type {$IntentionalAny} from '@encore/core/types/public'
-import type {Pointer} from '@encore/dataverse'
-import {val} from '@encore/dataverse'
+import getStudio from '@encorejs/studio/getStudio'
+import type {CommitOrDiscardOrRecapture} from '@encorejs/studio/StudioStore/StudioStore'
+import useDrag from '@encorejs/studio/uiComponents/useDrag'
+import useKeyDown from '@encorejs/studio/uiComponents/useKeyDown'
+import useValToAtom from '@encorejs/studio/uiComponents/useValToAtom'
+import mutableSetDeep from '@encorejs/utils/mutableSetDeep'
+import useRefAndState from '@encorejs/studio/utils/useRefAndState'
+import {usePrism} from '@encorejs/react'
+import type {$IntentionalAny} from '@encorejs/core/types/public'
+import type {Pointer} from '@encorejs/dataverse'
+import {val} from '@encorejs/dataverse'
 import React, {useMemo, useRef} from 'react'
 import styled from 'styled-components'
 import type {
   DopeSheetSelection,
   SequenceEditorPanelLayout,
-} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
+} from '@encorejs/studio/panels/SequenceEditorPanel/layout/layout'
 import type {
   SequenceEditorTree_AllRowTypes,
   SequenceEditorTree_PropWithChildren,
   SequenceEditorTree_Sheet,
   SequenceEditorTree_SheetObject,
-} from '@encore/studio/panels/SequenceEditorPanel/layout/tree'
-import DopeSnap from '@encore/studio/panels/SequenceEditorPanel/RightOverlay/DopeSnap'
+} from '@encorejs/studio/panels/SequenceEditorPanel/layout/tree'
+import DopeSnap from '@encorejs/studio/panels/SequenceEditorPanel/RightOverlay/DopeSnap'
 import {collectAggregateKeyframesInPrism} from './collectAggregateKeyframes'
-import type {ILogger, IUtilLogger} from '@encore/utils/logger'
-import {useLogger} from '@encore/studio/uiComponents/useLogger'
-import {__private} from '@encore/core'
+import type {ILogger, IUtilLogger} from '@encorejs/utils/logger'
+import {useLogger} from '@encorejs/studio/uiComponents/useLogger'
+import {__private} from '@encorejs/core'
 
 const {keyframeUtils} = __private
 

@@ -1,9 +1,9 @@
-import {Atom} from '@encore/dataverse'
-import type {$IntentionalAny} from '@encore/core/types/public'
+import {Atom} from '@encorejs/dataverse'
+import type {$IntentionalAny} from '@encorejs/core/types/public'
 import {useEffect, type ElementType, type MutableRefObject} from 'react'
-import type {DragOpts} from '@encore/studio/uiComponents/useDrag'
+import type {DragOpts} from '@encorejs/studio/uiComponents/useDrag'
 import type React from 'react'
-import type {AbsolutePlacementBoxConstraints} from '@encore/studio/uiComponents/Popover/PopoverPositioner'
+import type {AbsolutePlacementBoxConstraints} from '@encorejs/studio/uiComponents/Popover/PopoverPositioner'
 
 export type InvokeTypePopover = {
   type: 'popover'

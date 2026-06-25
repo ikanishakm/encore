@@ -21,5 +21,5 @@ export const globalVariableNames = {
   notifications: '__Encore_Notifications',
 } as const
 
-// This type is easier to import by the studio, since studio can only import types from `@encore/core/*`
+// This type is easier to import by the studio, since studio can only import types from `@encorejs/core/*`
 export type GlobalVariableNames = typeof globalVariableNames

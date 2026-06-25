@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
-import type {ToolConfigSwitch} from '@encore/core/types/public'
-import ToolbarSwitchSelect from '@encore/studio/uiComponents/toolbar/ToolbarSwitchSelect'
+import {pointerEventsAutoInNormalMode} from '@encorejs/studio/css'
+import type {ToolConfigSwitch} from '@encorejs/core/types/public'
+import ToolbarSwitchSelect from '@encorejs/studio/uiComponents/toolbar/ToolbarSwitchSelect'
 
 const IconContainer = styled.div`
   ${pointerEventsAutoInNormalMode};

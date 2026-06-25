@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import theatre from '@encore/core'
-import extension from '@encore/r3f/dist/extension'
-import {createRafDriver} from '@encore/core'
+import theatre from '@encorejs/core'
+import extension from '@encorejs/r3f/dist/extension'
+import {createRafDriver} from '@encorejs/core'
 
 const rafDriver = createRafDriver({name: 'a custom 5fps raf driver'})
 setInterval(() => {

@@ -16,9 +16,9 @@
     "typecheck": "yarn run build:ts",
     "build:ts": "tsc --build ./devEnv/typecheck-all-projects/tsconfig.all.json",
     "test": "jest",
-    "test:compat:install": "yarn workspace @encore/compat-tests run install-fixtures",
+    "test:compat:install": "yarn workspace @encorejs/compat-tests run install-fixtures",
     "test:compat:run": "jest --config jest.compat-tests.config.js",
-    "postinstall": "husky install && yarn workspace @encore/app run prisma generate && yarn workspace @encore/sync-server run prisma generate",
+    "postinstall": "husky install && yarn workspace @encorejs/app run prisma generate && yarn workspace @encorejs/sync-server run prisma generate",
     "lint:all": "eslint . --ext ts,tsx --ignore-path=.gitignore --rulesdir ./devEnv/eslint/rules"
   },
   "lint-staged": {

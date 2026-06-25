@@ -1,9 +1,9 @@
-import {prism, val} from '@encore/dataverse'
-import SimpleCache from '@encore/utils/SimpleCache'
-import type {$IntentionalAny, StrictRecord} from '@encore/core/types/public'
+import {prism, val} from '@encorejs/dataverse'
+import SimpleCache from '@encorejs/utils/SimpleCache'
+import type {$IntentionalAny, StrictRecord} from '@encorejs/core/types/public'
 import type {Studio} from './Studio'
-import type {PaneInstanceId, PaneInstance} from '@encore/core/types/public'
-import {emptyObject} from '@encore/utils'
+import type {PaneInstanceId, PaneInstance} from '@encorejs/core/types/public'
+import {emptyObject} from '@encorejs/utils'
 
 export default class PaneManager {
   private readonly _cache = new SimpleCache()
@@ -69,7 +69,7 @@ export default class PaneManager {
     const core = this._studio.core
     if (!core) {
       throw new Error(
-        `Can't create a pane because @encore/core is not yet loaded`,
+        `Can't create a pane because @encorejs/core is not yet loaded`,
       )
     }
 
@@ -104,7 +104,7 @@ export default class PaneManager {
     const core = this._studio.core
     if (!core) {
       throw new Error(
-        `Can't do this yet because @encore/core is not yet loaded`,
+        `Can't do this yet because @encorejs/core is not yet loaded`,
       )
     }
 

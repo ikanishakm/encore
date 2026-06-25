@@ -1,10 +1,10 @@
-import type {IExtension} from '@encore/core'
-import theatre from '@encore/core'
-import '@encore/core'
+import type {IExtension} from '@encorejs/core'
+import theatre from '@encorejs/core'
+import '@encorejs/core'
 import {extensionButton} from '../../shared/utils/useExtensionButton'
 
 const ext1: IExtension = {
-  id: '@encore/hello-world-extension',
+  id: '@encorejs/hello-world-extension',
   toolbars: {
     global(set, studio) {
       console.log('mount 1')

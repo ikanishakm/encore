@@ -1,12 +1,12 @@
 import type {
   BasicKeyframedTrack,
   TrackData,
-} from '@encore/core/types/private/core'
-import type {Prism, Pointer} from '@encore/dataverse'
-import {prism, val} from '@encore/dataverse'
+} from '@encorejs/core/types/private/core'
+import type {Prism, Pointer} from '@encorejs/dataverse'
+import {prism, val} from '@encorejs/dataverse'
 import UnitBezier from 'timing-function/lib/UnitBezier'
-import type {BasicKeyframe, SerializableValue} from '@encore/core'
-import {getSortedKeyframesCached} from '@encore/core/utils/keyframeUtils'
+import type {BasicKeyframe, SerializableValue} from '@encorejs/core'
+import {getSortedKeyframesCached} from '@encorejs/core/utils/keyframeUtils'
 
 /** `left` and `right` are not necessarily the same type.  */
 export type InterpolationTriple = {

@@ -1,12 +1,12 @@
-import type Sheet from '@encore/core/sheets/Sheet'
-import {usePrism} from '@encore/react'
-import {val} from '@encore/dataverse'
+import type Sheet from '@encorejs/core/sheets/Sheet'
+import {usePrism} from '@encorejs/react'
+import {val} from '@encorejs/dataverse'
 import React from 'react'
 import styled from 'styled-components'
 import {ObjectItem} from './ObjectItem'
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
-import BaseItem from '@encore/studio/panels/OutlinePanel/BaseItem'
-import {useCollapseStateInOutlinePanel} from '@encore/studio/panels/OutlinePanel/outlinePanelUtils'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
+import BaseItem from '@encorejs/studio/panels/OutlinePanel/BaseItem'
+import {useCollapseStateInOutlinePanel} from '@encorejs/studio/panels/OutlinePanel/outlinePanelUtils'
 
 export const Li = styled.li<{isSelected: boolean}>`
   color: ${(props) => (props.isSelected ? 'white' : 'hsl(1, 1%, 80%)')};

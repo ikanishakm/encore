@@ -6,8 +6,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@encore/core": "0.0.1-COMPAT.1",
-    "@encore/studio": "0.0.1-COMPAT.1"
+    "@encorejs/core": "0.0.1-COMPAT.1",
+    "@encorejs/studio": "0.0.1-COMPAT.1"
   },
   "browserslist": {
     "production": [">0.2%", "not dead", "not op_mini all"],

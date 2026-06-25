@@ -1,5 +1,5 @@
-import type {ISheet, ISheetObject} from '@encore/core'
-import {types, getStudioSync} from '@encore/core'
+import type {ISheet, ISheetObject} from '@encorejs/core'
+import {types, getStudioSync} from '@encorejs/core'
 
 let sheet: ISheet | undefined = undefined
 let sheetObject: ISheetObject<typeof editorSheetObjectConfig> | undefined =

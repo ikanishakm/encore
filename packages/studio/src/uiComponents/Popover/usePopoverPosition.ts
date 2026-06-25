@@ -1,8 +1,8 @@
 import type React from 'react'
 import {useLayoutEffect, useState} from 'react'
 import useWindowSize from 'react-use/esm/useWindowSize'
-import useBoundingClientRect from '@encore/studio/uiComponents/useBoundingClientRect'
-import useRefAndState from '@encore/studio/utils/useRefAndState'
+import useBoundingClientRect from '@encorejs/studio/uiComponents/useBoundingClientRect'
+import useRefAndState from '@encorejs/studio/utils/useRefAndState'
 import {clamp} from 'lodash-es'
 
 const minimumDistanceOfArrowToEdgeOfPopover = 8

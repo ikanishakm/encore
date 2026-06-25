@@ -1,4 +1,4 @@
-import type {$IntentionalAny} from '@encore/core/types/public'
+import type {$IntentionalAny} from '@encorejs/core/types/public'
 import {useEffect} from 'react'
 
 export default function useOnClickOutside(

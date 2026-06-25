@@ -1,1 +1,1 @@
-`@encore/utils`
+`@encorejs/utils`

@@ -1,19 +1,19 @@
-import getStudio from '@encore/studio/getStudio'
-import {val} from '@encore/dataverse'
+import getStudio from '@encorejs/studio/getStudio'
+import {val} from '@encorejs/dataverse'
 import type {
   SequenceEditorTree_PrimitiveProp,
   SequenceEditorTree_PropWithChildren,
   SequenceEditorTree_Sheet,
   SequenceEditorTree_SheetObject,
-} from '@encore/studio/panels/SequenceEditorPanel/layout/tree'
-import type {BasicKeyframe, SequenceTrackId} from '@encore/core/types/public'
-import type {TrackData} from '@encore/core/types/private/core'
-import {encodePathToProp} from '@encore/utils/pathToProp'
+} from '@encorejs/studio/panels/SequenceEditorPanel/layout/tree'
+import type {BasicKeyframe, SequenceTrackId} from '@encorejs/core/types/public'
+import type {TrackData} from '@encorejs/core/types/private/core'
+import {encodePathToProp} from '@encorejs/utils/pathToProp'
 import {uniq} from 'lodash-es'
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
-import type {StudioSheetItemKey} from '@encore/core/types/private'
-import {createStudioSheetItemKey} from '@encore/studio/utils/createStudioSheetItemKey'
-import {__private} from '@encore/core'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
+import type {StudioSheetItemKey} from '@encorejs/core/types/private'
+import {createStudioSheetItemKey} from '@encorejs/studio/utils/createStudioSheetItemKey'
+import {__private} from '@encorejs/core'
 
 const {keyframeUtils} = __private
 

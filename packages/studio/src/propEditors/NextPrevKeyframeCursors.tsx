@@ -1,11 +1,11 @@
-import type {VoidFn} from '@encore/core/types/public'
-import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
+import type {VoidFn} from '@encorejs/core/types/public'
+import {pointerEventsAutoInNormalMode} from '@encorejs/studio/css'
 import React from 'react'
 import styled, {css} from 'styled-components'
-import {PresenceFlag} from '@encore/studio/uiComponents/usePresence'
-import usePresence from '@encore/studio/uiComponents/usePresence'
-import type {StudioSheetItemKey} from '@encore/core/types/private'
-import type {BasicKeyframe} from '@encore/core'
+import {PresenceFlag} from '@encorejs/studio/uiComponents/usePresence'
+import usePresence from '@encorejs/studio/uiComponents/usePresence'
+import type {StudioSheetItemKey} from '@encorejs/core/types/private'
+import type {BasicKeyframe} from '@encorejs/core'
 
 export type NearbyKeyframesControls = {
   prev?: Pick<BasicKeyframe, 'position'> & {

@@ -1,5 +1,5 @@
 import {editorStore} from './store'
-import type {ISheetObject} from '@encore/core'
+import type {ISheetObject} from '@encorejs/core'
 
 export const refreshSnapshot = editorStore.getState().createSnapshot
 

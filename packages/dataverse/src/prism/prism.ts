@@ -718,7 +718,7 @@ function state<T>(key: string, initialValue: T): [T, (val: T) => void] {
  *
  * @example
  * ```ts
- * import {prism} from '@encore/dataverse'
+ * import {prism} from '@encorejs/dataverse'
  *
  * function onlyUsefulInAPrism() {
  *   prism.ensurePrism()

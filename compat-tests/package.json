@@ -1,5 +1,5 @@
 {
-  "name": "@encore/compat-tests",
+  "name": "@encorejs/compat-tests",
   "private": true,
   "scripts": {
     "install-fixtures": "tsx ./scripts/install-fixtures.ts",

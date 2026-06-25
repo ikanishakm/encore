@@ -1,4 +1,4 @@
-// import getStudio from '@encore/studio/getStudio'
+// import getStudio from '@encorejs/studio/getStudio'
 
 // export function createCursorLock(cursor: string) {
 //   const el = getStudio()!.ui.containerShadow.getElementById(

@@ -1,13 +1,13 @@
-import useRefAndState from '@encore/studio/utils/useRefAndState'
+import useRefAndState from '@encorejs/studio/utils/useRefAndState'
 import type {MutableRefObject} from 'react'
 import {useContext} from 'react'
 import React from 'react'
 import PopoverPositioner from './PopoverPositioner'
 import {createPortal} from 'react-dom'
 import {PortalContext} from 'reakit'
-import noop from '@encore/utils/noop'
-import type {$IntentionalAny} from '@encore/core/types/public'
-import {Atom} from '@encore/dataverse'
+import noop from '@encorejs/utils/noop'
+import type {$IntentionalAny} from '@encorejs/core/types/public'
+import {Atom} from '@encorejs/dataverse'
 import {useCallback, useEffect, useMemo} from 'react'
 
 /**

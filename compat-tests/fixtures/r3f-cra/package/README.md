@@ -1,1 +1,1 @@
-Testing `@encore/core` and `@encore/studio` with `npm`, `create-react-app`, and `react@18`
+Testing `@encorejs/core` and `@encorejs/studio` with `npm`, `create-react-app`, and `react@18`

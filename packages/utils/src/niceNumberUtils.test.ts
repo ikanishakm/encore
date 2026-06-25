@@ -6,7 +6,7 @@ import {
   nicestNumberBetween,
   toPrecision,
 } from './niceNumberUtils'
-import type {$IntentionalAny} from '@encore/utils/types'
+import type {$IntentionalAny} from '@encorejs/utils/types'
 
 const example = <Args extends $IntentionalAny[], Return>(
   fn: (...args: Args) => Return,

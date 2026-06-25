@@ -1,5 +1,5 @@
-import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
-import DropdownChevron from '@encore/studio/uiComponents/icons/DropdownChevron'
+import {pointerEventsAutoInNormalMode} from '@encorejs/studio/css'
+import DropdownChevron from '@encorejs/studio/uiComponents/icons/DropdownChevron'
 import React from 'react'
 import styled from 'styled-components'
 

@@ -1,5 +1,5 @@
-import * as core from '@encore/core'
-import '@encore/studio'
+import * as core from '@encorejs/core'
+import '@encorejs/studio'
 
 // @ts-ignore
 window.Encore = core

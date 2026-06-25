@@ -1,5 +1,5 @@
 {
-  "name": "@encore/tweak",
+  "name": "@encorejs/tweak",
   "version": "0.7.0",
   "license": "Apache-2.0",
   "author": {
@@ -28,7 +28,7 @@
     "clean": "rm -rf ./dist && rm -f tsconfig.tsbuildinfo"
   },
   "devDependencies": {
-    "@encore/dataverse": "workspace:*",
+    "@encorejs/dataverse": "workspace:*",
     "@microsoft/api-extractor": "^7.18.11",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.6.2",
@@ -40,9 +40,9 @@
     "typescript": "5.1.6"
   },
   "dependencies": {
-    "@encore/core": "workspace:*",
-    "@encore/react": "workspace:*",
-    "@encore/studio": "workspace:*",
+    "@encorejs/core": "workspace:*",
+    "@encorejs/react": "workspace:*",
+    "@encorejs/studio": "workspace:*",
     "oauth4webapi": "^2.4.0"
   },
   "peerDependencies": {

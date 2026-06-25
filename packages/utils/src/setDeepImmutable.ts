@@ -1,5 +1,5 @@
 import type {PathToProp} from './pathToProp'
-import type {$IntentionalAny} from '@encore/utils/types'
+import type {$IntentionalAny} from '@encorejs/utils/types'
 import updateImmutable from './updateDeep'
 
 /**

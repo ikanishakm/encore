@@ -3,8 +3,8 @@ import type {MutableRefObject} from 'react'
 import {useEffect} from 'react'
 import React, {useMemo, useRef} from 'react'
 import {mergeRefs} from 'react-merge-refs'
-import useRefAndState from '@encore/studio/utils/useRefAndState'
-import useOnClickOutside from '@encore/studio/uiComponents/useOnClickOutside'
+import useRefAndState from '@encorejs/studio/utils/useRefAndState'
+import useOnClickOutside from '@encorejs/studio/uiComponents/useOnClickOutside'
 
 const Input = styled.input.attrs({type: 'text'})`
   background: transparent;

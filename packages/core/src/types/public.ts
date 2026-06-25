@@ -1,4 +1,4 @@
-import type {Pointer} from '@encore/dataverse'
+import type {Pointer} from '@encorejs/dataverse'
 
 /** For `any`s that aren't meant to stay `any`*/
 export type $FixMe = any
@@ -247,10 +247,10 @@ export type IProjectConfig = {
 export interface IProject {
   readonly type: 'Theatre_Project_PublicAPI'
   /**
-   * If `@encore/studio` is used, this promise would resolve when studio has loaded
+   * If `@encorejs/studio` is used, this promise would resolve when studio has loaded
    * the state of the project into memory.
    *
-   * If `@encore/studio` is not used, this promise is already resolved.
+   * If `@encorejs/studio` is not used, this promise is already resolved.
    */
   readonly ready: Promise<void>
   /**
@@ -589,7 +589,7 @@ export interface ISequence {
    *
    * @example Usage
    * ```ts
-   * import {onChange, val} from '@encore/core'
+   * import {onChange, val} from '@encorejs/core'
    *
    * // let's assume `sheet` is a sheet
    * const sequence = sheet.sequence
@@ -1196,7 +1196,7 @@ export interface InitOpts {
  * @example
  * Basic usage:
  * ```ts
- * import theatre from '@encore/core'
+ * import theatre from '@encorejs/core'
  *
  * theatre.init({studio: true})
  * ```
@@ -1204,7 +1204,7 @@ export interface InitOpts {
  * @example
  * Usage with **tree-shaking**:
  * ```ts
- * import theatre from '@encore/core'
+ * import theatre from '@encorejs/core'
  *
  * if (process.env.NODE_ENV !== 'production') {
  *   theatre.init({studio: true})

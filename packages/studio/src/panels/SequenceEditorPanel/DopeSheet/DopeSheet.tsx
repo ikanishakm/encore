@@ -1,12 +1,12 @@
-import {useVal} from '@encore/react'
-import type {Pointer} from '@encore/dataverse'
+import {useVal} from '@encorejs/react'
+import type {Pointer} from '@encorejs/dataverse'
 import React from 'react'
 import styled from 'styled-components'
-import type {SequenceEditorPanelLayout} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
+import type {SequenceEditorPanelLayout} from '@encorejs/studio/panels/SequenceEditorPanel/layout/layout'
 import Left from './Left/Left'
 import DopeSheetBackground from './Right/DopeSheetBackground'
 import Right from './Right/Right'
-import VerticalScrollContainer from '@encore/studio/panels/SequenceEditorPanel/VerticalScrollContainer'
+import VerticalScrollContainer from '@encorejs/studio/panels/SequenceEditorPanel/VerticalScrollContainer'
 
 const Container = styled.div`
   position: absolute;

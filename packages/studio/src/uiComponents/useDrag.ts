@@ -1,11 +1,11 @@
-import type {$FixMe} from '@encore/core/types/public'
+import type {$FixMe} from '@encorejs/core/types/public'
 import {useLayoutEffect, useRef} from 'react'
 import {useCssCursorLock} from './PointerEventsHandler'
-import type {CapturedPointer} from '@encore/studio/UIRoot/PointerCapturing'
-import {usePointerCapturing} from '@encore/studio/UIRoot/PointerCapturing'
-import noop from '@encore/utils/noop'
+import type {CapturedPointer} from '@encorejs/studio/UIRoot/PointerCapturing'
+import {usePointerCapturing} from '@encorejs/studio/UIRoot/PointerCapturing'
+import noop from '@encorejs/utils/noop'
 import {isSafari} from './isSafari'
-import useRefAndState from '@encore/studio/utils/useRefAndState'
+import useRefAndState from '@encorejs/studio/utils/useRefAndState'
 
 export enum MouseButton {
   Left = 0,

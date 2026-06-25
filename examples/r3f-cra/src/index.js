@@ -1,7 +1,7 @@
 import {createRoot} from 'react-dom/client'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
-import '@encore/studio'
+import '@encorejs/studio'
 import React from 'react'
 import App from './App'
 

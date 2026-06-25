@@ -1,4 +1,4 @@
-import type {PropHighlighted} from '@encore/studio/panels/SequenceEditorPanel/whatPropIsHighlighted'
+import type {PropHighlighted} from '@encorejs/studio/panels/SequenceEditorPanel/whatPropIsHighlighted'
 import {css} from 'styled-components'
 
 export const propNameTextCSS = css<{isHighlighted?: PropHighlighted}>`

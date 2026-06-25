@@ -1,19 +1,19 @@
 import type {
   DopeSheetSelection,
   SequenceEditorPanelLayout,
-} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
+} from '@encorejs/studio/panels/SequenceEditorPanel/layout/layout'
 import type {
   SequenceEditorTree_PropWithChildren,
   SequenceEditorTree_Sheet,
   SequenceEditorTree_SheetObject,
-} from '@encore/studio/panels/SequenceEditorPanel/layout/tree'
-import {usePrism, useVal} from '@encore/react'
-import type {Prism, Pointer} from '@encore/dataverse'
-import {prism, val, pointerToPrism} from '@encore/dataverse'
+} from '@encorejs/studio/panels/SequenceEditorPanel/layout/tree'
+import {usePrism, useVal} from '@encorejs/react'
+import type {Prism, Pointer} from '@encorejs/dataverse'
+import {prism, val, pointerToPrism} from '@encorejs/dataverse'
 import React, {useMemo, Fragment} from 'react'
 import styled from 'styled-components'
-import useContextMenu from '@encore/studio/uiComponents/simpleContextMenu/useContextMenu'
-import useRefAndState from '@encore/studio/utils/useRefAndState'
+import useContextMenu from '@encorejs/studio/uiComponents/simpleContextMenu/useContextMenu'
+import useRefAndState from '@encorejs/studio/utils/useRefAndState'
 import type {
   IAggregateKeyframesAtPosition,
   IAggregateKeyframeEditorProps,
@@ -22,41 +22,41 @@ import AggregateKeyframeEditor from './AggregateKeyframeEditor/AggregateKeyframe
 import type {
   AggregatedKeyframes,
   KeyframeWithTrack,
-} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/collectAggregateKeyframes'
-import {collectAggregateSnapPositionsObjectOrCompound} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/collectAggregateKeyframes'
-import {useLogger} from '@encore/studio/uiComponents/useLogger'
+} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/Right/collectAggregateKeyframes'
+import {collectAggregateSnapPositionsObjectOrCompound} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/Right/collectAggregateKeyframes'
+import {useLogger} from '@encorejs/studio/uiComponents/useLogger'
 import {getAggregateKeyframeEditorUtilsPrismFn} from './AggregateKeyframeEditor/useAggregateKeyframeEditorUtils'
-import DopeSnap from '@encore/studio/panels/SequenceEditorPanel/RightOverlay/DopeSnap'
-import type {DragOpts} from '@encore/studio/uiComponents/useDrag'
-import type {CommitOrDiscardOrRecapture} from '@encore/studio/StudioStore/StudioStore'
-import useDrag from '@encore/studio/uiComponents/useDrag'
-import {useLockFrameStampPositionRef} from '@encore/studio/panels/SequenceEditorPanel/FrameStampPositionProvider'
-import {useCssCursorLock} from '@encore/studio/uiComponents/PointerEventsHandler'
-import getStudio from '@encore/studio/getStudio'
-import type {SheetObjectAddress} from '@encore/core/types/public'
+import DopeSnap from '@encorejs/studio/panels/SequenceEditorPanel/RightOverlay/DopeSnap'
+import type {DragOpts} from '@encorejs/studio/uiComponents/useDrag'
+import type {CommitOrDiscardOrRecapture} from '@encorejs/studio/StudioStore/StudioStore'
+import useDrag from '@encorejs/studio/uiComponents/useDrag'
+import {useLockFrameStampPositionRef} from '@encorejs/studio/panels/SequenceEditorPanel/FrameStampPositionProvider'
+import {useCssCursorLock} from '@encorejs/studio/uiComponents/PointerEventsHandler'
+import getStudio from '@encorejs/studio/getStudio'
+import type {SheetObjectAddress} from '@encorejs/core/types/public'
 import {
   decodePathToProp,
   encodePathToProp,
   doesPathStartWith,
-} from '@encore/utils/pathToProp'
+} from '@encorejs/utils/pathToProp'
 import type {
   ObjectAddressKey,
   SequenceTrackId,
-} from '@encore/core/types/public'
-import type Sequence from '@encore/core/sequences/Sequence'
+} from '@encorejs/core/types/public'
+import type Sequence from '@encorejs/core/sequences/Sequence'
 import KeyframeSnapTarget, {
   snapPositionsStateD,
-} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/KeyframeSnapTarget'
-import {emptyObject} from '@encore/utils'
-import type {KeyframeWithPathToPropFromCommonRoot} from '@encore/core/types/private'
+} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/Right/KeyframeSnapTarget'
+import {emptyObject} from '@encorejs/utils'
+import type {KeyframeWithPathToPropFromCommonRoot} from '@encorejs/core/types/private'
 import {
   collectKeyframeSnapPositions,
   snapToNone,
   snapToSome,
-} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/KeyframeSnapTarget'
-import {collectAggregateSnapPositionsSheet} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/collectAggregateKeyframes'
-import type {BasicKeyframe} from '@encore/core/types/public'
-import type {ContextMenuItem} from '@encore/studio/uiComponents/chordial/chordialInternals'
+} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/Right/KeyframeSnapTarget'
+import {collectAggregateSnapPositionsSheet} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/Right/collectAggregateKeyframes'
+import type {BasicKeyframe} from '@encorejs/core/types/public'
+import type {ContextMenuItem} from '@encorejs/studio/uiComponents/chordial/chordialInternals'
 
 const AggregatedKeyframeTrackContainer = styled.div`
   position: relative;

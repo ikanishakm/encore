@@ -1,7 +1,7 @@
-import type Project from '@encore/core/projects/Project'
-import type Sequence from '@encore/core/sequences/Sequence'
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
-import type Sheet from '@encore/core/sheets/Sheet'
+import type Project from '@encorejs/core/projects/Project'
+import type Sequence from '@encorejs/core/sequences/Sequence'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
+import type Sheet from '@encorejs/core/sheets/Sheet'
 import type {RafDriverPrivateAPI} from './rafDrivers'
 import type {
   IProject,
@@ -11,7 +11,7 @@ import type {
   ISheetObject,
   UnknownShorthandCompoundProps,
 } from './types/public'
-import type {$IntentionalAny} from '@encore/core/types/public'
+import type {$IntentionalAny} from '@encorejs/core/types/public'
 
 const publicAPIToPrivateAPIMap = new WeakMap()
 

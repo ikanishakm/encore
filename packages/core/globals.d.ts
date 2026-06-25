@@ -1,6 +1,6 @@
 declare module globalThis {
   /**
-   * This is set to true when running the tests, so that `@encore/core` will try to conenct to `@encore/studio`,
+   * This is set to true when running the tests, so that `@encorejs/core` will try to conenct to `@encorejs/studio`,
    * even if `typeof window === 'undefined'`.
    */
   var __THEATREJS__FORCE_CONNECT_CORE_AND_STUDIO: boolean | undefined

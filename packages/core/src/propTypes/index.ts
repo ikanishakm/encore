@@ -1,5 +1,5 @@
-import type {$FixMe, $IntentionalAny} from '@encore/core/types/public'
-import userReadableTypeOfValue from '@encore/utils/userReadableTypeOfValue'
+import type {$FixMe, $IntentionalAny} from '@encorejs/core/types/public'
+import userReadableTypeOfValue from '@encorejs/utils/userReadableTypeOfValue'
 
 import {
   decorateRgba,
@@ -7,9 +7,9 @@ import {
   oklabToLinearSrgb,
   srgbToLinearSrgb,
   linearSrgbToSrgb,
-} from '@encore/utils/color'
+} from '@encorejs/utils/color'
 import {clamp, mapValues} from 'lodash-es'
-import {propTypeSymbol, type NumberNudgeFn} from '@encore/core/types/public'
+import {propTypeSymbol, type NumberNudgeFn} from '@encorejs/core/types/public'
 import {sanitizeCompoundProps} from './internals'
 
 import type {
@@ -27,7 +27,7 @@ import type {
   Rgba,
   File,
   Asset,
-} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
 
 // Notes on naming:
 // As of now, prop types are either `simple` or `composite`.

@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from 'react'
 import type {CSSProperties} from 'react'
-import {types} from '@encore/core'
-import type {ISheet} from '@encore/core'
+import {types} from '@encorejs/core'
+import type {ISheet} from '@encorejs/core'
 import {remote} from './Remote'
 
 // Box element

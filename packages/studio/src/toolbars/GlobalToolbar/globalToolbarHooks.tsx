@@ -1,11 +1,11 @@
-import {usePrism, useVal} from '@encore/react'
-import getStudio from '@encore/studio/getStudio'
+import {usePrism, useVal} from '@encorejs/react'
+import getStudio from '@encorejs/studio/getStudio'
 import React, {useMemo, useRef} from 'react'
-import useTooltip from '@encore/studio/uiComponents/Popover/useTooltip'
-import ErrorTooltip from '@encore/studio/uiComponents/Popover/ErrorTooltip'
-import BasicTooltip from '@encore/studio/uiComponents/Popover/BasicTooltip'
-import {val} from '@encore/dataverse'
-import usePopover from '@encore/studio/uiComponents/Popover/usePopover'
+import useTooltip from '@encorejs/studio/uiComponents/Popover/useTooltip'
+import ErrorTooltip from '@encorejs/studio/uiComponents/Popover/ErrorTooltip'
+import BasicTooltip from '@encorejs/studio/uiComponents/Popover/BasicTooltip'
+import {val} from '@encorejs/dataverse'
+import usePopover from '@encorejs/studio/uiComponents/Popover/usePopover'
 import MoreMenu from './MoreMenu/MoreMenu'
 
 let showedVisualTestingWarning = false

@@ -3,10 +3,10 @@ import type {
   ColorModel,
   AnyColor,
   HsvaColor,
-} from '@encore/studio/uiComponents/colorPicker/types'
-import {equalColorObjects} from '@encore/studio/uiComponents/colorPicker/utils/compare'
+} from '@encorejs/studio/uiComponents/colorPicker/types'
+import {equalColorObjects} from '@encorejs/studio/uiComponents/colorPicker/utils/compare'
 import {useEventCallback} from './useEventCallback'
-import {useEditing} from '@encore/studio/uiComponents/colorPicker/components/EditingProvider'
+import {useEditing} from '@encorejs/studio/uiComponents/colorPicker/components/EditingProvider'
 
 export function useColorManipulation<T extends AnyColor>(
   colorModel: ColorModel<T>,

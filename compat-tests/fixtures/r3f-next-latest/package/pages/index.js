@@ -1,6 +1,6 @@
 import React from 'react'
-import studio from '@encore/studio'
-import extension from '@encore/r3f/dist/extension'
+import studio from '@encorejs/studio'
+import extension from '@encorejs/r3f/dist/extension'
 import App from '../src/App/App'
 
 if (process.env.NODE_ENV === 'development' && typeof window !== 'undefined') {

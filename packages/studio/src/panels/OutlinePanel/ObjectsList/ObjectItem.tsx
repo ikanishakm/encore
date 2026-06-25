@@ -1,10 +1,10 @@
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
-import getStudio from '@encore/studio/getStudio'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
+import getStudio from '@encorejs/studio/getStudio'
 import React from 'react'
-import BaseItem from '@encore/studio/panels/OutlinePanel/BaseItem'
-import {useVal} from '@encore/react'
-import {outlineSelection} from '@encore/studio/selectors'
-import useChordial from '@encore/studio/uiComponents/chordial/useChodrial'
+import BaseItem from '@encorejs/studio/panels/OutlinePanel/BaseItem'
+import {useVal} from '@encorejs/react'
+import {outlineSelection} from '@encorejs/studio/selectors'
+import useChordial from '@encorejs/studio/uiComponents/chordial/useChodrial'
 
 export const ObjectItem: React.FC<{
   sheetObject: SheetObject

@@ -1,4 +1,4 @@
-import type {KeyframeId, SequenceTrackId} from '@encore/core/types/public'
+import type {KeyframeId, SequenceTrackId} from '@encorejs/core/types/public'
 
 export function asKeyframeId(s: string): KeyframeId {
   return s as KeyframeId

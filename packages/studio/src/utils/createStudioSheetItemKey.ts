@@ -1,9 +1,9 @@
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
-import type {PathToProp} from '@encore/utils/pathToProp'
-import stableValueHash from '@encore/utils/stableJsonStringify'
-import type Sheet from '@encore/core/sheets/Sheet'
-import type {KeyframeId, SequenceTrackId} from '@encore/core/types/public'
-import type {StudioSheetItemKey} from '@encore/core/types/private'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
+import type {PathToProp} from '@encorejs/utils/pathToProp'
+import stableValueHash from '@encorejs/utils/stableJsonStringify'
+import type Sheet from '@encorejs/core/sheets/Sheet'
+import type {KeyframeId, SequenceTrackId} from '@encorejs/core/types/public'
+import type {StudioSheetItemKey} from '@encorejs/core/types/private'
 
 /**
  * This will not necessarily maintain consistent key values if any

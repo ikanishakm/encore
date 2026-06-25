@@ -1,24 +1,24 @@
-import {usePrism} from '@encore/react'
-import type {Pointer} from '@encore/dataverse'
-import {val} from '@encore/dataverse'
+import {usePrism} from '@encorejs/react'
+import type {Pointer} from '@encorejs/dataverse'
+import {val} from '@encorejs/dataverse'
 import React, {useMemo, useRef} from 'react'
 import styled from 'styled-components'
-import type {SequenceEditorPanelLayout} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
-import {zIndexes} from '@encore/studio/panels/SequenceEditorPanel/SequenceEditorPanel'
-import {topStripHeight} from '@encore/studio/panels/SequenceEditorPanel/RightOverlay/TopStrip'
-import useRefAndState from '@encore/studio/utils/useRefAndState'
-import type {CommitOrDiscardOrRecapture} from '@encore/studio/StudioStore/StudioStore'
-import useDrag from '@encore/studio/uiComponents/useDrag'
-import getStudio from '@encore/studio/getStudio'
-import usePopover from '@encore/studio/uiComponents/Popover/usePopover'
+import type {SequenceEditorPanelLayout} from '@encorejs/studio/panels/SequenceEditorPanel/layout/layout'
+import {zIndexes} from '@encorejs/studio/panels/SequenceEditorPanel/SequenceEditorPanel'
+import {topStripHeight} from '@encorejs/studio/panels/SequenceEditorPanel/RightOverlay/TopStrip'
+import useRefAndState from '@encorejs/studio/utils/useRefAndState'
+import type {CommitOrDiscardOrRecapture} from '@encorejs/studio/StudioStore/StudioStore'
+import useDrag from '@encorejs/studio/uiComponents/useDrag'
+import getStudio from '@encorejs/studio/getStudio'
+import usePopover from '@encorejs/studio/uiComponents/Popover/usePopover'
 import {
   includeLockFrameStampAttrs,
   useLockFrameStampPosition,
-} from '@encore/studio/panels/SequenceEditorPanel/FrameStampPositionProvider'
+} from '@encorejs/studio/panels/SequenceEditorPanel/FrameStampPositionProvider'
 import {GoChevronLeft, GoChevronRight} from 'react-icons/go'
 import LengthEditorPopover from './LengthEditorPopover'
-import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
-import BasicPopover from '@encore/studio/uiComponents/Popover/BasicPopover'
+import {pointerEventsAutoInNormalMode} from '@encorejs/studio/css'
+import BasicPopover from '@encorejs/studio/uiComponents/Popover/BasicPopover'
 
 const coverWidth = 1000
 

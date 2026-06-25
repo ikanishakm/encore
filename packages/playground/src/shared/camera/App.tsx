@@ -3,9 +3,9 @@ import {
   RefreshSnapshot,
   SheetProvider,
   PerspectiveCamera,
-} from '@encore/r3f'
+} from '@encorejs/r3f'
 import {Stars} from '@react-three/drei'
-import {getProject} from '@encore/core'
+import {getProject} from '@encorejs/core'
 import React, {Suspense, useRef, useState} from 'react'
 import {Canvas} from '@react-three/fiber'
 import {useGLTF} from '@react-three/drei'

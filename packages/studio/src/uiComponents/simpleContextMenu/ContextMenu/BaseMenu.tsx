@@ -1,9 +1,9 @@
 import type {ElementType} from 'react'
 import React from 'react'
 import Item from './Item'
-import type {$FixMe} from '@encore/core/types/public'
+import type {$FixMe} from '@encorejs/core/types/public'
 import styled from 'styled-components'
-import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
+import {pointerEventsAutoInNormalMode} from '@encorejs/studio/css'
 
 const minWidth = 190
 

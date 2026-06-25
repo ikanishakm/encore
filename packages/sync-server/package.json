@@ -1,5 +1,5 @@
 {
-  "name": "@encore/sync-server",
+  "name": "@encorejs/sync-server",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,10 +13,10 @@
   },
   "dependencies": {
     "@cspotcode/zx": "^6.1.2",
-    "@encore/app": "workspace:*",
-    "@encore/core": "workspace:*",
-    "@encore/saaz": "workspace:*",
-    "@encore/utils": "workspace:*",
+    "@encorejs/app": "workspace:*",
+    "@encorejs/core": "workspace:*",
+    "@encorejs/saaz": "workspace:*",
+    "@encorejs/utils": "workspace:*",
     "@prisma/client": "^4.12.0",
     "@trpc/client": "^10.43.0",
     "@trpc/server": "^10.43.0",

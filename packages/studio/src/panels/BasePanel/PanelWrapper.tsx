@@ -1,4 +1,4 @@
-import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
+import {pointerEventsAutoInNormalMode} from '@encorejs/studio/css'
 import React from 'react'
 import styled from 'styled-components'
 import {usePanel} from './BasePanel'

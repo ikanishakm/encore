@@ -7,8 +7,8 @@ import type {
   NotificationType,
   Notify,
   Notifiers,
-} from '@encore/core/utils/notify'
-import {useVal} from '@encore/react'
+} from '@encorejs/core/utils/notify'
+import {useVal} from '@encorejs/react'
 import getStudio from './getStudio'
 import {marked} from 'marked'
 import useTooltip from './uiComponents/Popover/useTooltip'

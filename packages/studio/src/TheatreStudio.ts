@@ -1,35 +1,35 @@
-import type {ISheet, ISheetObject} from '@encore/core'
-import type {Prism, Pointer} from '@encore/dataverse'
-import {getPointerParts, prism} from '@encore/dataverse'
-import SimpleCache from '@encore/utils/SimpleCache'
-import type {$IntentionalAny, VoidFn} from '@encore/core/types/public'
-import type {IScrub} from '@encore/core/types/public'
-import type {Studio} from '@encore/studio/Studio'
+import type {ISheet, ISheetObject} from '@encorejs/core'
+import type {Prism, Pointer} from '@encorejs/dataverse'
+import {getPointerParts, prism} from '@encorejs/dataverse'
+import SimpleCache from '@encorejs/utils/SimpleCache'
+import type {$IntentionalAny, VoidFn} from '@encorejs/core/types/public'
+import type {IScrub} from '@encorejs/core/types/public'
+import type {Studio} from '@encorejs/studio/Studio'
 import {outlineSelection} from './selectors'
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
 import getStudio from './getStudio'
 import {debounce, uniq} from 'lodash-es'
-import type Sheet from '@encore/core/sheets/Sheet'
+import type Sheet from '@encorejs/core/sheets/Sheet'
 import type {
   IExtension,
   IStudio,
   ITransactionAPI,
   PaneInstance,
   ProjectId,
-} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
 import {
   __experimental_disablePlayPauseKeyboardShortcut,
   __experimental_enablePlayPauseKeyboardShortcut,
 } from './UIRoot/useKeyboardShortcuts'
-import type TheatreSheetObject from '@encore/core/sheetObjects/TheatreSheetObject'
-import type TheatreSheet from '@encore/core/sheets/TheatreSheet'
-import type {__UNSTABLE_Project_OnDiskState} from '@encore/core'
-import type {OutlineSelectionState} from '@encore/core/types/private/studio'
-import type Project from '@encore/core/projects/Project'
-import type SheetTemplate from '@encore/core/sheets/SheetTemplate'
-import type SheetObjectTemplate from '@encore/core/sheetObjects/SheetObjectTemplate'
-import type {PaneInstanceId} from '@encore/core/types/public'
-import {__private} from '@encore/core'
+import type TheatreSheetObject from '@encorejs/core/sheetObjects/TheatreSheetObject'
+import type TheatreSheet from '@encorejs/core/sheets/TheatreSheet'
+import type {__UNSTABLE_Project_OnDiskState} from '@encorejs/core'
+import type {OutlineSelectionState} from '@encorejs/core/types/private/studio'
+import type Project from '@encorejs/core/projects/Project'
+import type SheetTemplate from '@encorejs/core/sheets/SheetTemplate'
+import type SheetObjectTemplate from '@encorejs/core/sheetObjects/SheetObjectTemplate'
+import type {PaneInstanceId} from '@encorejs/core/types/public'
+import {__private} from '@encorejs/core'
 const {
   isSheet,
   isProject,
@@ -224,9 +224,9 @@ export default class TheatreStudio implements IStudio {
   getStudioProject() {
     const core = getStudio().core
     if (!core) {
-      throw new Error(`You're calling studio.getStudioProject() before \`@encore/core\` is loaded. To fix this:
-1. Check if \`@encore/core\` is import/required in your bundle.
-2. Check the stack trace of this error and make sure the funciton that calls getStudioProject() is run after \`@encore/core\` is loaded.`)
+      throw new Error(`You're calling studio.getStudioProject() before \`@encorejs/core\` is loaded. To fix this:
+1. Check if \`@encorejs/core\` is import/required in your bundle.
+2. Check the stack trace of this error and make sure the funciton that calls getStudioProject() is run after \`@encorejs/core\` is loaded.`)
     }
     return getStudio().getStudioProject(core)
   }

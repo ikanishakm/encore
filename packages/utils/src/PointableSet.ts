@@ -1,4 +1,4 @@
-import type {StrictRecord} from '@encore/utils/types'
+import type {StrictRecord} from '@encorejs/utils/types'
 
 /**
  * Consistent way to maintain an unordered structure which plays well with dataverse pointers and

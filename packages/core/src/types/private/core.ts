@@ -1,15 +1,15 @@
-import type {PointableSet} from '@encore/utils/PointableSet'
-import type {PathToProp_Encoded} from '@encore/utils/pathToProp'
+import type {PointableSet} from '@encorejs/utils/PointableSet'
+import type {PathToProp_Encoded} from '@encorejs/utils/pathToProp'
 
-import type {SerializableMap} from '@encore/core/types/public'
+import type {SerializableMap} from '@encorejs/core/types/public'
 import type {
   BasicKeyframe,
   KeyframeId,
   ObjectAddressKey,
   SequenceTrackId,
   SheetId,
-} from '@encore/core/types/public'
-import type {StrictRecord} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
+import type {StrictRecord} from '@encorejs/core/types/public'
 
 export interface SheetState_Historic {
   /**
@@ -107,7 +107,7 @@ export interface ProjectEphemeralState {
 }
 
 /**
- * This is the state of each project that is consumable by `@encore/core`.
+ * This is the state of each project that is consumable by `@encorejs/core`.
  * If the studio is present, this part of the state joins the studio's historic state,
  * at {@link StudioHistoricState.coreByProject}
  */

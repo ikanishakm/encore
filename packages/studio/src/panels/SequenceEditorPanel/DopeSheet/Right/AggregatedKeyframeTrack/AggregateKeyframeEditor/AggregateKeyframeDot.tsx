@@ -1,32 +1,32 @@
 import React from 'react'
-import useRefAndState from '@encore/studio/utils/useRefAndState'
+import useRefAndState from '@encorejs/studio/utils/useRefAndState'
 import usePresence, {
   PresenceFlag,
-} from '@encore/studio/uiComponents/usePresence'
-import useContextMenu from '@encore/studio/uiComponents/simpleContextMenu/useContextMenu'
+} from '@encorejs/studio/uiComponents/usePresence'
+import useContextMenu from '@encorejs/studio/uiComponents/simpleContextMenu/useContextMenu'
 import type {IAggregateKeyframeEditorProps} from './AggregateKeyframeEditor'
 import type {IAggregateKeyframeEditorUtils} from './useAggregateKeyframeEditorUtils'
 import {AggregateKeyframeVisualDot, HitZone} from './AggregateKeyframeVisualDot'
-import getStudio from '@encore/studio/getStudio'
+import getStudio from '@encorejs/studio/getStudio'
 import {
   copyableKeyframesFromSelection,
   keyframesWithPaths,
-} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/selections'
-import type {KeyframeWithPathToPropFromCommonRoot} from '@encore/core/types/private'
-import {commonRootOfPathsToProps} from '@encore/utils/pathToProp'
-import DopeSnap from '@encore/studio/panels/SequenceEditorPanel/RightOverlay/DopeSnap'
+} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/selections'
+import type {KeyframeWithPathToPropFromCommonRoot} from '@encorejs/core/types/private'
+import {commonRootOfPathsToProps} from '@encorejs/utils/pathToProp'
+import DopeSnap from '@encorejs/studio/panels/SequenceEditorPanel/RightOverlay/DopeSnap'
 import type {
   PrimitivePropEditingOptions,
   PropWithChildrenEditingOptionsTree,
   SheetObjectEditingOptionsTree,
-} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/BasicKeyframedTrack/KeyframeEditor/useSingleKeyframeInlineEditorPopover'
-import {useKeyframeInlineEditorPopover} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/BasicKeyframedTrack/KeyframeEditor/useSingleKeyframeInlineEditorPopover'
+} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/Right/BasicKeyframedTrack/KeyframeEditor/useSingleKeyframeInlineEditorPopover'
+import {useKeyframeInlineEditorPopover} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/Right/BasicKeyframedTrack/KeyframeEditor/useSingleKeyframeInlineEditorPopover'
 import type {
   SequenceEditorTree_PrimitiveProp,
   SequenceEditorTree_PropWithChildren,
   SequenceEditorTree_SheetObject,
-} from '@encore/studio/panels/SequenceEditorPanel/layout/tree'
-import type {KeyframeWithTrack} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/Right/collectAggregateKeyframes'
+} from '@encorejs/studio/panels/SequenceEditorPanel/layout/tree'
+import type {KeyframeWithTrack} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/Right/collectAggregateKeyframes'
 
 type IAggregateKeyframeDotProps = {
   editorProps: IAggregateKeyframeEditorProps

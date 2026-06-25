@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import type {ComponentPropsWithRef, ReactNode} from 'react'
 import React, {forwardRef, useState} from 'react'
-import ToolbarIconButton from '@encore/studio/uiComponents/toolbar/ToolbarIconButton'
+import ToolbarIconButton from '@encorejs/studio/uiComponents/toolbar/ToolbarIconButton'
 
 const Container = styled(ToolbarIconButton)<{pinned?: boolean}>`
   color: ${({pinned}) => (pinned ? 'var(--tt-fg)' : 'var(--tt-fg-muted)')};

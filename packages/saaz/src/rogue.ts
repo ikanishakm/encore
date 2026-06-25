@@ -1,8 +1,8 @@
-import deepEqual from '@encore/utils/deepEqual'
+import deepEqual from '@encorejs/utils/deepEqual'
 import type {$IntentionalAny} from './types'
 import * as immer from 'immer'
 import setDeep from 'lodash-es/set'
-import memoizeFn from '@encore/utils/memoizeFn'
+import memoizeFn from '@encorejs/utils/memoizeFn'
 
 type BranchName = 'base' | string
 

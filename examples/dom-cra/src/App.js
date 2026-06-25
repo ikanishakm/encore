@@ -1,4 +1,4 @@
-import studio from '@encore/studio'
+import studio from '@encorejs/studio'
 import {useLayoutEffect, useMemo, useState} from 'react'
 import useDrag from './useDrag'
 

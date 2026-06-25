@@ -1,4 +1,4 @@
-import {Ticker} from '@encore/dataverse'
+import {Ticker} from '@encorejs/dataverse'
 import {setPrivateAPI} from './privateAPIs'
 import type {IRafDriver} from './types/public'
 
@@ -24,7 +24,7 @@ let lastDriverId = 0
  * Here is how you'd create a custom `rafDriver`:
  *
  * ```js
- * import { createRafDriver } from '@encore/core'
+ * import { createRafDriver } from '@encorejs/core'
  *
  * const rafDriver = createRafDriver({ name: 'a custom 5fps raf driver' })
  *
@@ -36,7 +36,7 @@ let lastDriverId = 0
  * Now, any time you set up an `onChange()` listener, pass your custom `rafDriver`:
  *
  * ```js
- * import { onChange } from '@encore/core'
+ * import { onChange } from '@encorejs/core'
  *
  * onChange(
  *   // let's say object is a Theatre object, the one returned from calling `sheet.object()`
@@ -67,7 +67,7 @@ let lastDriverId = 0
  * `rafDriver`s can optionally provide a `start/stop` callback. Theatre will call `start()` when it actually has computations scheduled, and will call `stop` if there is nothing to update after a few ticks:
  *
  * ```js
- * import { createRafDriver } from '@encore/core'
+ * import { createRafDriver } from '@encorejs/core'
  * import type { IRafDriver } from '@theare/core'
  *
  * function createBasicRafDriver(): IRafDriver {

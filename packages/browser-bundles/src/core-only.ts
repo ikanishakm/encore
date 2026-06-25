@@ -1,4 +1,4 @@
-import * as core from '@encore/core'
+import * as core from '@encorejs/core'
 
 // @ts-ignore
 window.Encore = core

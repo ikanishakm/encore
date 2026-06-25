@@ -4,10 +4,10 @@ import type {Interaction} from './Interactive'
 import {Interactive} from './Interactive'
 import {Pointer} from './Pointer'
 
-import {hsvaToHslaString} from '@encore/studio/uiComponents/colorPicker/utils/convert'
-import {clamp} from '@encore/studio/uiComponents/colorPicker/utils/clamp'
-import {round} from '@encore/studio/uiComponents/colorPicker/utils/round'
-import type {HsvaColor} from '@encore/studio/uiComponents/colorPicker/types'
+import {hsvaToHslaString} from '@encorejs/studio/uiComponents/colorPicker/utils/convert'
+import {clamp} from '@encorejs/studio/uiComponents/colorPicker/utils/clamp'
+import {round} from '@encorejs/studio/uiComponents/colorPicker/utils/round'
+import type {HsvaColor} from '@encorejs/studio/uiComponents/colorPicker/types'
 import styled from 'styled-components'
 
 const Container = styled.div`

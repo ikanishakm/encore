@@ -1,10 +1,10 @@
-import type {SequenceEditorTree_Sheet} from '@encore/studio/panels/SequenceEditorPanel/layout/tree'
-import {usePrism} from '@encore/react'
+import type {SequenceEditorTree_Sheet} from '@encorejs/studio/panels/SequenceEditorPanel/layout/tree'
+import {usePrism} from '@encorejs/react'
 import React from 'react'
 import LeftSheetObjectRow from './SheetObjectRow'
 import AnyCompositeRow from './AnyCompositeRow'
-import {setCollapsedSheetItem} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/setCollapsedSheetObjectOrCompoundProp'
-import uniqueKeyForAnyObject from '@encore/utils/uniqueKeyForAnyObject'
+import {setCollapsedSheetItem} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/setCollapsedSheetObjectOrCompoundProp'
+import uniqueKeyForAnyObject from '@encorejs/utils/uniqueKeyForAnyObject'
 
 const SheetRow: React.FC<{
   leaf: SequenceEditorTree_Sheet

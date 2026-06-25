@@ -1,4 +1,4 @@
-import type {$IntentionalAny} from '@encore/utils/types'
+import type {$IntentionalAny} from '@encorejs/utils/types'
 
 /**
  * This is like `Object.assign(base, override)`, with the following differences:

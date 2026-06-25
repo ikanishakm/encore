@@ -144,7 +144,7 @@ $ yarn lint:all --fix
 
 ### Publishing to npm
 
-Currently all packages (except for [`@encore/r3f`](./packages/r3f/)) share the
+Currently all packages (except for [`@encorejs/r3f`](./packages/r3f/)) share the
 same version number. In order to publish to npm, you can run the `release`
 script from the root of the repo:
 
@@ -158,15 +158,15 @@ $ yarn cli release x.y.z-rc.w # npm publish version x.y.z-rc.w and tag it as "rc
 
 The [monorepo](https://en.wikipedia.org/wiki/Monorepo) consists of:
 
-- `@encore/core` – The core animation library at
+- `@encorejs/core` – The core animation library at
   [`./packages/core`](./packages/core).
-- `@encore/studio` – The visual editor at
+- `@encorejs/studio` – The visual editor at
   [`./packages/studio`](./packages/studio).
-- `@encore/dataverse` – The reactive dataflow library at
+- `@encorejs/dataverse` – The reactive dataflow library at
   [`./packages/dataverse`](./packages/dataverse).
-- `@encore/react` – Utilities for using Encore with React at
+- `@encorejs/react` – Utilities for using Encore with React at
   [`./packages/react`](./packages/react).
-- `@encore/r3f` – The react-three-fiber extension at
+- `@encorejs/r3f` – The react-three-fiber extension at
   [`./packages/r3f`](./packages/r3f).
 - `playground` – The playground explained [above](#hacking-with-playground),
   located at [`./packages/playground`](./packages/playground)

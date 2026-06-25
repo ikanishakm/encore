@@ -1,10 +1,10 @@
-import {privateAPI, setPrivateAPI} from '@encore/core/privateAPIs'
-import {defer} from '@encore/utils/defer'
+import {privateAPI, setPrivateAPI} from '@encorejs/core/privateAPIs'
+import {defer} from '@encorejs/utils/defer'
 import type Sequence from './Sequence'
 import AudioPlaybackController from './playbackControllers/AudioPlaybackController'
-import {getCoreTicker} from '@encore/core/coreTicker'
-import type {Pointer} from '@encore/dataverse'
-import {notify} from '@encore/core/utils/notify'
+import {getCoreTicker} from '@encorejs/core/coreTicker'
+import type {Pointer} from '@encorejs/dataverse'
+import {notify} from '@encorejs/core/utils/notify'
 import type {
   IAttachAudioArgs,
   IPlaybackDirection,
@@ -12,7 +12,7 @@ import type {
   ISequence,
   IRafDriver,
   BasicKeyframe,
-} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
 
 export default class TheatreSequence implements ISequence {
   get type(): 'Theatre_Sequence_PublicAPI' {
@@ -46,8 +46,8 @@ export default class TheatreSequence implements ISequence {
         notify.warning(
           "Sequence can't be played",
           'You seem to have called `sequence.play()` before the project has finished loading.\n\n' +
-            'This would **not** a problem in production when using `@encore/core`, since Encore loads instantly in core mode. ' +
-            "However, when using `@encore/studio`, it takes a few milliseconds for it to load your project's state, " +
+            'This would **not** a problem in production when using `@encorejs/core`, since Encore loads instantly in core mode. ' +
+            "However, when using `@encorejs/studio`, it takes a few milliseconds for it to load your project's state, " +
             `before which your sequences cannot start playing.\n` +
             `\n` +
             'To fix this, simply defer calling `sequence.play()` until after the project is loaded, like this:\n\n' +

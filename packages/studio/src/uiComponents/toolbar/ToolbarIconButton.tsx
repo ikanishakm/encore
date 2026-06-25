@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
+import {pointerEventsAutoInNormalMode} from '@encorejs/studio/css'
 import React from 'react'
-import type {$FixMe, $IntentionalAny} from '@encore/core/types/public'
+import type {$FixMe, $IntentionalAny} from '@encorejs/core/types/public'
 import {mergeRefs} from 'react-merge-refs'
 import ToolbarSwitchSelectContainer from './ToolbarSwitchSelectContainer'
-import useChordial from '@encore/studio/uiComponents/chordial/useChodrial'
+import useChordial from '@encorejs/studio/uiComponents/chordial/useChodrial'
 
 export const Container = styled.button`
   ${pointerEventsAutoInNormalMode};

@@ -1,10 +1,10 @@
-import type {$FixMe} from '@encore/core/types/public'
-import type {Pointer} from '@encore/dataverse'
-import {getPointerParts} from '@encore/dataverse'
+import type {$FixMe} from '@encorejs/core/types/public'
+import type {Pointer} from '@encorejs/dataverse'
+import {getPointerParts} from '@encorejs/dataverse'
 import type {Studio} from './Studio'
 import type {CommitOrDiscardOrRecapture} from './StudioStore/StudioStore'
-import type {IScrub, IScrubApi} from '@encore/core'
-import {__private} from '@encore/core'
+import type {IScrub, IScrubApi} from '@encorejs/core'
+import {__private} from '@encorejs/core'
 const {forEachPropDeep} = __private.propTypeUtils
 const {isSheetObject} = __private.instanceTypes
 

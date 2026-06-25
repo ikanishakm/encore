@@ -1,9 +1,9 @@
-import type {$IntentionalAny} from '@encore/core/types/public'
+import type {$IntentionalAny} from '@encorejs/core/types/public'
 import type {
   PropTypeConfig,
   PropTypeConfig_Compound,
-} from '@encore/core/types/public'
-import {isPropConfigComposite} from '@encore/core/propTypes/utils'
+} from '@encorejs/core/types/public'
+import {isPropConfigComposite} from '@encorejs/core/propTypes/utils'
 
 type EncodedPropPath = string
 type Order = number

@@ -1,9 +1,9 @@
-import {privateAPI, setPrivateAPI} from '@encore/core/privateAPIs'
-import type {SheetObjectAddress} from '@encore/core/types/public'
-import SimpleCache from '@encore/utils/SimpleCache'
-import type {$FixMe, VoidFn} from '@encore/core/types/public'
-import type {Prism, Pointer} from '@encore/dataverse'
-import {prism, val} from '@encore/dataverse'
+import {privateAPI, setPrivateAPI} from '@encorejs/core/privateAPIs'
+import type {SheetObjectAddress} from '@encorejs/core/types/public'
+import SimpleCache from '@encorejs/utils/SimpleCache'
+import type {$FixMe, VoidFn} from '@encorejs/core/types/public'
+import type {Prism, Pointer} from '@encorejs/dataverse'
+import {prism, val} from '@encorejs/dataverse'
 import type SheetObject from './SheetObject'
 import {debounce} from 'lodash-es'
 import type {DebouncedFunc} from 'lodash-es'
@@ -15,8 +15,8 @@ import type {
   PropsValue,
   UnknownShorthandCompoundProps,
   DeepPartialOfSerializableValue,
-} from '@encore/core/types/public'
-import {onChange} from '@encore/core/coreExports'
+} from '@encorejs/core/types/public'
+import {onChange} from '@encorejs/core/coreExports'
 
 // Enabled for https://linear.app/theatre/issue/P-217/if-objvalue-is-read-make-sure-its-derivation-remains-hot-for-a-while
 // Disable to test old behavior

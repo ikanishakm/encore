@@ -1,10 +1,10 @@
-import OutlinePanel from '@encore/studio/panels/OutlinePanel/OutlinePanel'
-import DetailPanel from '@encore/studio/panels/DetailPanel/DetailPanel'
+import OutlinePanel from '@encorejs/studio/panels/OutlinePanel/OutlinePanel'
+import DetailPanel from '@encorejs/studio/panels/DetailPanel/DetailPanel'
 import React from 'react'
-import getStudio from '@encore/studio/getStudio'
-import {useVal} from '@encore/react'
-import ExtensionPaneWrapper from '@encore/studio/panels/BasePanel/ExtensionPaneWrapper'
-import SequenceEditorPanel from '@encore/studio/panels/SequenceEditorPanel/SequenceEditorPanel'
+import getStudio from '@encorejs/studio/getStudio'
+import {useVal} from '@encorejs/react'
+import ExtensionPaneWrapper from '@encorejs/studio/panels/BasePanel/ExtensionPaneWrapper'
+import SequenceEditorPanel from '@encorejs/studio/panels/SequenceEditorPanel/SequenceEditorPanel'
 
 const PanelsRoot: React.FC = () => {
   const panes = useVal(getStudio().paneManager.allPanesD)

@@ -1,5 +1,5 @@
-import type CoreBundle from '@encore/core/CoreBundle'
-import type {CoreBits} from '@encore/core/CoreBundle'
+import type CoreBundle from '@encorejs/core/CoreBundle'
+import type {CoreBits} from '@encorejs/core/CoreBundle'
 import type {Studio} from './Studio'
 
 export default class StudioBundle {

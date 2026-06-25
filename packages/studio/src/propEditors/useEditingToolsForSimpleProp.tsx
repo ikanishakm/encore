@@ -1,27 +1,27 @@
 import get from 'lodash-es/get'
 import React from 'react'
-import type {Prism, Pointer} from '@encore/dataverse'
-import {getPointerParts, prism, val} from '@encore/dataverse'
-import type SheetObject from '@encore/core/sheetObjects/SheetObject'
-import getStudio from '@encore/studio/getStudio'
-import type Scrub from '@encore/studio/Scrub'
-import getDeep from '@encore/utils/getDeep'
-import {usePrismInstance} from '@encore/react'
+import type {Prism, Pointer} from '@encorejs/dataverse'
+import {getPointerParts, prism, val} from '@encorejs/dataverse'
+import type SheetObject from '@encorejs/core/sheetObjects/SheetObject'
+import getStudio from '@encorejs/studio/getStudio'
+import type Scrub from '@encorejs/studio/Scrub'
+import getDeep from '@encorejs/utils/getDeep'
+import {usePrismInstance} from '@encorejs/react'
 import type {
   SerializablePrimitive as SerializablePrimitive,
   Asset,
   File as AssetFile,
-} from '@encore/core/types/public'
-import type {PropTypeConfig_AllSimples} from '@encore/core/types/public'
-import type {SequenceTrackId} from '@encore/core/types/public'
+} from '@encorejs/core/types/public'
+import type {PropTypeConfig_AllSimples} from '@encorejs/core/types/public'
+import type {SequenceTrackId} from '@encorejs/core/types/public'
 import DefaultOrStaticValueIndicator from './DefaultValueIndicator'
 import type {NearbyKeyframes} from './getNearbyKeyframesOfTrack'
 import {getNearbyKeyframesOfTrack} from './getNearbyKeyframesOfTrack'
 import type {NearbyKeyframesControls} from './NextPrevKeyframeCursors'
 import NextPrevKeyframeCursors from './NextPrevKeyframeCursors'
-import type {ContextMenuItem} from '@encore/studio/uiComponents/chordial/chordialInternals'
-import {__private} from '@encore/core'
-import type {$IntentionalAny} from '@encore/core/types/public'
+import type {ContextMenuItem} from '@encorejs/studio/uiComponents/chordial/chordialInternals'
+import {__private} from '@encorejs/core'
+import type {$IntentionalAny} from '@encorejs/core/types/public'
 
 const {isPropConfSequencable} = __private.propTypeUtils
 

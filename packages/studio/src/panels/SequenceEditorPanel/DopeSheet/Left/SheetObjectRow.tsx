@@ -1,9 +1,9 @@
-import type {SequenceEditorTree_SheetObject} from '@encore/studio/panels/SequenceEditorPanel/layout/tree'
+import type {SequenceEditorTree_SheetObject} from '@encorejs/studio/panels/SequenceEditorPanel/layout/tree'
 import React from 'react'
 import AnyCompositeRow from './AnyCompositeRow'
 import {decideRowByPropType} from './PropWithChildrenRow'
-import {setCollapsedSheetItem} from '@encore/studio/panels/SequenceEditorPanel/DopeSheet/setCollapsedSheetObjectOrCompoundProp'
-import getStudio from '@encore/studio/getStudio'
+import {setCollapsedSheetItem} from '@encorejs/studio/panels/SequenceEditorPanel/DopeSheet/setCollapsedSheetObjectOrCompoundProp'
+import getStudio from '@encorejs/studio/getStudio'
 
 const LeftSheetObjectRow: React.FC<{
   leaf: SequenceEditorTree_SheetObject

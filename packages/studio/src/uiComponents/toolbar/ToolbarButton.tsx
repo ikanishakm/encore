@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {pointerEventsAutoInNormalMode} from '@encore/studio/css'
+import {pointerEventsAutoInNormalMode} from '@encorejs/studio/css'
 import React from 'react'
 
 export const Container = styled.button<{disabled?: boolean; primary?: boolean}>`

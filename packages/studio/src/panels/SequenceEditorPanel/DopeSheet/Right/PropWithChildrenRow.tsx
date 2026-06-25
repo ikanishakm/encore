@@ -1,16 +1,16 @@
-import type {SequenceEditorPanelLayout} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
+import type {SequenceEditorPanelLayout} from '@encorejs/studio/panels/SequenceEditorPanel/layout/layout'
 import type {
   SequenceEditorTree_PrimitiveProp,
   SequenceEditorTree_PropWithChildren,
-} from '@encore/studio/panels/SequenceEditorPanel/layout/tree'
-import {usePrism} from '@encore/react'
-import type {Pointer} from '@encore/dataverse'
+} from '@encorejs/studio/panels/SequenceEditorPanel/layout/tree'
+import {usePrism} from '@encorejs/react'
+import type {Pointer} from '@encorejs/dataverse'
 import React from 'react'
 import PrimitivePropRow from './PrimitivePropRow'
 import RightRow from './Row'
 import AggregatedKeyframeTrack from './AggregatedKeyframeTrack/AggregatedKeyframeTrack'
 import {collectAggregateKeyframesInPrism} from './collectAggregateKeyframes'
-import {ProvideLogger, useLogger} from '@encore/studio/uiComponents/useLogger'
+import {ProvideLogger, useLogger} from '@encorejs/studio/uiComponents/useLogger'
 
 export const decideRowByPropType = (
   leaf: SequenceEditorTree_PropWithChildren | SequenceEditorTree_PrimitiveProp,

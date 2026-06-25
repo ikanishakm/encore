@@ -1,14 +1,14 @@
-import type {Pointer} from '@encore/dataverse'
+import type {Pointer} from '@encorejs/dataverse'
 import React, {useLayoutEffect, useMemo, useRef} from 'react'
 import styled from 'styled-components'
-import type {SequenceEditorPanelLayout} from '@encore/studio/panels/SequenceEditorPanel/layout/layout'
-import {useVal} from '@encore/react'
-import getStudio from '@encore/studio/getStudio'
-import type {BasicNumberInputNudgeFn} from '@encore/studio/uiComponents/form/BasicNumberInput'
-import type {CommitOrDiscardOrRecapture} from '@encore/studio/StudioStore/StudioStore'
-import {propNameTextCSS} from '@encore/studio/propEditors/utils/propNameTextCSS'
-import type {StudioHistoricStateSequenceEditorMarker} from '@encore/core/types/private'
-import BasicStringInput from '@encore/studio/uiComponents/form/BasicStringInput'
+import type {SequenceEditorPanelLayout} from '@encorejs/studio/panels/SequenceEditorPanel/layout/layout'
+import {useVal} from '@encorejs/react'
+import getStudio from '@encorejs/studio/getStudio'
+import type {BasicNumberInputNudgeFn} from '@encorejs/studio/uiComponents/form/BasicNumberInput'
+import type {CommitOrDiscardOrRecapture} from '@encorejs/studio/StudioStore/StudioStore'
+import {propNameTextCSS} from '@encorejs/studio/propEditors/utils/propNameTextCSS'
+import type {StudioHistoricStateSequenceEditorMarker} from '@encorejs/core/types/private'
+import BasicStringInput from '@encorejs/studio/uiComponents/form/BasicStringInput'
 
 const Container = styled.div`
   display: flex;

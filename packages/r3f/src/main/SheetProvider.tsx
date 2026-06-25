@@ -6,7 +6,7 @@ import React, {
   useLayoutEffect,
 } from 'react'
 import {useThree} from '@react-three/fiber'
-import type {ISheet} from '@encore/core'
+import type {ISheet} from '@encorejs/core'
 import {bindToCanvas} from './store'
 
 const ctx = createContext<{sheet: ISheet}>(undefined!)

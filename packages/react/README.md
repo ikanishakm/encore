@@ -1,4 +1,4 @@
-# @encore/react
+# @encorejs/react
 
 Utilities for using [Encore](https://www.theatrejs.com) or
 [Dataverse](https://github.com/ikanishakm/encore/tree/main/packages/dataverse)
@@ -13,8 +13,8 @@ A React hook that returns the value of the given prism or pointer.
 Usage with Dataverse pointers:
 
 ```tsx
-import {Atom} from '@encore/dataverse'
-import {useVal} from '@encore/react'
+import {Atom} from '@encorejs/dataverse'
+import {useVal} from '@encorejs/react'
 
 const atom = new Atom({foo: 'foo'})
 
@@ -27,8 +27,8 @@ function Component() {
 Usage with Dataverse prisms:
 
 ```tsx
-import {prism} from '@encore/dataverse'
-import {useVal} from '@encore/react'
+import {prism} from '@encorejs/dataverse'
+import {useVal} from '@encorejs/react'
 
 const pr = prism(() => 'some value')
 
@@ -41,8 +41,8 @@ function Component() {
 Usage with Encore pointers:
 
 ```tsx
-import {useVal} from '@encore/react'
-import {getProject} from '@encore/core'
+import {useVal} from '@encorejs/react'
+import {getProject} from '@encorejs/core'
 
 const obj = getProject('my project')
   .sheet('my sheet')
@@ -65,8 +65,8 @@ Creates a prism out of `fn` and subscribes the element to the value of the
 created prism.
 
 ```tsx
-import {Atom, val, prism} from '@encore/dataverse'
-import {usePrism} from '@encore/react'
+import {Atom, val, prism} from '@encorejs/dataverse'
+import {usePrism} from '@encorejs/react'
 
 const state = new Atom({a: 1, b: 1})
 
@@ -94,8 +94,8 @@ function Component(props: {which: 'a' | 'b'}) {
 Subscribes the element to the value of the given prism instance.
 
 ```tsx
-import {Atom, val, prism} from '@encore/dataverse'
-import {usePrismInstance} from '@encore/react'
+import {Atom, val, prism} from '@encorejs/dataverse'
+import {usePrismInstance} from '@encorejs/react'
 
 const state = new Atom({a: 1, b: 1})
 
@@ -115,7 +115,7 @@ function Component() {
 re-render if the value of the atom changes.
 
 ```tsx
-import {useAtom, useVal} from '@encore/react'
+import {useAtom, useVal} from '@encorejs/react'
 import {useEffect} from 'react'
 
 function MyComponent() {

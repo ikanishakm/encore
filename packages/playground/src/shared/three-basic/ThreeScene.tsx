@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react'
-import {types} from '@encore/core'
-import type {ISheetObject, IProject} from '@encore/core'
+import {types} from '@encorejs/core'
+import type {ISheetObject, IProject} from '@encorejs/core'
 import {
   Color,
   DirectionalLight,

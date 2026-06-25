@@ -1,5 +1,5 @@
 {
-  "name": "@encore/saaz",
+  "name": "@encorejs/saaz",
   "version": "0.7.0",
   "license": "Apache-2.0",
   "author": {
@@ -30,8 +30,8 @@
     "precommit": "yarn run docs"
   },
   "devDependencies": {
-    "@encore/dataverse": "workspace:*",
-    "@encore/utils": "workspace:*",
+    "@encorejs/dataverse": "workspace:*",
+    "@encorejs/utils": "workspace:*",
     "@microsoft/api-extractor": "^7.36.4",
     "@types/jest": "^26.0.23",
     "@types/lodash-es": "^4.17.4",

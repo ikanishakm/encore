@@ -1,7 +1,7 @@
-import type Project from '@encore/core/projects/Project'
+import type Project from '@encorejs/core/projects/Project'
 
-import {usePrism} from '@encore/react'
-import {val} from '@encore/dataverse'
+import {usePrism} from '@encorejs/react'
+import {val} from '@encorejs/dataverse'
 import React from 'react'
 import styled from 'styled-components'
 import {SheetInstanceItem} from './SheetInstanceItem'

@@ -1,4 +1,4 @@
-import type {$FixMe, $IntentionalAny} from '@encore/utils/types'
+import type {$FixMe, $IntentionalAny} from '@encorejs/utils/types'
 
 /**
  * Returns a new object with the value at `path` replaced with the result of `reducer(oldValue)`.

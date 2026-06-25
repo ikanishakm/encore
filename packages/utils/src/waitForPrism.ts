@@ -1,5 +1,5 @@
-import type {Prism} from '@encore/dataverse'
-import {defer} from '@encore/utils/defer'
+import type {Prism} from '@encorejs/dataverse'
+import {defer} from '@encorejs/utils/defer'
 
 /**
  * Returns a promise that resolved when the given prism's value satisfies the given condition.

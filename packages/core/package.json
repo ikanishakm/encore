@@ -1,5 +1,5 @@
 {
-  "name": "@encore/core",
+  "name": "@encorejs/core",
   "version": "0.7.0",
   "license": "Apache-2.0",
   "description": "Motion design editor for the web",
@@ -27,7 +27,7 @@
   },
   "sideEffects": true,
   "devDependencies": {
-    "@encore/utils": "workspace:*",
+    "@encorejs/utils": "workspace:*",
     "@rollup/plugin-alias": "^5.1.0",
     "@rollup/plugin-multi-entry": "^6.0.1",
     "@rollup/plugin-replace": "^5.0.5",
@@ -47,7 +47,7 @@
     "zod-validation-error": "^1.3.1"
   },
   "dependencies": {
-    "@encore/dataverse": "workspace:*"
+    "@encorejs/dataverse": "workspace:*"
   },
   "//": "Add packages here to make them externals of core. Add them to theatre/package.json if you want to bundle them with studio."
 }
