@@ -1,4 +1,4 @@
-[@theatre/dataverse](../README.md) / Atom
+[@encorejs/dataverse](../README.md) / Atom
 
 # Class: Atom<State\>
 
@@ -57,7 +57,7 @@ Wraps an object whose (sub)properties can be individually tracked.
 
 #### Defined in
 
-[Atom.ts:119](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Atom.ts#L119)
+[Atom.ts:119](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Atom.ts#L119)
 
 ## Properties
 
@@ -69,7 +69,7 @@ Convenience property that gives you a pointer to the root of the atom.
 
 #### Defined in
 
-[Atom.ts:113](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Atom.ts#L113)
+[Atom.ts:113](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Atom.ts#L113)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[Atom.ts:115](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Atom.ts#L115)
+[Atom.ts:115](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Atom.ts#L115)
 
 ## Methods
 
@@ -95,7 +95,7 @@ Returns the current state of the atom.
 
 #### Defined in
 
-[Atom.ts:139](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Atom.ts#L139)
+[Atom.ts:139](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Atom.ts#L139)
 
 ___
 
@@ -123,7 +123,7 @@ Returns the value at the given pointer
 
 #### Defined in
 
-[Atom.ts:155](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Atom.ts#L155)
+[Atom.ts:155](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Atom.ts#L155)
 
 ___
 
@@ -183,7 +183,7 @@ unsubscribe()
 
 #### Defined in
 
-[Atom.ts:305](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Atom.ts#L305)
+[Atom.ts:305](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Atom.ts#L305)
 
 ___
 
@@ -234,7 +234,7 @@ unsubscribe()
 
 #### Defined in
 
-[Atom.ts:271](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Atom.ts#L271)
+[Atom.ts:271](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Atom.ts#L271)
 
 ___
 
@@ -266,7 +266,7 @@ Returns a new prism of the value at the provided path.
 
 #### Defined in
 
-[Atom.ts:319](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Atom.ts#L319)
+[Atom.ts:319](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Atom.ts#L319)
 
 ___
 
@@ -286,7 +286,7 @@ ___
 
 #### Defined in
 
-[Atom.ts:173](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Atom.ts#L173)
+[Atom.ts:173](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Atom.ts#L173)
 
 ___
 
@@ -315,7 +315,7 @@ Reduces the value at the given pointer
 
 #### Defined in
 
-[Atom.ts:189](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Atom.ts#L189)
+[Atom.ts:189](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Atom.ts#L189)
 
 ___
 
@@ -337,7 +337,7 @@ Sets the state of the atom.
 
 #### Defined in
 
-[Atom.ts:129](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Atom.ts#L129)
+[Atom.ts:129](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Atom.ts#L129)
 
 ___
 
@@ -366,4 +366,4 @@ Sets the value at the given pointer
 
 #### Defined in
 
-[Atom.ts:214](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Atom.ts#L214)
+[Atom.ts:214](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Atom.ts#L214)

@@ -1,4 +1,4 @@
-[@theatre/dataverse](../README.md) / PointerToPrismProvider
+[@encorejs/dataverse](../README.md) / PointerToPrismProvider
 
 # Interface: PointerToPrismProvider
 
@@ -41,4 +41,4 @@ Returns a prism of the value at the provided pointer.
 
 #### Defined in
 
-[pointerToPrism.ts:21](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/pointerToPrism.ts#L21)
+[pointerToPrism.ts:21](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/pointerToPrism.ts#L21)

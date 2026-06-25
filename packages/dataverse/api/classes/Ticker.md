@@ -1,4 +1,4 @@
-[@theatre/dataverse](../README.md) / Ticker
+[@encorejs/dataverse](../README.md) / Ticker
 
 # Class: Ticker
 
@@ -44,7 +44,7 @@ external scheduling strategy, e.g. a raf.
 
 #### Defined in
 
-[Ticker.ts:43](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Ticker.ts#L43)
+[Ticker.ts:43](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Ticker.ts#L43)
 
 ## Properties
 
@@ -60,7 +60,7 @@ Consider this as experimental, and do not rely on it always being here in future
 
 #### Defined in
 
-[Ticker.ts:41](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Ticker.ts#L41)
+[Ticker.ts:41](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Ticker.ts#L41)
 
 ## Accessors
 
@@ -76,7 +76,7 @@ Whether the Ticker is dormant
 
 #### Defined in
 
-[Ticker.ts:31](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Ticker.ts#L31)
+[Ticker.ts:31](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Ticker.ts#L31)
 
 ___
 
@@ -93,7 +93,7 @@ The time at the start of the current tick if there is a tick in progress, otherw
 
 #### Defined in
 
-[Ticker.ts:122](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Ticker.ts#L122)
+[Ticker.ts:122](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Ticker.ts#L122)
 
 ## Methods
 
@@ -119,7 +119,7 @@ onNextTick
 
 #### Defined in
 
-[Ticker.ts:114](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Ticker.ts#L114)
+[Ticker.ts:114](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Ticker.ts#L114)
 
 ___
 
@@ -145,7 +145,7 @@ onThisOrNextTick
 
 #### Defined in
 
-[Ticker.ts:103](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Ticker.ts#L103)
+[Ticker.ts:103](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Ticker.ts#L103)
 
 ___
 
@@ -172,7 +172,7 @@ Registers a side effect to be called on the next tick.
 
 #### Defined in
 
-[Ticker.ts:89](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Ticker.ts#L89)
+[Ticker.ts:89](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Ticker.ts#L89)
 
 ___
 
@@ -205,7 +205,7 @@ offThisOrNextTick
 
 #### Defined in
 
-[Ticker.ts:74](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Ticker.ts#L74)
+[Ticker.ts:74](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Ticker.ts#L74)
 
 ___
 
@@ -232,4 +232,4 @@ Triggers a tick which starts executing the callbacks scheduled for this tick.
 
 #### Defined in
 
-[Ticker.ts:149](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/Ticker.ts#L149)
+[Ticker.ts:149](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/Ticker.ts#L149)

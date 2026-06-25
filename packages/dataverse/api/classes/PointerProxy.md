@@ -1,4 +1,4 @@
-[@theatre/dataverse](../README.md) / PointerProxy
+[@encorejs/dataverse](../README.md) / PointerProxy
 
 # Class: PointerProxy<O\>
 
@@ -49,7 +49,7 @@ Allows creating pointer-prisms where the pointer can be switched out.
 
 #### Defined in
 
-[PointerProxy.ts:34](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/PointerProxy.ts#L34)
+[PointerProxy.ts:34](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/PointerProxy.ts#L34)
 
 ## Properties
 
@@ -61,7 +61,7 @@ Convenience pointer pointing to the root of this PointerProxy.
 
 #### Defined in
 
-[PointerProxy.ts:32](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/PointerProxy.ts#L32)
+[PointerProxy.ts:32](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/PointerProxy.ts#L32)
 
 ## Methods
 
@@ -93,7 +93,7 @@ Returns a prism of the value at the provided sub-path of the proxied pointer.
 
 #### Defined in
 
-[PointerProxy.ts:52](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/PointerProxy.ts#L52)
+[PointerProxy.ts:52](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/PointerProxy.ts#L52)
 
 ___
 
@@ -115,4 +115,4 @@ Sets the underlying pointer.
 
 #### Defined in
 
-[PointerProxy.ts:43](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/PointerProxy.ts#L43)
+[PointerProxy.ts:43](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/PointerProxy.ts#L43)

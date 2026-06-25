@@ -1,8 +1,8 @@
-@theatre/dataverse
+@encorejs/dataverse
 
-# @theatre/dataverse
+# @encorejs/dataverse
 
-The animation-optimized FRP library powering the internals of Theatre.js.
+The animation-optimized FRP library powering the internals of Encore.
 
 ## Table of contents
 
@@ -60,7 +60,7 @@ Atom
 
 #### Defined in
 
-[pointer.ts:64](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/pointer.ts#L64)
+[pointer.ts:64](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/pointer.ts#L64)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[pointer.ts:5](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/pointer.ts#L5)
+[pointer.ts:5](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/pointer.ts#L5)
 
 ___
 
@@ -101,7 +101,7 @@ A wrapper type for the type a `Pointer` points to.
 
 #### Defined in
 
-[pointer.ts:35](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/pointer.ts#L35)
+[pointer.ts:35](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/pointer.ts#L35)
 
 ## Functions
 
@@ -142,7 +142,7 @@ const {root, path} = getPointerParts(pointer)
 
 #### Defined in
 
-[pointer.ts:136](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/pointer.ts#L136)
+[pointer.ts:136](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/pointer.ts#L136)
 
 ___
 
@@ -164,7 +164,7 @@ p is Pointer<unknown\>
 
 #### Defined in
 
-[pointer.ts:187](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/pointer.ts#L187)
+[pointer.ts:187](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/pointer.ts#L187)
 
 ___
 
@@ -186,7 +186,7 @@ d is Prism<unknown\>
 
 #### Defined in
 
-[prism/Interface.ts:66](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/Interface.ts#L66)
+[prism/Interface.ts:66](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/prism/Interface.ts#L66)
 
 ___
 
@@ -212,7 +212,7 @@ ___
 
 #### Defined in
 
-[prism/iterateAndCountTicks.ts:7](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/iterateAndCountTicks.ts#L7)
+[prism/iterateAndCountTicks.ts:7](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/prism/iterateAndCountTicks.ts#L7)
 
 ___
 
@@ -238,7 +238,7 @@ ___
 
 #### Defined in
 
-[prism/iterateOver.ts:8](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/iterateOver.ts#L8)
+[prism/iterateOver.ts:8](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/prism/iterateOver.ts#L8)
 
 ___
 
@@ -283,7 +283,7 @@ const sum = prism(() => {
 
 #### Defined in
 
-[pointer.ts:172](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/pointer.ts#L172)
+[pointer.ts:172](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/pointer.ts#L172)
 
 ___
 
@@ -312,7 +312,7 @@ cached per pointer.
 
 #### Defined in
 
-[pointerToPrism.ts:41](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/pointerToPrism.ts#L41)
+[pointerToPrism.ts:41](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/pointerToPrism.ts#L41)
 
 ___
 
@@ -341,7 +341,7 @@ in it as dependencies, and reruns the function when these change.
 
 #### Defined in
 
-[prism/prism.ts:832](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/prism/prism.ts#L832)
+[prism/prism.ts:832](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/prism/prism.ts#L832)
 
 ___
 
@@ -370,4 +370,4 @@ is a pointer, a prism or a plain value itself.
 
 #### Defined in
 
-[val.ts:19](https://github.com/theatre-js/theatre/blob/main/packages/dataverse/src/val.ts#L19)
+[val.ts:19](https://github.com/ikanishakm/encore/blob/main/packages/dataverse/src/val.ts#L19)
