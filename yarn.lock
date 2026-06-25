@@ -5477,7 +5477,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@encore/studio@workspace:packages/studio"
   dependencies:
-    "@encore/app": "workspace:*"
     "@encore/dataverse": "workspace:*"
     "@encore/react": "workspace:*"
     "@encore/saaz": "workspace:*"

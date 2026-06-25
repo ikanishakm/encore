@@ -20,7 +20,6 @@ import type {
 import createTransactionPrivateApi from './createTransactionPrivateApi'
 import {SaazBack} from '@encore/saaz'
 import type {Studio} from '@encore/studio/Studio'
-import getStudio from '@encore/studio/getStudio'
 
 export type Drafts = {
   historic: Draft<StudioHistoricState>
@@ -53,16 +52,15 @@ export default class StudioStore {
   >
 
   constructor(readonly studio: Studio) {
-    const backend =
-      typeof window === 'undefined'
-        ? new SaazBack({
-            storageAdapter: new Saaz.BackMemoryAdapter(),
-            dbName: 'test',
-            schema,
-          })
-        : createTrpcBackend(
-            this.studio._optsPromise.then((opts) => opts.persistenceKey),
-          )
+    // Encore fork: always use a local, in-memory saaz backend. The cloud
+    // sync-server transport (createTrpcBackend) was removed. Studio persistence
+    // is handled by the legacy persistAtom/IndexedDB path, so the editor keeps
+    // full local functionality (transactions, undo/redo, import/export).
+    const backend = new SaazBack({
+      storageAdapter: new Saaz.BackMemoryAdapter(),
+      dbName: 'test',
+      schema,
+    })
 
     const saaz = new Saaz.SaazFront({
       schema,
@@ -241,91 +239,3 @@ export default class StudioStore {
   // }
 }
 
-function createTrpcBackend(
-  dbNamePromise: Promise<string>,
-): Saaz.SaazBackInterface {
-  const applyUpdates: Saaz.SaazBackInterface['applyUpdates'] = async (opts) => {
-    const syncServerApi = getStudio().authedLinks.syncServer
-    const dbName = await dbNamePromise
-    return await syncServerApi.projectState.saaz_applyUpdates.mutate({
-      dbName,
-      opts,
-    })
-  }
-
-  const updatePresence: Saaz.SaazBackInterface['updatePresence'] = async (
-    opts,
-  ) => {
-    const dbName = await dbNamePromise
-    const syncServerApi = getStudio().authedLinks.syncServer
-
-    return await syncServerApi.projectState.saaz_updatePresence.mutate({
-      dbName,
-      opts,
-    })
-  }
-
-  const getUpdatesSinceClock: Saaz.SaazBackInterface['getUpdatesSinceClock'] =
-    async (opts) => {
-      const dbName = await dbNamePromise
-      const syncServerApi = getStudio().authedLinks.syncServer
-
-      return await syncServerApi.projectState.saaz_getUpdatesSinceClock.query({
-        dbName,
-        opts,
-      })
-    }
-
-  const getLastIncorporatedPeerClock: Saaz.SaazBackInterface['getLastIncorporatedPeerClock'] =
-    async (opts) => {
-      const dbName = await dbNamePromise
-      const syncServerApi = getStudio().authedLinks.syncServer
-
-      return await syncServerApi.projectState.saaz_getLastIncorporatedPeerClock.query(
-        {
-          dbName,
-          opts,
-        },
-      )
-    }
-
-  const closePeer: Saaz.SaazBackInterface['closePeer'] = async (opts) => {
-    const dbName = await dbNamePromise
-    const syncServerApi = getStudio().authedLinks.syncServer
-
-    return await syncServerApi.projectState.saaz_closePeer.mutate({
-      dbName,
-      opts,
-    })
-  }
-
-  const subscribe: Saaz.SaazBackInterface['subscribe'] = async (
-    opts,
-    onUpdate,
-  ) => {
-    const dbName = await dbNamePromise
-    const syncServerApi = getStudio().authedLinks.syncServer
-
-    const subscription = syncServerApi.projectState.saaz_subscribe.subscribe(
-      {
-        dbName,
-        opts,
-      },
-      {
-        onData(d) {
-          onUpdate(d as $FixMe)
-        },
-      },
-    )
-
-    return subscription.unsubscribe
-  }
-  return {
-    applyUpdates,
-    getUpdatesSinceClock,
-    subscribe,
-    updatePresence,
-    closePeer,
-    getLastIncorporatedPeerClock,
-  }
-}

@@ -28,7 +28,6 @@ import type {
 } from '@encore/core/types/private/core'
 import type {Deferred} from '@encore/utils/defer'
 import {defer} from '@encore/utils/defer'
-import checkForUpdates from './checkForUpdates'
 import shallowEqual from 'shallowequal'
 import {createStore} from './IDBStorage'
 import {getAllPossibleAssetIDs} from '@encore/studio/utils/assets'
@@ -36,13 +35,6 @@ import {notify} from './notify'
 import type {RafDriverPrivateAPI} from '@encore/core/rafDrivers'
 import {persistAtom} from '@encore/utils/persistAtom'
 import produce from 'immer'
-import Storno from './Storno/Storno'
-import Auth from './Auth'
-import type {$IntentionalAny} from '@encore/core/types/public'
-import AppLink from './SyncStore/AppLink'
-import SyncServerLink from './SyncStore/SyncServerLink'
-import type {TrpcClientWrapped} from './SyncStore/utils'
-import {wrapTrpcClientWithAuth} from './SyncStore/utils'
 import {env} from './env'
 
 const DEFAULT_PERSISTENCE_KEY = 'theatre-0.4'
@@ -101,8 +93,6 @@ export class Studio {
     this._projectsProxy.pointer
 
   readonly _store: StudioStore
-  readonly auth!: Auth
-  private readonly _storno = new Storno()
 
   private _corePrivateApi: CoreBits['privateAPI'] | undefined
 
@@ -161,16 +151,6 @@ export class Studio {
 
   private readonly _initializedPromise: Promise<void>
 
-  readonly _rawLinks: {
-    app: Promise<AppLink>
-    syncServer: Promise<SyncServerLink>
-  }
-
-  readonly authedLinks!: {
-    app: TrpcClientWrapped<AppLink['api']>
-    syncServer: TrpcClientWrapped<SyncServerLink['api']>
-  }
-
   get ticker(): Ticker {
     if (!this._rafDriver) {
       throw new Error(
@@ -194,57 +174,8 @@ export class Studio {
     this.address = {studioId: nanoid(10)}
     this._optsDeferred = defer()
 
-    const syncServerLinkDeferred = defer<SyncServerLink>()
-    const syncServerLink = syncServerLinkDeferred.promise
-    const appLink = this._optsPromise.then(
-      ({serverUrl}): AppLink =>
-        typeof window === 'undefined'
-          ? (null as $IntentionalAny)
-          : new AppLink(serverUrl),
-    )
-
-    if (typeof window !== 'undefined') {
-      void appLink
-        .then((appLink) => {
-          return appLink.api.syncServerUrl.query().then((url) => {
-            syncServerLinkDeferred.resolve(new SyncServerLink(url))
-          })
-        })
-        .catch((err) => {
-          syncServerLinkDeferred.reject(err)
-          console.error(err)
-        })
-    } else {
-      syncServerLinkDeferred.resolve(null as $IntentionalAny)
-    }
-
-    this._rawLinks = {app: appLink, syncServer: syncServerLink}
-
-    if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'test') {
-      this.auth = new Auth(this)
-      this.authedLinks = {
-        syncServer: wrapTrpcClientWithAuth(
-          this._rawLinks.syncServer.then((s) => s.api),
-          (fn: any, args: any[], path): any => {
-            return this.auth.wrapTrpcProcedureWithAuth(
-              fn,
-              args as $IntentionalAny,
-              path,
-            )
-          },
-        ),
-
-        app: wrapTrpcClientWithAuth(
-          this._rawLinks.app.then((s) => s.api),
-          (fn: any, args: any[], path): any =>
-            this.auth.wrapTrpcProcedureWithAuth(
-              fn,
-              args as $IntentionalAny,
-              path,
-            ),
-        ),
-      }
-    }
+    // Encore fork: cloud auth + sync-server transport removed. The editor runs
+    // fully local — no AppLink/SyncServerLink/Auth construction here.
 
     this._store = new StudioStore(this)
     this.publicApi = new TheatreStudio(this)
@@ -300,11 +231,6 @@ export class Studio {
 
     if (process.env.NODE_ENV !== 'test') {
       this.ui.render()
-      if (navigator.onLine) {
-        checkForUpdates().catch((err) => {
-          console.error(err)
-        })
-      }
     }
   }
 

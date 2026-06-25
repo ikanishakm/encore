@@ -32,7 +32,6 @@
     "@encore/dataverse": "workspace:*"
   },
   "devDependencies": {
-    "@encore/app": "workspace:*",
     "@encore/react": "workspace:*",
     "@encore/saaz": "workspace:*",
     "@encore/sync-server": "workspace:*",
